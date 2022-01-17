@@ -1,0 +1,258 @@
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 1 */
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 2 */ 
+
+/* See allScripts.css for the general scripts section */
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 3 */ 
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 4 */ 
+
+
+#text_box_number_1_page_4_script_3 { /* This is a textbox of small size that goes on page 4 and is the first of its type */
+    position: relative;
+    display: inline-block;
+    width: 300px;
+}
+
+#instruction_box_number_1_page_4_script_3 { /* This is an instructions box which has the dotted/dashed border */
+    position: relative;
+    width: 66.5%;
+    height: auto;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 5 */ 
+
+.text_box_number_1_page_5_script_3 {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+}
+#instruction_box_number_1_page_5_script_3 { /* This is an instructions box which has the dotted/dashed border */
+    position: relative;
+    width: 66.5%;
+    height: auto;
+}
+
+#instruction_box_number_2_page_5_script_3 { /* This is an instructions box which has the dotted/dashed border */
+    position: relative;
+    width: 66.5%;
+    height: auto;
+}
+
+#instruction_box_number_3_page_5_script_3 { /* This is an instructions box which has the dotted/dashed border */
+    position: relative;
+    width: 46.5%;
+    height: auto;
+}
+
+
+#stop_sharing_screen_page_5_script_3{
+    width: 500px;
+    margin: auto;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 6 */ 
+
+
+#instruction_box_number_1_page_6_script_3{
+    width: 500px;
+    height: 100px;
+    margin:0 20px 15px 50px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 7 */ 
+
+
+
+
+#bodyScanImageDiv > img{
+    display: inline-block;
+    width: 14.7em;
+}
+
+#bodyScanImageDiv > textarea{
+    border: none;
+    font-size: 12px;
+}
+
+
+
+
+#body_image_text_feelings_page_7_script_3{
+    position: absolute;
+    width: 5em;
+    height: 2.55em;
+    margin-top: 5px;
+    margin-left: -210px;
+}
+
+#body_image_text_head_page_7_script_3{
+    position: absolute;
+    width: 5.2em;
+    height: 2.45em;
+    margin-top: 8px;
+    margin-left: -78px;
+}
+
+#body_image_text_chest_page_7_script_3{
+    position: absolute;
+    width: 4.38em;
+    height: 2.33em;
+    margin-top: 50.8px;
+    margin-left: -215px;
+}
+
+#body_image_text_mouth_and_jaw_page_7_script_3{
+    position: absolute;
+    width: 5.2em;
+    height: 2.45em;
+    margin-top: 52px;
+    margin-left: -76.8px;
+}
+
+
+#body_image_text_breathing_page_7_script_3{
+    position: absolute;
+    width: 4.38em;
+    height: 2.33em;
+    margin-top: 92.8px;
+    margin-left: -215px;
+}
+
+#body_image_text_shoulders_page_7_script_3{
+    position: absolute;
+    width: 4.2em;
+    height: 2.35em;
+    margin-top: 98px;
+    margin-left: -64.5px;
+}
+
+#body_image_text_stomach_page_7_script_3{
+    position: absolute;
+    width: 5.2em;
+    height: 3em;
+    margin-top: 141.5px;
+    margin-left: -76.2px;
+}
+
+#body_image_text_hands_and_arms_page_7_script_3{
+    position: absolute;
+    width: 3.45em;
+    height: 3.3em;
+    margin-top: 178px;
+    margin-left: -207px;
+}
+
+#body_image_text_legs_and_feet_page_7_script_3{
+    position: absolute;
+    width: 3.2em;
+    height: 3em;
+    margin-top: 200px;
+    margin-left: -52px;
+}
+
+#body_image_text_fidgeting_page_7_script_3{
+    position: absolute;
+    width: 6.2em;
+    height: 1.6em;
+    margin-top: 268.8px;
+    margin-left: -206px;
+}
+
+#body_image_text_change_in_energy_level_page_7_script_3{
+    position: absolute;
+    width: 6.68em;
+    height: 1.65em;
+    margin-top: 268.8px;
+    margin-left: -103px;
+}
+
+
+#instruction_box_number_1_page_7_script_3{
+    padding-left: 1%;
+    width: 700px;
+    height: 350px;
+    margin:0 20px 15px 50px;
+}
+
+#share_your_screen_page_7_script_3{
+    padding-left: 7%;
+}
+
+#instruction_box_number_2_page_7_script_3{
+    padding-left: 1%;
+    width: 500px;
+    height: 230px;
+    margin:0 20px 15px 50px;
+}
+
+
+#stop_sharing_screen_page_7_script_3{
+    padding-left: 3%;
+    width: 90%
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 8 */ 
+
+#text_box_number_1_page_8_script_3 {
+    width: 731px;
+    height: 50px;
+
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 9 */ 
+
+
+#text_box_number_1_page_9_script_3{
+    position: relative;
+    display: inline-block;
+    width: 400px;
+}
+
+
+#instruction_box_number_1_page_9_script_3{
+    width: 850px;
+    height: 50px;
+    margin:0 20px 15px 0px;
+    
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 10 */ 
+
+/* See allScripts.css for the general scripts section */
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 11 */ 
+
+
+/* See allScripts.css for the general scripts section */
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 12 */ 
+
+/* See allScripts.css for the general scripts section */
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 13 */ 
+
+/* See allScripts.css for the general scripts section */

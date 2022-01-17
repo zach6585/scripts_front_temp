@@ -1,0 +1,26 @@
+#loginForm{
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+}
+
+
+.login_form_input_box{
+    width: 300px;
+}
+
+#submit{
+    font-size: 25px;
+    width: 100px;
+}
+
+#fake_link_text{
+    font-size: 15px;
+    text-align: center;
+    color: blue;
+    text-decoration: underline;
+}
+
+#error_text{
+    text-align: center;
+}

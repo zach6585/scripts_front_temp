@@ -1,0 +1,54 @@
+import { Component } from 'react';
+// import axios from 'axios';
+
+import Script1List from './components/scripts/script1/componentlist';
+import Script2List from './components/scripts/script2/componentlist';
+import Script3List from './components/scripts/script3/componentlist';
+import Script4List from './components/scripts/script4/componentlist';
+import Script5List from './components/scripts/script5/componentlist';
+import Script6List from './components/scripts/script6/componentlist';
+import Script7List from './components/scripts/script7/componentlist';
+import Script8List from './components/scripts/script8/componentlist';
+import Script9List from './components/scripts/script9/componentlist';
+import Script10List from './components/scripts/script10/componentlist';
+import Script11List from './components/scripts/script11/componentlist';
+import Script12List from './components/scripts/script12/componentlist';
+import Script13List from './components/scripts/script13/componentlist';
+// import Users from './components/users/users.js';
+// import ScriptDummyList from './components/scripts/dummy script/componentlist';
+
+
+class App extends Component {
+  
+  state = {
+    componentList: [<Script1List />, <Script2List />, <Script3List />, <Script4List />, <Script5List />, <Script6List />, <Script7List />, <Script8List />, <Script9List />, <Script10List />, <Script11List />, <Script12List />, <Script13List />], currComponent: null, buttonList: []
+  }
+
+  componentDidMount = () => {
+    this.makeButtons();
+  }
+
+  handleClick = (script) => {//Once a button is clicked, it takes you to the coresponding component
+    this.setState((prevState) => ({currComponent: prevState.componentList[script]}));
+    this.setState({buttonList: null});
+  }
+  makeButtons = () => {//Makes the button list depending on the componenents present in the componenet list
+    for (let i = 0; i < this.state.componentList.length; i++){
+      this.setState((prevstate) => ({buttonList: prevstate.buttonList.concat(<button key={i+1} onClick={() => this.handleClick(i)}>Script {i+1}</button>)}));
+    } 
+  }
+
+  render() {
+    return(
+    <div className="App">
+      {/* <Users /> */}
+      {this.state.buttonList}
+      {this.state.currComponent}
+    </div>
+    )
+  }
+}
+
+export default App;
+
+//

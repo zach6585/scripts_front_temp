@@ -1,0 +1,152 @@
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Page 1 */
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 2 */ 
+
+/* See allScripts.css for the general scripts section */
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 3 */ 
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 4 */ 
+
+#text_box_number_1_page_4_script_8{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px; 
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 5 */ 
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 6 */ 
+
+#instruction_box_number_1_page_6_script_8 { /* This is an instructions box which has the dotted/dashed border */
+    display: inline-block;
+    width: 33.5%;
+    /* position: relative; */
+    
+
+}
+
+#share_your_screen_page_6_script_8{
+    width: 400px;
+    /* margin: auto; */
+    position: absolute;
+    display: inline;
+}
+
+#text_box_number_1_page_6_script_8 {
+    position: relative;
+    display: inline;
+    width: 300px;
+}
+
+
+
+#instruction_box_number_2_page_6_script_8 {
+    display: inline-block;
+    width: 53.5%;
+    height: auto;
+}
+
+#instruction_box_number_3_page_6_script_8 {
+    display: inline-block;
+    width: 63.5%;
+    height: auto;
+    margin-left: 5%;
+}
+
+#instruction_box_number_4_page_6_script_8 {
+    display: inline-block;
+    width: 83.5%;
+    height: auto;
+}
+
+#text_box_number_2_page_6_script_8 {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 30px;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 7 */ 
+
+#instruction_box_number_1_page_7_script_8 { /* This is an instructions box which has the dotted/dashed border */
+    display: inline-block;
+    width: 33.5%;
+    height: auto;
+}
+
+
+#instruction_box_number_2_page_7_script_8 { /* This is an instructions box which has the dotted/dashed border */
+    display: inline-block;
+    width: 25%;
+    height: auto;
+    position: relative;
+}
+
+#share_your_screen_page_7_script_8 {
+    width: 500px;
+    margin: auto;
+    position: absolute;
+    display: inline;
+    
+}
+
+
+#instruction_box_number_3_page_7_script_8 { /* This is an instructions box which has the dotted/dashed border */
+    width: 85%;
+    height: auto;
+    position: relative;
+}
+
+
+#instruction_box_number_4_page_7_script_8 { /* This is an instructions box which has the dotted/dashed border */
+    width: 25%;
+    margin-left: 5%;
+    height: auto;
+    display: inline-block;
+}
+
+#stop_sharing_screen_page_7_script_8 {
+    display: inline;
+    position: absolute;
+    width: 40%;
+}
+
+#instruction_box_number_5_page_7_script_8 { /* This is an instructions box which has the dotted/dashed border */
+    width: 55%;
+    height: auto;
+    display: inline-block;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 8 */ 
+
+/* See allScripts.css for the general scripts section */
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 9 */ 
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 10 */ 
+/* See allScripts.css for the general scripts section */
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 11 */ 
+
+/* See allScripts.css for the general scripts section */
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 12 */ 
+
+/* See allScripts.css for the general scripts section */

@@ -1,0 +1,337 @@
+
+.sheet {
+    margin-top: 100px;
+    font-size: 15px;
+    margin-bottom: 200px;
+    margin-right: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2{
+    font-size: 25px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    list-style-type: none;
+}
+.square_bullets:before
+{
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+  }
+
+.right {
+    
+    margin-left: 85%;
+}
+
+.button{
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+a img {
+    position: absolute;
+    margin-top: 20%;
+    font-size: 16px;
+    padding: 10px 15px;  
+}
+
+#pressrecord {
+    width: 200px;
+    height: 100px;
+}
+
+h2, a{
+    font-weight: normal;
+    font-size: 25px;
+}
+
+p { 
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    font-style: italic;
+}
+
+
+textarea {
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    text-decoration: underline;
+}
+
+
+.small {
+    font-size: 15px;
+}
+
+
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+}
+
+
+.top_line_in_instruction_box{ /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    width: 100px;
+
+}
+
+.allEars{
+    height: 100px;
+}
+
+.demo_box {
+    margin-right: 100px;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .custom_svg {
+    /* this border won't actually take up any space since it's a background image, so add some extra padding to account for that */
+    padding: 2px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0%25' y='0%25' width='100%25' height='100%25' fill='transparent' stroke='blue' stroke-width='4px' stroke-dasharray='16 2 2 2' /%3E%3C/svg%3E");
+  }
+
+div.custom_svg > p, h2, h1 {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 5px 10px;
+}
+
+div.solid_box> p, h2, h1 {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 5px 10px;
+}
+
+
+.page_num {
+    position: relative;
+    margin-top: 140px;
+    margin-left: 750px;
+    font-size: 25px;
+}
+
+.arrow {
+    width: 150px;
+    height: 150px;
+}
+
+#buttonDiv {
+    display: inline-flex;
+}
+
+.check{
+    /* The general size and positioning of the green checks*/
+    width: 75px;
+    margin:0 20px 15px 160px; 
+}
+
+.redX{
+    /* The general size and positioning of the red xs*/
+    width: 65px;
+    margin:0 20px 15px 160px; 
+}
+
+.choicePicked {
+    /* Margin for text displayed next to check and x */
+    margin:0 20px 15px 200px;
+}
+
+
+
+
+.what_does_your_mentor_say{
+    display: inline-block;
+}
+
+
+/* ------------------------------ General pages CSS -------------------------------------- */
+
+            /* The purpose of this is to make general pages so that I don't repeat code that only needs to be written once */
+
+/* Session Start */
+
+.session_start_text_box{
+    width: 100%;
+    border: black;
+    border-style: solid;
+    position: relative;
+    top: 25px;
+    font-size: 25px;
+}
+
+/* Time for questions */
+
+.questions_text_box{
+    width: 60%;
+    height: 200px;
+}
+
+.questions_instructions_box{
+    width: 50%;
+    margin-left: 10px;
+}
+
+
+/* Reminders For Mentoring */
+
+.reminders_text_box{
+    position: relative;
+    display: inline-block;
+    width: 400px;
+}
+
+
+.highlighted {
+    background-color: greenyellow;
+}
+
+
+
+
+
+/* Sharing About Mentoring */
+
+#instruction_box_number_1_sharing_about_mentoring {
+    width: 43.5%;
+    height: auto;
+    margin-left: 2%;
+}
+
+#instruction_box_number_2_sharing_about_mentoring {
+    display: inline-block;
+    width: 23.5%;
+    height: auto;
+    margin-left: 2%;
+}
+
+#share_screen_sharing_about_mentoring {
+    width: 500px;
+    margin: auto;
+    position: absolute;
+    display: inline;
+    
+}
+
+#instruction_box_number_3_sharing_about_mentoring {
+    display: inline-block;
+    width: 23.5%;
+    height: auto;
+    margin-left: 2%;
+}
+
+#stop_share_sharing_about_mentoring{
+    width: 40%;
+    position: absolute;
+    display: inline;
+}
+
+
+.div_for_controlling_wrapping{
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+/* Scheduling for next weekend */
+
+.scheduling_for_next_week_text_box {
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    height: 20px;
+}
+
+
+#text_call_email{
+    margin-left: 16%;
+    display: block;
+    margin-top: -2%;
+}
+
+#instruction_box_number_1_schedule_for_next_week{
+    margin-left: 10%;
+    width: 60%;
+}
+
+.large_scheduling_for_next_week_text_box{
+    width: 80%;
+    height: 100px;
+}

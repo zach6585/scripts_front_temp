@@ -1,0 +1,16 @@
+
+// import body from '../../pictures/body.png';
+{/* <div className="bodyScanImageDiv_page_7">
+                        <img src={body} alt="Body diagram" id="body_page_7_script_12" />
+                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_feelings_page_7_script_12" className="body_text_box" defaultValue={this.getValue("body_image_text_feelings_page_7_script_12")} placeholder='Feeling' />
+                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_head_page_7_script_12" className="body_text_box" defaultValue={this.getValue("body_image_text_head_page_7_script_12")} placeholder='Head' />
+                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_chest_page_7_script_12" className="body_text_box" defaultValue={this.getValue("body_image_text_chest_page_7_script_12")} placeholder='Chest' />
+                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_mouth_and_jaw_page_7_script_12" className="body_text_box" defaultValue={this.getValue("body_image_text_mouth_and_jaw_page_7_script_12")} placeholder='Mouth and jaw' />
+                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_breathing_page_7_script_12" className="body_text_box" defaultValue={this.getValue("body_image_text_breathing_page_7_script_12")} placeholder='Breathing'/>
+                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_shoulders_page_7_script_12" className="body_text_box" defaultValue={this.getValue("body_image_text_shoulders_page_7_script_12")} placeholder='Shoulders' />
+                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_stomach_page_7_script_12" className="body_text_box" defaultValue={this.getValue("body_image_text_stomach_page_7_script_12")} placeholder='Stomach' />
+                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_hands_and_arms_page_7_script_12" className="body_text_box" defaultValue={this.getValue("body_image_text_hands_and_arms_page_7_script_12")} placeholder='Hands and arms' />
+                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_legs_and_feet_page_7_script_12" className="body_text_box" defaultValue={this.getValue("body_image_text_legs_and_feet_page_7_script_12")} placeholder='Legs and feet' />
+                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_fidgeting_page_7_script_12" className="body_text_box" defaultValue={this.getValue("body_image_text_fidgeting_page_7_script_12")} placeholder='Fidgeting' />
+                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_change_in_energy_level_page_7_script_12" className="body_text_box" defaultValue={this.getValue("body_image_text_change_in_energy_level_page_7_script_12")} placeholder='Change in energy level' />
+                    </div> */}

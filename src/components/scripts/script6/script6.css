@@ -1,0 +1,458 @@
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Page 1 */
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 2 */ 
+
+/* See allScripts.css for the general scripts section */
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 3 */ 
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 4 */ 
+
+#text_box_number_1_page_4_script_6{
+    width: 100%;
+    border: black;
+    border-style: solid;
+    position: relative;
+    top: 25px;
+    font-size: 25px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 5 */ 
+
+.pause#pause_page_5_script_6{
+    width: 200px;
+    margin-left: -50px;
+}
+
+.allEars#all_ears_page_5_script_6{
+    width: 120px;
+    height: 150px;
+
+}
+
+label {
+    text-align: center;
+}
+
+.side_text, .text_box_inputs{
+    font-size: 25px;
+}
+
+#text_box_number_1_page_5_script_6, #text_box_number_2_page_5_script_6, #text_box_number_3_page_5_script_6, #text_box_number_4_page_5_script_6 {
+    width: 500px;
+    height: 40px;
+    margin: 10px;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 6 */ 
+
+.rotate {
+    transform: rotate(60deg);
+    transition: transform 150ms ease;
+    transform-origin: center center;
+}
+
+.no_rotate{
+    transform: rotate(0deg);
+    transition: transform 150ms ease;
+    transform-origin: center center;
+}
+
+
+.hamburger_menu_div{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 1%;
+    margin-right: 1%;
+
+}
+
+    /* step 1 */
+
+    .bodyScanImageDiv_step_1 > img{
+        width: 14.7em;
+        margin-left: 70%;
+        margin-bottom: -300px;
+    }
+
+    #body_image_text_feelings_step_1_script_6{
+        position: absolute;
+        width: 2.5em;
+        height: 1.3em;
+        margin-top: 15px;
+        margin-left: -210px;
+    }
+    
+    #body_image_text_head_step_1_script_6{
+        position: absolute;
+        width: 2.7em;
+        height: 1.3em;
+        margin-top: 18px;
+        margin-left: -78px;
+    }
+    
+    #body_image_text_chest_step_1_script_6{
+        position: absolute;
+        width: 2.3em;
+        height: 1.2em;
+        margin-top: 60.8px;
+        margin-left: -215px;
+    }
+    
+    #body_image_text_mouth_and_jaw_step_1_script_6{
+        position: absolute;
+        width: 2.7em;
+        height: 1.25em;
+        margin-top: 62px;
+        margin-left: -76.8px;
+    }
+    
+    
+    #body_image_text_breathing_step_1_script_6{
+        position: absolute;
+        width: 2.38em;
+        height: 1.2em;
+        margin-top: 102.8px;
+        margin-left: -215px;
+    }
+    
+    #body_image_text_shoulders_step_1_script_6{
+        position: absolute;
+        width: 2.2em;
+        height: 1.25em;
+        margin-top: 108px;
+        margin-left: -65px;
+    }
+    
+    #body_image_text_stomach_step_1_script_6{
+        position: absolute;
+        width: 2.7em;
+        height: 1.55em;
+        margin-top: 151.5px;
+        margin-left: -76.5px;
+    }
+    
+    #body_image_text_hands_and_arms_step_1_script_6{
+        position: absolute;
+        width: 1.75em;
+        height: 1.8em;
+        margin-top: 188px;
+        margin-left: -207px;
+    }
+    
+    #body_image_text_legs_and_feet_step_1_script_6{
+        position: absolute;
+        width: 1.65em;
+        height: 1.6em;
+        margin-top: 210px;
+        margin-left: -52px;
+    }
+    
+    #body_image_text_fidgeting_step_1_script_6{
+        position: absolute;
+        width: 3.3em;
+        height: .8em;
+        margin-top: 278.8px;
+        margin-left: -206px;
+    }
+    
+    #body_image_text_change_in_energy_level_step_1_script_6{
+        position: absolute;
+        width: 3.5em;
+        height: .8em;
+        margin-top: 278.8px;
+        margin-left: -103px;
+    }
+
+    #instruction_box_number_1_step_1_script_6{
+        width: 60%;
+    }
+
+    #text_box_number_1_step_1_script_6{
+        width: 60%;
+        height: 30px;
+    }
+
+    #instruction_box_number_2_step_1_script_6{
+        width: 60%;
+        height: 400px;
+        display: inline-block;
+        position: relative;
+    }
+
+    #phone_step_1_script_6{
+        width: 20%;
+        margin-left: 50px;
+        margin-bottom: 100px;
+        display: inline;
+        position: absolute;
+    }
+
+    /* step 2 */
+
+    #form_step_2_script_6{
+        text-align: center;
+    }
+
+    label {
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    .side_text, .text_box_inputs{
+        font-size: 25px;
+    }
+    
+    #text_box_number_1_step_2_script_6 {
+        width: 900px;
+        height: 40px;
+    }
+
+    #instruction_box_number_1_step_2_script_6{
+        width: 60%;
+    }
+
+    #text_box_number_2_step_2_script_6{
+        width: 60%;
+    }
+
+    #text_box_number_3_step_2_script_6{
+        width: 40%;
+        height: 30px;
+    }
+
+    #ul_div_step_2_script_6{
+        display: inline-block;
+
+    }
+    #image_div_step_2_script_6{
+        position: absolute;
+        display: inline;
+        margin-top: 20%;
+    }
+
+    /* step 3 */
+
+    .bodyScanImageDiv_step_3 > img{
+        width: 14.7em;
+        margin-left: 70%;
+        margin-bottom: -300px;
+    }
+
+    #body_image_text_feelings_step_3_script_6{
+        position: absolute;
+        width: 2.5em;
+        height: 1.3em;
+        margin-top: 15px;
+        margin-left: -210px;
+    }
+    
+    #body_image_text_head_step_3_script_6{
+        position: absolute;
+        width: 2.7em;
+        height: 1.3em;
+        margin-top: 18px;
+        margin-left: -78px;
+    }
+    
+    #body_image_text_chest_step_3_script_6{
+        position: absolute;
+        width: 2.3em;
+        height: 1.2em;
+        margin-top: 60.8px;
+        margin-left: -215px;
+    }
+    
+    #body_image_text_mouth_and_jaw_step_3_script_6{
+        position: absolute;
+        width: 2.7em;
+        height: 1.25em;
+        margin-top: 62px;
+        margin-left: -76.8px;
+    }
+    
+    
+    #body_image_text_breathing_step_3_script_6{
+        position: absolute;
+        width: 2.38em;
+        height: 1.2em;
+        margin-top: 102.8px;
+        margin-left: -215px;
+    }
+    
+    #body_image_text_shoulders_step_3_script_6{
+        position: absolute;
+        width: 2.2em;
+        height: 1.25em;
+        margin-top: 108px;
+        margin-left: -65px;
+    }
+    
+    #body_image_text_stomach_step_3_script_6{
+        position: absolute;
+        width: 2.7em;
+        height: 1.55em;
+        margin-top: 151.5px;
+        margin-left: -76.5px;
+    }
+    
+    #body_image_text_hands_and_arms_step_3_script_6{
+        position: absolute;
+        width: 1.75em;
+        height: 1.8em;
+        margin-top: 188px;
+        margin-left: -207px;
+    }
+    
+    #body_image_text_legs_and_feet_step_3_script_6{
+        position: absolute;
+        width: 1.65em;
+        height: 1.6em;
+        margin-top: 210px;
+        margin-left: -52px;
+    }
+    
+    #body_image_text_fidgeting_step_3_script_6{
+        position: absolute;
+        width: 3.3em;
+        height: .8em;
+        margin-top: 278.8px;
+        margin-left: -206px;
+    }
+    
+    #body_image_text_change_in_energy_level_step_3_script_6{
+        position: absolute;
+        width: 3.5em;
+        height: .8em;
+        margin-top: 278.8px;
+        margin-left: -103px;
+    }
+
+    #text_box_number_1_step_3_script_6, #text_box_number_2_step_3_script_6{
+        width: 300px;
+        height: 30px;
+    }
+    #instruction_box_number_1_step_3_script_6, #instruction_box_number_2_step_3_script_6{
+        width: 60%;
+    }
+
+    #next_to_image_text_number_2_step_3_script_6{
+        width: 60%;
+        height: 400px;
+        display: inline-block;
+        position: relative;
+    }
+
+    #phone_step_3_script_6{
+        width: 20%;
+        margin-left: 50px;
+        margin-bottom: 100px;
+        display: inline;
+        position: absolute;
+    }
+    
+    /* step 4 */
+
+    .solid_box{
+        border: solid black;
+        margin-left: 10%;
+        width: 70%;
+    }
+
+    #text_box_number_1_step_4_script_6, #text_box_number_2_step_4_script_6{
+        width: 80%;
+        height: 1em;
+    }
+
+    #text_box_number_3_step_4_script_6{
+        height: 30px;
+        width: 150px;
+    }
+    
+    #image_and_instruction_box_div_step_4_script_6{
+        display: inline;
+    }
+    
+    
+    #image_and_instruction_box_div_step_4_script_6 > div{
+        width: 300px;
+        height: 100px;
+        display: inline-block;
+        vertical-align: middle;
+        
+    }
+    
+    #image_and_instruction_box_div_step_4_script_6 > img{
+        width: 400px;
+        vertical-align: middle;
+        
+    }
+    
+    #instruction_box_number_2_step_4_script_6{
+        width: 900px;
+    }
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 7 */ 
+
+
+/* See allScripts.css for the general scripts section */
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 8 */ 
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 9 */ 
+
+/* See allScripts.css for the general scripts section */
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 10 */ 
+
+#text_box_number_1_page_10_script_6{
+    position: relative;
+    display: inline-block;
+    width: 400px;
+}
+
+
+#text_box_number_2_page_10_script_6{
+    position: relative;
+    width: 350px;
+    height: 30px;
+    margin: 10px 20px -4px 0px;
+    display: inline-block;
+}
+
+
+p#text_under_text_box_number_1_page_10_script_6{
+    /* text-align: center; */
+    margin-left: 80px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 11 */ 
+
+
+/* See allScripts.css for the general scripts section */
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 12 */ 
+
+/* See allScripts.css for the general scripts section */
+
+
