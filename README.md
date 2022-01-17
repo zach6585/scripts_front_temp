@@ -75,7 +75,6 @@ Script 11:
         - Does "Link: Able to insert this" mean that it should be a textbox?
 
 
-PAT = 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
 
 
 
