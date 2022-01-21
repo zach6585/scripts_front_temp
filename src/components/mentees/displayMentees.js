@@ -12,7 +12,7 @@ function DisplayMentees(props){
         let total_list_of_mentee_buttons = [];
         if (props.mentees.mentees !== undefined){
             for (const i of props.mentees.mentees){
-                total_list_of_mentee_buttons.push(<button key={i.name} onClick={ event => handleMenteeButtonChoiceClick(event, i.id)}>{i.name}</button>)
+                total_list_of_mentee_buttons.push(<button className='mentee_button' key={i.name} onClick={ event => handleMenteeButtonChoiceClick(event, i.id)}>{i.name}</button>)
             }
             setMenteeList(total_list_of_mentee_buttons)
         }
@@ -29,7 +29,9 @@ function DisplayMentees(props){
     // eslint-disable-next-line
     useEffect (() => {menteeButtonMaker()},[])
     return(
-        <div id="mentee_button_list">
+        <div id="mentee_buttons">
+            <h1 className='bold center'>Which Mentee are you working with today?</h1>
+            <br/><br/>
             {menteeButtonList}
         </div>
     )

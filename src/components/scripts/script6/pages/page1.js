@@ -2,14 +2,7 @@ import { Component } from 'react';
 
 class Page1 extends Component {
 
-    handleScroll=()=>{
-        window.scroll({top:0,behavior:'smooth'})
-    
-    }
-    componentDidMount() {
-        this.handleScroll()
-  }
-    render() {
+   render() {
         return (
             <div className="sheet">
                  <h1 className="bold center">Peer mentoring session 6</h1>

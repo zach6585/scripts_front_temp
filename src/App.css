@@ -11,11 +11,97 @@
 }
 
 
-.hamburger_menu_div{
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin-top: 2%;
-    margin-left: 2%;
 
+
+/* Computer screen size */
+@media (max-width: 1023px) and (min-width: 769px ) {
+    #hamburger_menu_ps_div{
+        position: absolute;
+        display: inline;
+        width: 500px;
+        padding: 10px;
+        margin-left: -500px;
+        margin-top: -20px
+    }
+    
+    #hamburger_menu_ps_div > p{
+        color: blue;
+        display: inline;
+        padding: 10px;
+        position: relative;
+        margin-bottom: -6%;
+    
+    }
+
+    .hamburger_menu_div{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 2%;
+        margin-right: 2%;
+    
+    }
+}
+
+/* Ipad Pro screen size */
+@media (min-width: 1024px) {
+    
+    #hamburger_menu_ps_div{
+        position: absolute;
+        display: inline;
+        width: 600px;
+        padding: 10px;
+        margin-left: -570px;
+        margin-top: -20px
+    }
+    
+    #hamburger_menu_ps_div > p{
+        color: blue;
+        display: inline;
+        padding: 10px;
+        position: relative;
+        margin-bottom: -6%;
+    
+    }
+
+    .hamburger_menu_div{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 2%;
+        margin-right: 2%;
+    
+    }
+}
+
+/* iPad screen size */
+
+@media (max-width: 768px){
+    
+    #hamburger_menu_ps_div{
+        position: absolute;
+        display: inline;
+        width: 600px;
+        padding: 10px;
+        margin-left: -570px;
+        margin-top: -20px
+    }
+    
+    #hamburger_menu_ps_div > p{
+        color: blue;
+        display: inline;
+        padding: 10px;
+        position: relative;
+        margin-bottom: -6%;
+    
+    }
+
+    .hamburger_menu_div{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 2%;
+        margin-right: -2%;
+    
+    }
 }

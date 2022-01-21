@@ -70,7 +70,6 @@
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 7 */ 
 
-/* step 1 */
 
 .bodyScanImageDiv_page_7 > img{
     width: 14.7em;
@@ -190,9 +189,6 @@
     display: inline;
     position: absolute;
 }
-
-/* step 2 */
-
 
 
 /* step 3 */
@@ -337,7 +333,8 @@
 }
 
 #text_box_number_2_page_8_script_12{
-    width: 60%;
+    width: 600px;
+    height: 300px;
 }
 
 #text_box_number_3_page_8_script_12{

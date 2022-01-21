@@ -11,21 +11,12 @@ import { patchTexts, postTexts } from '../../../../actions/text';
 
 class Page6 extends Component {
     
-    
-    handleScroll=()=>{
-        window.scroll({top:0,behavior:'smooth'})
-    
-    }
-    componentDidMount() {
-        this.handleScroll()
-    }
-
-    handleChange = (event) => {
+   handleChange = (event) => {
         const object_outcome = this.getObject(event.target.id)
         object_outcome === "" ? 
-        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: '2'})
+        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
         :
-        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: '2'})
+        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
 
     }
     
@@ -81,7 +72,8 @@ class Page6 extends Component {
 const mapStateToProps = state => {
     return{
         texts: state.texts.curatedTextsFromCurrentScript,
-        mentee_id: state.mentees.current_mentee_id
+        mentee_id: state.mentees.current_mentee_id,
+        script: state.texts.currentScript
     }
 }
 

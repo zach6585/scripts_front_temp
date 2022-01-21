@@ -3,13 +3,7 @@ import { Component } from 'react';
 
 
 class Page3 extends Component {
-    handleScroll=()=>{
-        window.scroll({top:0,behavior:'smooth'})
     
-    }
-    componentDidMount() {
-        this.handleScroll()
-  }
     render() {
         return (
             <div className="sheet">
@@ -29,6 +23,7 @@ class Page3 extends Component {
         )
     }
 }
+
 export default Page3;
 
 

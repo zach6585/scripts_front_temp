@@ -3,11 +3,10 @@ import SessionStart from '../../general pages/sessionstart';
 
 
 class Page2 extends Component {
-    
-
-    render() {
+   
+   render() {
         return (
-           <SessionStart script={"3"} /> 
+           <SessionStart /> 
         )
     }
 }

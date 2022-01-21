@@ -5,8 +5,8 @@ import { patchTexts, postTexts } from '../../../actions/text';
 
 
 import pressrecord from '../pictures/pressrecord.png'; 
-import check from "../pictures/check.png";
-import redX from "../pictures/redx.png";
+import checkButSmaller from "../pictures/checkbutsmaller.png";
+import redXButSmaller from "../pictures/redxbutsmaller.png";
 
 
 class SessionStart extends Component {
@@ -17,14 +17,15 @@ class SessionStart extends Component {
         words_that_appear_when_you_click_red_x: ''
         }
     }
-        handleClick = (e, letter) => {
-            if (letter === 'c'){
-                this.setState({handleclick: {words_that_appear_when_you_click_green_check: <GreenCheckClicked />, words_that_appear_when_you_click_red_x: ''}})
-            }
-            else if (letter === 'x'){
-                this.setState({handleclick: {words_that_appear_when_you_click_green_check : null, words_that_appear_when_you_click_red_x: "Go to the next page"}})
-            }
+
+    handleClick = (e, letter) => {
+        if (letter === 'c'){
+            this.setState({handleclick: {words_that_appear_when_you_click_green_check: <GreenCheckClicked />, words_that_appear_when_you_click_red_x: ''}})
         }
+        else if (letter === 'x'){
+            this.setState({handleclick: {words_that_appear_when_you_click_green_check : null, words_that_appear_when_you_click_red_x: "Go to the next page"}})
+        }
+    }
 
     
     handleChange = (event) => {
@@ -63,11 +64,11 @@ class SessionStart extends Component {
                         Was there anything last week you wanted to talk about more? 
                     </p>
                     <div className='container_for_medium_margin'>
-                        <img className="check" src={check} alt="Check" onClick={(event) => this.handleClick(event, 'c')} /><p className="what_does_your_mentor_say">Your mentee says yes</p>
+                        <img className="check" src={checkButSmaller} alt="Check" onClick={(event) => this.handleClick(event, 'c')} /><p className="what_does_your_mentor_say">Your mentee says yes</p>
                         <br/>
                         <div className="choicePicked">{this.state.handleclick.words_that_appear_when_you_click_green_check}</div>
                         <br/><br/>
-                        <img className="redX" src={redX} alt="Red X" onClick={(event) => this.handleClick(event, 'x')} /><p className="what_does_your_mentor_say">Your mentee says no</p>
+                        <img className="redX" src={redXButSmaller} alt="Red X" onClick={(event) => this.handleClick(event, 'x')} /><p className="what_does_your_mentor_say">Your mentee says no</p>
                         <br/>
                         <p className="choicePicked">{this.state.handleclick.words_that_appear_when_you_click_red_x}</p>
                     </div>
@@ -93,8 +94,10 @@ class GreenCheckClicked extends Component{
 
 const mapStateToProps = state => {
     return{
+        script: state.texts.currentScript,
         texts: state.texts.curatedTextsFromCurrentScript,
         mentee_id: state.mentees.current_mentee_id
+        
     }
 }
 

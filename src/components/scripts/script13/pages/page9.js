@@ -5,14 +5,7 @@ import pause from "../../pictures/pause.png";
 
 class Page9 extends Component {
 
-    handleScroll=()=>{
-        window.scroll({top:0,behavior:'smooth'})
-    
-    }
-    componentDidMount() {
-        this.handleScroll()
-  }
-    render() {
+   render() {
         return (
             <div className="sheet">
                  <h1 className="bold center">Where to do coping strategies</h1>

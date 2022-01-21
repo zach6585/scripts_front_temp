@@ -1,230 +1,237 @@
-/*-------------------------------------------------------------------------------------------------------------------------------- */
+@media (min-width: 1025px) {
+    /*-------------------------------------------------------------------------------------------------------------------------------- */
 
-/* Page 1 */
+    /* Page 1 */
 
-/*-------------------------------------------------------------------------------------------------------------------------------- */
-/* Page 2 */ 
+    /*-------------------------------------------------------------------------------------------------------------------------------- */
+    /* Page 2 */ 
 
-/* See allScripts.css for the general scripts section */
-
-
-/*-------------------------------------------------------------------------------------------------------------------------------- */
-/* Page 3 */ 
+    /* See allScripts.css for the general scripts section */
 
 
-/*-------------------------------------------------------------------------------------------------------------------------------- */
-/* Page 4 */ 
+    /*-------------------------------------------------------------------------------------------------------------------------------- */
+    /* Page 3 */ 
 
 
-#instruction_box_number_1_page_4_script_2 {
-    position: relative;
-    width: 66.5%;
-    height: auto;
+    /*-------------------------------------------------------------------------------------------------------------------------------- */
+    /* Page 4 */ 
+
+
+    #instruction_box_number_1_page_4_script_2 {
+        position: relative;
+        width: 66.5%;
+        height: auto;
+    }
+
+
+    #instruction_box_number_2_page_4_script_2 {
+        width: 800px;
+        height: 250px;
+    }
+
+
+    #share_your_screen_page_4_script_2 {
+        position: absolute;
+        top: 0;
+        left: 550px;
+        width: 80%;
+    }
+
+    #text_box_number_1_page_4_script_2{
+        margin-top: 10px;
+    }
+
+    #stop_sharing_screen_page_4_script_2 {
+        display: block;
+        margin: auto;
+        width: 400px;
+    }
+
+
+    /*-------------------------------------------------------------------------------------------------------------------------------- */
+    /* Page 5 */ 
+
+    #text_box_number_1_page_5_script_2 {
+        position: relative;
+        display: inline-block;
+        width: 700px;
+        height: 100px;
+    }
+
+    /*-------------------------------------------------------------------------------------------------------------------------------- */
+    /* Page 6 */ 
+
+
+
+    #instruction_box_number_1_page_6_script_2{
+        width: 400px;
+        height: 330px;
+        padding: 10px;
+        display: inline-block;
+
+    }
+
+    #text_box_number_1_page_6_script_2{
+        position: relative;
+        display: inline-block;
+        width: 300px;
+        height: 40px;
+    }
+
+    #share_your_screen_page_6_script_2{
+        width: 350px;
+        margin-left: -5%;
+    }
+
+    #text_box_number_2_page_6_script_2{
+        position: relative;
+        display: inline-block;
+        width: 600px;
+        height: 100px;
+    }
+
+    #stop_sharing_screen_page_6_script_2{
+        width: 500px;
+        display: block;
+        margin: auto;
+        justify-content: center;
+    }
+
+
+
+
+
+
+    /*-------------------------------------------------------------------------------------------------------------------------------- */
+    /* Page 7 */ 
+
+
+
+    /*-------------------------------------------------------------------------------------------------------------------------------- */
+    /* Page 8 */ 
+
+    #instruction_box_number_1_page_8_script_2 {
+        width: 231px;
+        height: 50px;
+        position: relative;
+        float: left;
+    }
+
+    #share_your_screen_number_1_page_8_script_2{
+        width: 500px;
+    }
+
+    #jake{
+        width: 200px;
+        display: block;
+        margin: auto;
+        justify-content: center;
+    }
+
+    #jerome{
+        width: 200px;
+        height: 150px;
+        display: block;
+        margin: auto;
+        justify-content: center;
+    }
+
+    #maggie{
+        width: 200px;
+        display: block;
+        margin: auto;
+        justify-content: center;
+    }
+
+    #stop_sharing_screen_page_8_script_2{
+        width: 500px;
+        display: block;
+        margin: auto;
+        justify-content: center;
+    }
+
+    #text_box_number_1_page_8_script_2{
+        position: relative;
+        display: inline-block;
+        /* float: left; */
+        width: 29%;
+        
+    }
+
+    #text_box_number_2_page_8_script_2{
+        position: relative;
+        /* display: inline-block; */
+        width: 100%;
+    }
+
+    #instruction_box_number_2_page_8_script_2{
+        width: 800px;
+        height: 450px;
+        margin:0 20px 15px 50px;
+    }
+
+    #instruction_box_number_3_page_8_script_2 {
+        width: 350px;
+        height: 175px;
+        /* float: left; */
+        display: inline-block;
+    }
+
+    #share_your_screen_number_2_page_8_script_2{
+        width: 45%;
+        position: absolute;
+    }
+
+    #optimize_video_page_8_script_2{
+        width: 90%;
+        padding-top: 10%;
+        display: flex;
+    }
+
+    #text_box_number_3_page_8_script_2 {
+        width: 100%;
+        height: 120px;
+    }
+
+
+    /*-------------------------------------------------------------------------------------------------------------------------------- */
+    /* Page 9 */ 
+
+
+    #text_box_number_1_page_9_script_2{
+        position: relative;
+        display: inline-block;
+        width: 400px;
+        height: 40px;
+    }
+
+
+    #instruction_box_number_1_page_9_script_2{
+        width: 800px;
+        height: 150px;
+        margin:0 20px 15px 0px;
+        
+    }
+
+
+    /*-------------------------------------------------------------------------------------------------------------------------------- */
+    /* Page 10 */ 
+
+    /* See allScripts.css for the general scripts section */
+
+    /*-------------------------------------------------------------------------------------------------------------------------------- */
+    /* Page 11 */ 
+
+    /* See allScripts.css for the general scripts section */
+
+    /*-------------------------------------------------------------------------------------------------------------------------------- */
+    /* Page 12 */ 
+
+    /* See allScripts.css for the general scripts section */
+
+    /*-------------------------------------------------------------------------------------------------------------------------------- */
+    /* Page 13 */ 
+
+    /* See allScripts.css for the general scripts section */
+
 }
-
-
-#instruction_box_number_2_page_4_script_2 {
-    width: 800px;
-    height: 250px;
-}
-
-
-#share_your_screen_page_4_script_2 {
-    position: absolute;
-    top: 0;
-    left: 450px;
-    width: 80%;
-}
-
-#stop_sharing_screen_page_4_script_2 {
-    display: block;
-    margin: auto;
-    width: 400px;
-}
-
-
-/*-------------------------------------------------------------------------------------------------------------------------------- */
-/* Page 5 */ 
-
-#text_box_number_1_page_5_script_2 {
-    position: relative;
-    display: inline-block;
-    width: 300px;
-    height: 40px;
-}
-
-/*-------------------------------------------------------------------------------------------------------------------------------- */
-/* Page 6 */ 
-
-
-
-#instruction_box_number_1_page_6_script_2{
-    width: 400px;
-    height: 330px;
-    padding: 10px;
-    display: inline-block;
-
-}
-
-#text_box_number_1_page_6_script_2{
-    position: relative;
-    display: inline-block;
-    width: 300px;
-    height: 40px;
-}
-
-#share_your_screen_page_6_script_2{
-    width: 350px;
-    margin-left: -5%;
-}
-
-#text_box_number_2_page_6_script_2{
-    position: relative;
-    display: inline-block;
-    width: 300px;
-    height: 40px;
-}
-
-#stop_sharing_screen_page_6_script_2{
-    width: 500px;
-    display: block;
-    margin: auto;
-    justify-content: center;
-}
-
-
-
-
-
-
-/*-------------------------------------------------------------------------------------------------------------------------------- */
-/* Page 7 */ 
-
-
-
-/*-------------------------------------------------------------------------------------------------------------------------------- */
-/* Page 8 */ 
-
-#instruction_box_number_1_page_8_script_2 {
-    width: 231px;
-    height: 50px;
-    position: relative;
-    float: left;
-}
-
-#share_your_screen_number_1_page_8_script_2{
-    width: 500px;
-}
-
-#jake{
-    width: 200px;
-    display: block;
-    margin: auto;
-    justify-content: center;
-}
-
-#jerome{
-    width: 200px;
-    height: 150px;
-    display: block;
-    margin: auto;
-    justify-content: center;
-}
-
-#maggie{
-    width: 200px;
-    display: block;
-    margin: auto;
-    justify-content: center;
-}
-
-#stop_sharing_screen_page_8_script_2{
-    width: 500px;
-    display: block;
-    margin: auto;
-    justify-content: center;
-}
-
-#text_box_number_1_page_8_script_2{
-    position: relative;
-    display: inline-block;
-    /* float: left; */
-    width: 29%;
-    
-}
-
-#text_box_number_2_page_8_script_2{
-    position: relative;
-    /* display: inline-block; */
-    width: 100%;
-}
-
-#instruction_box_number_2_page_8_script_2{
-    width: 800px;
-    height: 450px;
-    margin:0 20px 15px 50px;
-}
-
-#instruction_box_number_3_page_8_script_2 {
-    width: 350px;
-    height: 175px;
-    /* float: left; */
-    display: inline-block;
-}
-
-#share_your_screen_number_2_page_8_script_2{
-    width: 45%;
-    position: absolute;
-}
-
-#optimize_video_page_8_script_2{
-    width: 90%;
-    padding-top: 10%;
-    display: flex;
-}
-
-#text_box_number_3_page_8_script_2 {
-    width: 100%;
-    height: 120px;
-   }
-
-
-/*-------------------------------------------------------------------------------------------------------------------------------- */
-/* Page 9 */ 
-
-
-#text_box_number_1_page_9_script_2{
-    position: relative;
-    display: inline-block;
-    width: 400px;
-    height: 40px;
-}
-
-
-#instruction_box_number_1_page_9_script_2{
-    width: 800px;
-    height: 150px;
-    margin:0 20px 15px 0px;
-    
-}
-
-
-/*-------------------------------------------------------------------------------------------------------------------------------- */
-/* Page 10 */ 
-
-/* See allScripts.css for the general scripts section */
-
-/*-------------------------------------------------------------------------------------------------------------------------------- */
-/* Page 11 */ 
-
-/* See allScripts.css for the general scripts section */
-
-/*-------------------------------------------------------------------------------------------------------------------------------- */
-/* Page 12 */ 
-
-/* See allScripts.css for the general scripts section */
-
-/*-------------------------------------------------------------------------------------------------------------------------------- */
-/* Page 13 */ 
-
-/* See allScripts.css for the general scripts section */

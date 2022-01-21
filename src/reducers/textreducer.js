@@ -2,7 +2,8 @@ import { TEXTS_LOADING, TEXTS_SUCCESS } from '../actions/text';
 const initialState = {
   loading: false,
   error: "",
-  curatedTextsFromCurrentScript: null
+  curatedTextsFromCurrentScript: null,
+  currentScript: ""
 }
 
 export function textReducer(state = initialState, action) {
@@ -27,7 +28,8 @@ export function textReducer(state = initialState, action) {
           ...state,
           loading: false,
           err: '',
-          curatedTextsFromCurrentScript: action.payload
+          curatedTextsFromCurrentScript: action.payload.texts,
+          currentScript: action.payload.script_number
         }
 
       case 'TEXT_UPDATED': //Number 1 from above
@@ -46,7 +48,8 @@ export function textReducer(state = initialState, action) {
         case 'CHANGE_SCRIPT':
         return{
           ...state,
-          curatedTextsFromCurrentScript: null
+          curatedTextsFromCurrentScript: null,
+          currentScript: ""
         }
       
       default:

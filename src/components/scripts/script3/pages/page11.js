@@ -5,9 +5,10 @@ import RemindersAboutMentoring from '../../general pages/remindersaboutmentoring
 
 
 class Page11 extends Component {
-    render(){
+    
+   render(){
         return (
-            <RemindersAboutMentoring script={"3"} />
+            <RemindersAboutMentoring />
         )
     }
 }

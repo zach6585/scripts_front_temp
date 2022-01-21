@@ -25,6 +25,7 @@ class Script5List extends Component {
     pagePos: 0}
     
     handleClick = (letter) => {//This determines which button was pressed
+      window.scroll({top:0,behavior:'smooth'});
       if (letter === 'b'){
         this.setState((prevState) => ({pagePos: prevState.pagePos - 1}))
       }
@@ -37,8 +38,8 @@ class Script5List extends Component {
       return(
       <div className="Script5">{this.state.component_list[this.state.pagePos]}
         <div id="buttonDiv">
-          {this.state.pagePos === 0 ? null :  <img alt="left arrow back" src={larrow} onClick={() => this.handleClick('b')} className="left arrow button"/>}
-          {this.state.pagePos === this.state.component_list.length - 1 ? null :  <img alt="right arrow forward" src={rarrow} onClick={() => this.handleClick('f')} className="right arrow button"/>}
+          {this.state.pagePos === 0 ? null :  <img alt="left arrow back" src={larrow} onClick={() => this.handleClick('b')} className="left page_button"/>}
+          {this.state.pagePos === this.state.component_list.length - 1 ? null :  <img alt="right arrow forward" src={rarrow} onClick={() => this.handleClick('f')} className="right page_button"/>}
         </div>
         <h3 className="page_num">{this.state.pagePos + 1}</h3>
       </div>

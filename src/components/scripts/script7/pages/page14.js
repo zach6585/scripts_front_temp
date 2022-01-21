@@ -1,23 +1,22 @@
 import { Component } from 'react';
 
-import SchedulingForNextWeek from '../../general pages/schedulingfornextweek.js';
+import RemindersAboutMentoring from '../../general pages/remindersaboutmentoring.js';
+
 
 class Page14 extends Component {
-
     
-    handleScroll=()=>{
-        window.scroll({top:0,behavior:'smooth'})
-    
-    }
-    componentDidMount() {
-        this.handleScroll()
-        
-    }
-
-    render() {
+    render() { 
         return (
-            <SchedulingForNextWeek script={"7"} />
+            <div>
+                <RemindersAboutMentoring />
+                <div className='sheet left'>
+                    <p>
+                        This week, when you do your mood logs, try using the body scan worksheet first. The body scan worksheet might help you do the mood log. 
+                    </p>  
+                </div>
+            </div>
         )
     }
 }
+
 export default Page14;

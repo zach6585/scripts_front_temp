@@ -1,8 +1,11 @@
 import { Component } from 'react';
+import { connect } from 'react-redux';
+
+import { patchTexts, postTexts } from '../../../actions/text';
 
 import allEars from "../pictures/allears.png"
 import pause from "../pictures/pause.png"
-import axios from 'axios';
+
 
 
 class RemindersAboutMentoring extends Component {
@@ -24,17 +27,17 @@ class RemindersAboutMentoring extends Component {
                 this.setState({handleclick: {oft : null, five: <Five />, highlight_f: "highlighted", highlight_o: null, highlight_z: null}})
             }
             else if (letter === 'o'){
-                this.setState({handleclick: {five : null, otf: <OTFZ otf_or_z={'otf'} script={this.props.script} />, highlight_f: null, highlight_o: "highlighted", highlight_z: null}})
+                this.setState({handleclick: {five : null, otf: <OTFZ props={this.props} otf_or_z={'otf'} script={this.props.script} />, highlight_f: null, highlight_o: "highlighted", highlight_z: null}})
             }
             else if (letter === 'z'){
-                this.setState({handleclick: {five : null, otf: <OTFZ otf_or_z={'z'} script={this.props.script} />, highlight_f: null, highlight_o: null, highlight_z: "highlighted"}})
+                this.setState({handleclick: {five : null, otf: <OTFZ props={this.props} otf_or_z={'z'} script={this.props.script} />, highlight_f: null, highlight_o: null, highlight_z: "highlighted"}})
             }
        
     }
 
     componentDidMount = () => {
         if (this.props.extrapractice){
-            this.setState({extrapracticesession: <ExtraPracticeSection script={this.props.script} />})
+            this.setState({extrapracticesession: <ExtraPracticeSection props={this.props} script={this.props.script} />})
         }
     }
 
@@ -71,42 +74,25 @@ class Five extends Component{
 
 class OTFZ extends Component{
 
-    state = {
-        text: {}
+    handleChange = (event) => {
+        const object_outcome = this.getObject(event.target.id)
+        object_outcome === "" ? 
+        this.props.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.props.script})
+        :
+        this.props.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.props.script})
+
     }
     
-    componentDidMount() {
-        axios.get("http://localhost:3001/texts")
-        .then(res => {
-            const texts = res.data;
-            for (const txt of texts){
-                if (txt.script === this.props.script){
-                    this.setState({
-                        text: {...this.state.text, [txt.id_tag]: txt}
-                    })
-                }
-            }
-              
-    })
-}
-
-    handleChange = (event) => {
-        this.setState({text: {...this.state.text, [event.target.id]: {value: event.target.value, id_tag: event.target.id}}})
-        if (event.target.id in this.state.text){
-            axios.patch(`http://localhost:3001/texts/${this.state.text[event.target.id].id}`, {value: event.target.value, id_tag: event.target.id, script: this.props.script})
-    }
-        else {
-            axios.post("http://localhost:3001/texts", {value: event.target.value, id_tag: event.target.id, script: this.props.script })
-        }
+    getObject = (current_id_tag) => {
+        //Returns the object that has the specific id_tag
+        let current_text = this.props.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
+        return current_text ? current_text : ""
     }
 
-    getValue = (id) => {
-        for (const i in this.state.text){
-            if (this.state.text[i].id_tag === id){
-                return this.state.text[i].value;
-            }
-        }
-        return ""
+    getValue = (current_id_tag) => {
+        //Same as getObject but instead it returns the value
+        let current_text_for_value = this.props.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
+        return current_text_for_value ? current_text_for_value.value : ""
     }
         render(){
             const otf_or_z = this.props.otf_or_z
@@ -146,42 +132,26 @@ class OTFZ extends Component{
 
 class ExtraPracticeSection extends Component{
 
-    state = {
-        text: {}
+    
+    handleChange = (event) => {
+        const object_outcome = this.getObject(event.target.id)
+        object_outcome === "" ? 
+        this.props.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.props.script})
+        :
+        this.props.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.props.script})
+
     }
     
-    componentDidMount() {
-        axios.get("http://localhost:3001/texts")
-        .then(res => {
-            const texts = res.data;
-            for (const txt of texts){
-                if (txt.script === this.props.script){
-                    this.setState({
-                        text: {...this.state.text, [txt.id_tag]: txt}
-                    })
-                }
-            }
-              
-    })
-}
-
-    handleChange = (event) => {
-        this.setState({text: {...this.state.text, [event.target.id]: {value: event.target.value, id_tag: event.target.id}}})
-        if (event.target.id in this.state.text){
-            axios.patch(`http://localhost:3001/texts/${this.state.text[event.target.id].id}`, {value: event.target.value, id_tag: event.target.id, script: this.props.script})
-    }
-        else {
-            axios.post("http://localhost:3001/texts", {value: event.target.value, id_tag: event.target.id, script: this.props.script })
-        }
+    getObject = (current_id_tag) => {
+        //Returns the object that has the specific id_tag
+        let current_text = this.props.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
+        return current_text ? current_text : ""
     }
 
-    getValue = (id) => {
-        for (const i in this.state.text){
-            if (this.state.text[i].id_tag === id){
-                return this.state.text[i].value;
-            }
-        }
-        return ""
+    getValue = (current_id_tag) => {
+        //Same as getObject but instead it returns the value
+        let current_text_for_value = this.props.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
+        return current_text_for_value ? current_text_for_value.value : ""
     }
     render(){
         return(
@@ -210,4 +180,20 @@ class ExtraPracticeSection extends Component{
     }
 }
 
-export default RemindersAboutMentoring;
+const mapStateToProps = state => {
+    return{
+        texts: state.texts.curatedTextsFromCurrentScript,
+        mentee_id: state.mentees.current_mentee_id
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return{
+        patchTexts: (text_data) => dispatch(patchTexts(text_data)),
+        postTexts: (text_data) => dispatch(postTexts(text_data))
+
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(RemindersAboutMentoring);
+

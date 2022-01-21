@@ -1,7 +1,5 @@
 import { Component } from 'react';
 
-
-
 class Page5 extends Component {
     
     render() {

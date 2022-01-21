@@ -30,8 +30,9 @@ class Mentees extends Component{
     render(){
         if (this.state.current_component_name === "display mentees"){
             return(
-                <div>
-                    <DisplayMentees />
+                <div className='mentee_main_div'>
+                    <div id="display_mentees"><DisplayMentees /></div>
+                    <br/>
                     <button id="button_to_make_a_mentee" onClick={event => this.handleClick(event)}>Add a new mentee</button>
                 </div>
             )

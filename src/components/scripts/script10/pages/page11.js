@@ -1,26 +1,54 @@
 import { Component } from 'react';
 
-import RemindersAboutMentoring from '../../general pages/remindersaboutmentoring.js';
+import check from "../../pictures/check.png";
+import redX from "../../pictures/redx.png";
 
 
-class Page11 extends Component {
-    
+class Page11 extends Component{
 
-    handleScroll=()=>{
-        window.scroll({top:0,behavior:'smooth'})
-    
-    }
-    componentDidMount() {
-        this.handleScroll()
-
+    state = {
+        handleclick: {
+        words_that_appear_when_you_click_green_check: '',
+        words_that_appear_when_you_click_red_x: ''
+        }
     }
 
-    render() {
-        
-        return (
+    handleClick = (e, letter) => {
+        if (letter === 'c'){
+            this.setState({handleclick: {words_that_appear_when_you_click_green_check: 
+            <p>
+                Let's look at some solutions together. 
+                [Help your mentee review the solutions website]
+                Will insert hyperlink
+            </p>, 
+            words_that_appear_when_you_click_red_x: ''}})
+        }
+        else if (letter === 'x'){
+            this.setState({handleclick: {words_that_appear_when_you_click_green_check : '', words_that_appear_when_you_click_red_x: 
+            <p>
+                I'm so glad to hear that. 
+                We will move onto the next step.
+            </p>
+                }})
+        }
+    }
+    
+    render(){
+        return(
+            <div className="sheet">
+                <h1 className='bold'>Step 4: Reflecting on how it went</h1>
+                <div className='container_for_medium_margin'>
+                    <p>Was anything about doing that strategy hard, just now?</p>
+                    <img className="check" src={check} alt="Check" onClick={(event) => this.handleClick(event, 'c')} /><p className="what_does_your_mentor_say">Your mentee says yes</p>
+                    <br/>
+                    <div className="choicePicked">{this.state.handleclick.words_that_appear_when_you_click_green_check}</div>
+                    <br/><br/>p
+                    <img className="redX" src={redX} alt="Red X" onClick={(event) => this.handleClick(event, 'x')} /><p className="what_does_your_mentor_say">Your mentee says no</p>
+                    <br/>
+                    <div className="choicePicked">{this.state.handleclick.words_that_appear_when_you_click_red_x}</div>
+                </div>
+            </div>
             
-                <RemindersAboutMentoring script={"10"} extrapractice={true} />
-                
         )
     }
 }
@@ -28,5 +56,5 @@ class Page11 extends Component {
 export default Page11;
 
 
-           
-          
+
+

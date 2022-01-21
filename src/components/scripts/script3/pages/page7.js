@@ -1,99 +1,102 @@
 import { Component } from 'react';
 
+import { connect } from 'react-redux';
 
-import axios from 'axios';
+import { patchTexts, postTexts } from '../../../../actions/text';
 
-import body from '../../pictures/body.png';
+import BodyDiagram from '../../general pages/bodydiagram';
+
 import shareScreen from '../../pictures/sharescreen.png';
 import stopShare from '../../pictures/stopshare.png';
-
+import body from '../../pictures/body.png';
 
 
 class Page7 extends Component {
-    
+
     state = {
-        text: {}
+        body_image_clicked: false,
+        main_div: "show",
+        image_and_text_boxes_div: "hide"
     }
-    handleScroll=()=>{
-        window.scroll({top:0,behavior:'smooth'})
+
+   
+    handleBodyImageClicked = (event) => {
+        this.setState(prevState => ({body_image_clicked: !prevState.body_image_clicked, main_div: prevState.image_and_text_boxes_div, image_and_text_boxes_div: prevState.main_div}))
+        
+    }
     
-    }
-    componentDidMount() {
-        this.handleScroll()
-        axios.get("http://localhost:3001/texts")
-        .then(res => {
-            const texts = res.data;
-            for (const txt of texts){
-                if (txt.script === "3"){
-                    this.setState({
-                        text: {...this.state.text, [txt.id_tag]: txt}
-                    })
-                }
-            }
-              
-    })
-}
-
     handleChange = (event) => {
-        this.setState({text: {...this.state.text, [event.target.id]: {value: event.target.value, id_tag: event.target.id}}})
-        if (event.target.id in this.state.text){
-            axios.patch(`http://localhost:3001/texts/${this.state.text[event.target.id].id}`, {value: event.target.value, id_tag: event.target.id, script: "3"})
+        const object_outcome = this.getObject(event.target.id)
+        object_outcome === "" ? 
+        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
+        :
+        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
+
     }
-        else {
-            axios.post("http://localhost:3001/texts", {value: event.target.value, id_tag: event.target.id, script: "3" })
-        }
+    
+    getObject = (current_id_tag) => {
+        //Returns the object that has the specific id_tag
+        let current_text = this.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
+        return current_text ? current_text : ""
     }
 
-    getValue = (id) => {
-        for (const i in this.state.text){
-            if (this.state.text[i].id_tag === id){
-                return this.state.text[i].value;
-            }
-        }
-        return ""
+    getValue = (current_id_tag) => {
+        //Same as getObject but instead it returns the value
+        let current_text_for_value = this.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
+        return current_text_for_value ? current_text_for_value.value : ""
     }
 
     render() {
         return (
-            <div className="sheet">
-                <h1 className="bold center">Body scan</h1>
-                <div className="left container_for_medium_margin">
-                    <p>Now we will practice thinking about how your body feels using something called a body scan.</p>
-                    <div id="bodyScanImageDiv">
-                        <p>Our bodies can help us learn about our feelings and emotions. I will show you an example.</p>
-                        <img src={body} alt="Body diagram" id="body_page_7_script_3" />
-                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_feelings_page_7_script_3" className="body_text_box" defaultValue={this.getValue("body_image_text_feelings_page_7_script_3")} placeholder='Feeling' />
-                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_head_page_7_script_3" className="body_text_box" defaultValue={this.getValue("body_image_text_head_page_7_script_3")} placeholder='Head' />
-                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_chest_page_7_script_3" className="body_text_box" defaultValue={this.getValue("body_image_text_chest_page_7_script_3")} placeholder='Chest' />
-                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_mouth_and_jaw_page_7_script_3" className="body_text_box" defaultValue={this.getValue("body_image_text_mouth_and_jaw_page_7_script_3")} placeholder='Mouth and jaw' />
-                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_breathing_page_7_script_3" className="body_text_box" defaultValue={this.getValue("body_image_text_breathing_page_7_script_3")} placeholder='Breathing'/>
-                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_shoulders_page_7_script_3" className="body_text_box" defaultValue={this.getValue("body_image_text_shoulders_page_7_script_3")} placeholder='Shoulders' />
-                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_stomach_page_7_script_3" className="body_text_box" defaultValue={this.getValue("body_image_text_stomach_page_7_script_3")} placeholder='Stomach' />
-                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_hands_and_arms_page_7_script_3" className="body_text_box" defaultValue={this.getValue("body_image_text_hands_and_arms_page_7_script_3")} placeholder='Hands and arms' />
-                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_legs_and_feet_page_7_script_3" className="body_text_box" defaultValue={this.getValue("body_image_text_legs_and_feet_page_7_script_3")} placeholder='Legs and feet' />
-                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_fidgeting_page_7_script_3" className="body_text_box" defaultValue={this.getValue("body_image_text_fidgeting_page_7_script_3")} placeholder='Fidgeting' />
-                        <textarea onChange={event => this.handleChange(event)} id="body_image_text_change_in_energy_level_page_7_script_3" className="body_text_box" defaultValue={this.getValue("body_image_text_change_in_energy_level_page_7_script_3")} placeholder='Change in energy level' />
-
-                    </div>
-                    <br/>
-                    <div id="instruction_box_number_1_page_7_script_3" className="custom_svg demo_box container_for_medium_margin">
-                        <p className="top_line_in_instruction_box">Click on the [link to be inserted] and share your screen. </p>
-                        <br/><br/><br/>
-                        <img src={shareScreen} alt="Share screen" id="share_your_screen_page_7_script_3"/>
-                        <br/><br/>
-                        <p>Explain your example </p>
-                    </div>
-                    <br/>
-                    <div id="instruction_box_number_2_page_7_script_3" className="custom_svg demo_box container_for_large_margin">
-                        <p className='top_line_in_instruction_box'>When you are done, stop screen sharing</p>
-                        <img src={stopShare} alt="Stop sharing screen" id="stop_sharing_screen_page_7_script_3"/>
+            <div>
+                <div className='sheet'>
+                    <div className={`body_page_main_div ${this.state.main_div}`}>
+                        <h1 className="bold center">Body scan</h1>
+                        <div className="left container_for_medium_margin">
+                            
+                            <p>Now we will practice thinking about how your body feels using something called a body scan.</p>
+                            <div id="div_with_body_image_and_p_page_7_script_3">
+                                <p>Our bodies can help us learn about our feelings and emotions. I will show you an example.</p>
+                                <input type="image" alt="Body image" src={body} name="body_image" className="body_diagram_button" id="body_image_button" onClick={event => this.handleBodyImageClicked(event)} />
+                            </div>
+                            <br/>
+                            <div id="instruction_box_number_1_page_7_script_3" className="custom_svg demo_box container_for_medium_margin">
+                                <p className="top_line_in_instruction_box">Click on the [link to be inserted] and share your screen. </p>
+                                <br/><br/><br/>
+                                <img src={shareScreen} alt="Share screen" id="share_your_screen_page_7_script_3"/>
+                                <br/><br/>
+                                <p>Explain your example </p>
+                            </div>
+                            <br/>
+                            <div id="instruction_box_number_2_page_7_script_3" className="custom_svg demo_box container_for_large_margin">
+                                <p className='top_line_in_instruction_box'>When you are done, stop screen sharing</p>
+                                <img src={stopShare} alt="Stop sharing screen" id="stop_sharing_screen_page_7_script_3"/>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div className={`body_diagram_popup ${this.state.image_and_text_boxes_div}`}><BodyDiagram script={this.props.script} /></div>
             </div>
         )
     }
 
 
 }
-export default Page7;
 
+const mapStateToProps = state => {
+    return{
+        texts: state.texts.curatedTextsFromCurrentScript,
+        mentee_id: state.mentees.current_mentee_id,
+        script: state.texts.currentScript
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return{
+        patchTexts: (text_data) => dispatch(patchTexts(text_data)),
+        postTexts: (text_data) => dispatch(postTexts(text_data))
+
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Page7);

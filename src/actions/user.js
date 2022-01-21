@@ -9,6 +9,7 @@ export const userLoginAndCheck = (user_data) => dispatch => {
         else {
             localStorage.setItem("token", response.data.jwt)
             dispatch({type: 'USER_SUCCESS', payload: response.data.id })
+            dispatch({type: "GET_MENTEES", payload: response.data.mentees})
         }
     })
 } 

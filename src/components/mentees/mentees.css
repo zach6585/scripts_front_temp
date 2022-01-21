@@ -1,0 +1,97 @@
+#mentee_buttons{
+ /* This is the big div in displayMentees.js */
+ display: inline;
+}
+
+.mentee_button{
+    /* These are the buttons with the names of the individual mentees */
+    margin: 0 20px 0 20px;
+}
+
+
+#display_mentees {
+    /* The div in the main mentees.js file that holds the whole DisplayMentees component */
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+  }
+
+.mentee_main_div {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+}
+
+.mentee_main_div > button{
+    margin-top: 40px;
+}
+
+/* Ipad Pro screen size */
+@media (max-width: 1024px) and (min-width: 768px ) {
+    
+    #hamburger_menu_ps_div{
+        position: absolute;
+        display: inline;
+        width: 600px;
+        padding: 10px;
+        margin-left: -570px;
+        margin-top: -20px
+    }
+    
+    #hamburger_menu_ps_div > p{
+        color: blue;
+        display: inline;
+        padding: 10px;
+        position: relative;
+        margin-bottom: -6%;
+    
+    }
+
+/* Computer screen size */
+@media (min-width: 1025px) {
+
+    #hamburger_menu_ps_div{
+        position: absolute;
+        display: inline;
+        width: 500px;
+        padding: 10px;
+        margin-left: -500px;
+        margin-top: -20px
+    }
+    
+    #hamburger_menu_ps_div > p{
+        color: blue;
+        display: inline;
+        padding: 10px;
+        position: relative;
+        margin-bottom: -6%;
+    
+    }
+}
+    
+}
+
+/* iPad screen size */
+
+@media (max-width: 768px){
+    
+    #hamburger_menu_ps_div{
+        position: absolute;
+        display: inline;
+        width: 600px;
+        padding: 10px;
+        margin-left: -570px;
+        margin-top: -20px
+    }
+    
+    #hamburger_menu_ps_div > p{
+        color: blue;
+        display: inline;
+        padding: 10px;
+        position: relative;
+        margin-bottom: -6%;
+    
+    }
+}

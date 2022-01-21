@@ -35,7 +35,13 @@ export default function menteeReducer(state = initialState, action){
         case 'FLUSH_MENTEE_LIST':
             return {
                 ...state,
-                mentees: null
+                mentees: null,
+                current_mentee_id: -1
+            }
+        case 'CHANGE_MENTEE':
+            return{
+                ...state,
+                current_mentee_id: -1
             }
         default: 
             return state 

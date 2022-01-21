@@ -5,20 +5,9 @@ import RemindersAboutMentoring from '../../general pages/remindersaboutmentoring
 
 class Page10 extends Component {
     
-
-    handleScroll=()=>{
-        window.scroll({top:0,behavior:'smooth'})
-    
-    }
-    componentDidMount() {
-        this.handleScroll()
-
-    }
-
     render() {
-        
         return (
-            <RemindersAboutMentoring script={"8"} extrapractice={true} />
+            <RemindersAboutMentoring extrapractice={true} />
         )
     }
 }

@@ -8,7 +8,7 @@ class Page12 extends Component {
 
     render(){
         return(
-            <SharingAboutMentoring script={"3"} />
+            <SharingAboutMentoring />
         )
     }
 }

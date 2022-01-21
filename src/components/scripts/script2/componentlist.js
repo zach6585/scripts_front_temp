@@ -20,7 +20,8 @@ import Page13 from './pages/page13';
 import larrow from "../pictures/larrow.png";
 import rarrow from "../pictures/rarrow.png";
 import './script2.css';
-import '../allScripts.css';
+import './script2iPad.css';
+import './script2iPadPro.css';
 
 
 class Script2List extends Component {
@@ -31,6 +32,7 @@ class Script2List extends Component {
   }
     
     handleClick = (letter) => {//This determines which button was pressed
+      window.scroll({top:0,behavior:'smooth'});
       if (letter === 'b'){
         this.props.goBack();
       }
@@ -43,8 +45,8 @@ class Script2List extends Component {
       return(
       <div className="Script2">{this.state.component_list[this.props.pageNum-1]}
         <div id="buttonDiv">
-          {this.props.pageNum === 1 ? null :  <img alt="left arrow back" src={larrow} onClick={() => this.handleClick('b')} className="left arrow button"/>}
-          {this.props.pageNum === this.state.component_list.length  ? null :  <img alt="right arrow forward" src={rarrow} onClick={() => this.handleClick('f')} className="right arrow button"/>}
+          {this.props.pageNum === 1 ? null :  <img alt="left arrow back" src={larrow} onClick={() => this.handleClick('b')} className="left page_button"/>}
+          {this.props.pageNum === this.state.component_list.length  ? null :  <img alt="right arrow forward" src={rarrow} onClick={() => this.handleClick('f')} className="right page_button"/>}
         </div>
         <h3 className="page_num">{this.props.pageNum}</h3>
       </div>

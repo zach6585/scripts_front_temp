@@ -2,10 +2,16 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import { getTexts, changeTexts } from './actions/text';
 import { userLogout, autoLogin } from './actions/user';
-import { flushMenteeList } from './actions/mentee';
+import { flushMenteeList,changeMentee } from './actions/mentee';
 
 import hamburgerMenu from "./components/scripts/pictures/hamburger_menu.png";
+
 import './App.css';
+import './components/scripts/allScripts.css';
+import './components/scripts/allScriptsiPad.css';
+import './components/scripts/allScriptsiPadPro.css';
+
+
 
 import Script1List from './components/scripts/script1/componentlist';
 import Script2List from './components/scripts/script2/componentlist';
@@ -23,7 +29,6 @@ import Script13List from './components/scripts/script13/componentlist';
 
 import Users from './components/users/users.js';
 import Mentees from './components/mentees/mentees';
-// import ScriptDummyList from './components/scripts/dummy script/componentlist';
 
 
 class App extends Component {
@@ -34,6 +39,12 @@ class App extends Component {
     buttonList: [],
     hamburger_is_clicked: false,
     options: ''
+    // windowWidth: 0
+  }
+
+  onScrollCloseHamburger = () => {
+    //I want to make it so that when you scroll the hamburger menu closes so this function does that
+    this.setState({hamburger_is_clicked: false, options: ''});
   }
 
   componentDidMount = () => {
@@ -41,6 +52,8 @@ class App extends Component {
       this.props.autoLogin();
     }
     this.makeButtons();
+    window.addEventListener('scroll', this.onScrollCloseHamburger);
+    // this.setState({windowWidth: window.innerWidth})
   }
 
   hamburgerClick = (event) => {
@@ -51,9 +64,10 @@ class App extends Component {
     else if (this.state.hamburger_is_clicked === false){
         this.setState({hamburger_is_clicked: true,
         options: 
-        <div>
-            <p onClick={event => this.menuItemHandleClick(event, 1)}>Change Script</p>
-            <p onClick={event => this.menuItemHandleClick(event, 2)}>Logout</p>
+        <div id="hamburger_menu_ps_div">
+            <p onClick={event => this.menuItemHandleClick(event, 1)}>Change Script    |</p>
+            <p onClick={event => this.menuItemHandleClick(event, 2)}>Change Mentee    |</p>
+            <p onClick={event => this.menuItemHandleClick(event, 3)}>Logout</p>
         </div>
     })
     }
@@ -62,11 +76,21 @@ class App extends Component {
   menuItemHandleClick = (e, choice) => {
     //For the hamburger menu
     if (choice === 1){
+      this.setState({hamburger_is_clicked: false, options: ''});
       this.makeButtons();
       this.props.changeTexts();
     }
     else if (choice === 2){
-      this.setState({hamburger_is_clicked: false, options: ''})
+      this.setState({hamburger_is_clicked: false, options: ''});
+      this.makeButtons();
+      this.props.changeTexts();
+      this.props.changeMentee();
+    }
+    else if (choice === 3){
+      this.setState({hamburger_is_clicked: false, options: ''});
+      this.makeButtons();
+      this.props.changeTexts();
+      this.props.flushMenteeList();
       this.props.userLogout();
     }
      
@@ -74,7 +98,7 @@ class App extends Component {
 
   handleClick = (script_number) => {//Once a button is clicked, it takes you to the coresponding component
     // debugger;
-    this.setState({buttonList: null});
+    this.setState({buttonList: []});
     this.setState({currComponent: this.state.componentList[script_number]})
     this.props.getTexts({script_number: parseInt(script_number) + 1, mentee_id: this.props.mentees.current_mentee_id});
   }
@@ -87,7 +111,12 @@ class App extends Component {
     
   }
 
+  // changeWindowSize = () => {
+  //   this.setState({windowWidth: window.innerWidth})
+  // }
+
   render() {
+    // window.addEventListener('resize', this.changeWindowSize)
     if (localStorage.getItem("token")){
       if ((this.props.texts_loading)){
         return(
@@ -105,10 +134,12 @@ class App extends Component {
         }
       }
 
-      else if ((this.props.texts.curatedTextsFromCurrentScript === null)){
+      else {
+        if ((this.props.texts.curatedTextsFromCurrentScript === null)){
         return (
           <div>
             {this.state.buttonList}
+            {/* <p>{this.state.windowWidth} px</p> */}
           </div>
         )
       }
@@ -117,12 +148,13 @@ class App extends Component {
           <div>
             {this.state.currComponent}
             <div className="hamburger_menu_div">
-                  <img className={this.state.hamburger_is_clicked ? "rotate" : "no_rotate"} src={hamburgerMenu} alt="Hamburger menu icon" onClick={(event) => this.hamburgerClick(event)} />
                   {this.state.options}
+                  <img className={this.state.hamburger_is_clicked ? "rotate" : "no_rotate"} src={hamburgerMenu} alt="Hamburger menu icon" onClick={(event) => this.hamburgerClick(event)} />
             </div>
           </div>
           
         )
+        }
       }
     }
     else{
@@ -150,7 +182,8 @@ const mapDispatchToProps = dispatch => {
       changeTexts: () => dispatch(changeTexts()),
       userLogout: () => dispatch(userLogout()),
       flushMenteeList: () => dispatch(flushMenteeList()),
-      autoLogin: () => dispatch(autoLogin())
+      autoLogin: () => dispatch(autoLogin()),
+      changeMentee: () => dispatch(changeMentee())
   }
 }
 
