@@ -37,6 +37,7 @@ function Signup(props){
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        debugger;
         props.userSignupAndCheck({username: username, email: email, password: password, password_confirmation: password_confirmation})
     }
     
