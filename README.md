@@ -4,9 +4,7 @@ Really we can break down this into three steps:
 
 1) Finish script 12 
 
-2) Deploy
-
-3) Make changes as needed
+2) Make changes as needed
     - buttonDiv as an id in component lists can just be removed to be a plain div
     - Make sure everything that should be a textbox is one (Links, thing you wrote last week, etc.)
     - There are parts where she wants links to other pages (using redux)
