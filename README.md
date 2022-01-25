@@ -23,7 +23,6 @@ Extras:
     - Would have a "return to beginning" option on the last page
     - Need to get rid of 'here' print statements lol
     - Need to make sure that all binding prys are gone
-    - Need to learn how to clean out postgres so I can gut it of all of the past things I've made but decided not to use like pages and usertexts
     - If you really have extra time (obviously this isn't mandatory it'll just make things look cleaner) you can make all components ones that use hooks instead of class components
     - Make the buttons looks all cool
     - Maybe look into image caching
