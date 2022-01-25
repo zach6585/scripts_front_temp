@@ -17,7 +17,7 @@ export const userLoginAndCheck = (user_data) => dispatch => {
 export const userSignupAndCheck = (user_data) => dispatch => {
     axios.post("https://scripts-app-backend.herokuapp.com/users", {username: user_data.username, email: user_data.email, password: user_data.password, password_confirmation: user_data.password_confirmation})
     .then(response => {
-        debugger;
+        console.log(response.data)
         if (response.data.errors){
             dispatch({ type: 'ERRORS_FOUND', payload: response.data.errors});
         }
