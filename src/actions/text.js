@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 export const postTexts = (data) => dispatch => {
-  axios.post("https://scripts-app-backend.herokuapp.com/texts", {value: data.value, id_tag: data.id_tag, script: data.script, mentee_id: data.mentee_id })
+  axios.post("https://cors-for-all.herokuapp.com/https://scripts-app-backend.herokuapp.com/texts", {value: data.value, id_tag: data.id_tag, script: data.script, mentee_id: data.mentee_id })
   .then(resp => dispatch({type: 'TEXT_CREATED', payload: resp.data}))
 }
 
