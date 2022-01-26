@@ -13,7 +13,7 @@ export const flushMenteeList = () => dispatch => {
 
 export const createMentee = (mentee_info) => dispatch => {
     //Add a new mentee to your list of mentees
-    axios.post("https://scripts-app-backend.herokuapp.com/mentees", {name: mentee_info.name, user_id: mentee_info.user_id})
+    axios.post("https://cors-for-all.herokuapp.com/https://scripts-app-backend.herokuapp.com/mentees", {name: mentee_info.name, user_id: mentee_info.user_id})
     .then(resp => {
         dispatch({type: 'CREATE_MENTEE', payload: resp.data})
     })
