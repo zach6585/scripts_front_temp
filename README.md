@@ -2,10 +2,11 @@ Whole project:
 
 Really we can break down this into three steps:
 
-1) Finish script 12 
+1) Finish comments thing
+
+2) Finish script 12
 
 2) Make changes as needed
-    - buttonDiv as an id in component lists can just be removed to be a plain div
     - Make sure everything that should be a textbox is one (Links, thing you wrote last week, etc.)
     - There are parts where she wants links to other pages (using redux)
     - Make most text boxes higher as scrolling will make things hard.
@@ -31,6 +32,11 @@ Extras:
 Questions for Ariel:
 
 - Do you want it to look good on phones too?
+- What do you want body diagram (see script 3 page 7) to look like
+- Domain name?
+- Comments functionality?
+- Is the phone thing also supposed to be a form?
+
 
 
 

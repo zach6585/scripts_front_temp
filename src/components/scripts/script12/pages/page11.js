@@ -4,7 +4,7 @@ import check from "../../pictures/check.png";
 import redX from "../../pictures/redx.png";
 
 
-class Page12 extends Component{
+class Page11 extends Component{
 
     state = {
         handleclick: {
@@ -48,14 +48,14 @@ class Page12 extends Component{
                         <p><em>If they're not sure, help them look through the barriers from the card sort.</em></p>
                     </div>
                 
-                    <div id="instruction_box_number_1_page_12_script_9" className="custom_svg demo_box container_for_small_margin">
+                    <div id="instruction_box_number_1_page_11_script_12" className="custom_svg demo_box container_for_small_margin">
                         <p className='top_line_in_instruction_box'>
                             Help your mentee problem solve how they will deal with the barrier. Use your tools and experiences to help them solve the problem.<br/>
                             You can use the solution website <a href="https://sites.google.com/view/peer-mentoring-solutions">Link</a>
                         </p>
                     </div>
 
-                    <div id="instruction_box_number_2_page_12_script_9" className="custom_svg demo_box container_for_small_margin">
+                    <div id="instruction_box_number_2_page_11_script_12" className="custom_svg demo_box container_for_small_margin">
                         <p className='top_line_in_instruction_box'>
                             After your mentee has an idea for the problem, ask: 
                         </p>
@@ -110,4 +110,4 @@ class XPicked extends Component{
 
 
 
-export default Page12;
+export default Page11;

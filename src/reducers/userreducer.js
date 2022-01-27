@@ -1,6 +1,8 @@
 const initialState = {
   user_id: -1,
-  err: ''
+  err: '',
+  admin: false,
+  superUser: false
 }
 
 
@@ -20,11 +22,31 @@ export default function userReducer(state = initialState, action) {
           user_id: -1
         }
       case 'USER_SUCCESS':
-        return{
-          ...state,
-          err: '',
-          user_id: action.payload
+        if (action.payload.user.super_user === true){
+          return{
+            ...state,
+            err: '',
+            user_id: action.payload.id,
+            admin: true,
+            superUser: true
+          }
         }
+        else if (action.payload.user.admin === true){
+          return{
+            ...state,
+            err: '',
+            user_id: action.payload.id,
+            admin: true
+          }
+        }
+        else{
+          return{
+            ...state,
+            err: '',
+            user_id: action.payload.id
+          }
+        }
+        
       case 'CHANGE_PAGE':
         return{
           ...state,

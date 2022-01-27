@@ -60,6 +60,10 @@ class Page8 extends Component{
                                 <li className='open_circles_bullets'>“Do you like the way you feel as you do this activity?” Why? Or Why not?</li>
                                 <li className='open_circles_bullets'>“This activity makes me feel <textarea onChange={event => this.handleChange(event)} id="text_box_number_3_page_8_script_12" defaultValue={this.getValue("text_box_number_3_page_8_script_12")} />. How does it make you feel?” </li>
                             </ul>
+                            <div id="image_div_page_8_script_12">
+                                <img src={pause} className='pause' alt="Pause" />
+                                <img src={allEars} className='allEars' alt="Listen" />
+                            </div>
                             <br/><br/><br/>
                             <li>Encourage your mentee by saying things like:</li>
                             <ul>
@@ -68,17 +72,9 @@ class Page8 extends Component{
                                 <li className='open_circles_bullets'>“Keep trying!”</li>
                                 <li className='open_circles_bullets'>“Wow, you are doing such an awesome job!”</li>
                                 <li className='open_circles_bullets'>“I know you can do it.”</li>
-                                <li className='open_circles_bullets'>“I'm right here with you.”</li>
                             </ul>
                         </ul>
                     </div>
-
-                    <div id="image_div_page_8_script_12">
-                        <img src={pause} className='pause' alt="Pause" />
-                        <img src={allEars} className='allEars' alt="Listen" />
-                    </div>
-
-                
                 </div>
             </div>
             

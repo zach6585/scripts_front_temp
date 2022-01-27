@@ -1,10 +1,16 @@
 import { Component } from 'react';
 import { connect } from 'react-redux';
+
+
 import { getTexts, changeTexts } from './actions/text';
 import { userLogout, autoLogin } from './actions/user';
 import { flushMenteeList,changeMentee } from './actions/mentee';
 
+
 import hamburgerMenu from "./components/scripts/pictures/hamburger_menu.png";
+// import commentBubble from "./components/scripts/pictures/comment_bubble.png";
+
+// import Sidebar from './components/sidebar';
 
 import './App.css';
 import './components/scripts/allScripts.css';
@@ -39,6 +45,10 @@ class App extends Component {
     buttonList: [],
     hamburger_is_clicked: false,
     options: ''
+    // add_comments_text: "Add comment",
+    // comment_bubble: null, //The comment_bubble image
+    // sidebar: null, //The actual sidebar
+    // visibility: "full_opacity" //Determines if things are visible as in the sidebar is not rendered
     // windowWidth: 0
   }
 
@@ -57,19 +67,24 @@ class App extends Component {
   }
 
   hamburgerClick = (event) => {
+    //Opens and closes the hamburger menu through spinning it as well as if the menu is opened through this adds options to click
     if (this.state.hamburger_is_clicked === true){
         this.setState({hamburger_is_clicked: false, options: ''})
     }
   
     else if (this.state.hamburger_is_clicked === false){
+      if (this.props.user.admin){
         this.setState({hamburger_is_clicked: true,
-        options: 
-        <div id="hamburger_menu_ps_div">
-            <p onClick={event => this.menuItemHandleClick(event, 1)}>Change Script    |</p>
-            <p onClick={event => this.menuItemHandleClick(event, 2)}>Change Mentee    |</p>
-            <p onClick={event => this.menuItemHandleClick(event, 3)}>Logout</p>
-        </div>
-    })
+          options: 
+          <div id="hamburger_menu_ps_div">
+              <p onClick={event => this.menuItemHandleClick(event, 1)}>Change Script    |</p>
+              <p onClick={event => this.menuItemHandleClick(event, 2)}>Change Mentee    |</p>
+              <p onClick={event => this.menuItemHandleClick(event, 3)}>Logout    |</p>
+              {/* <p onClick={event => this.menuItemHandleClick(event, 4)}>{this.state.add_comments_text}</p> */}
+          </div>
+      })
+      }
+        
     }
   }
   
@@ -93,8 +108,23 @@ class App extends Component {
       this.props.flushMenteeList();
       this.props.userLogout();
     }
-     
+
+    // else if (choice === 4){
+    //   if (this.state.comment_bubble === null){
+    //     this.setState({comment_bubble: <image src={commentBubble}  alt="comment button" onClick={event => this.handleCommentButtonClick(event)}/>, add_comments_text: "Stop adding comments" })
+    //   }
+    //   else {
+    //     this.setState({comment_bubble: null, add_comments_text: "Add comment" })
+    //   }
+    // }
   }
+
+  // handleCommentButtonClick = (e) => {
+  //   let highlighted_area = window.getSelection();
+  //   if (highlighted_area.toString() !== '' && this.state.visibility === "full_opacity"){
+  //     this.setState({comment_bubble: null, sidebar: <Sidebar />, visibility: "low_opacity"})
+  //   }
+  // }
 
   handleClick = (script_number) => {//Once a button is clicked, it takes you to the coresponding component
     // debugger;
@@ -146,10 +176,13 @@ class App extends Component {
       else{
         return(
           <div>
-            {this.state.currComponent}
-            <div className="hamburger_menu_div">
-                  {this.state.options}
-                  <img className={this.state.hamburger_is_clicked ? "rotate" : "no_rotate"} src={hamburgerMenu} alt="Hamburger menu icon" onClick={(event) => this.hamburgerClick(event)} />
+            {this.state.comment_bubble}
+            <div className={this.state.visibility}>
+              {this.state.currComponent}
+              <div className="hamburger_menu_div">
+                    {this.state.options}
+                    <img className={this.state.hamburger_is_clicked ? "rotate" : "no_rotate"} src={hamburgerMenu} alt="Hamburger menu icon" onClick={(event) => this.hamburgerClick(event)} />
+              </div>
             </div>
           </div>
           
@@ -167,6 +200,7 @@ class App extends Component {
 
 
 const mapStateToProps = state => {
+  console.log(state);
   return{
     pages: state.pages,
     texts: state.texts,

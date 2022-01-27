@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export const userLoginAndCheck = (user_data) => dispatch => {
+    console.log(user_data);
     axios.post("https://cors-for-all.herokuapp.com/https://scripts-app-backend.herokuapp.com/login", {username: user_data.username, password: user_data.password})
     .then(response => {
         if (response.data.errors){
@@ -8,7 +9,7 @@ export const userLoginAndCheck = (user_data) => dispatch => {
         }
         else {
             localStorage.setItem("token", response.data.jwt)
-            dispatch({type: 'USER_SUCCESS', payload: response.data.id })
+            dispatch({type: 'USER_SUCCESS', payload: {user: response.data.user, id: response.data.id} })
             dispatch({type: "GET_MENTEES", payload: response.data.mentees})
         }
     })
