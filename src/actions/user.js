@@ -37,7 +37,7 @@ export const changeUserPage = () => dispatch => {
 export const autoLogin = () => dispatch => {
     axios.get("https://cors-for-all.herokuapp.com/https://scripts-app-backend.herokuapp.com/auto_login", {headers: {"Authenticate": localStorage.token}})
     .then(resp => {
-        dispatch({type: 'USER_SUCCESS', payload: {user: response.data.user, id: response.data.id}})
+        dispatch({type: 'USER_SUCCESS', payload: {user: resp.data.user, id: resp.data.id}})
         dispatch({type: "GET_MENTEES", payload: resp.data.mentees})
     })
 }
