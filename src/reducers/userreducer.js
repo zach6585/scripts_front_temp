@@ -22,6 +22,7 @@ export default function userReducer(state = initialState, action) {
           user_id: -1
         }
       case 'USER_SUCCESS':
+        console.log(action.payload);
         if (action.payload.user.superUser === true){
           return{
             ...state,
