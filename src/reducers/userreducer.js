@@ -22,7 +22,7 @@ export default function userReducer(state = initialState, action) {
           user_id: -1
         }
       case 'USER_SUCCESS':
-        if (action.payload.user.super_user === true){
+        if (action.payload.super_user === true){
           return{
             ...state,
             err: '',
@@ -31,7 +31,7 @@ export default function userReducer(state = initialState, action) {
             superUser: true
           }
         }
-        else if (action.payload.user.admin === true){
+        else if (action.payload.admin === true){
           return{
             ...state,
             err: '',

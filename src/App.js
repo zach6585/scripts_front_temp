@@ -73,17 +73,15 @@ class App extends Component {
     }
   
     else if (this.state.hamburger_is_clicked === false){
-      if (this.props.user.admin){
-        this.setState({hamburger_is_clicked: true,
-          options: 
-          <div id="hamburger_menu_ps_div">
-              <p onClick={event => this.menuItemHandleClick(event, 1)}>Change Script    |</p>
-              <p onClick={event => this.menuItemHandleClick(event, 2)}>Change Mentee    |</p>
-              <p onClick={event => this.menuItemHandleClick(event, 3)}>Logout    |</p>
-              {/* <p onClick={event => this.menuItemHandleClick(event, 4)}>{this.state.add_comments_text}</p> */}
-          </div>
+      this.setState({hamburger_is_clicked: true,
+        options: 
+        <div id="hamburger_menu_ps_div">
+            <p onClick={event => this.menuItemHandleClick(event, 1)}>Change Script    |</p>
+            <p onClick={event => this.menuItemHandleClick(event, 2)}>Change Mentee    |</p>
+            <p onClick={event => this.menuItemHandleClick(event, 3)}>Logout    |</p>
+            {/* <p onClick={event => this.menuItemHandleClick(event, 4)}>{this.state.add_comments_text}</p> */}
+        </div>
       })
-      }
         
     }
   }
@@ -200,6 +198,7 @@ class App extends Component {
 
 
 const mapStateToProps = state => {
+  console.log(state);
   return{
     pages: state.pages,
     texts: state.texts,

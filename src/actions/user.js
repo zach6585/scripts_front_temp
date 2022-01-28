@@ -9,7 +9,7 @@ export const userLoginAndCheck = (user_data) => dispatch => {
         }
         else {
             localStorage.setItem("token", response.data.jwt)
-            dispatch({type: 'USER_SUCCESS', payload: {user: response.data.user, id: response.data.id} })
+            dispatch({type: 'USER_SUCCESS', payload: response.data.user })
             dispatch({type: "GET_MENTEES", payload: response.data.mentees})
         }
     })
@@ -24,7 +24,7 @@ export const userSignupAndCheck = (user_data) => dispatch => {
         }
         else {
             localStorage.setItem("token", response.data.jwt)
-            dispatch({type: 'USER_SUCCESS', payload: {user: response.data.user, id: response.data.id} })
+            dispatch({type: 'USER_SUCCESS', payload: response.data.user })
             dispatch({type: "GET_MENTEES", payload: response.data.mentees})
         }
     })
@@ -37,7 +37,8 @@ export const changeUserPage = () => dispatch => {
 export const autoLogin = () => dispatch => {
     axios.get("https://cors-for-all.herokuapp.com/https://scripts-app-backend.herokuapp.com/auto_login", {headers: {"Authenticate": localStorage.token}})
     .then(response => {
-        dispatch({type: 'USER_SUCCESS', payload: {user: response.data.user, id: response.data.id} })
+        console.log(response.data)
+        dispatch({type: 'USER_SUCCESS', payload: response.data.user })
         dispatch({type: "GET_MENTEES", payload: response.data.mentees})
     })
 }
