@@ -28,7 +28,7 @@ import '../allScripts.css';
 class Script12List extends Component {
 
     state = {button_use: {button_back: false, button_forward: true}, 
-    component_list: [<Page1 />, <Page2/>, <Page3 />, <Page4 />, <Page5 />, <Page6 />, <Page7 />, <Page8 />, <Page6/>, <Page7 />, <Page8/>, <Page9 />, <Page10 />, <Page11 />, <Page12 />, <Page13 />, <Page14 />, <Page15 />, <Page16 />, <Page17 />], 
+    component_list: [<Page1 />, <Page2/>, <Page3 />, <Page4 />, <Page5 />, <Page6 />, <Page7 />, <Page8 />, <Page9/>, <Page10 />, <Page11 />, <Page12 />, <Page13 />, <Page14 />, <Page15 />, <Page16 />, <Page17 />], 
     pagePos: 0}
     
     handleClick = (letter) => {//This determines which button was pressed

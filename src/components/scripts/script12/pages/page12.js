@@ -39,7 +39,7 @@ const Page12 = props => {
                 <div id="instruction_box_number_1_page_12_script_12" className="custom_svg demo_box container_for_medium_margin">
                     <p className='top_line_in_instruction_box'>
                         Send your mentee the link to their toolkit in the chat<br/>
-                        Link: <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_12_script_12" defaultValue={this.getValue("text_box_number_1_page_12_script_12")} /><br/>
+                        Link: <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_12_script_12" defaultValue={getValue("text_box_number_1_page_12_script_12")} /><br/>
                         Ask them to share their screen or you can both look at the toolkit on your own screens if you don't want to do screen share<br/><br/>    
                         Ask them questions about who their supports are. Find out why they think that person is a good support.<br/>
                         Share about your supports.
@@ -55,7 +55,7 @@ const Page12 = props => {
                 <div id="instruction_box_number_2_page_12_script_12" className="custom_svg demo_box container_for_medium_margin">
                     <p className='top_line_in_instruction_box'>
                         Send your mentee the link to the google slide<br/>
-                        Link: <textarea onChange={event => this.handleChange(event)} id="text_box_number_2_page_12_script_12" defaultValue={this.getValue("text_box_number_2_page_12_script_12")} /><br/> 
+                        Link: <textarea onChange={event => handleChange(event)} id="text_box_number_2_page_12_script_12" defaultValue={getValue("text_box_number_2_page_12_script_12")} /><br/> 
                         Ask them to share their screen or you can both look at the toolkit on your own screens if you don't want to do screen share
                     </p>
                 </div>
@@ -65,14 +65,14 @@ const Page12 = props => {
                         Each card has a different scenario on it. On each scenario, you can type in the person who will help you or make you feel better.<br/><br/>
                         Different people will be able to help you with different sized problems. <br/><br/>
                         Small problems are the easiest to solve. They might go away on their own and usually don't last too long. They can still be upsetting. <br/>
-                        For small problems, I get help from <textarea onChange={event => this.handleChange(event)} id="text_box_number_3_page_12_script_12" defaultValue={this.getValue("text_box_number_3_page_12_script_12")} /> 
-                        because <textarea onChange={event => this.handleChange(event)} id="text_box_number_4_page_12_script_12" defaultValue={this.getValue("text_box_number_4_page_12_script_12")} /><br/>
+                        For small problems, I get help from <textarea onChange={event => handleChange(event)} id="text_box_number_3_page_12_script_12" defaultValue={getValue("text_box_number_3_page_12_script_12")} /> 
+                        because <textarea onChange={event => handleChange(event)} id="text_box_number_4_page_12_script_12" defaultValue={getValue("text_box_number_4_page_12_script_12")} /><br/>
                         Medium problems can be a little bit more hard to solve and they might last longer.<br/>
-                        For medium problems, I get help from <textarea onChange={event => this.handleChange(event)} id="text_box_number_5_page_12_script_12" defaultValue={this.getValue("text_box_number_5_page_12_script_12")} /> 
-                        because <textarea onChange={event => this.handleChange(event)} id="text_box_number_6_page_12_script_12" defaultValue={this.getValue("text_box_number_6_page_12_script_12")} /><br/>
+                        For medium problems, I get help from <textarea onChange={event => handleChange(event)} id="text_box_number_5_page_12_script_12" defaultValue={getValue("text_box_number_5_page_12_script_12")} /> 
+                        because <textarea onChange={event => handleChange(event)} id="text_box_number_6_page_12_script_12" defaultValue={getValue("text_box_number_6_page_12_script_12")} /><br/>
                         Big problems are the hardest to solve. It might take a lot of work to solve them. Sometimes big problems have to do with safety or really big feelings. <br/>
-                        For big problems, I get help from <textarea onChange={event => this.handleChange(event)} id="text_box_number_7_page_12_script_12" defaultValue={this.getValue("text_box_number_7_page_12_script_12")} /> 
-                        because <textarea onChange={event => this.handleChange(event)} id="text_box_number_2_page_12_script_12" defaultValue={this.getValue("text_box_number_2_page_12_script_12")} />
+                        For big problems, I get help from <textarea onChange={event => handleChange(event)} id="text_box_number_7_page_12_script_12" defaultValue={getValue("text_box_number_7_page_12_script_12")} /> 
+                        because <textarea onChange={event => handleChange(event)} id="text_box_number_2_page_12_script_12" defaultValue={getValue("text_box_number_2_page_12_script_12")} />
                     </p>
                 </div>
 

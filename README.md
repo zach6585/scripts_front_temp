@@ -4,8 +4,6 @@ Really we can break down this into three steps:
 
 1) Finish comments thing
 
-2) Finish script 12
-
 2) Make changes as needed
     - Make sure everything that should be a textbox is one (Links, thing you wrote last week, etc.)
     - There are parts where she wants links to other pages (using redux)
@@ -16,7 +14,7 @@ Really we can break down this into three steps:
     
 
 Extras: 
-    
+     
     - Save a value in db that's associated with the last page that user was on so that when they reload it goes back to that page, especially so they don't have to keep going back to page 1 now that this is a single page app.
         - The way to do this would have a "saved page" quality in the users table
     - Would have a "return to beginning" option on the last page
@@ -31,11 +29,18 @@ Extras:
 
 Questions for Ariel:
 
-- Do you want it to look good on phones too?
-- What do you want body diagram (see script 3 page 7) to look like
-- Domain name?
-- Comments functionality?
-- Is the phone thing also supposed to be a form?
+- Do you want it to look good on phones too? (No)
+- What do you want body diagram (see script 3 page 7) to look like (How it is)
+- Domain name? (No)
+- Comments functionality? (Yes)
+- Is the phone thing also supposed to be a form? (No)
+
+Notes:
+
+- Since it's only text as in p's it might be feasible to do content editable
+- For some reason mentees not being saved
+- Save body image when done as pdf (make that its own button as an option). If emailing is simple then do that but otherwise do like print to pdf with timestamp 
+
 
 
 
