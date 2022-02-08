@@ -16,7 +16,7 @@ export const userLoginAndCheck = (user_data) => dispatch => {
 } 
 
 export const userSignupAndCheck = (user_data) => dispatch => {
-    axios.post("https://cors-for-all.herokuapp.com/https://scripts-app-backend.herokuapp.com/users", {username: user_data.username, email: user_data.email, password: user_data.password, password_confirmation: user_data.password_confirmation})
+    axios.post("https://cors-for-all.herokuapp.com/https://scripts-app-backend.herokuapp.com/users", {username: user_data.username, password: user_data.password, password_confirmation: user_data.password_confirmation})
     .then(response => {
         console.log(response.data)
         if (response.data.errors){

@@ -43,7 +43,7 @@ class Script2List extends Component {
     }
     render() {
       return(
-      <div className="Script2">{this.state.component_list[this.props.pageNum-1]}
+      <div>{this.state.component_list[this.props.pageNum-1]}
         <div id="buttonDiv">
           {this.props.pageNum === 1 ? null :  <img alt="left arrow back" src={larrow} onClick={() => this.handleClick('b')} className="left page_button"/>}
           {this.props.pageNum === this.state.component_list.length  ? null :  <img alt="right arrow forward" src={rarrow} onClick={() => this.handleClick('f')} className="right page_button"/>}

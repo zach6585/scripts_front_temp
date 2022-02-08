@@ -32,8 +32,8 @@ class Page11 extends Component{
     render(){
         return(
             <div className="sheet">
-                <h1 className='bold'>Step 5: Figuring out solutions</h1>
-                <div className='container_for_extra_small_margin'>
+                <div className='container_for_extra_small_margin left'>    
+                    <h1 className='bold'>Step 5: Figuring out solutions</h1>
                     <p>Do you think you could do this activity at home on your own this week?</p>
                     <img className="check" src={check} alt="Check" onClick={(event) => this.handleClick(event, 'c')} /><p className="what_does_your_mentor_say">Your mentee says yes</p>
                     <br/>

@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 
 import { patchTexts, postTexts } from '../../../../actions/text';
 
-import body from '../../pictures/body.png';
-import phone from '../../pictures/phone.png'
+// import body from '../../pictures/body.png';
+import phone from '../../pictures/phone.png';
 
 
 class Page9 extends Component{
@@ -34,8 +34,8 @@ class Page9 extends Component{
     render(){
         return(
             <div className="sheet">
-                <h1 className='bold'>Step 3: Identify how you are feeling</h1>
-                <div className='container_for_small_margin'>
+                <h1 className='bold center'>Step 3: Identify how you are feeling</h1>
+                <div className='container_for_small_margin left'>
                     <p>
                         When we checked in earlier, you said you were feeling <span className='underline_text'>{this.getValue('text_box_number_1_step_1_script_12')}</span>.
                         <br/><br/>
@@ -48,9 +48,9 @@ class Page9 extends Component{
                             Put the link in the chat and ask your mentee to screen share
                         </p>
                     </div>
-                
-                    <div id="image_div_page_9_script_12">
-                        <img src={phone} id="phone_page_9_script_12" alt="Phone with emojis" />
+                    <img src={phone} id="phone_page_9_script_12" alt="Phone with emojis" />
+                    {/* <div id="image_div_page_9_script_12">
+                        
                         <img src={body} alt="Body diagram" id="body_page_9_script_12" />
                         <textarea onChange={event => this.handleChange(event)} id="body_image_text_feelings_page_9_script_12" className="body_text_box" defaultValue={this.getValue("body_image_text_feelings_page_9_script_12")} placeholder='Feeling' />
                         <textarea onChange={event => this.handleChange(event)} id="body_image_text_head_page_9_script_12" className="body_text_box" defaultValue={this.getValue("body_image_text_head_page_9_script_12")} placeholder='Head' />
@@ -63,7 +63,7 @@ class Page9 extends Component{
                         <textarea onChange={event => this.handleChange(event)} id="body_image_text_legs_and_feet_page_9_script_12" className="body_text_box" defaultValue={this.getValue("body_image_text_legs_and_feet_page_9_script_12")} placeholder='Legs and feet' />
                         <textarea onChange={event => this.handleChange(event)} id="body_image_text_fidgeting_page_9_script_12" className="body_text_box" defaultValue={this.getValue("body_image_text_fidgeting_page_9_script_12")} placeholder='Fidgeting' />
                         <textarea onChange={event => this.handleChange(event)} id="body_image_text_change_in_energy_level_page_9_script_12" className="body_text_box" defaultValue={this.getValue("body_image_text_change_in_energy_level_page_9_script_12")} placeholder='Change in energy level' />
-                    </div>
+                    </div> */}
                 </div>
             </div>
             

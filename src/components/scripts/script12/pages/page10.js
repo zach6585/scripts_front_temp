@@ -31,8 +31,8 @@ class Page10 extends Component{
     render(){
         return(
             <div className="sheet">
-                <h1 className='bold'>Step 4: Reflecting on how it went</h1>
-                <div className='container_for_extra_small_margin'>
+                <div className='container_for_extra_small_margin left'>
+                    <h1 className='bold'>Step 4: Reflecting on how it went</h1>
                     <p>Sometimes it can be hard to do a coping strategy because things get in the way.</p>
                 
                     <div className="container_for_extra_small_margin solid_box">

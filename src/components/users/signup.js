@@ -9,7 +9,6 @@ function Signup(props){
 
     
     const [username, setUsername] = useState("")
-    const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [password_confirmation, setPasswordConfirmation] = useState("")
 
@@ -23,10 +22,6 @@ function Signup(props){
         setUsername(evt.target.value)
     }
 
-    const handleEmailChange = (evt) => {
-        setEmail(evt.target.value)
-    }
-
     const handlePasswordChange = (evt) => {
       setPassword(evt.target.value)
     }
@@ -37,7 +32,7 @@ function Signup(props){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.userSignupAndCheck({username: username, email: email, password: password, password_confirmation: password_confirmation})
+        props.userSignupAndCheck({username: username, password: password, password_confirmation: password_confirmation})
     }
     
     return(
@@ -48,8 +43,6 @@ function Signup(props){
                 <label htmlFor='username'>Username: </label>
                 <input onChange={handleUsernameChange} type="text" className="login_form_input_box" name="username" autoComplete='username'></input>
                 <br/><br/>
-                <label htmlFor='email'>Email: </label>
-                <input onChange={handleEmailChange} type="text" className="login_form_input_box" name="email" autoComplete='email'></input>
                 <label htmlFor='password'>Password: </label>
                 <input onChange={handlePasswordChange} type="password" className="login_form_input_box" name="password" autoComplete='password'></input>
                 <br/><br/>

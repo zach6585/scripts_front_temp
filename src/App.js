@@ -5,12 +5,11 @@ import { connect } from 'react-redux';
 import { getTexts, changeTexts } from './actions/text';
 import { userLogout, autoLogin } from './actions/user';
 import { flushMenteeList,changeMentee } from './actions/mentee';
+import { getChanges, switchChangesList } from './actions/change';
 
 
 import hamburgerMenu from "./components/scripts/pictures/hamburger_menu.png";
-// import commentBubble from "./components/scripts/pictures/comment_bubble.png";
 
-// import Sidebar from './components/sidebar';
 
 import './App.css';
 import './components/scripts/allScripts.css';
@@ -32,6 +31,9 @@ import Script10List from './components/scripts/script10/componentlist';
 import Script11List from './components/scripts/script11/componentlist';
 import Script12List from './components/scripts/script12/componentlist';
 import Script13List from './components/scripts/script13/componentlist';
+import Script14List from './components/scripts/script14/componentlist';
+import Script15List from './components/scripts/script15/componentlist';
+import Script16List from './components/scripts/script16/componentlist';
 
 import Users from './components/users/users.js';
 import Mentees from './components/mentees/mentees';
@@ -40,15 +42,11 @@ import Mentees from './components/mentees/mentees';
 class App extends Component {
   
   state = {
-    componentList: [<Script1List />, <Script2List />, <Script3List />, <Script4List />, <Script5List />, <Script6List />, <Script7List />, <Script8List />, <Script9List />, <Script10List />, <Script11List />, <Script12List />, <Script13List />], 
+    componentList: [<Script1List />, <Script2List />, <Script3List />, <Script4List />, <Script5List />, <Script6List />, <Script7List />, <Script8List />, <Script9List />, <Script10List />, <Script11List />, <Script12List />, <Script13List />, <Script14List />, <Script15List />, <Script16List />], 
     currComponent: null,
     buttonList: [],
     hamburger_is_clicked: false,
     options: ''
-    // add_comments_text: "Add comment",
-    // comment_bubble: null, //The comment_bubble image
-    // sidebar: null, //The actual sidebar
-    // visibility: "full_opacity" //Determines if things are visible as in the sidebar is not rendered
     // windowWidth: 0
   }
 
@@ -79,7 +77,6 @@ class App extends Component {
             <p onClick={event => this.menuItemHandleClick(event, 1)}>Change Script    |</p>
             <p onClick={event => this.menuItemHandleClick(event, 2)}>Change Mentee    |</p>
             <p onClick={event => this.menuItemHandleClick(event, 3)}>Logout    |</p>
-            {/* <p onClick={event => this.menuItemHandleClick(event, 4)}>{this.state.add_comments_text}</p> */}
         </div>
       })
         
@@ -97,33 +94,19 @@ class App extends Component {
       this.setState({hamburger_is_clicked: false, options: ''});
       this.makeButtons();
       this.props.changeTexts();
+      this.props.switchChangesList();
       this.props.changeMentee();
     }
     else if (choice === 3){
       this.setState({hamburger_is_clicked: false, options: ''});
       this.makeButtons();
       this.props.changeTexts();
+      this.props.switchChangesList();
       this.props.flushMenteeList();
       this.props.userLogout();
     }
-
-    // else if (choice === 4){
-    //   if (this.state.comment_bubble === null){
-    //     this.setState({comment_bubble: <image src={commentBubble}  alt="comment button" onClick={event => this.handleCommentButtonClick(event)}/>, add_comments_text: "Stop adding comments" })
-    //   }
-    //   else {
-    //     this.setState({comment_bubble: null, add_comments_text: "Add comment" })
-    //   }
-    // }
   }
-
-  // handleCommentButtonClick = (e) => {
-  //   let highlighted_area = window.getSelection();
-  //   if (highlighted_area.toString() !== '' && this.state.visibility === "full_opacity"){
-  //     this.setState({comment_bubble: null, sidebar: <Sidebar />, visibility: "low_opacity"})
-  //   }
-  // }
-
+  
   handleClick = (script_number) => {//Once a button is clicked, it takes you to the coresponding component
     // debugger;
     this.setState({buttonList: []});
@@ -133,7 +116,7 @@ class App extends Component {
 
 
   makeButtons = () => {//Makes the button list depending on the componenents present in the componenet list
-    for (let i = 1; i < 14; i++){
+    for (let i = 1; i < this.state.componentList.length + 1; i++){
       this.setState((prevstate) => ({buttonList: prevstate.buttonList.concat(<button key={i-1} onClick={() => this.handleClick((i-1).toString())}>Script {i}</button>)}));
     } 
     
@@ -204,7 +187,10 @@ const mapStateToProps = state => {
     texts: state.texts,
     user: state.user,
     mentees: state.mentees,
+    changes: state.changes,
     texts_loading: state.texts.loading,
+    changes_loading: state.changes.loading
+    
   }
 }
 
@@ -215,7 +201,9 @@ const mapDispatchToProps = dispatch => {
       userLogout: () => dispatch(userLogout()),
       flushMenteeList: () => dispatch(flushMenteeList()),
       autoLogin: () => dispatch(autoLogin()),
-      changeMentee: () => dispatch(changeMentee())
+      changeMentee: () => dispatch(changeMentee()),
+      getChanges: () => dispatch(getChanges()),
+      switchChangesList: () => dispatch(switchChangesList())
   }
 }
 

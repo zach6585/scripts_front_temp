@@ -29,16 +29,13 @@ Extras:
 
 Questions for Ariel:
 
-- Do you want it to look good on phones too? (No)
-- What do you want body diagram (see script 3 page 7) to look like (How it is)
-- Domain name? (No)
-- Comments functionality? (Yes)
-- Is the phone thing also supposed to be a form? (No)
+- What do you want for the file thing that goes into sharing about mentoring? 
+- In script 16, The final two pages are somewhat redundant. They should really just be one page
 
 Notes:
 
-- Since it's only text as in p's it might be feasible to do content editable
-- For some reason mentees not being saved
+
+
 - Save body image when done as pdf (make that its own button as an option). If emailing is simple then do that but otherwise do like print to pdf with timestamp 
 
 
