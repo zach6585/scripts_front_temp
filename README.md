@@ -11,6 +11,7 @@ Really we can break down this into three steps:
     - I've been really stupid and have only been looking at an iPad Pro!! I need to make sure it works for regular iPad too. Honestly I really should just be making multiple versions depending on size (Like I did with Freshlayers).
     - Solutions website
     - Body image page
+    - Make sure all checks and xs are changed to their smaller counter parts
     
 
 Extras: 

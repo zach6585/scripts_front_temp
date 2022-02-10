@@ -71,7 +71,8 @@ class Page8 extends Component {
                         <p>
                             Let's switch from talking about physical health, like having a cold, and now talk about mental health.<br/>
                             Symptoms can be upsetting thoughts, strong or big emotions, and feeling a need to do certain behaviors. If symptoms are really strong or go on for a long time, they can cause problems with people's daily life.<br/>
-                            I'd like to tell you about the symptoms I have with my mental health condition. The name of my mental health condition is <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_8_script_2" defaultValue={this.getValue("text_box_number_1_page_8_script_2")} /><br/>
+                            I'd like to tell you about the symptoms I have with my mental health condition. The name of my mental health condition is<br/>
+                            <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_8_script_2" defaultValue={this.getValue("text_box_number_1_page_8_script_2")} /><br/>
                             The symptoms I have include:<br/><br/>
                             <textarea onChange={event => this.handleChange(event)} id="text_box_number_2_page_8_script_2" defaultValue={this.getValue("text_box_number_2_page_8_script_2")} /><br/>
                             Before we move on to an activity where you get to think about your own symptoms, I'm wondering if there's anything about 'symptoms' that was confusing or that you want to talk more about? <br/>
@@ -98,18 +99,24 @@ class Page8 extends Component {
                             During our time together, we are going to be learning a lot about mental health and how to keep your symptoms from getting in the way of things you want to do! Remember, you are not alone in feeling this way - there are a lot of young adults, including me, who are going through similar things as you.<br/>
                             Now we will watch a video to learn more about symptoms.<br/>
                         </p>
-                        <a href="https://drive.google.com/file/d/1cxN_Bzo3uN-Mkt6nL29vEMUJTXLB7tPk/view?usp=sharing">Video link</a>
                     </div>
                     
-                    <div id="instruction_box_number_3_page_8_script_2" className="custom_svg demo_box container_for_small_margin">
-                        <p className="top_line_in_instruction_box">
-                            Share your screen <br/><br/>
-                            -Share sound<br/><br/>
-                            -Optimize for video
-                        </p>
+                    <div className='container_for_small_margin'>
+                        <a href="https://drive.google.com/file/d/1cxN_Bzo3uN-Mkt6nL29vEMUJTXLB7tPk/view?usp=sharing">Video link</a><br/><br/>
+                        <div id="image_and_instruction_box_div_page_8_script_2" className='container_for_extra_small_margin'>
+                            <div id="instruction_box_number_3_page_8_script_2" className="custom_svg demo_box">
+                                <p className="top_line_in_instruction_box">
+                                    Share your screen <br/><br/>
+                                    -Share sound<br/><br/>
+                                    -Optimize for video
+                                </p>
+                            </div>
+                            <img src={shareScreen} alt="Share screen" id="share_your_screen_number_2_page_8_script_2" />
+                        </div>
                     </div>
+                    
 
-                    <img src={shareScreen} alt="Share screen" id="share_your_screen_number_2_page_8_script_2" />
+                    
                     
                     <img src={optimizeVideo} alt="Optimize video" id="optimize_video_page_8_script_2" />
                     

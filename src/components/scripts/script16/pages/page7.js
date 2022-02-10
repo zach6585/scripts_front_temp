@@ -41,7 +41,8 @@ const Page7 = (props) => {
                 <div id="instruction_box_number_1_page_7_script_16" className="custom_svg demo_box container_for_large_margin">
                     <p className="top_line_in_instruction_box">
                         Coping strategy toolkit link:  
-                        <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_7_script_16" defaultValue={getValue("text_box_number_1_page_7_script_16")} />
+                        <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_7_script_16" defaultValue={getValue("text_box_number_1_page_7_script_16")} /><br/><br/>
+                        <textarea onChange={event => handleChange(event)} id="text_box_number_2_page_7_script_16" defaultValue={getValue("text_box_number_1_page_7_script_16")} />
                     </p>
                 </div>
 

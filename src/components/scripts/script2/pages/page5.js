@@ -37,7 +37,8 @@ class Page5 extends Component {
                         Last week, we talked about the big topic of mental health.<br/>
                         Mental health is all about how we think, feel, and act.  Mental health is about how we handle stress.<br/><br />
                         A mental health condition is when a person is having a hard time with how they think, feel, and act.<br/><br/>
-                        You mentioned that mental health is <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_5_script_2" defaultValue={this.getValue("text_box_number_1_page_5_script_2")} />
+                        You mentioned that mental health is <br/>
+                        <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_5_script_2" defaultValue={this.getValue("text_box_number_1_page_5_script_2")} />
                     </p>
                 </div>
             </div>

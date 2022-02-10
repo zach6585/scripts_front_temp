@@ -19,12 +19,12 @@ const Page12 = () =>{
 
     return (
         <div className="sheet">
-            <h1>Keeping in touch</h1>
+            <h1 className="center">Keeping in touch</h1>
             <div className="left">
                 <div className='container_for_extra_small_margin'>
                     <img className="check" src={checkButSmaller} alt="Check" onClick={(event) => handleClick(event, 'c')} /><p className="what_does_your_mentor_say">You want to stay in touch with your mentee</p>
                     <br/>
-                    <div className="choicePicked">{greenCheckWords}</div>
+                    <p className="choicePicked">{greenCheckWords}</p>
                     <br/><br/>
                     <img className="redX" src={redXButSmaller} alt="Red X" onClick={(event) => handleClick(event, 'x')} /><p className="what_does_your_mentor_say">You do not want to stay in touch with your mentee</p>
                     <br/>

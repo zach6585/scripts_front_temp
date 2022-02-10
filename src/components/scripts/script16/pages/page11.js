@@ -28,7 +28,7 @@ const Page11 = (props) =>{
     const placeholderText = "Write something nice you want to share with your mentee. Think about some things you liked about getting to know them. You can write exactly what you want to say, or write bullet points."
     return (
         <div className="sheet">
-            <h1>Saying goodbye</h1>
+            <h1 className='center'>Saying goodbye</h1>
             <div className="left">
                 <div id="instruction_box_number_1_page_11_script_16" className="custom_svg demo_box">
                     <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_11_script_16" defaultValue={getValue("text_box_number_1_page_11_script_16")} placeholder={placeholderText} />

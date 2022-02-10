@@ -21,15 +21,18 @@
     position: relative;
     top: 25px;
     font-size: 25px;
+    height: 300px;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 5 */ 
 
+#instruction_box_number_1_page_5_script_16{
+    width: 900px;
+}
 
-
-#text_box_number_1_page_5_script_14{
-    width: 500px;
+#text_box_number_1_page_5_script_16{
+    width: 200px;
     border: black;
     border-style: solid;
     position: relative;
@@ -37,47 +40,65 @@
     margin-top: 20px;
 }
 
-#instruction_box_number_1_page_5_script_14{
-    margin-left: 100px;
-    width: 900px;
+#text_box_number_2_page_5_script_16{
+    width: 600px;
+    border: black;
+    border-style: solid;
+    position: relative;
+    height: 200px;
+    margin-top: 20px;
 }
 
-#stop_sharing_screen_page_5_script_14{
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 500px;
+#text_box_number_3_page_5_script_16{
+    width: 400px;
+    border: black;
+    border-style: solid;
+    position: relative;
+    height: 60px;
+    margin-right: 10px;
 }
 
+#text_box_number_4_page_5_script_16{
+    width: 600px;
+    border: black;
+    border-style: solid;
+    position: relative;
+    height: 200px;
+    margin-top: 20px;
+}
 
 
 
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 6 */ 
 
-
-/*-------------------------------------------------------------------------------------------------------------------------------- */
-/* Page 7 */ 
-
-
-#text_box_number_1_page_7_script_14, #text_box_number_3_page_7_script_14{
-    width: 500px;
-    height: 40px;
-    margin-top: 10px;
-}
-
-#text_box_number_2_page_7_script_14{
-    width: 350px;
-    height: 30px;
-}
-
-#image_and_instruction_box_div_page_7_script_14{
+#image_and_instruction_box_div_number_1_page_6_script_16{
     display: inline;
 }
 
 
-#image_and_instruction_box_div_page_7_script_14 > div{
+#image_and_instruction_box_div_number_1_page_6_script_16 > div{
+    width: 600px;
+    height: 120px;
+    padding-right: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    
+}
+
+#image_and_instruction_box_div_number_1_page_6_script_16 > img{
+    width: 400px;
+    margin-top: 100px;
+    vertical-align: middle;
+    
+}
+
+#image_and_instruction_box_div_number_2_page_6_script_16{
+    display: inline;
+}
+
+
+#image_and_instruction_box_div_number_2_page_6_script_16 > div{
     width: 600px;
     height: 120px;
     display: inline-block;
@@ -85,19 +106,56 @@
     
 }
 
-#image_and_instruction_box_div_page_7_script_14 > img{
+#image_and_instruction_box_div_number_2_page_6_script_16 > img{
+    width: 600px;
+    margin-top: 100px;
+    vertical-align: middle;
+    
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 7 */ 
+
+
+#text_box_number_1_page_7_script_16{
+    width: 200px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#text_box_number_2_page_7_script_16{
+    width: 650px;
+    height: 200px;
+}
+
+
+#image_and_instruction_box_div_page_7_script_16{
+    display: inline;
+}
+
+
+#image_and_instruction_box_div_page_7_script_16 > div{
+    width: 600px;
+    height: 120px;
+    display: inline-block;
+    vertical-align: middle;
+    
+}
+
+#image_and_instruction_box_div_page_7_script_16 > img{
     width: 400px;
     margin-top: 100px;
     vertical-align: middle;
     
 }
 
-#instruction_box_number_3_page_7_script_14{
+#instruction_box_number_3_page_7_script_16{
     /* margin-left: 100px; */
     width: 900px;
 }
 
-#stop_sharing_screen_page_7_script_14{
+#stop_sharing_screen_page_7_script_16{
     width: 500px;
     margin-top: 50px;
     margin-left: 100px;
@@ -112,6 +170,7 @@
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 9 */ 
 
+/* See allScripts.css for the general scripts section */
 
 
 /*-------------------------------------------------------------------------------------------------------------------------------- */
@@ -123,8 +182,22 @@
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 11 */ 
 
-/* See allScripts.css for the general scripts section */
+#instruction_box_number_1_page_11_script_16{
+    width: 900px;
+    height: 500px;
+    display: block;
+    margin: auto;
+}
 
+#instruction_box_number_1_page_11_script_16 > textarea {
+    width: 888px;
+    height: 488px;
+    border: none;
+}
+
+#instruction_box_number_1_page_11_script_16 > textarea:focus {
+    outline: none;
+}
 
 
 /*-------------------------------------------------------------------------------------------------------------------------------- */

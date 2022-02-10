@@ -3,7 +3,7 @@
  const Page10 = () => {
     return (
         <div className="sheet">
-            <h1>Reminders about mentoring</h1>
+            <h1 className="center">Reminders about mentoring</h1>
             <div className="left">
                 <div className="container_for_small_margin">
                     <p>

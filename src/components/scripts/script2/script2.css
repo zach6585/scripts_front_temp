@@ -54,8 +54,8 @@
     #text_box_number_1_page_5_script_2 {
         position: relative;
         display: inline-block;
-        width: 700px;
-        height: 100px;
+        width: 900px;
+        height: 300px;
     }
 
     /*-------------------------------------------------------------------------------------------------------------------------------- */
@@ -86,8 +86,8 @@
     #text_box_number_2_page_6_script_2{
         position: relative;
         display: inline-block;
-        width: 600px;
-        height: 100px;
+        width: 700px;
+        height: 300px;
     }
 
     #stop_sharing_screen_page_6_script_2{
@@ -153,15 +153,16 @@
     #text_box_number_1_page_8_script_2{
         position: relative;
         display: inline-block;
-        /* float: left; */
-        width: 29%;
+        width: 80%;
+        height: 200px;
         
     }
 
     #text_box_number_2_page_8_script_2{
         position: relative;
-        /* display: inline-block; */
-        width: 100%;
+        display: inline-block;
+        width: 80%;
+        height: 200px;
     }
 
     #instruction_box_number_2_page_8_script_2{
@@ -170,17 +171,25 @@
         margin:0 20px 15px 50px;
     }
 
-    #instruction_box_number_3_page_8_script_2 {
-        width: 350px;
-        height: 175px;
-        /* float: left; */
-        display: inline-block;
+    #image_and_instruction_box_div_page_8_script_2{
+        display: inline;
     }
 
-    #share_your_screen_number_2_page_8_script_2{
-        width: 45%;
-        position: absolute;
+    
+    #image_and_instruction_box_div_page_8_script_2 > div{
+        width: 350px;
+        height: 175px;
+        display: inline-block;
+        vertical-align: middle;
+        
     }
+    
+    #image_and_instruction_box_div_page_8_script_2 > img{
+        width: 45%;
+        vertical-align: middle;
+        
+    }
+
 
     #optimize_video_page_8_script_2{
         width: 90%;
@@ -190,7 +199,7 @@
 
     #text_box_number_3_page_8_script_2 {
         width: 100%;
-        height: 120px;
+        height: 320px;
     }
 
 
@@ -201,16 +210,21 @@
     #text_box_number_1_page_9_script_2{
         position: relative;
         display: inline-block;
-        width: 400px;
-        height: 40px;
+        width: 900px;
+        height: 300px;
     }
 
 
     #instruction_box_number_1_page_9_script_2{
         width: 800px;
-        height: 150px;
+        height: 200px;
         margin:0 20px 15px 0px;
         
+    }
+
+    #text_box_number_2_page_9_script_2{
+        width: 400px;
+        height: 40px;
     }
 
 

@@ -27,10 +27,10 @@ class RemindersAboutMentoring extends Component {
                 this.setState({handleclick: {oft : null, five: <Five />, highlight_f: "highlighted", highlight_o: null, highlight_z: null}})
             }
             else if (letter === 'o'){
-                this.setState({handleclick: {five : null, otf: <OTFZ props={this.props} otf_or_z={'otf'} script={this.props.script} />, highlight_f: null, highlight_o: "highlighted", highlight_z: null}})
+                this.setState({handleclick: {five : null, otf: <OTFZ props={this.props} otf_or_z={'otf'}/>, highlight_f: null, highlight_o: "highlighted", highlight_z: null}})
             }
             else if (letter === 'z'){
-                this.setState({handleclick: {five : null, otf: <OTFZ props={this.props} otf_or_z={'z'} script={this.props.script} />, highlight_f: null, highlight_o: null, highlight_z: "highlighted"}})
+                this.setState({handleclick: {five : null, otf: <OTFZ props={this.props} otf_or_z={'z'} />, highlight_f: null, highlight_o: null, highlight_z: "highlighted"}})
             }
        
     }
@@ -80,7 +80,6 @@ class OTFZ extends Component{
         this.props.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.props.script})
         :
         this.props.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.props.script})
-
     }
     
     getObject = (current_id_tag) => {
@@ -100,7 +99,7 @@ class OTFZ extends Component{
             let otfz2 = null;
             let otfz3 = null;
             if (otf_or_z === 'otf'){
-                otfz1 = <p>This week you did <textarea className='reminders_text_box' onChange={event => this.handleChange(event)} id={`text_box_number_1_mentoring_reminders_script_${this.props.script}`} defaultValue={this.getValue(`text_box_number_1_mentoring_reminders_script_${this.props.script}`)} /> mood logs. Thanks for doing those. Please try to do 5 this week.</p>
+                otfz1 = <p>This week you did <textarea className='reminders_number_done' onChange={event => this.handleChange(event)} id={`text_box_number_1_mentoring_reminders_script_${this.props.script}`} defaultValue={this.getValue(`text_box_number_1_mentoring_reminders_script_${this.props.script}`)} /> mood logs. Thanks for doing those. Please try to do 5 this week.</p>
                 otfz2 = <textarea className='reminders_text_box' onChange={event => this.handleChange(event)} id={`text_box_number_2_mentoring_reminders_script_${this.props.script}`} defaultValue={this.getValue(`text_box_number_2_mentoring_reminders_script_${this.props.script}`)} />
                 otfz3 = null 
             }
@@ -183,7 +182,8 @@ class ExtraPracticeSection extends Component{
 const mapStateToProps = state => {
     return{
         texts: state.texts.curatedTextsFromCurrentScript,
-        mentee_id: state.mentees.current_mentee_id
+        mentee_id: state.mentees.current_mentee_id,
+        script: state.texts.currentScript
     }
 }
 

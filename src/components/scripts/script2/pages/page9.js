@@ -38,7 +38,8 @@ class Page9 extends Component {
                     <p>
                         Today we talked about a lot!<br/>
                         We mostly focused on symptoms.<br/><br/>
-                        Some of my symptoms are: <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_9_script_2" defaultValue={this.getValue("text_box_number_1_page_9_script_2")} /><br/>
+                        Some of my symptoms are: <br/>
+                        <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_9_script_2" defaultValue={this.getValue("text_box_number_1_page_9_script_2")} /><br/>
                         Do you remember what some of your symptoms are?
                     </p>
                     <img src={pause} alt="Pause" className="pause" />
@@ -46,7 +47,7 @@ class Page9 extends Component {
                     <br/><br/><br/><br/>
                     <div id="instruction_box_number_1_page_9_script_2" className="ital custom_svg demo_box container_for_large_margin">
                         <p className="top_line_in_instruction_box">
-                            Help your mentee look at the symptom cards. [will insert link]<br/>
+                            Help your mentee look at the symptom cards. <textarea onChange={event => this.handleChange(event)} id="text_box_number_2_page_9_script_2" defaultValue={this.getValue("text_box_number_2_page_9_script_2")} /><br/>
                             Share your screen to show them the card sort.
                         </p>
                     </div>

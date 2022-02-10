@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import check from "../../pictures/check.png";
-import redX from "../../pictures/redx.png";
+import checkButSmaller from "../../pictures/checkbutsmaller.png";
+import redXButSmaller from "../../pictures/redxbutsmaller.png";
 
 
 class Page7 extends Component {
@@ -8,7 +8,6 @@ class Page7 extends Component {
     state = {
         check_words: '',
         x_words: ''
-        
     }
     handleClick = (e, letter) => {
         if (letter === 'c'){
@@ -27,13 +26,13 @@ class Page7 extends Component {
                 <div className='left container_for_medium_margin'>
                     <p>One way to know that a person has a mental health condition is because they have “symptoms.”  Are you familiar with that word?</p>
                     <div>
-                        <img className="check" src={check} alt="Check" onClick={(event) => this.handleClick(event, 'c')} /><p className="what_does_your_mentor_say">Your mentee says yes</p>
+                        <img className="check" src={checkButSmaller} alt="Check" onClick={(event) => this.handleClick(event, 'c')} /><p className="what_does_your_mentor_say">Your mentee says yes</p>
                         <br/>
-                        <div className="choicePicked">{this.state.check_words}</div>
+                        <p className="choicePicked">{this.state.check_words}</p>
                         <br/><br/>
-                        <img className="redX" src={redX} alt="Red X" onClick={(event) => this.handleClick(event, 'x')} /><p className="what_does_your_mentor_say">Your mentee says no</p>
+                        <img className="redX" src={redXButSmaller} alt="Red X" onClick={(event) => this.handleClick(event, 'x')} /><p className="what_does_your_mentor_say">Your mentee says no</p>
                         <br/>
-                        <div className="choicePicked">{this.state.x_words}</div>
+                        <p className="choicePicked">{this.state.x_words}</p>
                         <br/><br/>
                     </div>
                    <p>When people have a mental health condition, there are things that get in the way of their mood, thoughts, or behaviors.  These things are called <strong>symptoms</strong>. </p>

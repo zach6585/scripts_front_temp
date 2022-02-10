@@ -57,7 +57,9 @@ class Page6 extends Component {
 
                         <img src={shareScreen} alt="Share Screen" id="share_your_screen_page_6_script_2" />
                     </div>
-                    <p>I picked this picture because <textarea onChange={event => this.handleChange(event)} id="text_box_number_2_page_6_script_2" defaultValue={this.getValue("text_box_number_2_page_6_script_2")} /></p>
+                    <p>I picked this picture because<br/>
+                        <textarea onChange={event => this.handleChange(event)} id="text_box_number_2_page_6_script_2" defaultValue={this.getValue("text_box_number_2_page_6_script_2")} />
+                    </p>
                     <br/>
                     <img src={stopShare} alt="Stop share" id="stop_sharing_screen_page_6_script_2" />
                 </div>
