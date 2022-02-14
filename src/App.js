@@ -5,7 +5,10 @@ import { connect } from 'react-redux';
 import { getTexts, changeTexts } from './actions/text';
 import { userLogout, autoLogin } from './actions/user';
 import { flushMenteeList,changeMentee } from './actions/mentee';
-import { getChanges, switchChangesList } from './actions/change';
+import { toggleCommentMode } from './actions/comments';
+
+//Need to make a thing for just me (the superuser) so I can see comments on front page if there are any. This requires importing the 
+//other function from the comments action
 
 
 import hamburgerMenu from "./components/scripts/pictures/hamburger_menu.png";
@@ -71,15 +74,27 @@ class App extends Component {
     }
   
     else if (this.state.hamburger_is_clicked === false){
-      this.setState({hamburger_is_clicked: true,
-        options: 
-        <div id="hamburger_menu_ps_div">
-            <p onClick={event => this.menuItemHandleClick(event, 1)}>Change Script    |</p>
-            <p onClick={event => this.menuItemHandleClick(event, 2)}>Change Mentee    |</p>
-            <p onClick={event => this.menuItemHandleClick(event, 3)}>Logout    |</p>
-        </div>
-      })
-        
+      if (this.props.user.admin){
+        this.setState({hamburger_is_clicked: true,
+          options: 
+          <div id="hamburger_menu_ps_div">
+              <p onClick={event => this.menuItemHandleClick(event, 1)}>Change Script    |</p>
+              <p onClick={event => this.menuItemHandleClick(event, 2)}>Change Mentee    |</p>
+              <p onClick={event => this.menuItemHandleClick(event, 3)}>Logout    |</p>
+              <p onClick={event => this.menuItemHandleClick(event, 4)}>Add a comment</p>
+          </div>
+        })
+      }
+      else {
+        this.setState({hamburger_is_clicked: true,
+          options: 
+          <div id="hamburger_menu_ps_div">
+              <p onClick={event => this.menuItemHandleClick(event, 1)}>Change Script    |</p>
+              <p onClick={event => this.menuItemHandleClick(event, 2)}>Change Mentee    |</p>
+              <p onClick={event => this.menuItemHandleClick(event, 3)}>Logout</p>
+          </div>
+        })
+      }  
     }
   }
   
@@ -94,16 +109,18 @@ class App extends Component {
       this.setState({hamburger_is_clicked: false, options: ''});
       this.makeButtons();
       this.props.changeTexts();
-      this.props.switchChangesList();
       this.props.changeMentee();
     }
     else if (choice === 3){
       this.setState({hamburger_is_clicked: false, options: ''});
       this.makeButtons();
       this.props.changeTexts();
-      this.props.switchChangesList();
       this.props.flushMenteeList();
       this.props.userLogout();
+    }
+    else {
+      this.setState({hamburger_is_clicked: false, options: ''});
+      this.props.toggleCommentMode();
     }
   }
   
@@ -157,16 +174,12 @@ class App extends Component {
       else{
         return(
           <div>
-            {this.state.comment_bubble}
-            <div className={this.state.visibility}>
-              {this.state.currComponent}
-              <div className="hamburger_menu_div">
-                    {this.state.options}
-                    <img className={this.state.hamburger_is_clicked ? "rotate" : "no_rotate"} src={hamburgerMenu} alt="Hamburger menu icon" onClick={(event) => this.hamburgerClick(event)} />
-              </div>
+            {this.state.currComponent}
+            <div className="hamburger_menu_div">
+                  {this.state.options}
+                  <img className={this.state.hamburger_is_clicked ? "rotate" : "no_rotate"} src={hamburgerMenu} alt="Hamburger menu icon" onClick={(event) => this.hamburgerClick(event)} />
             </div>
           </div>
-          
         )
         }
       }
@@ -187,9 +200,9 @@ const mapStateToProps = state => {
     texts: state.texts,
     user: state.user,
     mentees: state.mentees,
-    changes: state.changes,
-    texts_loading: state.texts.loading,
-    changes_loading: state.changes.loading
+    texts_loading: state.texts.loading, 
+    comments: state.comments.comments,
+    commentMode: state.comments.commentMode
     
   }
 }
@@ -202,8 +215,7 @@ const mapDispatchToProps = dispatch => {
       flushMenteeList: () => dispatch(flushMenteeList()),
       autoLogin: () => dispatch(autoLogin()),
       changeMentee: () => dispatch(changeMentee()),
-      getChanges: () => dispatch(getChanges()),
-      switchChangesList: () => dispatch(switchChangesList())
+      toggleCommentMode: () => dispatch(toggleCommentMode())
   }
 }
 

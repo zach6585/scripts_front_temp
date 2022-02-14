@@ -3,6 +3,9 @@ Whole project:
 Really we can break down this into three steps:
 
 1) Finish comments thing
+    - Have made it so that we get the whole blur thing which is nice. It's not perfect but it's good enough for now
+    - Need to make it so that they have the ability to actually leave comments (would use a sidebar)
+    - Need to set it up for every script page which isn't too terrible
 
 2) Make changes as needed
     - Make sure everything that should be a textbox is one (Links, thing you wrote last week, etc.)
@@ -29,10 +32,7 @@ Extras:
 
 
 Questions for Ariel:
-
-- What do you want for the file thing that goes into sharing about mentoring? 
-- In script 16, The final two pages are somewhat redundant. They should really just be one page
-
+ 
 Notes:
 
 

@@ -28,7 +28,7 @@ class Script2List extends Component {
 
     state = {
       button_use: {button_back: false, button_forward: true}, 
-      component_list: [<Page1 />, <Page2/>, <Page3 />, <Page4/>, <Page5 />, <Page6/>, <Page7 />, <Page8/>, <Page9 />, <Page10 />, <Page11 />, <Page12 />, <Page13 />]
+      component_list: [<Page1 />, <Page2/>, <Page3 />, <Page4/>, <Page5 />, <Page6/>, <Page7 />, <Page8/>, <Page9 />, <Page10 />, <Page11 />, <Page12 />, <Page13 />],
   }
     
     handleClick = (letter) => {//This determines which button was pressed
@@ -57,7 +57,7 @@ class Script2List extends Component {
 const mapStateToProps = (state) => {
   return {
     pageNum: state.pages.pageNumber,
-    texts: state.texts
+    texts: state.texts,
   }
 }
 

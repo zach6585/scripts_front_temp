@@ -4,6 +4,8 @@ import stopShare from '../../pictures/stopshare.png';
 import { connect } from 'react-redux';
 
 import { patchTexts, postTexts } from '../../../../actions/text';
+import { postComments } from '../../../../actions/comments';
+    
 
 
 class Page4 extends Component {
@@ -30,7 +32,7 @@ class Page4 extends Component {
     }
     render() {
         return (
-            <div className="sheet">
+            <div className={`sheet ${this.props.commentMode}`}>
                 <h1 className="bold center">Icebreaker</h1>
                 <div className="left container_for_medium_margin">
                     <p>I think it would be fun to get to know more about each other. </p>
@@ -64,14 +66,16 @@ const mapStateToProps = state => {
     return{
         texts: state.texts.curatedTextsFromCurrentScript,
         mentee_id: state.mentees.current_mentee_id,
-        script: state.texts.currentScript
+        script: state.texts.currentScript,
+        commentMode: state.comments.commentMode
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return{
         patchTexts: (text_data) => dispatch(patchTexts(text_data)),
-        postTexts: (text_data) => dispatch(postTexts(text_data))
+        postTexts: (text_data) => dispatch(postTexts(text_data)),
+        postComments: () => dispatch(postComments())
 
     }
 }
