@@ -10,7 +10,7 @@ export const getComments = () => dispatch => {
 }
 
 export const postComments = (comment_info, script, page_number) => dispatch => {
+    dispatch({type: 'SENDING_COMMENT'})
     axios.post('https://cors-for-all.herokuapp.com/https://scripts-app-backend.herokuapp.com/comments', {content: comment_info.content, id_tag: comment_info.id_tag, script: script, page_number: page_number})
     .then(res => dispatch({type: 'ADD_COMMENT', payload: res.data}))
 }
-

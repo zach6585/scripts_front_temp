@@ -220,9 +220,16 @@
         display: inline-block;
     }
 
-    .commentModeOn > h1:not(:hover), .commentModeOn > div > div:not(:hover), .commentModeOn > div > p:not(:hover), .commentModeOn > div > input:not(:hover), .commentModeOn > div > textarea:not(:hover), .commentModeOn > div > h1:not(:hover), .commentModeOn > div > img:not(:hover), .commentModeOn > div > a:not(:hover), .commentModeOn > div > button:not(:hover) {
-        filter: blur(5px);
+    .commentModeOn:hover{
+        background-color: lightseagreen;
     }
+
+    .commentModeOn:active{
+        background-color: lightseagreen;
+        box-shadow: 0 5px black;
+        transform: translateY(4px);
+    }
+
 
 
     /* ------------------------------ General pages CSS -------------------------------------- */
