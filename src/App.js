@@ -5,11 +5,7 @@ import { connect } from 'react-redux';
 import { getTexts, changeTexts } from './actions/text';
 import { userLogout, autoLogin } from './actions/user';
 import { flushMenteeList,changeMentee } from './actions/mentee';
-import { getComments, toggleCommentMode } from './actions/comment';
-
-//Need to make a thing for just me (the superuser) so I can see comments on front page if there are any. This requires importing the 
-//other function from the comments action
-//Need to also have a get comments thing when we first render it 
+import { toggleCommentMode } from './actions/comment';
 
 
 import hamburgerMenu from "./components/scripts/pictures/hamburger_menu.png";
@@ -49,7 +45,6 @@ class App extends Component {
     buttonList: [],
     hamburger_is_clicked: false,
     options: ''
-    // windowWidth: 0
   }
 
   onScrollCloseHamburger = () => {
@@ -75,14 +70,14 @@ class App extends Component {
     else if (this.state.hamburger_is_clicked === false){
       if (this.props.user.admin){
         this.setState({hamburger_is_clicked: true,
-          options: 
-          <div id="hamburger_menu_ps_div">
-              <p onClick={event => this.menuItemHandleClick(event, 1)}>Change Script    |</p>
-              <p onClick={event => this.menuItemHandleClick(event, 2)}>Change Mentee    |</p>
-              <p onClick={event => this.menuItemHandleClick(event, 3)}>Logout    |</p>
-              <p onClick={event => this.menuItemHandleClick(event, 4)}>Add a comment</p>
-          </div>
-        })
+            options: 
+            <div id="hamburger_menu_ps_div">
+                <p onClick={event => this.menuItemHandleClick(event, 1)}>Change Script    |</p>
+                <p onClick={event => this.menuItemHandleClick(event, 2)}>Change Mentee    |</p>
+                <p onClick={event => this.menuItemHandleClick(event, 3)}>Logout    |</p>
+                <p onClick={event => this.menuItemHandleClick(event, 4)}>Add a comment</p>
+            </div>
+          })
       }
       else {
         this.setState({hamburger_is_clicked: true,
@@ -117,18 +112,16 @@ class App extends Component {
       this.props.flushMenteeList();
       this.props.userLogout();
     }
-    else {
+    else if (choice === 4) {
       this.setState({hamburger_is_clicked: false, options: ''});
       this.props.toggleCommentMode();
     }
   }
   
   handleClick = (script_number) => {//Once a button is clicked, it takes you to the coresponding component
-    // debugger;
     this.setState({buttonList: []});
     this.setState({currComponent: this.state.componentList[script_number]})
     this.props.getTexts({script_number: parseInt(script_number) + 1, mentee_id: this.props.mentees.current_mentee_id});
-    this.props.getComments(script_number);
   }
 
 
@@ -136,15 +129,9 @@ class App extends Component {
     for (let i = 1; i < this.state.componentList.length + 1; i++){
       this.setState((prevstate) => ({buttonList: prevstate.buttonList.concat(<button key={i-1} onClick={() => this.handleClick((i-1).toString())}>Script {i}</button>)}));
     } 
-    
   }
 
-  // changeWindowSize = () => {
-  //   this.setState({windowWidth: window.innerWidth})
-  // }
-
   render() {
-    // window.addEventListener('resize', this.changeWindowSize)
     if (localStorage.getItem("token")){
       if ((this.props.texts_loading)){
         return(
@@ -167,7 +154,6 @@ class App extends Component {
         return (
           <div>
             {this.state.buttonList}
-            {/* <p>{this.state.windowWidth} px</p> */}
           </div>
         )
       }
@@ -215,8 +201,7 @@ const mapDispatchToProps = dispatch => {
       flushMenteeList: () => dispatch(flushMenteeList()),
       autoLogin: () => dispatch(autoLogin()),
       changeMentee: () => dispatch(changeMentee()),
-      toggleCommentMode: () => dispatch(toggleCommentMode()),
-      getComments: (script_number) => dispatch(getComments(script_number))
+      toggleCommentMode: () => dispatch(toggleCommentMode())
   }
 }
 

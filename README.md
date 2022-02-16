@@ -1,11 +1,6 @@
 Whole project:
 
-Really we can break down this into three steps:
-
-1) Finish comments thing
-    - Have made it so that we get the whole blur thing which is nice. It's not perfect but it's good enough for now
-    - Need to make it so that they have the ability to actually leave comments (would use a sidebar)
-    - Need to set it up for every script page which isn't too terrible
+1) Script 1
 
 2) Make changes as needed
     - Make sure everything that should be a textbox is one (Links, thing you wrote last week, etc.)
@@ -22,11 +17,7 @@ Extras:
     - Save a value in db that's associated with the last page that user was on so that when they reload it goes back to that page, especially so they don't have to keep going back to page 1 now that this is a single page app.
         - The way to do this would have a "saved page" quality in the users table
     - Would have a "return to beginning" option on the last page
-    - Need to get rid of 'here' print statements lol
-    - Need to make sure that all binding prys are gone
-    - If you really have extra time (obviously this isn't mandatory it'll just make things look cleaner) you can make all components ones that use hooks instead of class components
-    - Make the buttons looks all cool
-    - Maybe look into image caching
+    
 
 
 

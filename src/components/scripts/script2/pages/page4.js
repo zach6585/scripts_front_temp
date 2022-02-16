@@ -1,17 +1,18 @@
 import shareScreen from '../../pictures/sharescreen.png';
 import stopShare from '../../pictures/stopshare.png';
 import { connect } from 'react-redux';
-import { useState, useEffect } from 'react';
+
 
 import { patchTexts, postTexts } from '../../../../actions/text';
 import { toggleCommentMode } from '../../../../actions/comment';
+
+import { useState, useEffect } from 'react';
 
 import Sidebar from '../../general pages/sidebar';
 
 
 const Page4 = (props) => {
 
-    
     const [sideBar, setSidebar] = useState(null);
     const [blur, setBlur] = useState("");                         
 
@@ -62,7 +63,7 @@ const Page4 = (props) => {
             <div className={`sheet ${blur}`}>
                 <h1 className={`bold center ${props.commentMode}`} id="h1" onClick={event => handleCommentClick(event)}>Icebreaker</h1>
                 <div className="left container_for_medium_margin">
-                    <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p1">I think it would be fun to get to know more about each other. </p>
+                    <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_1">I think it would be fun to get to know more about each other. </p>
 
                     <div id="instruction_box_number_1_page_4_script_2" className={`ital custom_svg demo_box container_for_small_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                         <img src={shareScreen} alt="Share Screen" id="share_your_screen_page_4_script_2" />
@@ -73,7 +74,7 @@ const Page4 = (props) => {
                         </p>
                     </div>
                     <div className='container_for_small_margin'>
-                        <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p2">
+                        <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_2">
                             We will click on the boxes. A question will show up in the box and we will both answer it.<br/>
                             If you also have a question that isn't in game, but you really want to ask me, just let me know!<br/>
                         </p>

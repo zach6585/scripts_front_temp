@@ -1,7 +1,6 @@
 
 const initialState = {
     commentMode: '',
-    comments: null ,
     sendingComment: false
 }
 
@@ -21,19 +20,6 @@ export default function commentReducer(state = initialState, action){
                 }
             }
             
-        case 'GET_COMMENTS':
-            return{
-                ...state,
-                comments: action.payload
-            }
-
-        case 'ADD_COMMENT':
-            return {
-                ...state, 
-                comments: [...state.comments, action.payload],
-                sendingComment: false
-              }
-        
         case 'SENDING_COMMENT':
             return {
                 ...state,
