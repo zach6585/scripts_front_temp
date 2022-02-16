@@ -1,699 +1,5221 @@
-@media (min-width: 1025px){
-    .sheet {
-        /* Sheet is the class that the main div in each page component has */
-        margin: 100px 100px 200px 0;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+.sheet {
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    h1{
-        font-size: 25px;
-    }
+h1{
+    font-size: 25px;
+}
 
-    .bold {
-        /* For when you want bold text */
-        font-weight: bold;
-    }
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
 
-    .center {
-        /* For when you want text to be in the center */
-        text-align: center;
-    }
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
 
-    .left {
-        /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
-        left */
-        margin-left: 80px;
-    }
-
-
-    li {
-        font-weight: normal;
-        margin:0 20px 15px 20px; 
-        vertical-align: top;
-        font-size: 25px;
-    }
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
 
 
-    .square_bullets {
-        /* Bullets that are square shaped and hollow */
-        list-style-type: none;
-    }
-    .square_bullets:before{
-        /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
-        margin-left: -25px; 
-        content: "\2610";
-    }
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
 
 
-    .open_circles_bullets {
-        /* Bullets that are circle shaped and hollow */
-        list-style-type: circle;
-    }
-
-    td{
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-        font-size: 20px;
-        vertical-align: top;
-    }
-
-    .right {
-        /* For when you want things to be right justified but don't want to use float */
-        margin-left: 1300px;
-    }
-
-    .page_button{
-        /* For the arrow buttons that allow you to change pages */
-        position: absolute;
-        margin-top: 0%;
-        font-size: 16px;
-        padding: 10px 15px;
-        width: 150px;
-        height: 150px;
-    }
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
 
 
-    p { 
-        /* As p is our main tag we use, this is what defines them */
-        line-height: 200%;
-        font-size: 25px;
-        white-space: pre-wrap;
-    }
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
 
 
-    /* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
-    I used them but they're a staple of the project now so... */
-
-    div.container_for_extra_small_margin {
-        margin-top: 2%;
-    }
-
-    div.container_for_small_margin {
-        margin-top: 5%;
-    }
-
-    div.container_for_medium_margin {
-        margin-top: 8%;
-    }
-
-    div.container_for_large_margin {
-        margin-top: 10%;
-    }
-
-    div.container_for_extra_large_margin {
-        margin-top: 15%;
-    }
-
-    .ital {
-        /* For when I want italics */
-        font-style: italic;
-    }
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
 
 
-    textarea {
-        /* For textareas */
-        border: black;
-        border-style: solid;
-        border-width: 2px;
-        font-size: 25px;
-    }
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
 
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
 
 
 
-    .underline_text {
-        /* For when I want to underline text */
-        text-decoration: underline;
-    }
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
 
 
-    .small {
-        /* For when I want small text */
-        font-size: 15px;
-    }
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
 
 /* 
-    .body_text_box::-webkit-input-placeholder {
-        font-size: 8px;
-    } */
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
 
 
-    .top_line_in_instruction_box{ 
-        /* The purpose of this is so that the top line in the instructions box is touching the top*/
-        display: inline;
-        vertical-align: top;
-        
-    }
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
 
 
-    .pause{
-        /* Standard for all of the pause images */
-        width: 100px;
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
 
-    }
+}
 
-    .allEars{
-        /* Standard for all of the listening images (allEars is like a punny term I used for it) */
-        height: 100px;
-    }
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    .demo_box {
-        /* This is the instruction box div */
-        margin-right: 100px;
-        box-sizing: border-box;
-        padding: 10px;
-    }
-    .custom_svg {
-        /* This is the actual dash aspect of the instruction box div */
-        /* this border won't actually take up any space since it's a background image, so add some extra padding to account for that */
-        padding: 2px;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0%25' y='0%25' width='100%25' height='100%25' fill='transparent' stroke='blue' stroke-width='4px' stroke-dasharray='16 2 2 2' /%3E%3C/svg%3E");
-    }
+h1{
+    font-size: 25px;
+}
 
-    div.custom_svg > p, h2, h1 {
-        /* Sets the text to be properly distanced from the sides of the instruction box */
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-        padding: 5px 10px;
-    }
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
 
-    div.solid_box> p, h2, h1 {
-        /* Does the same thing as the thing right above this but for the solid box form */
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-        padding: 5px 10px;
-    }
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
 
 
-    .page_num {
-        /* This is the page number that is displayed at the bottom of the page */
-        position: relative;
-        margin-top: 140px;
-        text-align: center;
-        font-size: 25px;
-    }
-
-    .check{
-        /* The general size and positioning of the green checks*/
-        width: 75px;
-        margin:0 20px 15px 160px; 
-    }
-
-    .redX{
-        /* The general size and positioning of the red xs*/
-        width: 65px;
-        margin:0 20px 15px 160px; 
-    }
-
-    .choicePicked {
-        /* Margin for text displayed next to check and x */
-        margin:0 20px 15px 200px;
-    }
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
 
 
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
 
 
-    .what_does_your_mentor_say{
-        /* I just made this the standard because most of the check and xs have this as the text after them. So it's just that, 
-        the text after the check and x */
-        display: inline-block;
-    }
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
 
-    .commentModeOn:hover{
-        background-color: lightseagreen;
-    }
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
 
-    .commentModeOn:active{
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    /* Sheet is the class that the main div in each page component has */
+    margin: 100px 100px 200px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.bold {
+    /* For when you want bold text */
+    font-weight: bold;
+}
+
+.center {
+    /* For when you want text to be in the center */
+    text-align: center;
+}
+
+.left {
+    /* Most things in these scripts are left justified. This allows for things to be left justified but not too close to the 
+    left */
+    margin-left: 80px;
+}
+
+
+li {
+    font-weight: normal;
+    margin:0 20px 15px 20px; 
+    vertical-align: top;
+    font-size: 25px;
+}
+
+
+.square_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.square_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "\2610";
+}
+
+
+.open_circles_bullets {
+    /* Bullets that are circle shaped and hollow */
+    list-style-type: circle;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.right {
+    /* For when you want things to be right justified but don't want to use float */
+    margin-left: 1300px;
+}
+
+.page_button{
+    /* For the arrow buttons that allow you to change pages */
+    position: absolute;
+    margin-top: 0%;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 150px;
+    height: 150px;
+}
+
+
+p { 
+    /* As p is our main tag we use, this is what defines them */
+    line-height: 200%;
+    font-size: 25px;
+    white-space: pre-wrap;
+}
+
+
+/* These upcoming div.container... things are all for making spaces meant to replace br tags. Not really sure why 
+I used them but they're a staple of the project now so... */
+
+div.container_for_extra_small_margin {
+    margin-top: 2%;
+}
+
+div.container_for_small_margin {
+    margin-top: 5%;
+}
+
+div.container_for_medium_margin {
+    margin-top: 8%;
+}
+
+div.container_for_large_margin {
+    margin-top: 10%;
+}
+
+div.container_for_extra_large_margin {
+    margin-top: 15%;
+}
+
+.ital {
+    /* For when I want italics */
+    font-style: italic;
+}
+
+
+textarea {
+    /* For textareas */
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+
+
+
+
+.underline_text {
+    /* For when I want to underline text */
+    text-decoration: underline;
+}
+
+
+.small {
+    /* For when I want small text */
+    font-size: 15px;
+}
+
+/* 
+.body_text_box::-webkit-input-placeholder {
+    font-size: 8px;
+} */
+
+
+.top_line_in_instruction_box{ 
+    /* The purpose of this is so that the top line in the instructions box is touching the top*/
+    display: inline;
+    vertical-align: top;
+    
+}
+
+
+.pause{
+    /* Standard for all of the pause images */
+    width: 100px;
+
+}
+
+.allEars{
+    /* Standard for all of the listening images (allEars is like a punny term I used for it) */
+    height: 100px;
+}
+
+.demo_box {
+    /* This is the instruction box div */
+    margin-right: 100px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.custom_svg {
+    /* This is the actual dash aspect of the instruction box div */
+    /* this border won't actually take up any space since it's a background image, so add some extra padding to account for that */
+    padding: 2px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0%25' y='0%25' width='100%25' height='100%25' fill='transparent' stroke='blue' stroke-width='4px' stroke-dasharray='16 2 2 2' /%3E%3C/svg%3E");
+}
+
+div.custom_svg > p, h2, h1 {
+    /* Sets the text to be properly distanced from the sides of the instruction box */
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 5px 10px;
+}
+
+div.solid_box> p, h2, h1 {
+    /* Does the same thing as the thing right above this but for the solid box form */
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 5px 10px;
+}
+
+
+.page_num {
+    /* This is the page number that is displayed at the bottom of the page */
+    position: relative;
+    margin-top: 140px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.check{
+    /* The general size and positioning of the green checks*/
+    width: 75px;
+    margin:0 20px 15px 160px; 
+}
+
+.redX{
+    /* The general size and positioning of the red xs*/
+    width: 65px;
+    margin:0 20px 15px 160px; 
+}
+
+.choicePicked {
+    /* Margin for text displayed next to check and x */
+    margin:0 20px 15px 200px;
+}
+
+
+
+
+.what_does_your_mentor_say{
+    /* I just made this the standard because most of the check and xs have this as the text after them. So it's just that, 
+    the text after the check and x */
+    display: inline-block;
+}
+
+.commentModeOn:hover{
+    background-color: lightseagreen;
+}
+
+.commentModeOn:active{
+    background-color: lightseagreen;
+    box-shadow: 0 5px black;
+    transform: translateY(4px);
+}
+
+.blur{
+    filter: blur(8px);
+}
+
+
+
+/* ------------------------------ General pages CSS -------------------------------------- */
+
+            /* The purpose of this is to make general pages so that I don't repeat code that only needs to be written once */
+
+/* Session Start */
+
+.session_start_text_box{
+    width: 100%;
+    border: black;
+    border-style: solid;
+    position: relative;
+    top: 25px;
+    font-size: 25px;
+    height: 400px;
+}
+
+/* Time for questions */
+
+.questions_text_box{
+    width: 60%;
+    height: 200px;
+}
+
+.questions_instructions_box{
+    width: 50%;
+    margin-left: 10px;
+}
+
+
+/* Reminders For Mentoring */
+
+.reminders_text_box{
+    position: relative;
+    display: inline-block;
+    width: 800px;
+    height: 200px;
+}
+
+
+.highlighted {
+    background-color: greenyellow;
+}
+
+.reminders_number_done{
+    width: 50px;
+    height: 40px;
+}
+
+
+
+
+
+
+/* Sharing About Mentoring */
+
+#instruction_box_number_1_sharing_about_mentoring {
+    width: 43.5%;
+    height: auto;
+    margin-left: 2%;
+}
+
+#instruction_box_number_2_sharing_about_mentoring {
+    display: inline-block;
+    width: 23.5%;
+    height: auto;
+    margin-left: 2%;
+}
+
+#share_screen_sharing_about_mentoring {
+    width: 500px;
+    margin: auto;
+    position: absolute;
+    display: inline;
+    
+}
+
+#instruction_box_number_3_sharing_about_mentoring {
+    display: inline-block;
+    width: 23.5%;
+    height: auto;
+    margin-left: 2%;
+}
+
+#stop_share_sharing_about_mentoring{
+    width: 40%;
+    position: absolute;
+    display: inline;
+}
+
+
+.div_for_controlling_wrapping{
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+/* Scheduling for next weekend */
+
+.scheduling_for_next_week_text_box {
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    height: 20px;
+}
+
+
+#text_call_email{
+    margin-left: 16%;
+    display: block;
+    margin-top: -2%;
+}
+
+#instruction_box_number_1_schedule_for_next_week{
+    margin-left: 10%;
+    width: 60%;
+}
+
+.large_scheduling_for_next_week_text_box{
+    width: 80%;
+    height: 100px;
+}
+
+
+/* Practice Reminder */
+
+.practice_reminder_text_box_1{
+    position: relative;
+    display: inline-block;
+    width: 400px;
+}
+
+
+.practice_reminder_text_box_2{
+    position: relative;
+    width: 350px;
+    height: 30px;
+    margin: 10px 20px -4px 0px;
+    display: inline-block;
+}
+
+
+.text_under_text_box_number_1_practice_reminder{
+    /* text-align: center; */
+    margin-left: 80px;
+}
+
+
+/* Body diagram */
+
+
+.bodyScanImageDiv > img{
+    width: 700px;
+    margin-left: 400px;
+    margin-top: -2000px;
+    margin-bottom: 500px;
+}
+
+
+.feelings_label, .head_label, .chest_label, .mouth_and_jaw_label, .breathing_label, .shoulders_label, .stomach_label, .hands_and_arms_label,
+.legs_and_feet_label, .fidgeting_label, .energy_level_label{
+    font-size: 20px;
+}
+
+.feelings_div {
+    /* The div that controls the feelings textarea and span of the body diagram */
+    position: absolute;
+    margin-top: -1470px;
+    margin-left: 446px;
+}
+
+.feelings_div > span{
+    position: inherit;
+    margin-top: 3px;
+    z-index: 2;
+}
+
+.feelings_div > textarea{
+    border: none;
+    font-size: 25px;
+    width: 209px;
+    height: 118px;
+    position: inherit;
+    z-index: 1;
+}
+
+
+.head_div {
+    /* The div that controls the head textarea and span of the body diagram */
+    position: absolute;
+    margin-top: -1442px;
+    margin-left: 855px;
+}
+
+.head_div > span{
+    position: inherit;
+    margin-top: -15px;
+    z-index: 2;
+}
+
+.head_div > textarea{
+    border: none;
+    font-size: 25px;
+    width: 232px;
+    height: 120px;
+    position: inherit;
+    z-index: 1;
+}
+
+
+.chest_div {
+    /* The div that controls the chest textarea and span of the body diagram */
+    position: absolute;
+    margin-top: -1306px;
+    margin-left: 419px;
+}
+
+.chest_div > span{
+    position: inherit;
+    margin-top: -20px;
+    z-index: 2;
+}
+
+.chest_div > textarea{
+    border: none;
+    font-size: 25px;
+    width: 209px;
+    height: 117px;
+    position: inherit;
+    z-index: 1;
+}
+
+
+.mouth_and_jaw_div {
+    /* The div that controls the mouth and jaw textarea and span of the body diagram */
+    position: absolute;
+    margin-top: -1300px;
+    margin-left: 856px;
+}
+
+.mouth_and_jaw_div > span{
+    position: inherit;
+    margin-top: -15px;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.mouth_and_jaw_div > textarea{
+    border: none;
+    font-size: 25px;
+    width: 229px;
+    height: 118px;
+    position: inherit;
+    z-index: 1;
+}
+
+.breathing_div {
+    /* The div that controls the breathing textarea and span of the body diagram */
+    position: absolute;
+    margin-top: -1173px;
+    margin-left: 419px;
+}
+
+.breathing_div > span{
+    position: inherit;
+    margin-top: -10px;
+    z-index: 2;
+}
+
+.breathing_div > textarea{
+    border: none;
+    font-size: 25px;
+    width: 209px;
+    height: 117px;
+    position: inherit;
+    z-index: 1;
+}
+
+.shoulders_div {
+    /* The div that controls the shoulders textarea and span of the body diagram */
+    position: absolute;
+    margin-top: -1157px;
+    margin-left: 860px;
+}
+
+.shoulders_div > span{
+    position: inherit;
+    margin-top: -15px;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.shoulders_div > textarea{
+    border: none;
+    font-size: 25px;
+    width: 229px;
+    height: 118px;
+    position: inherit;
+    z-index: 1;
+}
+
+.stomach_div {
+    /* The div that controls the stomach textarea and span of the body diagram */
+    position: absolute;
+    margin-top: -999px;
+    margin-left: 856px;
+}
+
+.stomach_div > span{
+    position: inherit;
+    margin-top: -15px;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.stomach_div > textarea{
+    border: none;
+    font-size: 25px;
+    width: 229px;
+    height: 118px;
+    position: inherit;
+    z-index: 1;
+}
+
+
+.hands_and_arms_div {
+    /* The div that controls the hands and arms textarea and span of the body diagram */
+    position: absolute;
+    margin-top: -873px;
+    margin-left: 419px;
+}
+
+.hands_and_arms_div > span{
+    position: inherit;
+    white-space: nowrap;
+    margin-top: -10px;
+    z-index: 2;
+}
+
+.hands_and_arms_div > textarea{
+    border: none;
+    font-size: 25px;
+    width: 209px;
+    height: 117px;
+    position: inherit;
+    z-index: 1;
+}
+
+
+
+.legs_and_feet_div {
+    /* The div that controls the legs and feet textarea and span of the body diagram */
+    position: absolute;
+    margin-top: -820px;
+    margin-left: 899px;
+}
+
+.legs_and_feet_div > span{
+    position: inherit;
+    white-space: nowrap;
+    margin-top: -10px;
+    z-index: 2;
+}
+
+.legs_and_feet_div > textarea{
+    border: none;
+    font-size: 25px;
+    width: 209px;
+    height: 117px;
+    position: inherit;
+    z-index: 1;
+}
+
+
+.legs_and_feet{
+    position: absolute;
+    width: 3.2em;
+    height: 3em;
+    margin-top: 200px;
+    margin-left: -52px;
+}
+
+.fidgeting{
+    position: absolute;
+    width: 6.2em;
+    height: 1.6em;
+    margin-top: 268.8px;
+    margin-left: -206px;
+}
+
+.energy_level{
+    position: absolute;
+    width: 6.68em;
+    height: 1.65em;
+    margin-top: 268.8px;
+    margin-left: -103px;
+}
+
+    /* Still pertains to body diagram but belongs to the individual components that render it */
+
+        /* First part is what gives the image a button like quality. Colors should be discussed with Ariel */
+
+        #div_with_body_image_and_p_page_7_script_3{
+            display: inline-block;
+        }
+
+        #div_with_body_image_and_p_page_7_script_3 > p{
+            display: inline;
+        }
+
+        #div_with_body_image_and_p_page_7_script_3 > input{
+            margin-left: 1100px;
+            display: inline;
+            padding: 15px 15px;
+            font-size: 25px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: black;
+            background-color: blue;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px black;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        #div_with_body_image_and_p_page_7_script_3 > input:hover {background-color: lightseagreen}
+
+        #div_with_body_image_and_p_page_7_script_3 > input:active {
         background-color: lightseagreen;
         box-shadow: 0 5px black;
         transform: translateY(4px);
-    }
+        }
 
-
-
-    /* ------------------------------ General pages CSS -------------------------------------- */
-
-                /* The purpose of this is to make general pages so that I don't repeat code that only needs to be written once */
-
-    /* Session Start */
-
-    .session_start_text_box{
-        width: 100%;
-        border: black;
-        border-style: solid;
-        position: relative;
-        top: 25px;
-        font-size: 25px;
-        height: 400px;
-    }
-
-    /* Time for questions */
-
-    .questions_text_box{
-        width: 60%;
-        height: 200px;
-    }
-
-    .questions_instructions_box{
-        width: 50%;
-        margin-left: 10px;
-    }
-
-
-    /* Reminders For Mentoring */
-
-    .reminders_text_box{
-        position: relative;
-        display: inline-block;
-        width: 800px;
-        height: 200px;
-    }
-
-
-    .highlighted {
-        background-color: greenyellow;
-    }
-
-    .reminders_number_done{
-        width: 50px;
-        height: 40px;
-    }
-
-
-
-
-
-
-    /* Sharing About Mentoring */
-
-    #instruction_box_number_1_sharing_about_mentoring {
-        width: 43.5%;
-        height: auto;
-        margin-left: 2%;
-    }
-
-    #instruction_box_number_2_sharing_about_mentoring {
-        display: inline-block;
-        width: 23.5%;
-        height: auto;
-        margin-left: 2%;
-    }
-
-    #share_screen_sharing_about_mentoring {
-        width: 500px;
-        margin: auto;
-        position: absolute;
-        display: inline;
+        /* Below controls the popup quality of the component */
         
-    }
+        /* The actual popup */
+        .body_diagram_popup {
+            position: absolute;
+            z-index: 1;
+        }
+        
+        .hide{
+            visibility: hidden;
+        }
+        
+        /* Toggle this class - hide and show the popup */
+        .show {
+            visibility: visible;
+        }
+        
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {opacity: 0;} 
+            to {opacity: 1;}
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity:1 ;}
+        }
+    /* Sidebar */
 
-    #instruction_box_number_3_sharing_about_mentoring {
-        display: inline-block;
-        width: 23.5%;
-        height: auto;
-        margin-left: 2%;
-    }
-
-    #stop_share_sharing_about_mentoring{
-        width: 40%;
+    .sidebar{
         position: absolute;
-        display: inline;
+        background-color: white;
+        height: 800px;
+        width: 500px;
+        left: 0;
+        top: 0;
     }
 
-
-    .div_for_controlling_wrapping{
-        white-space: nowrap;
-        overflow: hidden;
-
-    }
-
-    /* Scheduling for next weekend */
-
-    .scheduling_for_next_week_text_box {
-        position: relative;
-        display: inline-block;
-        width: 30%;
-        height: 20px;
-    }
-
-
-    #text_call_email{
-        margin-left: 16%;
+    .sidebar_text_box{
         display: block;
-        margin-top: -2%;
-    }
-
-    #instruction_box_number_1_schedule_for_next_week{
-        margin-left: 10%;
-        width: 60%;
-    }
-
-    .large_scheduling_for_next_week_text_box{
-        width: 80%;
-        height: 100px;
-    }
-
-
-    /* Practice Reminder */
-
-    .practice_reminder_text_box_1{
-        position: relative;
-        display: inline-block;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
         width: 400px;
+        height: 620px;
     }
 
-
-    .practice_reminder_text_box_2{
-        position: relative;
-        width: 350px;
-        height: 30px;
-        margin: 10px 20px -4px 0px;
-        display: inline-block;
+    .sidebar_submit_button{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
-
-
-    .text_under_text_box_number_1_practice_reminder{
-        /* text-align: center; */
-        margin-left: 80px;
-    }
-
-
-    /* Body diagram */
-
-
-    .bodyScanImageDiv > img{
-        width: 700px;
-        margin-left: 400px;
-        margin-top: -2000px;
-        margin-bottom: 500px;
-    }
-
-
-    .feelings_label, .head_label, .chest_label, .mouth_and_jaw_label, .breathing_label, .shoulders_label, .stomach_label, .hands_and_arms_label,
-    .legs_and_feet_label, .fidgeting_label, .energy_level_label{
-        font-size: 20px;
-    }
-
-    .feelings_div {
-        /* The div that controls the feelings textarea and span of the body diagram */
-        position: absolute;
-        margin-top: -1470px;
-        margin-left: 446px;
-    }
-
-    .feelings_div > span{
-        position: inherit;
-        margin-top: 3px;
-        z-index: 2;
-    }
-
-    .feelings_div > textarea{
-        border: none;
-        font-size: 25px;
-        width: 209px;
-        height: 118px;
-        position: inherit;
-        z-index: 1;
-    }
-
-
-    .head_div {
-        /* The div that controls the head textarea and span of the body diagram */
-        position: absolute;
-        margin-top: -1442px;
-        margin-left: 855px;
-    }
-
-    .head_div > span{
-        position: inherit;
-        margin-top: -15px;
-        z-index: 2;
-    }
-
-    .head_div > textarea{
-        border: none;
-        font-size: 25px;
-        width: 232px;
-        height: 120px;
-        position: inherit;
-        z-index: 1;
-    }
-
-
-    .chest_div {
-        /* The div that controls the chest textarea and span of the body diagram */
-        position: absolute;
-        margin-top: -1306px;
-        margin-left: 419px;
-    }
-
-    .chest_div > span{
-        position: inherit;
-        margin-top: -20px;
-        z-index: 2;
-    }
-
-    .chest_div > textarea{
-        border: none;
-        font-size: 25px;
-        width: 209px;
-        height: 117px;
-        position: inherit;
-        z-index: 1;
-    }
-
-
-    .mouth_and_jaw_div {
-        /* The div that controls the mouth and jaw textarea and span of the body diagram */
-        position: absolute;
-        margin-top: -1300px;
-        margin-left: 856px;
-    }
-
-    .mouth_and_jaw_div > span{
-        position: inherit;
-        margin-top: -15px;
-        white-space: nowrap;
-        z-index: 2;
-    }
-
-    .mouth_and_jaw_div > textarea{
-        border: none;
-        font-size: 25px;
-        width: 229px;
-        height: 118px;
-        position: inherit;
-        z-index: 1;
-    }
-
-    .breathing_div {
-        /* The div that controls the breathing textarea and span of the body diagram */
-        position: absolute;
-        margin-top: -1173px;
-        margin-left: 419px;
-    }
-
-    .breathing_div > span{
-        position: inherit;
-        margin-top: -10px;
-        z-index: 2;
-    }
-
-    .breathing_div > textarea{
-        border: none;
-        font-size: 25px;
-        width: 209px;
-        height: 117px;
-        position: inherit;
-        z-index: 1;
-    }
-
-    .shoulders_div {
-        /* The div that controls the shoulders textarea and span of the body diagram */
-        position: absolute;
-        margin-top: -1157px;
-        margin-left: 860px;
-    }
-
-    .shoulders_div > span{
-        position: inherit;
-        margin-top: -15px;
-        white-space: nowrap;
-        z-index: 2;
-    }
-
-    .shoulders_div > textarea{
-        border: none;
-        font-size: 25px;
-        width: 229px;
-        height: 118px;
-        position: inherit;
-        z-index: 1;
-    }
-
-    .stomach_div {
-        /* The div that controls the stomach textarea and span of the body diagram */
-        position: absolute;
-        margin-top: -999px;
-        margin-left: 856px;
-    }
-
-    .stomach_div > span{
-        position: inherit;
-        margin-top: -15px;
-        white-space: nowrap;
-        z-index: 2;
-    }
-
-    .stomach_div > textarea{
-        border: none;
-        font-size: 25px;
-        width: 229px;
-        height: 118px;
-        position: inherit;
-        z-index: 1;
-    }
-
-
-    .hands_and_arms_div {
-        /* The div that controls the hands and arms textarea and span of the body diagram */
-        position: absolute;
-        margin-top: -873px;
-        margin-left: 419px;
-    }
-
-    .hands_and_arms_div > span{
-        position: inherit;
-        white-space: nowrap;
-        margin-top: -10px;
-        z-index: 2;
-    }
-
-    .hands_and_arms_div > textarea{
-        border: none;
-        font-size: 25px;
-        width: 209px;
-        height: 117px;
-        position: inherit;
-        z-index: 1;
-    }
-
-
-
-    .legs_and_feet_div {
-        /* The div that controls the legs and feet textarea and span of the body diagram */
-        position: absolute;
-        margin-top: -820px;
-        margin-left: 899px;
-    }
-
-    .legs_and_feet_div > span{
-        position: inherit;
-        white-space: nowrap;
-        margin-top: -10px;
-        z-index: 2;
-    }
-
-    .legs_and_feet_div > textarea{
-        border: none;
-        font-size: 25px;
-        width: 209px;
-        height: 117px;
-        position: inherit;
-        z-index: 1;
-    }
-
-
-    .legs_and_feet{
-        position: absolute;
-        width: 3.2em;
-        height: 3em;
-        margin-top: 200px;
-        margin-left: -52px;
-    }
-
-    .fidgeting{
-        position: absolute;
-        width: 6.2em;
-        height: 1.6em;
-        margin-top: 268.8px;
-        margin-left: -206px;
-    }
-
-    .energy_level{
-        position: absolute;
-        width: 6.68em;
-        height: 1.65em;
-        margin-top: 268.8px;
-        margin-left: -103px;
-    }
-
-        /* Still pertains to body diagram but belongs to the individual components that render it */
-
-            /* First part is what gives the image a button like quality. Colors should be discussed with Ariel */
-
-            #div_with_body_image_and_p_page_7_script_3{
-                display: inline-block;
-            }
-
-            #div_with_body_image_and_p_page_7_script_3 > p{
-                display: inline;
-            }
-
-            #div_with_body_image_and_p_page_7_script_3 > input{
-                margin-left: 1100px;
-                display: inline;
-                padding: 15px 15px;
-                font-size: 25px;
-                cursor: pointer;
-                text-align: center;
-                text-decoration: none;
-                outline: none;
-                color: black;
-                background-color: blue;
-                border: none;
-                border-radius: 15px;
-                box-shadow: 0 9px black;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
-
-            #div_with_body_image_and_p_page_7_script_3 > input:hover {background-color: lightseagreen}
-
-            #div_with_body_image_and_p_page_7_script_3 > input:active {
-            background-color: lightseagreen;
-            box-shadow: 0 5px black;
-            transform: translateY(4px);
-            }
-
-            /* Below controls the popup quality of the component */
-            
-            /* The actual popup */
-            .body_diagram_popup {
-                position: absolute;
-                z-index: 1;
-            }
-            
-            .hide{
-                visibility: hidden;
-            }
-            
-            /* Toggle this class - hide and show the popup */
-            .show {
-                visibility: visible;
-            }
-            
-            /* Add animation (fade in the popup) */
-            @-webkit-keyframes fadeIn {
-                from {opacity: 0;} 
-                to {opacity: 1;}
-            }
-            
-            @keyframes fadeIn {
-                from {opacity: 0;}
-                to {opacity:1 ;}
-            }
-}

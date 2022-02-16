@@ -5,10 +5,11 @@ import { connect } from 'react-redux';
 import { getTexts, changeTexts } from './actions/text';
 import { userLogout, autoLogin } from './actions/user';
 import { flushMenteeList,changeMentee } from './actions/mentee';
-import { toggleCommentMode } from './actions/comments';
+import { getComments, toggleCommentMode } from './actions/comment';
 
 //Need to make a thing for just me (the superuser) so I can see comments on front page if there are any. This requires importing the 
 //other function from the comments action
+//Need to also have a get comments thing when we first render it 
 
 
 import hamburgerMenu from "./components/scripts/pictures/hamburger_menu.png";
@@ -16,8 +17,6 @@ import hamburgerMenu from "./components/scripts/pictures/hamburger_menu.png";
 
 import './App.css';
 import './components/scripts/allScripts.css';
-import './components/scripts/allScriptsiPad.css';
-import './components/scripts/allScriptsiPadPro.css';
 
 
 
@@ -129,6 +128,7 @@ class App extends Component {
     this.setState({buttonList: []});
     this.setState({currComponent: this.state.componentList[script_number]})
     this.props.getTexts({script_number: parseInt(script_number) + 1, mentee_id: this.props.mentees.current_mentee_id});
+    this.props.getComments(script_number);
   }
 
 
@@ -215,7 +215,8 @@ const mapDispatchToProps = dispatch => {
       flushMenteeList: () => dispatch(flushMenteeList()),
       autoLogin: () => dispatch(autoLogin()),
       changeMentee: () => dispatch(changeMentee()),
-      toggleCommentMode: () => dispatch(toggleCommentMode())
+      toggleCommentMode: () => dispatch(toggleCommentMode()),
+      getComments: (script_number) => dispatch(getComments(script_number))
   }
 }
 
