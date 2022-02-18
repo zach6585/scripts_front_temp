@@ -1,15 +1,15 @@
-
+import allEars from "../../pictures/allears.png"
+import pause from "../../pictures/pause.png"
 import { connect } from 'react-redux';
-import { useState, useEffect } from 'react';
 
 import { patchTexts, postTexts } from '../../../../actions/text';
 import { toggleCommentMode } from '../../../../actions/comment';
 
+import { useState, useEffect } from 'react';
+
 import Sidebar from '../../general pages/sidebar';
 
-
-
-const Page5 = (props) => {
+const Page9 = (props) => {
 
     const [sideBar, setSidebar] = useState(null);
     const [blur, setBlur] = useState("");                         
@@ -56,27 +56,40 @@ const Page5 = (props) => {
         let current_text_for_value = props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
         return current_text_for_value ? current_text_for_value.value : ""
     }
-
+  
     return (
         <div>
             <div className={`sheet ${blur}`}>
-                <h1 className={`bold center ${props.commentMode}`} id="h1" onClick={event => handleCommentClick(event)}>Learning about mental health conditions</h1>
+                <h1 className={`bold center ${props.commentMode}`} id="h1" onClick={event => handleCommentClick(event)}>Review</h1>
                 <div className="left container_for_small_margin">
                     <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_1">
-                        Last week, we talked about the big topic of mental health.<br/>
-                        Mental health is all about how we think, feel, and act.  Mental health is about how we handle stress.<br/><br />
-                        A mental health condition is when a person is having a hard time with how they think, feel, and act.<br/><br/>
-                        You mentioned that mental health is <br/>
-                        <textarea className={props.commentMode} onClick={event => handleCommentClick(event)} onChange={event => handleChange(event)} id="text_box_number_1_page_5_script_2" defaultValue={getValue("text_box_number_1_page_5_script_2")} />
+                        Today we talked about a lot!<br/>
+                        We mostly focused on symptoms.<br/><br/>
+                        Some of my symptoms are: <br/>
+                        <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_9_script_2" defaultValue={getValue("text_box_number_1_page_9_script_2")} /><br/>
+                        Do you remember what some of your symptoms are?
                     </p>
+                    <img className={`pause ${props.commentMode}`} onClick={event => handleCommentClick(event)} src={pause} alt="Pause" />
+                    <img className={`allEars ${props.commentMode}`} onClick={event => handleCommentClick(event)} src={allEars} alt="All ears" />
+                    <br/><br/><br/><br/>
+                    <div id="instruction_box_number_1_page_9_script_2" className={`ital custom_svg demo_box container_for_large_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
+                        <p className="top_line_in_instruction_box">
+                            Help your mentee look at the symptom cards. <textarea onChange={event => handleChange(event)} id="text_box_number_2_page_9_script_2" defaultValue={getValue("text_box_number_2_page_9_script_2")} /><br/>
+                            Share your screen to show them the card sort.
+                        </p>
+                    </div>
+                    <div className='container_for_large_margin'>
+                        <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_2">
+                            This week, try to pay attention to how you feel. <br/>
+                            If you have any symptoms, try to notice when they happen. We can talk about them next week. This is an important first step for helping you with your mental health and working together.
+                        </p>  
+                    </div>
                 </div>
             </div>
             {sideBar}
         </div>
     )
 }
-
-
 
 const mapStateToProps = state => {
     return{
@@ -96,5 +109,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Page5);
-
+export default connect(mapStateToProps, mapDispatchToProps)(Page9);

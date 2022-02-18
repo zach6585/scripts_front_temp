@@ -60,16 +60,30 @@ const Page5 = (props) => {
     return (
         <div>
             <div className={`sheet ${blur}`}>
-                <h1 className={`bold center ${props.commentMode}`} id="h1" onClick={event => handleCommentClick(event)}>Learning about mental health conditions</h1>
-                <div className="left container_for_small_margin">
-                    <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_1">
-                        Last week, we talked about the big topic of mental health.<br/>
-                        Mental health is all about how we think, feel, and act.  Mental health is about how we handle stress.<br/><br />
-                        A mental health condition is when a person is having a hard time with how they think, feel, and act.<br/><br/>
-                        You mentioned that mental health is <br/>
-                        <textarea className={props.commentMode} onClick={event => handleCommentClick(event)} onChange={event => handleChange(event)} id="text_box_number_1_page_5_script_2" defaultValue={getValue("text_box_number_1_page_5_script_2")} />
-                    </p>
-                </div>
+            <div>
+             <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_1">
+                 I'm excited to play it with you for the first time!<br/>
+                 You will think about two things that are true about yourself. You will also make something up about yourself.  In this game, it's okay to make something up about yourself! It's part of the fun.<br/> 
+                 Then, tell me all three things.  But don't tell me which are true and which is not true.<br/><br/>
+                 Here is an example:
+             </p>
+
+             <div className="container_for_small_margin">
+                 <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_2">I <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_5_script_1" defaultValue={getValue("text_box_number_1_page_5_script_1")} /></p>
+                 <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_3">I <textarea onChange={event => handleChange(event)} id="text_box_number_2_page_5_script_1" defaultValue={getValue("text_box_number_2_page_5_script_1")} /></p>
+                 <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_4">These two things are true about me.</p>
+             </div>
+
+             <div className="container_for_small_margin">
+                 <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_5">
+                     But I do not <textarea onChange={event => handleChange(event)} id="text_box_number_3_page_5_script_1" defaultValue={getValue("text_box_number_3_page_5_script_1")} />.
+                     This thing is a lie, or something not true.<br/>
+                     When we play, you will guess what thing is NOT true. <br/>
+                     You will also tell me two things that are true and one thing that is NOT true. I will guess which is NOT true. 
+                 </p>
+                
+             </div>
+         </div>
             </div>
             {sideBar}
         </div>
@@ -97,4 +111,3 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Page5);
-

@@ -2,6 +2,8 @@ Whole project:
 
 1) Script 1
 
+1a) Add page at the end of script 16 that I left out
+
 2) Make changes as needed
     - Make sure everything that should be a textbox is one (Links, thing you wrote last week, etc.)
     - There are parts where she wants links to other pages (using redux)
