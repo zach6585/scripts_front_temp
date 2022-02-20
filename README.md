@@ -25,6 +25,8 @@ Extras:
 
 
 Questions for Ariel:
+
+- Pages 
  
 Notes:
 

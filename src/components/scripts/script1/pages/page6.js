@@ -36,7 +36,7 @@ const Page6 = (props) => {
     
     return (
         <div>
-            <div className={`sheet ${blur}`}>
+            <div className={`sheet ${blur} left`}>
                 <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_1">
                     We will take some time to think about our 2 truths and 1 thing that is not true. Let me know when you're ready to guess.
                 </p>
