@@ -1,14 +1,16 @@
+import checkButSmaller from "../../pictures/checkbutsmaller.png";
+import redXButSmaller from "../../pictures/redxbutsmaller.png";
+
 import { connect } from 'react-redux';
-
-import shareScreen from '../../pictures/sharescreen.png';
-import stopShare from '../../pictures/stopshare.png';
-import optimizeVideo from "../../pictures/optimizevideo.png";
-
-import { toggleCommentMode } from '../../../../actions/comment';
-
 import { useState, useEffect } from 'react';
 
+
+import { toggleCommentMode } from '../../../../actions/comment';
+import {goToSpecificPage} from '../../../../actions/page';
+
 import Sidebar from '../../general pages/sidebar';
+
+
 
 const Page9 = (props) => {
 
@@ -21,8 +23,7 @@ const Page9 = (props) => {
         setSidebar(null);
       }, [props.sendingComment]);
 
-    const handleCommentClick = (event) => {
-        //Here is where you render the sidebar
+      const handleClick = (e, letter) => {
         if (props.commentMode === 'commentModeOn'){
             if (blur === ""){
                 setBlur("blur");
@@ -31,56 +32,53 @@ const Page9 = (props) => {
                 setBlur("");
             }
             if (sideBar === null){
-                setSidebar(<Sidebar id_tag={event.target.id} />)
+                setSidebar(<Sidebar id_tag={e.target.id} />)
             }
             props.toggleCommentMode();
+        }
+        else{
+            if (letter === 'c'){
+                props.goToSpecificPage(11);
+            }
+            else if (letter === 'x'){
+                props.goToSpecificPage(10);
+            }
         }
     }
 
     return (
         <div>
             <div className={`sheet ${blur}`}>
+                <h1 className={`bold center ${props.commentMode}`} id="h1" onClick={event => handleClick(event, "")}>Learning about mental health conditions</h1>
                 <div className="left">
-                    <div>
-                        <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_1">
-                            That's ok, we're going to watch a video about mental health to learn more.
-                            We are going to watch a video together about mental health made by young adults who have mental health conditions. Please ask me to pause if you have a question or if something makes you feel uncomfortable.
-                        </p>
-                    </div>
-                  
-                    <div className='wrapper'>
-                        <a href="https://drive.google.com/file/d/1cJXHFL2jlVdH_YSihqijsdhD-lgr7Cvk/view" id="video_link_page_9_script_1" className={props.commentMode} onClick={event => handleCommentClick(event)}>Video link</a>
-                        <div id="image_and_instruction_box_number_1_page_9_script_1" className='container_for_extra_small_margin'>
-                            <div id="instruction_box_number_1_page_9_script_1" className={`ital custom_svg demo_box ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
-                                <p className='top_line_in_instruction_box'>
-                                    Share your screen <br/>
-                                    -Share sound <br/>
-                                    -Optimize for video
-                                </p>
-                            </div>
-                            <img src={shareScreen} id="share_screen_page_9_script_1" alt="Share your screen" className={props.commentMode} onClick={event => handleCommentClick(event)} />
-                        </div>
-                    </div>
                     <div className='container_for_medium_margin'>
-                        <img src={optimizeVideo} id="opt_page_9_script_1" alt="Optimize your video" className={props.commentMode} onClick={event => handleCommentClick(event)} />
-                    </div>
-
-                    <div id="image_and_instruction_box_number_1_page_9_script_1" className='container_for_extra_medium_margin'>
-                        <div id="instruction_box_number_2_page_9_script_1" className={`ital custom_svg demo_box container_for_medium_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
-                            <p className='top_line_in_instruction_box'>
-                                When you are finished, stop sharing your screen
-                            </p>
+                        <p className={props.commentMode} onClick={event => handleClick(event, "")} id="p_1">
+                            We are going to learn a few new words about mental health today.  To give you a preview, here's what we're going to talk about: 
+                        </p>
+                        <ul>
+                            <li className={`${props.commentMode}`} id="li_1" onClick={event => handleClick(event, "")}>mental health</li>
+                            <li className={`${props.commentMode}`} id="li_2" onClick={event => handleClick(event, "")}>coping tools, or coping strategies</li>
+                            <li className={`${props.commentMode}`} id="li_3" onClick={event => handleClick(event, "")}>mental health conditions, and</li>
+                            <li className={`${props.commentMode}`} id="li_4" onClick={event => handleClick(event, "")}>symptoms</li>
+                        </ul>
+                        <p className={props.commentMode} onClick={event => handleClick(event, "")} id="p_1_indented">
+                            Have you ever heard of “mental health” before? 
+                        </p>
+                        <div>
+                            <img className={`check ${props.commentMode}`} id="img_1" src={checkButSmaller} alt="Check" onClick={(event) => handleClick(event, 'c')} /><p className={`what_does_your_mentor_say ${props.commentMode}`} id="p_2" onClick={(event) => handleClick(event, '')}>Your mentee says yes</p>
+                            <br/><br/>
+                            <img className={`redX ${props.commentMode}`} id="img_2" src={redXButSmaller} alt="Red X" onClick={(event) => handleClick(event, 'x')} /><p  className={`what_does_your_mentor_say ${props.commentMode}`} id="p_3" onClick={(event) => handleClick(event, '')}>Your mentee says no</p>
+                            <br/><br/>
                         </div>
-                        <img src={stopShare} alt="Stop sharing your screen" id='stop_share_page_9_script_1' className={props.commentMode} onClick={event => handleCommentClick(event)} />
                     </div>
-                    
-
                 </div>
             </div>
             {sideBar}
         </div>
     )
 }
+
+
 
 const mapStateToProps = state => {
     return{
@@ -91,7 +89,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return{
-        toggleCommentMode: () => dispatch(toggleCommentMode())
+        toggleCommentMode: () => dispatch(toggleCommentMode()),
+        goToSpecificPage: (pageNum) => dispatch(goToSpecificPage(pageNum))
     }
 }
 

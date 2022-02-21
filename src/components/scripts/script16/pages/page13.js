@@ -3,7 +3,7 @@ import redXButSmaller from "../../pictures/redxbutsmaller.png";
 
 import { useState } from "react";
 
-const Page12 = () =>{
+const Page13 = () =>{
 
     const [greenCheckWords, setGreenCheckWords] = useState("")
     const [redXWords, setRedXWords] = useState("")
@@ -35,4 +35,4 @@ const Page12 = () =>{
     )
 }
 
-export default Page12;
+export default Page13;

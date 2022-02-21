@@ -133,12 +133,7 @@ class App extends Component {
 
   render() {
     if (localStorage.getItem("token")){
-      if ((this.props.texts_loading)){
-        return(
-          <h1>Loading</h1>
-        )
-      }
-      else if (this.props.mentees.current_mentee_id === -1){
+      if (this.props.mentees.current_mentee_id === -1){
         if (this.props.mentees.mentees === null){
           return(<h1>Loading</h1>)
         }
@@ -147,6 +142,11 @@ class App extends Component {
             <Mentees />
           )
         }
+      }
+      else if ((this.props.texts_loading)){
+        return(
+          <h1>Loading</h1>
+        )
       }
 
       else {

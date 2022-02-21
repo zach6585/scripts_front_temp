@@ -45,7 +45,7 @@ const Page11 = (props) => {
                 <div className="left">
                     <div>
                         <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_1">
-                        If you're comfortable with it, can you tell me a little bit about what you know about mental health?  That way I'll know if there are certain things you've already learned about mental health that would be boring to repeat to you, or certain parts of mental health that you really want to talk about together and learn more about. 
+                            If you're comfortable with it, can you tell me a little bit about what you know about mental health?  That way I'll know if there are certain things you've already learned about mental health that would be boring to repeat to you, or certain parts of mental health that you really want to talk about together and learn more about. 
                         </p>
                     </div>
 
@@ -54,7 +54,7 @@ const Page11 = (props) => {
                        <img src={allEars} className={`allEars ${props.commentMode}`} alt="Listen" id="allEars" onClick={event => handleCommentClick(event)} /> 
                     </div>
 
-                    <div id="instruction_box_number_1_page_10_script_1" className={`ital custom_svg demo_box container_for_small_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
+                    <div id="instruction_box_number_1_page_11_script_1" className={`ital custom_svg demo_box container_for_small_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                         <p className='top_line_in_instruction_box'>
                            Listen to your mentee's definitions of mental health and talk to them about their ideas. You can also share your own definition of mental health. 
                         </p>
@@ -82,7 +82,7 @@ const Page11 = (props) => {
                         <img src={optimizeVideo} id="opt_page_11_script_1" alt="Optimize your video" className={props.commentMode} onClick={event => handleCommentClick(event)} />
                     </div>
 
-                    <div id="image_and_instruction_box_number_1_page_11_script_1" className='container_for_extra_medium_margin'>
+                    <div id="image_and_instruction_box_number_2_page_11_script_1" className='container_for_extra_medium_margin'>
                         <div id="instruction_box_number_2_page_11_script_1" className={`ital custom_svg demo_box container_for_medium_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                             <p className='top_line_in_instruction_box'>
                                 When you are finished, stop sharing your screen

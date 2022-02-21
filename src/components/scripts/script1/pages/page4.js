@@ -1,26 +1,26 @@
-import checkButSmaller from "../../pictures/checkbutsmaller.png";
-import redXButSmaller from "../../pictures/redxbutsmaller.png";
+
+
+
 
 import { connect } from 'react-redux';
+import { useState, useEffect } from 'react';
 
 import { toggleCommentMode } from '../../../../actions/comment';
-import {goToSpecificPage} from '../../../../actions/page';
-
-import { useState, useEffect } from 'react';
 
 import Sidebar from '../../general pages/sidebar';
 
-
 const Page4 = (props) => {
     const [sideBar, setSidebar] = useState(null);
-    const [blur, setBlur] = useState("");                       
+    const [blur, setBlur] = useState("");                         
+
 
     useEffect(() => {
         setBlur("");
         setSidebar(null);
       }, [props.sendingComment]);
 
-    const handleClick = (e, letter) => {
+    const handleCommentClick = (event) => {
+        //Here is where you render the sidebar
         if (props.commentMode === 'commentModeOn'){
             if (blur === ""){
                 setBlur("blur");
@@ -29,48 +29,39 @@ const Page4 = (props) => {
                 setBlur("");
             }
             if (sideBar === null){
-                setSidebar(<Sidebar id_tag={e.target.id} />)
+                setSidebar(<Sidebar id_tag={event.target.id} />)
             }
             props.toggleCommentMode();
         }
-        else{
-            if (letter === 'c'){
-                props.goToSpecificPage(6);
-            }
-            else if (letter === 'x'){
-                props.goToSpecificPage(5);
-            }
-        }
     }
 
-    return(
+   return (
         <div>
             <div className={`sheet ${blur}`}>
-                <h1 className={`bold center ${props.commentMode}`} id="h1" onClick={event => handleClick(event, "")}>Icebreaker</h1>
-                <div className="left">
-                    <div className="container_for_medium_margin">
-                        <p className={props.commentMode} onClick={event => handleClick(event, "")} id="p_1">
-                            I think it would be fun to get to know more about each other. <br/>
-                            We are going to play a game called “two truths and a lie.” Have you ever played before?
+                <h1 className={`bold center ${props.commentMode}`} id="h1_1" onClick={event => handleCommentClick(event)}>Plan for the day</h1>
+                <div className='left'>
+                    <div className='container_for_large_margin'>
+                        <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_1">
+                            Each time we meet, there is a plan for the day. It helps us know what to expect.  
+                            Today's plan is:
                         </p>
                     </div>
-                    <div>
-                        <img className={`check ${props.commentMode}`} id="img_1" src={checkButSmaller} alt="Check" onClick={(event) => handleClick(event, 'c')} /><p className={`what_does_your_mentor_say ${props.commentMode}`} id="p_2" onClick={(event) => handleClick(event, '')}>Your mentee says yes</p>
-                        <br/><br/>
-                        <img className={`redX ${props.commentMode}`} id="img_2" src={redXButSmaller} alt="Red X" onClick={(event) => handleClick(event, 'x')} /><p  className={`what_does_your_mentor_say ${props.commentMode}`} id="p_3" onClick={(event) => handleClick(event, '')}>Your mentee says no</p>
-                        <br/><br/>
-                    </div>
+                    <div className='container_for_medium_margin'>
+                        <ol>
+                            <li className={`${props.commentMode}`} id="li_1" onClick={event => handleCommentClick(event)}>Icebreaker game</li>
+                            <li className={`${props.commentMode}`} id="li_2" onClick={event => handleCommentClick(event)}>Learning about peer mentoring</li>
+                            <li className={`${props.commentMode}`} id="li_3" onClick={event => handleCommentClick(event)}>Learning about mental health conditions</li>
+                            <li className={`${props.commentMode}`} id="li_4" onClick={event => handleCommentClick(event)}>Doing the peer mentoring contract</li>
+                            <li className={`${props.commentMode}`} id="li_5" onClick={event => handleCommentClick(event)}>Time for questions</li>
+                            <li className={`${props.commentMode}`} id="li_6" onClick={event => handleCommentClick(event)}>Reminders about mentoring</li>
+                        </ol>
+                    </div> 
                 </div>
             </div>
             {sideBar}
         </div>
     )
 }
-
-
-
-
-
 
 
 const mapStateToProps = state => {
@@ -82,7 +73,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return{
-        goToSpecificPage: (page_num) => dispatch(goToSpecificPage(page_num)), 
         toggleCommentMode: () => dispatch(toggleCommentMode())
     }
 }

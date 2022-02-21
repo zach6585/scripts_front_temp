@@ -1,9 +1,9 @@
-import SharingAboutMentoring from '../../general pages/sharingaboutmentoring';
+import RemindersAboutMentoring from '../../general pages/remindersaboutmentoring.js';
 
 
 const Page16 = () => {
     return (
-        <SharingAboutMentoring /> 
+        <RemindersAboutMentoring /> 
     )
 }
 

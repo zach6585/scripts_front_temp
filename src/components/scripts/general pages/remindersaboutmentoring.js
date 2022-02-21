@@ -15,63 +15,84 @@ class RemindersAboutMentoring extends Component {
         five: null,
         otf: null,
         dns: null,
-        highlight_f: null, 
-        highlight_o: null,
-        highlight_z: null, //These highlights are all about which element gets to be highlighted
-        highlight_d: null
+        highlight_f: '', 
+        highlight_o: '',
+        highlight_z: '', //These highlights are all about which element gets to be highlighted
+        highlight_d: ''
         }, 
-        extrapracticesession: null,
-        extraBulletPoint: null
+        extrapracticesession: null
     }
 
 
     handleClick = (e, letter) => {
        if (letter === 'f'){
-                this.setState({handleclick: {oft : null, five: <Five />, highlight_f: "highlighted", highlight_o: null, highlight_z: null}})
+                this.setState({handleclick: {otf : null, five: <Five />, dns: null, highlight_f: "highlighted", highlight_o: '', highlight_z: '', highlight_d: ''}})
         }
         else if (letter === 'o'){
-            this.setState({handleclick: {five : null, otf: <OTFZ props={this.props} otf_or_z={'otf'}/>, highlight_f: null, highlight_o: "highlighted", highlight_z: null}})
+            this.setState({handleclick: {five : null, otf: <OTFZ props={this.props} otf_or_z={'otf'}/>, dns: null, highlight_f: '', highlight_o: "highlighted", highlight_z: '', highlight_d: ''}})
         }
         else if (letter === 'z'){
-            this.setState({handleclick: {five : null, otf: <OTFZ props={this.props} otf_or_z={'z'} />, highlight_f: null, highlight_o: null, highlight_z: "highlighted"}})
+            this.setState({handleclick: {five : null, otf: <OTFZ props={this.props} otf_or_z={'z'} />, dns: null, highlight_f: '', highlight_o: '', highlight_z: "highlighted", highlight_d: ''}})
         }
-        if (letter === "d"){
-            this.setState({handleClick: {dns: <DNS />, highlight_d: "highlighted"} })
+        else if (letter === 'd'){
+            console.log('here');
+            this.setState({handleclick: {five : null, otf: null, dns: <DNS />, highlight_f: '', highlight_o: '', highlight_z: "", highlight_d: 'highlighted'}})
         }
-       
     }
 
     componentDidMount = () => {
         if (this.props.extrapractice){
             this.setState({extrapracticesession: <ExtraPracticeSection props={this.props} script={this.props.script} />})
         }
-        if (this.props.script === "1"){
-            this.setState({extraBulletPoint: <div className={this.state.handleclick.highlight_d}><li className="square_bullets" onClick={(event) => this.handleClick(event, 'd')}>Your mentee hasn't started their mood logs</li></div>})
-        }
     }
 
     render() {
-        return (
-            <div className="sheet">
-                <h1 className="bold center">Reminders about mentoring</h1>
-                <div className="left container_for_small_margin">
-                    <p>
-                        It was really great to talk with you. <br/>
-                        <span className='uline'>Mood log reminder</span>
-                    </p>
-                    <ul>
-                        <div className={this.state.handleclick.highlight_f}><li className="square_bullets" onClick={(event) => this.handleClick(event, 'f')}>Your mentee completed 5 mood logs.</li></div>
-                        <div className={this.state.handleclick.highlight_o}><li className="square_bullets" onClick={(event) => this.handleClick(event, 'o')}>Your mentee completed 1-4 mood logs.</li></div>
-                        <div className={this.state.handleclick.highlight_z}><li className="square_bullets" onClick={(event) => this.handleClick(event, 'z')}>Your mentee completed 0 mood logs.</li></div>
-                        {this.state.extraBulletPoint}
-                    </ul>
-                    {this.state.handleclick.five}
-                    {this.state.handleclick.otf}
-                    {this.state.extrapracticesession}
-                    {this.state.dns}
+        if (this.props.script === "1"){
+            return (
+                <div className="sheet">
+                    <h1 className="bold center">Reminders about mentoring</h1>
+                    <div className="left container_for_small_margin">
+                        <p>
+                            It was really great to talk with you. <br/>
+                            <span className='uline'>Mood log reminder</span>
+                        </p>
+                        <ul>
+                            <div className={`${this.state.handleclick.highlight_f}`}><li className="square_bullets" onClick={(event) => this.handleClick(event, 'f')}>Your mentee completed 5 mood logs.</li></div>
+                            <div className={`${this.state.handleclick.highlight_o}`}><li className="square_bullets" onClick={(event) => this.handleClick(event, 'o')}>Your mentee completed 1-4 mood logs.</li></div>
+                            <div className={`${this.state.handleclick.highlight_z}`}><li className="square_bullets" onClick={(event) => this.handleClick(event, 'z')}>Your mentee completed 0 mood logs.</li></div>
+                            <div className={this.state.handleclick.highlight_d}><li className="square_bullets" onClick={(event) => this.handleClick(event, 'd')}>Your mentee hasn't started their mood logs</li></div>
+                        </ul>
+                        {this.state.handleclick.five}
+                        {this.state.handleclick.otf}
+                        {this.state.extrapracticesession}
+                        {this.state.handleclick.dns}
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        }
+        else {
+            return (
+                <div className="sheet">
+                    <h1 className="bold center">Reminders about mentoring</h1>
+                    <div className="left container_for_small_margin">
+                        <p>
+                            It was really great to talk with you. <br/>
+                            <span className='uline'>Mood log reminder</span>
+                        </p>
+                        <ul>
+                            <div className={`${this.state.handleclick.highlight_f}`}><li className="square_bullets" onClick={(event) => this.handleClick(event, 'f')}>Your mentee completed 5 mood logs.</li></div>
+                            <div className={`${this.state.handleclick.highlight_o}`}><li className="square_bullets" onClick={(event) => this.handleClick(event, 'o')}>Your mentee completed 1-4 mood logs.</li></div>
+                            <div className={`${this.state.handleclick.highlight_z}`}><li className="square_bullets" onClick={(event) => this.handleClick(event, 'z')}>Your mentee completed 0 mood logs.</li></div>
+                        </ul>
+                        {this.state.handleclick.five}
+                        {this.state.handleclick.otf}
+                        {this.state.extrapracticesession}
+                        {this.state.handleclick.dns}
+                    </div>
+                </div>
+            )
+        }
+        
     }
 }
 
@@ -106,17 +127,17 @@ class OTFZ extends Component{
     }
         render(){
             const otf_or_z = this.props.otf_or_z
-            let otfz1 = null;
-            let otfz2 = null;
-            let otfz3 = null;
+            let otfz1 = '';
+            let otfz2 = '';
+            let otfz3 = '';
             if (otf_or_z === 'otf'){
                 otfz1 = <p>This week you did <textarea className='reminders_number_done' onChange={event => this.handleChange(event)} id={`text_box_number_1_mentoring_reminders_script_${this.props.script}`} defaultValue={this.getValue(`text_box_number_1_mentoring_reminders_script_${this.props.script}`)} /> mood logs. Thanks for doing those. Please try to do 5 this week.</p>
                 otfz2 = <textarea className='reminders_text_box' onChange={event => this.handleChange(event)} id={`text_box_number_2_mentoring_reminders_script_${this.props.script}`} defaultValue={this.getValue(`text_box_number_2_mentoring_reminders_script_${this.props.script}`)} />
-                otfz3 = null 
+                otfz3 = '' 
             }
             else if (otf_or_z === 'z'){
                 otfz1 = <p>I noticed that you did not get a chance to do any of your mood logs</p>
-                otfz2 = null
+                otfz2 = ''
                 otfz3 = <textarea className='reminders_text_box' onChange={event => this.handleChange(event)} id={`text_box_number_3_mentoring_reminders_script_${this.props.script}`} defaultValue={this.getValue(`text_box_number_3_mentoring_reminders_script_${this.props.script}`)} />
             }
         return(
@@ -190,16 +211,19 @@ class ExtraPracticeSection extends Component{
     }
 }
 
-const DNS = () => {
-    return (
-        <p>
-            This week you will start doing your mood logs. Please try to do them at least 5 times per week. <br/><br/>
-
-            The mood logs will help you learn about how you are feeling.<br/><br/>
-
-            You will earn $5 for every week you do at least 5 mood logs. That means you could earn up to $80 for doing the mood logs.<br/><br/>
-        </p>
-    )
+class DNS extends Component {
+    render(){
+        return (
+            <p>
+                This week you will start doing your mood logs. Please try to do them at least 5 times per week. <br/><br/>
+    
+                The mood logs will help you learn about how you are feeling.<br/><br/>
+    
+                You will earn $5 for every week you do at least 5 mood logs. That means you could earn up to $80 for doing the mood logs.<br/><br/>
+            </p>
+        )
+    }
+    
 }
 
 const mapStateToProps = state => {

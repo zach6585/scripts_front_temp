@@ -1,27 +1,30 @@
 
-import { connect } from 'react-redux';
-import { useState, useEffect } from 'react';
 
-import { patchTexts, postTexts } from '../../../../actions/text';
+
+
+import checkButSmaller from "../../pictures/checkbutsmaller.png";
+import redXButSmaller from "../../pictures/redxbutsmaller.png";
+
+import { connect } from 'react-redux';
+
 import { toggleCommentMode } from '../../../../actions/comment';
+import {goToSpecificPage} from '../../../../actions/page';
+
+import { useState, useEffect } from 'react';
 
 import Sidebar from '../../general pages/sidebar';
 
 
-
 const Page5 = (props) => {
-
     const [sideBar, setSidebar] = useState(null);
-    const [blur, setBlur] = useState("");                         
-
+    const [blur, setBlur] = useState("");                       
 
     useEffect(() => {
         setBlur("");
         setSidebar(null);
       }, [props.sendingComment]);
 
-    const handleCommentClick = (event) => {
-        //Here is where you render the sidebar
+    const handleClick = (e, letter) => {
         if (props.commentMode === 'commentModeOn'){
             if (blur === ""){
                 setBlur("blur");
@@ -30,58 +33,36 @@ const Page5 = (props) => {
                 setBlur("");
             }
             if (sideBar === null){
-                setSidebar(<Sidebar id_tag={event.target.id} />)
+                setSidebar(<Sidebar id_tag={e.target.id} />)
             }
             props.toggleCommentMode();
         }
+        else{
+            if (letter === 'c'){
+                props.goToSpecificPage(7);
+            }
+            else if (letter === 'x'){
+                props.goToSpecificPage(6);
+            }
+        }
     }
 
-    const handleChange = (event) => {
-        const object_outcome = getObject(event.target.id)
-        object_outcome === "" ? 
-        props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: props.mentee_id, script: props.script})
-        :
-        props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: props.mentee_id, script: props.script})
-
-    }
-    
-    const getObject = (current_id_tag) => {
-        //Returns the object that has the specific id_tag
-        let current_text = props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
-        return current_text ? current_text : ""
-    }
-
-    const getValue = (current_id_tag) => {
-        //Same as getObject but instead it returns the value
-        let current_text_for_value = props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
-        return current_text_for_value ? current_text_for_value.value : ""
-    }
-
-    return (
+    return(
         <div>
             <div className={`sheet ${blur}`}>
-                <div className='left'>
-                    <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_1">
-                        I'm excited to play it with you for the first time!<br/>
-                        You will think about two things that are true about yourself. You will also make something up about yourself.  In this game, it's okay to make something up about yourself! It's part of the fun.<br/> 
-                        Then, tell me all three things.  But don't tell me which are true and which is not true.<br/><br/>
-                        Here is an example:
-                    </p>
-
-                    <div className="container_for_small_margin">
-                        <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_2">I <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_5_script_1" defaultValue={getValue("text_box_number_1_page_5_script_1")} /></p>
-                        <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_3">I <textarea onChange={event => handleChange(event)} id="text_box_number_2_page_5_script_1" defaultValue={getValue("text_box_number_2_page_5_script_1")} /></p>
-                        <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_4">These two things are true about me.</p>
-                    </div>
-
-                    <div className="container_for_small_margin">
-                        <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_5">
-                            But I do not <textarea onChange={event => handleChange(event)} id="text_box_number_3_page_5_script_1" defaultValue={getValue("text_box_number_3_page_5_script_1")} />.
-                            This thing is a lie, or something not true.<br/>
-                            When we play, you will guess what thing is NOT true. <br/>
-                            You will also tell me two things that are true and one thing that is NOT true. I will guess which is NOT true. 
+                <h1 className={`bold center ${props.commentMode}`} id="h1" onClick={event => handleClick(event, "")}>Icebreaker</h1>
+                <div className="left">
+                    <div className="container_for_medium_margin">
+                        <p className={props.commentMode} onClick={event => handleClick(event, "")} id="p_1">
+                            I think it would be fun to get to know more about each other. <br/>
+                            We are going to play a game called “two truths and a lie.” Have you ever played before?
                         </p>
-                        
+                    </div>
+                    <div>
+                        <img className={`check ${props.commentMode}`} id="img_1" src={checkButSmaller} alt="Check" onClick={(event) => handleClick(event, 'c')} /><p className={`what_does_your_mentor_say ${props.commentMode}`} id="p_2" onClick={(event) => handleClick(event, '')}>Your mentee says yes</p>
+                        <br/><br/>
+                        <img className={`redX ${props.commentMode}`} id="img_2" src={redXButSmaller} alt="Red X" onClick={(event) => handleClick(event, 'x')} /><p  className={`what_does_your_mentor_say ${props.commentMode}`} id="p_3" onClick={(event) => handleClick(event, '')}>Your mentee says no</p>
+                        <br/><br/>
                     </div>
                 </div>
             </div>
@@ -92,11 +73,12 @@ const Page5 = (props) => {
 
 
 
+
+
+
+
 const mapStateToProps = state => {
     return{
-        texts: state.texts.curatedTextsFromCurrentScript,
-        mentee_id: state.mentees.current_mentee_id,
-        script: state.texts.currentScript,
         commentMode: state.comments.commentMode,
         sendingComment: state.comments.sendingComment 
     }
@@ -104,8 +86,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return{
-        patchTexts: (text_data) => dispatch(patchTexts(text_data)),
-        postTexts: (text_data) => dispatch(postTexts(text_data)),
+        goToSpecificPage: (page_num) => dispatch(goToSpecificPage(page_num)), 
         toggleCommentMode: () => dispatch(toggleCommentMode())
     }
 }

@@ -1,0 +1,177 @@
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Page 1 */
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 2 */ 
+
+
+#instruction_box_number_1_page_2_script_1{
+    width: 950px;
+}
+
+#text_box_number_1_page_2_script_1{
+    width: 900px;
+    height: 400px;
+}
+
+#instruction_box_number_2_page_2_script_1{
+    width: 912px;
+    height: 312px;
+}
+
+#text_box_number_2_page_2_script_1{
+    width: 900px;
+    height: 300px;
+    border: none;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 3 */ 
+
+#image_and_ul_div_page_2_script_1{
+    display: inline;
+}
+
+#image_and_ul_div_page_2_script_1 > div{
+    width: 350px;
+    height: 175px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#image_and_ul_div_page_2_script_1 > ul{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 4 */ 
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 5 */ 
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 6 */ 
+
+
+
+#text_box_number_1_page_6_script_1, #text_box_number_2_page_6_script_1, #text_box_number_3_page_6_script_1{
+    width: 800px;
+    height: 100px;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 7 */ 
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 8 */ 
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 9 */ 
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 10 */ 
+
+
+#video_link_page_10_script_1{
+    font-size: 25px;
+}
+
+#image_and_instruction_box_number_1_page_10_script_1{
+    margin-top: 10px;
+    display: flex;
+}
+
+#image_and_instruction_box_number_1_page_10_script_1 > div{
+    width: 150px;
+    height: 175px;
+    flex: 0.2;
+    
+}
+
+#image_and_instruction_box_number_1_page_10_script_1 > img{
+    flex: 0.5;
+    
+}
+
+
+#image_and_instruction_box_number_2_page_10_script_1{
+    display: flex;
+}
+
+#image_and_instruction_box_number_2_page_10_script_1 > div{
+    flex: 1;
+    
+}
+
+#image_and_instruction_box_number_2_page_10_script_1 > img{
+    width: 400px;
+    flex: 1;
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 11 */ 
+
+
+#video_link_page_11_script_1{
+    font-size: 25px;
+}
+
+#image_and_instruction_box_number_1_page_11_script_1{
+    margin-top: 10px;
+    display: flex;
+}
+
+#image_and_instruction_box_number_1_page_11_script_1 > div{
+    width: 150px;
+    height: 175px;
+    flex: 0.2;
+    
+}
+
+#image_and_instruction_box_number_1_page_11_script_1 > img{
+    flex: 0.5;
+    
+}
+
+
+#image_and_instruction_box_number_2_page_11_script_1{
+    margin-top: 10px;
+    display: flex;
+}
+
+#image_and_instruction_box_number_2_page_11_script_1 > div{
+    flex: 1;
+    
+}
+
+#image_and_instruction_box_number_2_page_11_script_1 > img{
+    width: 400px;
+    flex: 1;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 12 */ 
+
+/* See allScripts.css for the general scripts section */
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 13 */ 
+
+/* See allScripts.css for the general scripts section */
+

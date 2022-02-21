@@ -1,8 +1,6 @@
 Whole project:
 
-1) Script 1 (Just need to work on the css part of it)
-
-1a) Add page at the end of script 16 that I left out
+1) Add page at the end of script 16 that I left out
 
 2) Make changes as needed
     - Make sure everything that should be a textbox is one (Links, thing you wrote last week, etc.)

@@ -1,5 +1,9 @@
 import { connect } from 'react-redux';
 
+
+import allEars from "../../pictures/allears.png";
+import pause from "../../pictures/pause.png";
+
 import { patchTexts, postTexts } from '../../../../actions/text';
 import { toggleCommentMode } from '../../../../actions/comment';
 
@@ -64,28 +68,64 @@ const Page13 = (props) => {
     return (
         <div>
             <div className={`sheet ${blur}`}>
-              <h1 className={`bold center ${props.commentMode}`} id="h1">Doing the mentoring contract</h1>
                 <div className="left">
-                    <div className='container_for_medium_margin'>
+                    <div>
                         <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_1">
-                          I want to make sure that peer mentoring will work well for you. <br/>
-                          That is why we do the peer mentoring contract.<br/>
-                          You learned about the contract when you met with Ariel. It should also be in your email.<br/>
-                          To make sure that everyone has a good time in peer mentoring, we will work together to agree on some rules. We will talk about each of these rules to make sure you understand them and agree with them.<br/>
-                          I will read each part. <br/>
-                          Let me know if you have any questions or want me to pause. 
+                            What did you think about the video? Do you have any questions? 
                         </p>
+                    </div>
+
+                    <div id="pause_listen_div">
+                        <img src={pause} className={`pause ${props.commentMode}`} alt="Pause" id="pause" onClick={event => handleCommentClick(event)} />                        
+                        <img src={allEars} className={`allEars ${props.commentMode}`} alt="Listen" id="allEars" onClick={event => handleCommentClick(event)} /> 
                     </div>
 
                     <div id="instruction_box_number_1_page_13_script_1" className={`ital custom_svg demo_box container_for_small_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                         <p className='top_line_in_instruction_box'>
-                          Send your mentee the contract link: <br/>
-                          <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_13_script_1" defaultValue={getValue("text_box_number_1_page_13_script_1")} /><br/>
-                          Ask them to share their screen. <br/>
-                          Read each question to your mentee. If your mentee says they want to read, that's ok. Make sure that you talk about each question.<br/>
-                          Talk about the contract with your mentee. Answer their questions and help them fill out the form.<br/><br/>
-                          When they are done, ask them to stop sharing their screen.
+                            Talk with your mentee about the video 
                         </p>
+                    </div>
+                    
+                    <div className='container_for_medium_margin'>
+                        <p className={props.commentMode} id="p_2" onClick={event => handleCommentClick(event)}>
+                        Sometimes teens and young adults feel embarrassed to talk about mental health.   This might be because they worry other people may not want to be their friends, might judge them, or might think that there is something wrong with them.  Sometimes people don't even want to talk about mental health out loud because they are so afraid about being judged and that makes them afraid to ask for help. <br/>
+                        I am here to tell you that having a mental health condition is not something you have to be afraid of or embarrassed having. Having a mental health condition does not mean you are bad, did something wrong, or are crazy.  It's okay for you to be you, and I am happy to get to know you better!
+
+                        </p>
+                    </div>
+                    <div className='container_for_medium_margin'>
+                        <p className={props.commentMode} id="p_3" onClick={event => handleCommentClick(event)}>
+                        I have a mental health condition. It is called: <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_13_script_1" defaultValue={getValue("text_box_number_1_page_13_script_1")} />
+                        </p>
+                        <p className={props.commentMode} id="p_4" onClick={event => handleCommentClick(event)}>
+                        This means: <textarea onChange={event => handleChange(event)} id="text_box_number_2_page_13_script_1" defaultValue={getValue("text_box_number_2_page_13_script_1")} />
+                        </p>
+                        <p className={props.commentMode} id="p_5" onClick={event => handleCommentClick(event)}>
+                        Thank you for being open to talking about mental health with me.  Next time, we will talk about how to take care of your mental health.
+                        </p>
+                    </div>
+                    
+                    <div className='container_for_large_margin'>
+                        <p className={props.commentMode} onClick={event => handleCommentClick(event)} >
+                            Let's take a few minutes to do a quick scavenger hunt in our homes, and then show each other on screen what we've found.  We are each going to look for something at home that makes us feel really happy.  Maybe it's something we play, like an instrument.  Or a drawing you made.  Or maybe it's an awesome gift someone gave you.  
+                            For example, I want to show you <textarea onChange={event => handleChange(event)} id="text_box_number_3_page_13_script_1" defaultValue={getValue("text_box_number_3_page_13_script_1")} />.  
+                            I chose this because  <textarea onChange={event => handleChange(event)} id="text_box_number_4_page_13_script_1" defaultValue={getValue("text_box_number_4_page_13_script_1")} />.<br/>
+                            Can you find something and bring it back to the screen? <br/>
+                            We'll take five minutes to do this.
+                        </p>
+                    </div>
+
+                    <div id="instruction_box_number_2_page_13_script_1" className={`ital custom_svg demo_box container_for_small_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
+                        <p className='top_line_in_instruction_box'>
+                            When your mentee comes back, talk to them about what they brought.<br/>
+                            <span className='underline_text'>Example questions to ask:</span><br/>
+                        </p>
+                        <ul>
+                            <li className={`${props.commentMode}`} id="li_1" onClick={event => handleCommentClick(event)}>What is it?</li>
+                            <li className={`${props.commentMode}`} id="li_2" onClick={event => handleCommentClick(event)}>Where did you get it from / how did you make it? </li>
+                            <li className={`${props.commentMode}`} id="li_3" onClick={event => handleCommentClick(event)}>Why does this make you happy?  </li>
+                            <li className={`${props.commentMode}`} id="li_4" onClick={event => handleCommentClick(event)}>Have you had it for a long time?</li>
+                        </ul>
                     </div>
                 </div>
             </div>
