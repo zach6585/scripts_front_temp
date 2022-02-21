@@ -66,29 +66,29 @@ const Page11 = (props) => {
                      </p>
                   </div>
                     <div className='wrapper'>
-                        <a href="https://drive.google.com/file/d/1cJXHFL2jlVdH_YSihqijsdhD-lgr7Cvk/view" id="video_link_page_9_script_1" className={props.commentMode} onClick={event => handleCommentClick(event)}>Video link</a>
-                        <div id="image_and_instruction_box_number_1_page_9_script_1" className='container_for_extra_small_margin'>
-                            <div id="instruction_box_number_1_page_9_script_1" className={`ital custom_svg demo_box ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
+                        <a href="https://drive.google.com/file/d/1cJXHFL2jlVdH_YSihqijsdhD-lgr7Cvk/view" id="video_link_page_11_script_1" className={props.commentMode} onClick={event => handleCommentClick(event)}>Video link</a>
+                        <div id="image_and_instruction_box_number_1_page_11_script_1" className='container_for_extra_small_margin'>
+                            <div id="instruction_box_number_1_page_11_script_1" className={`ital custom_svg demo_box ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                                 <p className='top_line_in_instruction_box'>
                                     Share your screen <br/>
                                     -Share sound <br/>
                                     -Optimize for video
                                 </p>
                             </div>
-                            <img src={shareScreen} id="share_screen_page_9_script_1" alt="Share your screen" className={props.commentMode} onClick={event => handleCommentClick(event)} />
+                            <img src={shareScreen} id="share_screen_page_11_script_1" alt="Share your screen" className={props.commentMode} onClick={event => handleCommentClick(event)} />
                         </div>
                     </div>
                     <div className='container_for_medium_margin'>
-                        <img src={optimizeVideo} id="opt_page_9_script_1" alt="Optimize your video" className={props.commentMode} onClick={event => handleCommentClick(event)} />
+                        <img src={optimizeVideo} id="opt_page_11_script_1" alt="Optimize your video" className={props.commentMode} onClick={event => handleCommentClick(event)} />
                     </div>
 
-                    <div id="image_and_instruction_box_number_1_page_9_script_1" className='container_for_extra_medium_margin'>
-                        <div id="instruction_box_number_2_page_9_script_1" className={`ital custom_svg demo_box container_for_medium_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
+                    <div id="image_and_instruction_box_number_1_page_11_script_1" className='container_for_extra_medium_margin'>
+                        <div id="instruction_box_number_2_page_11_script_1" className={`ital custom_svg demo_box container_for_medium_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                             <p className='top_line_in_instruction_box'>
                                 When you are finished, stop sharing your screen
                             </p>
                         </div>
-                        <img src={stopShare} alt="Stop sharing your screen" id='stop_share_page_9_script_1' className={props.commentMode} onClick={event => handleCommentClick(event)} />
+                        <img src={stopShare} alt="Stop sharing your screen" id='stop_share_page_11_script_1' className={props.commentMode} onClick={event => handleCommentClick(event)} />
                     </div>
                     
 

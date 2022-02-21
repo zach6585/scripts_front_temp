@@ -4,7 +4,7 @@ import redXButSmaller from "../../pictures/redxbutsmaller.png";
 import { connect } from 'react-redux';
 import { useState, useEffect } from 'react';
 
-import { patchTexts, postTexts } from '../../../../actions/text';
+
 import { toggleCommentMode } from '../../../../actions/comment';
 
 import Sidebar from '../../general pages/sidebar';
@@ -81,9 +81,6 @@ const Page7 = (props) => {
 
 const mapStateToProps = state => {
     return{
-        texts: state.texts.curatedTextsFromCurrentScript,
-        mentee_id: state.mentees.current_mentee_id,
-        script: state.texts.currentScript,
         commentMode: state.comments.commentMode,
         sendingComment: state.comments.sendingComment 
     }
@@ -91,8 +88,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return{
-        patchTexts: (text_data) => dispatch(patchTexts(text_data)),
-        postTexts: (text_data) => dispatch(postTexts(text_data)),
         toggleCommentMode: () => dispatch(toggleCommentMode())
     }
 }
