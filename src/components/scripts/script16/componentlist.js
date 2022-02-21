@@ -16,7 +16,7 @@ import Page9 from './pages/page9';
 import Page10 from './pages/page10';
 import Page11 from './pages/page11';
 import Page12 from './pages/page12';
-import Page13 from './pages/page13';
+
 
 import larrow from "../pictures/larrow.png";
 import rarrow from "../pictures/rarrow.png";
@@ -28,7 +28,7 @@ import '../allScripts.css';
 class Script16List extends Component {
 
     state = {button_use: {button_back: false, button_forward: true}, 
-    component_list: [<Page1 />, <Page2/>, <Page3 />, <Page4/>, <Page5 />, <Page6/>, <Page7 />, <Page8/>, <Page9 />, <Page10 />, <Page11 />, <Page12 />, <Page13 />]}
+    component_list: [<Page1 />, <Page2/>, <Page3 />, <Page4/>, <Page5 />, <Page6/>, <Page7 />, <Page8/>, <Page9 />, <Page10 />, <Page11 />, <Page12 />]}
     
       
     handleClick = (letter) => {//This determines which button was pressed

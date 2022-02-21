@@ -1,25 +1,22 @@
 Whole project:
 
-1) Add page at the end of script 16 that I left out
-
-2) Make changes as needed
+1) Make changes as needed
     - Make sure everything that should be a textbox is one (Links, thing you wrote last week, etc.)
     - There are parts where she wants links to other pages (using redux)
     - Make most text boxes higher as scrolling will make things hard.
-    - I've been really stupid and have only been looking at an iPad Pro!! I need to make sure it works for regular iPad too. Honestly I really should just be making multiple versions depending on size (Like I did with Freshlayers).
     - Solutions website
     - Body image page
     - Make sure all checks and xs are changed to their smaller counter parts
+    - Make sure text next to checks and xs is correct
+    - Make sure all images are correct
 
 3) Finish the comment thing
     
 
 Extras: 
      
-    - Save a value in db that's associated with the last page that user was on so that when they reload it goes back to that page, especially so they don't have to keep going back to page 1 now that this is a single page app.
-        - The way to do this would have a "saved page" quality in the users table
-    - Would have a "return to beginning" option on the last page
-    
+    - Finish up the "last user" stuff
+        - Would need to add methods to the user class in Ruby so that it would take post requests specifically to update the user's info
 
 
 

@@ -1,11 +1,10 @@
 import {Component} from 'react';
-import { connect } from 'react-redux';
 import './users.css';
 
 import Signup from './signup';
 import Login from './login';
 
-import {changeUserPage} from '../../actions/user';
+
 
 class Users extends Component{
 
@@ -17,7 +16,6 @@ class Users extends Component{
 
     handleClick = (event) => {
         event.preventDefault();
-        this.props.changeUserPage();
         if (this.state.current_component_name === "login"){
             this.setState({
                 current_component_being_rendered: <Signup />,
@@ -46,10 +44,6 @@ class Users extends Component{
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return{
-        changeUserPage: () => dispatch(changeUserPage())
-    }
-}
 
-export default connect(null, mapDispatchToProps)(Users);
+
+export default Users

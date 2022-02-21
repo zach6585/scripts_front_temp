@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { menteeChosen } from '../../actions/mentee';
+import {changeLastUserMentee} from '../../actions/user';
 
 function DisplayMentees(props){
 
@@ -46,7 +47,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return{
-        menteeChosen: (mentee_id) => dispatch(menteeChosen(mentee_id))
+        menteeChosen: (mentee_id) => dispatch(menteeChosen(mentee_id)),
+        changeLastUserMentee: (mentee_id) => dispatch(changeLastUserMentee(mentee_id))
     }
 }
 

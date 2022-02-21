@@ -30,8 +30,16 @@ export const userSignupAndCheck = (user_data) => dispatch => {
     })
 } 
 
-export const changeUserPage = () => dispatch => {
-    dispatch({type: 'CHANGE_PAGE'})
+export const changeLastUserPage = (pageNum) => dispatch => {
+    dispatch({type: 'CHANGE_USER_PAGE', payload: pageNum})
+}
+
+export const changeLastUserScript = (scriptNum) => dispatch => {
+    dispatch({type: 'CHANGE_USER_SCRIPT', payload: scriptNum})
+}
+
+export const changeLastUserMentee = (menteeID) => dispatch => {
+    dispatch({type: 'CHANGE_USER_MENTEE', payload: menteeID})
 }
 
 export const autoLogin = () => dispatch => {

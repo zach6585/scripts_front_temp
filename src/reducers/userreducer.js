@@ -1,8 +1,9 @@
 const initialState = {
   user_id: -1,
   err: '',
-  admin: false,
-  superUser: false
+  lastPage: null,
+  lastScript: null,
+  lastMentee: null
 }
 
 
@@ -22,40 +23,42 @@ export default function userReducer(state = initialState, action) {
           user_id: -1
         }
       case 'USER_SUCCESS':
-        if (action.payload.super_user === true){
-          return{
-            ...state,
-            err: '',
-            user_id: action.payload.id,
-            admin: true,
-            superUser: true
-          }
-        }
-        else if (action.payload.admin === true){
-          return{
-            ...state,
-            err: '',
-            user_id: action.payload.id,
-            admin: true
-          }
-        }
-        else{
-          return{
-            ...state,
-            err: '',
-            user_id: action.payload.id
-          }
-        }
-        
-      case 'CHANGE_PAGE':
         return{
           ...state,
-          err: ''
+          err: '',
+          user_id: action.payload.id,
+          lastPage: action.payload.last_page_number,
+          lastScript: action.payload.last_script_number,
+          lastMentee: action.payload.last_mentee_id
         }
+        
+      case 'CHANGE_USER_PAGE':
+        return{
+          ...state,
+          lastPage: action.payload
+        }
+      
+      case 'CHANGE_USER_SCRIPT':
+        return{
+          ...state,
+          lastScript: action.payload
+        }
+
+      case 'CHANGE_USER_MENTEE':
+        console.log('here')
+        return{
+          ...state,
+          lastMentee: action.payload
+        }
+
       case 'LOGOUT':
         return{
           ...state,
-          user_id: -1
+          user_id: -1,
+          err: '',
+          lastPage: null,
+          lastScript: null,
+          lastMentee: null
         }
       default:
         // If the reducer doesn't care about this action type,

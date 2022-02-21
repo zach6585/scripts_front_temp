@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 
 import { getTexts, changeTexts } from './actions/text';
-import { userLogout, autoLogin } from './actions/user';
+import { userLogout, autoLogin, changeLastUserScript, changeLastUserMentee } from './actions/user';
 import { flushMenteeList,changeMentee } from './actions/mentee';
 import { toggleCommentMode } from './actions/comment';
 
@@ -68,7 +68,7 @@ class App extends Component {
     }
   
     else if (this.state.hamburger_is_clicked === false){
-      if (this.props.user.admin){
+      if (this.props.user.user_id === 5){
         this.setState({hamburger_is_clicked: true,
             options: 
             <div id="hamburger_menu_ps_div">
@@ -98,12 +98,14 @@ class App extends Component {
       this.setState({hamburger_is_clicked: false, options: ''});
       this.makeButtons();
       this.props.changeTexts();
+      this.props.changeLastUserScript(null);
     }
     else if (choice === 2){
       this.setState({hamburger_is_clicked: false, options: ''});
       this.makeButtons();
       this.props.changeTexts();
       this.props.changeMentee();
+      this.props.changeLastUserMentee(null);
     }
     else if (choice === 3){
       this.setState({hamburger_is_clicked: false, options: ''});
@@ -122,6 +124,7 @@ class App extends Component {
     this.setState({buttonList: []});
     this.setState({currComponent: this.state.componentList[script_number]})
     this.props.getTexts({script_number: parseInt(script_number) + 1, mentee_id: this.props.mentees.current_mentee_id});
+    this.props.changeLastUserScript(script_number);
   }
 
 
@@ -138,6 +141,7 @@ class App extends Component {
           return(<h1>Loading</h1>)
         }
         else{
+          
           return(
             <Mentees />
           )
@@ -180,7 +184,6 @@ class App extends Component {
 
 
 const mapStateToProps = state => {
-  console.log(state);
   return{
     pages: state.pages,
     texts: state.texts,
@@ -201,7 +204,9 @@ const mapDispatchToProps = dispatch => {
       flushMenteeList: () => dispatch(flushMenteeList()),
       autoLogin: () => dispatch(autoLogin()),
       changeMentee: () => dispatch(changeMentee()),
-      toggleCommentMode: () => dispatch(toggleCommentMode())
+      toggleCommentMode: () => dispatch(toggleCommentMode()),
+      changeLastUserScript: (script) => dispatch(changeLastUserScript(script)),
+      changeLastUserMentee: (mentee_id) => dispatch(changeLastUserMentee(mentee_id))
   }
 }
 
