@@ -35,15 +35,26 @@ const Page3 = (props) => {
         <div>
             <div className={`sheet ${blur}`}>
                 <h1 className={`bold center ${props.commentMode}`} id="h1_1" onClick={event => handleCommentClick(event)}>Plan for the day</h1>
-                <div className='left container_for_medium_margin'>
-                    <ol>
-                        <li className={`${props.commentMode}`} id="li_1" onClick={event => handleCommentClick(event)}>Icebreaker game</li>
-                        <li className={`${props.commentMode}`} id="li_2" onClick={event => handleCommentClick(event)}>Learning about mental health conditions</li>
-                        <li className={`${props.commentMode}`} id="li_3" onClick={event => handleCommentClick(event)}>Learning about self-monitoring</li>
-                        <li className={`${props.commentMode}`} id="li_4" onClick={event => handleCommentClick(event)}>Time for questions</li>
-                        <li className={`${props.commentMode}`} id="li_5" onClick={event => handleCommentClick(event)}>Reminders about mentoring</li>
-                        <li className={`${props.commentMode}`} id="li_6" onClick={event => handleCommentClick(event)}>Make a plan for practice</li>
-                    </ol>
+                <div className='left'>
+                    <div className='container_for_medium=_margin'>
+                        <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p">
+                            For every peer mentoring session, we will have a plan for today. I can read it out loud to you or would you prefer to read it to yourself?<br/>
+                            Today's plan is: 
+
+                        </p>
+                    </div>
+                    
+                    <div className='container_for_small_margin'>
+                        <ol>
+                            <li className={`${props.commentMode}`} id="li_1" onClick={event => handleCommentClick(event)}>Icebreaker game</li>
+                            <li className={`${props.commentMode}`} id="li_2" onClick={event => handleCommentClick(event)}>Learning about mental health conditions</li>
+                            <li className={`${props.commentMode}`} id="li_3" onClick={event => handleCommentClick(event)}>Learning about self-monitoring</li>
+                            <li className={`${props.commentMode}`} id="li_4" onClick={event => handleCommentClick(event)}>Time for questions</li>
+                            <li className={`${props.commentMode}`} id="li_5" onClick={event => handleCommentClick(event)}>Reminders about mentoring</li>
+                            <li className={`${props.commentMode}`} id="li_6" onClick={event => handleCommentClick(event)}>Make a plan for practice</li>
+                        </ol>
+                    </div>
+                    
                 </div>
             </div>
             {sideBar}

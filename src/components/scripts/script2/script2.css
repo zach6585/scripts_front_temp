@@ -34,7 +34,7 @@
         position: absolute;
         top: 0;
         left: 550px;
-        width: 80%;
+        width: 800px;
     }
 
     #text_box_number_1_page_4_script_2{
@@ -61,26 +61,26 @@
     /*-------------------------------------------------------------------------------------------------------------------------------- */
     /* Page 6 */ 
 
-
-
-    #instruction_box_number_1_page_6_script_2{
-        width: 400px;
-        height: 330px;
-        padding: 10px;
-        display: inline-block;
-
-    }
-
+   
     #text_box_number_1_page_6_script_2{
         position: relative;
         display: inline-block;
         width: 300px;
         height: 40px;
     }
+    #image_and_instruction_box_page_6_script_2{
+        display: flex;
+    }
 
-    #share_your_screen_page_6_script_2{
-        width: 350px;
-        margin-left: -5%;
+    #image_and_instruction_box_page_6_script_2  > div {
+        flex: .8;
+
+    }
+
+    #image_and_instruction_box_page_6_script_2 > img{
+        width: 300px;
+        height: 200px;
+        flex: 1;
     }
 
     #text_box_number_2_page_6_script_2{
@@ -90,12 +90,15 @@
         height: 300px;
     }
 
+
     #stop_sharing_screen_page_6_script_2{
-        width: 500px;
+        width: 600px;
         display: block;
         margin: auto;
         justify-content: center;
     }
+
+    
 
 
 
@@ -171,22 +174,24 @@
         margin:0 20px 15px 50px;
     }
 
-    #image_and_instruction_box_div_page_8_script_2{
-        display: inline;
+    #video_link_page_8_script_2{
+        font-size: 25px;
     }
-
     
-    #image_and_instruction_box_div_page_8_script_2 > div{
-        width: 350px;
+    #image_and_instruction_box_number_1_page_8_script_2{
+        margin-top: 10px;
+        display: flex;
+    }
+    
+    #image_and_instruction_box_number_1_page_8_script_2 > div{
+        width: 150px;
         height: 175px;
-        display: inline-block;
-        vertical-align: middle;
+        flex: 0.2;
         
     }
     
-    #image_and_instruction_box_div_page_8_script_2 > img{
-        width: 45%;
-        vertical-align: middle;
+    #image_and_instruction_box_number_1_page_8_script_2 > img{
+        flex: 0.5;
         
     }
 

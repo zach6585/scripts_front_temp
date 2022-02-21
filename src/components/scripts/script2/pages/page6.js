@@ -65,17 +65,23 @@ const Page6 = (props) => {
                 <h1 className={`bold center ${props.commentMode}`} id="h1" onClick={event => handleCommentClick(event)}>Mental Health Worksheet</h1>
                 <div className="left container_for_medium_margin">
                     <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_1">What does mental health mean to you? </p>
-                    <img className={`${props.commentMode} pause`} onClick={event => handleCommentClick(event)} id="pause" src={pause} alt="pause" />
-                    <img className={`${props.commentMode} allEars`} onClick={event => handleCommentClick(event)} id="allEars" src={allEars} alt="All ears" />
-                    <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_2">
-                        Let's work together to find pictures that describe mental health.<br/>
-                        You can do a search online or share pictures you have taken. <br/>
-                        Or, you can send me an emoji or a GIF to show me what mental health means to you. <br/><br/>
-                        There is no right or wrong way to do  I can help you if you want.<br/><br/>
-                        Here is an example.
-                    </p>
-                    <div className="div_for_controlling_wrapping">
-                        <div id="instruction_box_number_1_page_6_script_2" className={`ital custom_svg demo_box container_for_medium_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)} >
+                    <div id="pause_and_allEars_div">
+                        <img className={`${props.commentMode} pause`} onClick={event => handleCommentClick(event)} id="pause" src={pause} alt="pause" />
+                        <img className={`${props.commentMode} allEars`} onClick={event => handleCommentClick(event)} id="allEars" src={allEars} alt="All ears" />
+                    </div>
+                    
+                    <div className="container_for_small_margin">
+                        <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_2">
+                            Let's work together to find pictures that describe mental health.<br/>
+                            You can do a search online or share pictures you have taken. <br/>
+                            Or, you can send me an emoji or a GIF to show me what mental health means to you. <br/><br/>
+                            There is no right or wrong way to do  I can help you if you want.<br/><br/>
+                            Here is an example.
+                        </p>
+                    </div>
+                    
+                    <div id="image_and_instruction_box_page_6_script_2">
+                        <div id="instruction_box_number_1_page_6_script_2" className={`ital custom_svg demo_box ${props.commentMode}`} onClick={event => handleCommentClick(event)} >
                             <p className="top_line_in_instruction_box">
                                 Share your screen to show your picture<br/><br/>
                                 Link to your picture: <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_6_script_2" defaultValue={getValue("text_box_number_1_page_6_script_2")} />

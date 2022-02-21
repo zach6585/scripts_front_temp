@@ -62,7 +62,7 @@ const Page4 = (props) => {
         <div>
             <div className={`sheet ${blur}`}>
                 <h1 className={`bold center ${props.commentMode}`} id="h1" onClick={event => handleCommentClick(event)}>Icebreaker</h1>
-                <div className="left container_for_medium_margin">
+                <div className="left container_for_small_margin">
                     <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_1">I think it would be fun to get to know more about each other. </p>
 
                     <div id="instruction_box_number_1_page_4_script_2" className={`ital custom_svg demo_box container_for_small_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
@@ -80,7 +80,7 @@ const Page4 = (props) => {
                         </p>
                     </div>
                     
-                    <div id="instruction_box_number_2_page_4_script_2" className={`ital custom_svg demo_box container_for_small_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
+                    <div id="instruction_box_number_2_page_4_script_2" className={`ital custom_svg demo_box container_for_large_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                         <p className="top_line_in_instruction_box">When you are done with the game, stop screen sharing</p>
                         <img src={stopShare} alt="Stop share" id="stop_sharing_screen_page_4_script_2" />
                     </div>

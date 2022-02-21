@@ -49,6 +49,16 @@ li {
     list-style-type: circle;
 }
 
+.dash_bullets {
+    /* Bullets that are square shaped and hollow */
+    list-style-type: none;
+}
+.dash_bullets:before{
+    /* Before denotes what comes before the thing. This allows for the square to replace the normal bullet */
+    margin-left: -25px; 
+    content: "-";
+}
+
 td{
     border: 1px solid #dddddd;
     text-align: left;
@@ -148,13 +158,13 @@ textarea {
 
 .pause{
     /* Standard for all of the pause images */
-    width: 100px;
+    width: 200px;
 
 }
 
 .allEars{
     /* Standard for all of the listening images (allEars is like a punny term I used for it) */
-    height: 100px;
+    height: 150px;
 }
 
 .demo_box {

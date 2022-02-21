@@ -104,7 +104,7 @@ const Page8 = (props) => {
                             The symptoms I have include:<br/><br/>
                             <textarea onChange={event => handleChange(event)} id="text_box_number_2_page_8_script_2" defaultValue={getValue("text_box_number_2_page_8_script_2")} /><br/>
                             Before we move on to an activity where you get to think about your own symptoms, I'm wondering if there's anything about 'symptoms' that was confusing or that you want to talk more about? <br/>
-                            Here are some cards that show mental health symptoms other young adults have. You might have some of these symptoms too. Let's sort them into two piles—symptoms you sometimes have and symptoms you don't have.<br/>
+                            Here are some cards that show mental health symptoms other young adults have. You might have some of these symptoms too. Let's sort them into two piles—symptoms you sometimes have and symptoms you don't have.<br/><br/>
                             If you have questions about these symptoms, I can try to help you understand them better.
                         </p>
                    </div>
@@ -117,8 +117,8 @@ const Page8 = (props) => {
                             If they talk about their symptoms causing challenges, You can say things that show you understand, such as:
                         </p>
                         <ul>
-                            <li>-"That sounds hard"</li>
-                            <li>-"That happens to me sometimes too"</li>
+                            <li className="dash_bullets">"That sounds hard"</li>
+                            <li className="dash_bullets">"That happens to me sometimes too"</li>
                         </ul>
                     </div>
 
@@ -129,24 +129,22 @@ const Page8 = (props) => {
                         </p>
                     </div>
                     
-                    <div className='container_for_small_margin'>
-                        <a className={props.commentMode} onClick={event => handleCommentClick(event)} id="a_1" href="https://drive.google.com/file/d/1cxN_Bzo3uN-Mkt6nL29vEMUJTXLB7tPk/view?usp=sharing">Video link</a><br/><br/>
-                        <div id="image_and_instruction_box_div_page_8_script_2" className='container_for_extra_small_margin'>
+                    <div className='wrapper'>
+                        <a href="https://drive.google.com/file/d/1cxN_Bzo3uN-Mkt6nL29vEMUJTXLB7tPk/view?usp=sharing" id="video_link_page_8_script_2" className={props.commentMode} onClick={event => handleCommentClick(event)}>Video link</a>
+                        <div id="image_and_instruction_box_number_1_page_8_script_2" className='container_for_extra_small_margin'>
                             <div id="instruction_box_number_3_page_8_script_2" className={`ital custom_svg demo_box ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
-                                <p className="top_line_in_instruction_box">
-                                    Share your screen <br/><br/>
-                                    -Share sound<br/><br/>
+                                <p className='top_line_in_instruction_box'>
+                                    Share your screen <br/>
+                                    -Share sound <br/>
                                     -Optimize for video
                                 </p>
                             </div>
-                            <img className={props.commentMode} onClick={event => handleCommentClick(event)} src={shareScreen} alt="Share screen" id="share_your_screen_number_2_page_8_script_2" />
+                            <img src={shareScreen} id="share_screen_page_8_script_2" alt="Share your screen" className={props.commentMode} onClick={event => handleCommentClick(event)} />
                         </div>
                     </div>
-                    
-
-                    
-                    
-                    <img className={props.commentMode} onClick={event => handleCommentClick(event)} src={optimizeVideo} alt="Optimize video" id="optimize_video_page_8_script_2" />
+                    <div className='container_for_medium_margin'>
+                        <img src={optimizeVideo} id="opt_page_8_script_2" alt="Optimize your video" className={props.commentMode} onClick={event => handleCommentClick(event)} />
+                    </div>
                     
                     <div className='container_for_large_margin'>
                         <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_4">

@@ -1,6 +1,6 @@
 Whole project:
 
-1) Make changes as needed
+1) Make changes as needed (Currently finished 2 and starting 3)
     - Make sure everything that should be a textbox is one (Links, thing you wrote last week, etc.)
     - There are parts where she wants links to other pages (using redux)
     - Make most text boxes higher as scrolling will make things hard.
@@ -10,7 +10,7 @@ Whole project:
     - Make sure text next to checks and xs is correct
     - Make sure all images are correct
 
-3) Finish the comment thing
+3) Finish the comment thing (Currently on script 3 page 8)
     
 
 Extras: 
