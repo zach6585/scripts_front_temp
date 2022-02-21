@@ -80,7 +80,7 @@ const Page12 = (props) => {
                         <img src={allEars} className={`allEars ${props.commentMode}`} alt="Listen" id="allEars" onClick={event => handleCommentClick(event)} /> 
                     </div>
 
-                    <div id="instruction_box_number_1_page_10_script_1" className={`ital custom_svg demo_box container_for_small_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
+                    <div id="instruction_box_number_1_page_12_script_1" className={`ital custom_svg demo_box container_for_small_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                         <p className='top_line_in_instruction_box'>
                             Talk with your mentee about the video 
                         </p>
@@ -115,7 +115,7 @@ const Page12 = (props) => {
                         </p>
                     </div>
 
-                    <div id="instruction_box_number_2_page_10_script_1" className={`ital custom_svg demo_box container_for_small_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
+                    <div id="instruction_box_number_2_page_12_script_1" className={`ital custom_svg demo_box container_for_small_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                         <p className='top_line_in_instruction_box'>
                             When your mentee comes back, talk to them about what they brought.<br/>
                             <span className='underline_text'>Example questions to ask:</span><br/>

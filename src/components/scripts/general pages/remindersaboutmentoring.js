@@ -14,30 +14,39 @@ class RemindersAboutMentoring extends Component {
         handleclick: {
         five: null,
         otf: null,
+        dns: null,
         highlight_f: null, 
         highlight_o: null,
-        highlight_z: null, //These highlights are all about which element gets to be highlighted,
-        extrapracticesession: null
-        }
+        highlight_z: null, //These highlights are all about which element gets to be highlighted
+        highlight_d: null
+        }, 
+        extrapracticesession: null,
+        extraBulletPoint: null
     }
 
 
     handleClick = (e, letter) => {
        if (letter === 'f'){
                 this.setState({handleclick: {oft : null, five: <Five />, highlight_f: "highlighted", highlight_o: null, highlight_z: null}})
-            }
-            else if (letter === 'o'){
-                this.setState({handleclick: {five : null, otf: <OTFZ props={this.props} otf_or_z={'otf'}/>, highlight_f: null, highlight_o: "highlighted", highlight_z: null}})
-            }
-            else if (letter === 'z'){
-                this.setState({handleclick: {five : null, otf: <OTFZ props={this.props} otf_or_z={'z'} />, highlight_f: null, highlight_o: null, highlight_z: "highlighted"}})
-            }
+        }
+        else if (letter === 'o'){
+            this.setState({handleclick: {five : null, otf: <OTFZ props={this.props} otf_or_z={'otf'}/>, highlight_f: null, highlight_o: "highlighted", highlight_z: null}})
+        }
+        else if (letter === 'z'){
+            this.setState({handleclick: {five : null, otf: <OTFZ props={this.props} otf_or_z={'z'} />, highlight_f: null, highlight_o: null, highlight_z: "highlighted"}})
+        }
+        if (letter === "d"){
+            this.setState({handleClick: {dns: <DNS />, highlight_d: "highlighted"} })
+        }
        
     }
 
     componentDidMount = () => {
         if (this.props.extrapractice){
             this.setState({extrapracticesession: <ExtraPracticeSection props={this.props} script={this.props.script} />})
+        }
+        if (this.props.script === "1"){
+            this.setState({extraBulletPoint: <div className={this.state.handleclick.highlight_d}><li className="square_bullets" onClick={(event) => this.handleClick(event, 'd')}>Your mentee hasn't started their mood logs</li></div>})
         }
     }
 
@@ -54,10 +63,12 @@ class RemindersAboutMentoring extends Component {
                         <div className={this.state.handleclick.highlight_f}><li className="square_bullets" onClick={(event) => this.handleClick(event, 'f')}>Your mentee completed 5 mood logs.</li></div>
                         <div className={this.state.handleclick.highlight_o}><li className="square_bullets" onClick={(event) => this.handleClick(event, 'o')}>Your mentee completed 1-4 mood logs.</li></div>
                         <div className={this.state.handleclick.highlight_z}><li className="square_bullets" onClick={(event) => this.handleClick(event, 'z')}>Your mentee completed 0 mood logs.</li></div>
+                        {this.state.extraBulletPoint}
                     </ul>
                     {this.state.handleclick.five}
                     {this.state.handleclick.otf}
                     {this.state.extrapracticesession}
+                    {this.state.dns}
                 </div>
             </div>
         )
@@ -177,6 +188,18 @@ class ExtraPracticeSection extends Component{
                 </div>
         )
     }
+}
+
+const DNS = () => {
+    return (
+        <p>
+            This week you will start doing your mood logs. Please try to do them at least 5 times per week. <br/><br/>
+
+            The mood logs will help you learn about how you are feeling.<br/><br/>
+
+            You will earn $5 for every week you do at least 5 mood logs. That means you could earn up to $80 for doing the mood logs.<br/><br/>
+        </p>
+    )
 }
 
 const mapStateToProps = state => {

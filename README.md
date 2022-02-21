@@ -1,6 +1,6 @@
 Whole project:
 
-1) Script 1
+1) Script 1 (Just need to work on the css part of it)
 
 1a) Add page at the end of script 16 that I left out
 
@@ -12,6 +12,8 @@ Whole project:
     - Solutions website
     - Body image page
     - Make sure all checks and xs are changed to their smaller counter parts
+
+3) Finish the comment thing
     
 
 Extras: 
