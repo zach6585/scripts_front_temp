@@ -30,17 +30,20 @@
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 5 */ 
 
-.text_box_number_1_page_5_script_3 {
+#text_box_number_1_page_5_script_3 {
     position: relative;
     display: inline-block;
     width: 300px;
 }
 #instruction_box_number_1_page_5_script_3 { /* This is an instructions box which has the dotted/dashed border */
     position: relative;
-    width: 66.5%;
+    width: 800px;
     height: auto;
 }
 
+#text_box_number_8_page_5_script_3{
+    margin-top: 5px;
+}
 #instruction_box_number_2_page_5_script_3 { /* This is an instructions box which has the dotted/dashed border */
     position: relative;
     width: 66.5%;
@@ -58,6 +61,8 @@
     width: 500px;
     margin: auto;
 }
+
+
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 6 */ 
 
@@ -71,12 +76,14 @@
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 7 */ 
 
-
+#text_box_number_1_page_7_script_3{
+    margin-top: 5px;
+}
 
 #instruction_box_number_1_page_7_script_3{
     padding-left: 1%;
     width: 700px;
-    height: 350px;
+    height: 450px;
     margin:0 20px 15px 50px;
 }
 

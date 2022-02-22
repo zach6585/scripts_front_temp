@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import check from "../../pictures/check.png";
-import redX from "../../pictures/redx.png";
+import checkButSmaller from "../../pictures/checkbutsmaller.png";
+import redXButSmaller from "../../pictures/redxbutsmaller.png";
 
 import { connect } from 'react-redux';
 
@@ -124,11 +124,11 @@ class Page8 extends Component {
                         <li>Do you feel like you have less energy than usual?</li>
                     </ul>
                     <div>
-                        <img className="check" src={check} alt="Check" onClick={(event) => this.handleClick(event, 'c')} /><p className="what_does_your_mentor_say">Your mentee <strong>did</strong> describe a feeling at the beginning of the worksheet</p>
+                        <img className="check" src={checkButSmaller} alt="Check" onClick={(event) => this.handleClick(event, 'c')} /><p className="what_does_your_mentor_say">Your mentee <strong>did</strong> describe a feeling at the beginning of the worksheet</p>
                         <br/>
                         <div className="choicePicked">{this.state.check_words}</div>
                         <br/><br/>
-                        <img className="redX" src={redX} alt="Red X" onClick={(event) => this.handleClick(event, 'x')} /><p className="what_does_your_mentor_say">Your mentee did <strong>not</strong> describe a feeling at the beginning of the worksheet</p>
+                        <img className="redX" src={redXButSmaller} alt="Red X" onClick={(event) => this.handleClick(event, 'x')} /><p className="what_does_your_mentor_say">Your mentee did <strong>not</strong> describe a feeling at the beginning of the worksheet</p>
                         <br/>
                         <div className="choicePicked">{this.state.x_words}</div>
                         <br/><br/>

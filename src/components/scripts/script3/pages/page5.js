@@ -72,13 +72,12 @@ const Page5 = (props) => {
                         when I was at <textarea onChange={event => handleChange(event)} id="text_box_number_4_page_5_script_3" defaultValue={getValue("text_box_number_4_page_5_script_3")} />.<br/>
                         When I was at home, some of the symptoms I had were <textarea onChange={event => handleChange(event)} id="text_box_number_5_page_5_script_3" defaultValue={getValue("text_box_number_5_page_5_script_3")} />.<br/>
                         When I was feeling <textarea onChange={event => handleChange(event)} id="text_box_number_6_page_5_script_3" defaultValue={getValue("text_box_number_6_page_5_script_3")} />.<br/>
-                        When I was at home, some of the symptoms I had were <textarea onChange={event => handleChange(event)} id="text_box_number_7_page_5_script_3" defaultValue={getValue("text_box_number_7_page_5_script_3")} />,<br/>
-                        I used a coping strategy to make me feel less/more <textarea onChange={event => handleChange(event)} id="text_box_number_8_page_5_script_3" defaultValue={getValue("text_box_number_8_page_5_script_3")} />. <br/>
-                        We can look at the card sort to think of the other symptoms you have.<br/>
+                        I used a coping strategy to make me feel less/more <textarea onChange={event => handleChange(event)} id="text_box_number_7_page_5_script_3" defaultValue={getValue("text_box_number_7_page_5_script_3")} />. <br/><br/>
+                        We can look at the card sort to think of the other symptoms you have.
                     </p>
-                    <div id="instruction_box_number_1_page_5_script_3" className={`ital custom_svg demo_box container_for_medium_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
+                    <div id="instruction_box_number_1_page_5_script_3" className={`ital custom_svg demo_box container_for_small_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                         <p className="top_line_in_instruction_box ">
-                            Send your mentee this link [link to be inserted]<br/>
+                            Send your mentee this link <textarea onChange={event => handleChange(event)} id="text_box_number_8_page_5_script_3" defaultValue={getValue("text_box_number_8_page_5_script_3")} /><br/>
                             Ask your mentee to click on the link and share their screen. <br/>
                         </p>
                     </div>
@@ -91,7 +90,7 @@ const Page5 = (props) => {
                         <img className={`allEars ${props.commentMode}`} id="img_2" onClick={event => handleCommentClick(event)} src={allEars} alt="All ears" />
                         <br/><br/><br/><br/>
                     </div>
-                    <div id="instruction_box_number_2_page_5_script_3" className={`ital custom_svg demo_box ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
+                    <div id="instruction_box_number_2_page_5_script_3" className={`custom_svg demo_box ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                         <p className="top_line_in_instruction_box">Show that you understand what your mentee is saying. Some things you can say are:</p>
                         <ul>
                             <li>Thank you for sharing</li>
@@ -111,8 +110,8 @@ const Page5 = (props) => {
                             That's ok! Sometimes you might not have symptoms. It can also be really hard to notice symptoms when they happen.
                         </p>
                     </div>
-                    <div id="instruction_box_number_3_page_5_script_3" className={`ital custom_svg demo_box container_for_large_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
-                        <p className="top_line_in_instruction_box small">When you are done, ask your mentee to stop screen sharing</p><br/>
+                    <div id="instruction_box_number_3_page_5_script_3" className={`custom_svg demo_box container_for_large_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
+                        <p className="top_line_in_instruction_box">When you are done, ask your mentee to stop screen sharing</p><br/>
                         <img id="stop_sharing_screen_page_5_script_3" alt="Stop share" src={stopShare} />
                     </div>
                 </div>
