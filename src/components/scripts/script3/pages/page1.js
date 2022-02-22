@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { toggleCommentMode } from '../../../../actions/comment';
 
 import Sidebar from '../../general pages/sidebar';
-
+ 
 const Page1 = (props) => {
 
     const [sideBar, setSidebar] = useState(null);

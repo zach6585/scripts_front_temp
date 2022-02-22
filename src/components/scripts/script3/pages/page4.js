@@ -56,7 +56,7 @@ const Page4 = (props) => {
         let current_text_for_value = props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
         return current_text_for_value ? current_text_for_value.value : ""
     }
-
+ 
     return (
         <div>
             <div className={`sheet ${blur}`}>

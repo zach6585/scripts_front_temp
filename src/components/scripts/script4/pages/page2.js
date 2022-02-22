@@ -1,16 +1,12 @@
-import { Component } from 'react';
-
 import SessionStart from '../../general pages/sessionstart';
  
 
-class Page2 extends Component {
+const Page2 = () => {
    
-    render() {
-        return (
-            <SessionStart />
-        )
-            
-    }
+    return (
+        <SessionStart />
+    )
+      
 }
 
 export default Page2;

@@ -128,11 +128,16 @@
 
 #instruction_box_number_1_page_9_script_3{
     width: 850px;
-    height: 50px;
+    height: 150px;
     margin:0 20px 15px 0px;
     
 }
 
+#text_box_number_2_page_9_script_3, #text_box_number_3_page_9_script_3 {
+    position: relative;
+    display: inline-block;
+    width: 400px;
+}
 
 
 

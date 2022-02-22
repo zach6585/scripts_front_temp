@@ -1,15 +1,12 @@
-import { Component } from 'react';
-
 import TimeForQuestions from '../../general pages/timeforquestions';
 
 
-class Page10 extends Component {
+const Page10 = () => {
 
-   render() {
-        return (
-           <TimeForQuestions /> 
-        )
-    }
+   return (
+      <TimeForQuestions /> 
+   )
 }
+
 export default Page10;
 

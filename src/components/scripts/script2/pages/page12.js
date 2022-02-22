@@ -1,14 +1,11 @@
-import { Component } from 'react';
-
 import SharingAboutMentoring from '../../general pages/sharingaboutmentoring'; 
 
 
-class Page12 extends Component {
+const Page12 = () => {
 
-    render() {
-        return (
-            <SharingAboutMentoring />
-        )
-    }
+    return (
+        <SharingAboutMentoring />
+    )
 }
+
 export default Page12;

@@ -1,13 +1,9 @@
-import { Component } from 'react';
-
 import SchedulingForNextWeek from '../../general pages/schedulingfornextweek';
 
-class Page13 extends Component {
+const Page13 = () => {
   
-  render() {
-        return (
-          <SchedulingForNextWeek />  
-        )
-    }
+  return (
+    <SchedulingForNextWeek />  
+  )
 }
 export default Page13;

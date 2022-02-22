@@ -1,16 +1,13 @@
-import { Component } from 'react';
-
 import RemindersAboutMentoring from '../../general pages/remindersaboutmentoring.js';
 
 
-
-class Page11 extends Component {
+const Page11 = () => {
     
-   render(){
-        return (
-            <RemindersAboutMentoring />
-        )
-    }
+    return (
+        <RemindersAboutMentoring /> 
+    )
 }
 
 export default Page11;
+
+

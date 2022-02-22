@@ -1,15 +1,18 @@
 Whole project:
 
-1) Make changes as needed (Currently on script 3 page 7 (need to work on the body image thing))
+1) Make changes as needed (Currently on script 4 page 5 (need to work on the body image thing))
     - Make sure everything that should be a textbox is one (Links, thing you wrote last week, etc.)
     - There are parts where she wants links to other pages (using redux)
     - Make most text boxes higher as scrolling will make things hard.
     - Solutions website
-    - Body image page
     - Make sure all checks and xs are changed to their smaller counter parts
     - Make sure text next to checks and xs is correct
     - Make sure all images are correct
     - Make sure all textboxes save properly (Don't have weird extra props)
+
+2) Finish body image page
+    - Seen on:
+        - Script 3 page 7
 
 3) Finish the comment thing (Currently on script 3 page 8)
     
