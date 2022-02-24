@@ -1,7 +1,9 @@
 
 const initialState = {
     mentees: null,
-    current_mentee_id: -1
+    current_mentee_id: -1,
+    lastScript: -1,
+    lastPage: -1
 }
 
 export default function menteeReducer(state = initialState, action){
@@ -32,16 +34,32 @@ export default function menteeReducer(state = initialState, action){
                 }
             }
             
+        case 'CHANGE_PAGE':
+            return {
+                ...state,
+                lastPage: action.payload
+            }
+        
+        case 'CHANGE_SCRIPT':
+            return {
+                ...state,
+                lastScript: action.payload
+            }
+            
         case 'FLUSH_MENTEE_LIST':
             return {
                 ...state,
                 mentees: null,
-                current_mentee_id: -1
+                current_mentee_id: -1,
+                lastPage: -1,
+                lastScript: -1
             }
         case 'CHANGE_MENTEE':
             return{
                 ...state,
-                current_mentee_id: -1
+                current_mentee_id: -1,
+                lastPage: -1,
+                lastScript: -1
             }
         default: 
             return state 

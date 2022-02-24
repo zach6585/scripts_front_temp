@@ -1,9 +1,7 @@
 const initialState = {
   user_id: -1,
   err: '',
-  lastPage: null,
-  lastScript: null,
-  lastMentee: null
+  lastMentee: -1
 }
 
 
@@ -27,28 +25,7 @@ export default function userReducer(state = initialState, action) {
           ...state,
           err: '',
           user_id: action.payload.id,
-          lastPage: action.payload.last_page_number,
-          lastScript: action.payload.last_script_number,
           lastMentee: action.payload.last_mentee_id
-        }
-        
-      case 'CHANGE_USER_PAGE':
-        return{
-          ...state,
-          lastPage: action.payload
-        }
-      
-      case 'CHANGE_USER_SCRIPT':
-        return{
-          ...state,
-          lastScript: action.payload
-        }
-
-      case 'CHANGE_USER_MENTEE':
-        console.log('here')
-        return{
-          ...state,
-          lastMentee: action.payload
         }
 
       case 'LOGOUT':
@@ -56,9 +33,7 @@ export default function userReducer(state = initialState, action) {
           ...state,
           user_id: -1,
           err: '',
-          lastPage: null,
-          lastScript: null,
-          lastMentee: null
+          lastMentee: -1
         }
       default:
         // If the reducer doesn't care about this action type,

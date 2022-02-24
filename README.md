@@ -1,6 +1,6 @@
 Whole project:
 
-1) Make changes as needed (Currently on script 4 page 5 (need to work on the body image thing))
+1) Make changes as needed (Currently on script 5 page 1)
     - Make sure everything that should be a textbox is one (Links, thing you wrote last week, etc.)
     - There are parts where she wants links to other pages (using redux)
     - Make most text boxes higher as scrolling will make things hard.
@@ -9,18 +9,20 @@ Whole project:
     - Make sure text next to checks and xs is correct
     - Make sure all images are correct
     - Make sure all textboxes save properly (Don't have weird extra props)
+    - Comment thing
 
 2) Finish body image page
     - Seen on:
         - Script 3 page 7
+        - Script 4 page 9
 
-3) Finish the comment thing (Currently on script 3 page 8)
+
     
 
 Extras: 
      
     - Finish up the "last user" stuff
-        - Would need to add methods to the user class in Ruby so that it would take post requests specifically to update the user's info
+        - So we have two things: We have the last page and script, which should be tied to the mentee, and we have the last mentee, which could be something we have saved to the user but in actuality, I think it should be something saved to the session rather than the db so that it will keep it on reload. This is very much secondary and I might just not even do it
 
 
 

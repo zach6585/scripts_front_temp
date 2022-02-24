@@ -23,3 +23,13 @@ export const changeMentee = () => dispatch => {
     //When the user clicks the button to change the current mentee
     dispatch({ type: 'CHANGE_MENTEE' })
   }
+
+export const changePage = (pageNum, menteeID) => dispatch => {
+    dispatch({type: 'CHANGE_PAGE'})
+    axios.patch(`https://cors-for-all.herokuapp.com/https://scripts-app-backend.herokuapp.com/mentees/${menteeID}`, {last_page_number: pageNum})
+}
+
+export const changeScript = (scriptNum, menteeID) => dispatch => {
+    dispatch({type: 'CHANGE_SCRIPT'})
+    axios.patch(`https://cors-for-all.herokuapp.com/https://scripts-app-backend.herokuapp.com/mentees/${menteeID}`, {last_script_number: scriptNum})
+}

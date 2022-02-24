@@ -3,9 +3,11 @@ import { connect } from 'react-redux';
 
 
 import { getTexts, changeTexts } from './actions/text';
-import { userLogout, autoLogin, changeLastUserScript, changeLastUserMentee } from './actions/user';
+import { userLogout, autoLogin } from './actions/user';
 import { flushMenteeList,changeMentee } from './actions/mentee';
+// import { changeScript, changePage } from './actions/mentee';
 import { toggleCommentMode } from './actions/comment';
+// import { goToSpecificPage } from './actions/page';
 
 
 import hamburgerMenu from "./components/scripts/pictures/hamburger_menu.png";
@@ -58,7 +60,6 @@ class App extends Component {
     }
     this.makeButtons();
     window.addEventListener('scroll', this.onScrollCloseHamburger);
-    // this.setState({windowWidth: window.innerWidth})
   }
 
   hamburgerClick = (event) => {
@@ -68,7 +69,7 @@ class App extends Component {
     }
   
     else if (this.state.hamburger_is_clicked === false){
-      if (this.props.user.user_id === 5){
+      if (this.props.user.user_id === 5 || this.props.user.user_id === 1){
         this.setState({hamburger_is_clicked: true,
             options: 
             <div id="hamburger_menu_ps_div">
@@ -98,14 +99,15 @@ class App extends Component {
       this.setState({hamburger_is_clicked: false, options: ''});
       this.makeButtons();
       this.props.changeTexts();
-      this.props.changeLastUserScript(null);
+      // this.props.changeScript(-1, this.props.currentMentee);
+      // this.props.changePage(-1, this.props.currentMentee);
     }
     else if (choice === 2){
       this.setState({hamburger_is_clicked: false, options: ''});
       this.makeButtons();
       this.props.changeTexts();
       this.props.changeMentee();
-      this.props.changeLastUserMentee(null);
+      
     }
     else if (choice === 3){
       this.setState({hamburger_is_clicked: false, options: ''});
@@ -120,17 +122,16 @@ class App extends Component {
     }
   }
   
-  handleClick = (script_number) => {//Once a button is clicked, it takes you to the coresponding component
+  handleClick = (script_number, origin) => {//Once a button is clicked, it takes you to the coresponding component. Origin determines if it was a button or in render
     this.setState({buttonList: []});
     this.setState({currComponent: this.state.componentList[script_number]})
     this.props.getTexts({script_number: parseInt(script_number) + 1, mentee_id: this.props.mentees.current_mentee_id});
-    this.props.changeLastUserScript(script_number);
   }
 
 
   makeButtons = () => {//Makes the button list depending on the componenents present in the componenet list
     for (let i = 1; i < this.state.componentList.length + 1; i++){
-      this.setState((prevstate) => ({buttonList: prevstate.buttonList.concat(<button key={i-1} onClick={() => this.handleClick((i-1).toString())}>Script {i}</button>)}));
+      this.setState((prevstate) => ({buttonList: prevstate.buttonList.concat(<button key={i-1} onClick={() => this.handleClick((i-1).toString(), "button")}>Script {i}</button>)}));
     } 
   }
 
@@ -155,23 +156,23 @@ class App extends Component {
 
       else {
         if ((this.props.texts.curatedTextsFromCurrentScript === null)){
-        return (
-          <div>
-            {this.state.buttonList}
-          </div>
-        )
-      }
-      else{
-        return(
-          <div>
-            {this.state.currComponent}
-            <div className="hamburger_menu_div">
-                  {this.state.options}
-                  <img className={this.state.hamburger_is_clicked ? "rotate" : "no_rotate"} src={hamburgerMenu} alt="Hamburger menu icon" onClick={(event) => this.hamburgerClick(event)} />
-            </div>
-          </div>
-        )
+          return (
+              <div>
+                {this.state.buttonList}
+              </div>
+            )
         }
+        else{
+          return(
+            <div>
+              {this.state.currComponent}
+              <div className="hamburger_menu_div">
+                    {this.state.options}
+                    <img className={this.state.hamburger_is_clicked ? "rotate" : "no_rotate"} src={hamburgerMenu} alt="Hamburger menu icon" onClick={(event) => this.hamburgerClick(event)} />
+              </div>
+            </div>
+          )
+          }
       }
     }
     else{
@@ -193,6 +194,7 @@ const mapStateToProps = state => {
     comments: state.comments.comments,
     commentMode: state.comments.commentMode
     
+    
   }
 }
 
@@ -204,9 +206,7 @@ const mapDispatchToProps = dispatch => {
       flushMenteeList: () => dispatch(flushMenteeList()),
       autoLogin: () => dispatch(autoLogin()),
       changeMentee: () => dispatch(changeMentee()),
-      toggleCommentMode: () => dispatch(toggleCommentMode()),
-      changeLastUserScript: (script) => dispatch(changeLastUserScript(script)),
-      changeLastUserMentee: (mentee_id) => dispatch(changeLastUserMentee(mentee_id))
+      toggleCommentMode: () => dispatch(toggleCommentMode())
   }
 }
 

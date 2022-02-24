@@ -62,7 +62,7 @@ const Page4 = (props) => {
                         <br/>
                         <div className="choicePicked">{words_that_appear_when_you_click_green_check}</div>
                         <br/><br/>
-                        <img className={`redX ${props.commentMode}`} id="img_1" src={redXButSmaller} alt="Red X" onClick={(event) => handleClick(event, 'x')} /><p className={`what_does_your_mentor_say ${props.commentMode}`} id="p_3" onClick={event => handleClick(event, "")}>Your mentee says no</p>
+                        <img className={`redX ${props.commentMode}`} id="img_2" src={redXButSmaller} alt="Red X" onClick={(event) => handleClick(event, 'x')} /><p className={`what_does_your_mentor_say ${props.commentMode}`} id="p_3" onClick={event => handleClick(event, "")}>Your mentee says no</p>
                         <br/>
                         <div className="choicePicked">{words_that_appear_when_you_click_red_x}</div>
                     </div>
@@ -200,3 +200,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Page4);
+ 
