@@ -2,7 +2,7 @@
 import { Component } from 'react';
 import TimeForQuestions from '../../general pages/timeforquestions.js';
 
-class Page10 extends Component {
+class Page8 extends Component {
 
     render(){
         return (
@@ -10,5 +10,5 @@ class Page10 extends Component {
         )
     }
 }
-export default Page10;
+export default Page8;
 

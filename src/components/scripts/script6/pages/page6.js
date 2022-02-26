@@ -11,9 +11,9 @@ class Page6 extends Component{
     handleChange = (event) => {
         const object_outcome = this.getObject(event.target.id)
         object_outcome === "" ? 
-        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
         :
-        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
 
     }
     
@@ -32,7 +32,7 @@ class Page6 extends Component{
     render(){
         return(
             <div className="sheet">
-                <div className='container_for_small_margin'>
+                <div className='left container_for_small_margin'>
                     <p>
                         <strong>Step 1: Identify how you are feeling</strong><br/>
                         The purpose of a coping strategy is to help you feel better when you are having challenging, uncomfortable emotions. Sometimes it can be hard to tell how you are feeling.<br/>

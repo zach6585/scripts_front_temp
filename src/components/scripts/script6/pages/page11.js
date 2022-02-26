@@ -10,9 +10,9 @@ class Page11 extends Component {
     handleChange = (event) => {
         const object_outcome = this.getObject(event.target.id)
         object_outcome === "" ? 
-        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
         :
-        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
 
     }
     
@@ -36,8 +36,8 @@ class Page11 extends Component {
                     <p>
                         We did a lot today! <br/>
                         We practiced a coping strategy and we thought about things that might get in the way. <br/><br/>
-                        This week, you will practice using your strategy, [the one they practiced].<br/><br/>  
-                        You said you would practice your strategy this week [the time/place they said they would practice]
+                        This week, you will practice using your strategy, <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_11_script_6" defaultValue={this.getValue("text_box_number_1_page_11_script_6")} />.<br/><br/>  
+                        You said you would practice your strategy this week <textarea onChange={event => this.handleChange(event)} id="text_box_number_2_page_11_script_6" defaultValue={this.getValue("text_box_number_2_page_11_script_6")} />
                     </p>
                 </div>
             </div>

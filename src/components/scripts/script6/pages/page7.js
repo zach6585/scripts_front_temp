@@ -12,9 +12,9 @@ class Page7 extends Component{
     handleChange = (event) => {
         const object_outcome = this.getObject(event.target.id)
         object_outcome === "" ? 
-        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
         :
-        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
 
     }
     
@@ -33,7 +33,7 @@ class Page7 extends Component{
     render(){
         return(
             <div className="sheet">
-                <div className='container_for_small_margin'>
+                <div className='left container_for_small_margin'>
                     <p>
                         <strong>Step 2: Practicing coping strategies</strong><br/>
                         Today we are working on:

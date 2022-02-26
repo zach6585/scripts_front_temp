@@ -13,9 +13,9 @@ class Page8 extends Component{
     handleChange = (event) => {
         const object_outcome = this.getObject(event.target.id)
         object_outcome === "" ? 
-        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
         :
-        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
 
     }
     
@@ -34,8 +34,8 @@ class Page8 extends Component{
     render(){
         return(
             <div className="sheet">
-                <h1 className='bold'>Step 3: Identify how you are feeling</h1>
-                <div className='container_for_small_margin'>
+                <div className='left container_for_small_margin'>
+                    <h1 className='bold'>Step 3: Identify how you are feeling</h1>
                     <div className="bodyScanImageDiv_page_8">
                         <img src={body} alt="Body diagram" id="body_step_1_script_6" />
                         <textarea onChange={event => this.handleChange(event)} id="body_image_text_feelings_step_1_script_6" className="body_text_box" defaultValue={this.getValue("body_image_text_feelings_step_1_script_6")} placeholder='Feeling' />

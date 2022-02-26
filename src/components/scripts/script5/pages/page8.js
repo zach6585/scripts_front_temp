@@ -1,24 +1,63 @@
-import { Component } from 'react';
+import { connect } from 'react-redux';
+import { useState, useEffect } from 'react';
 
+import { toggleCommentMode } from '../../../../actions/comment';
+
+import Sidebar from '../../general pages/sidebar';
 import RemindersAboutMentoring from '../../general pages/remindersaboutmentoring.js';
 
 
-class Page8 extends Component {
-    
-    render() {
-        
-        return (
+const Page8 = (props) => {
+
+    const [sideBar, setSidebar] = useState(null);
+    const [blur, setBlur] = useState("");                         
+
+
+    useEffect(() => {
+        setBlur("");
+        setSidebar(null);
+      }, [props.sendingComment]);
+
+    const handleCommentClick = (event) => {
+        //Here is where you render the sidebar
+        if (props.commentMode === 'commentModeOn'){
+            if (blur === ""){
+                setBlur("blur");
+            }
+            else {
+                setBlur("");
+            }
+            if (sideBar === null){
+                setSidebar(<Sidebar id_tag={event.target.id} />)
+            }
+            props.toggleCommentMode();
+        }
+    } 
+    return (
             <div>
                 <RemindersAboutMentoring />
                 <div className='sheet left'>
-                    <p>
+                    <p className={`${props.commentMode}`} id="p_1" onClick={event => handleCommentClick(event)}>
                         This week, when you do your mood logs, try using the body scan worksheet first. The body scan worksheet might help you do the mood log. 
                     </p>  
                 </div>
+                {sideBar}
             </div>
         )
+}
+
+const mapStateToProps = state => {
+    return{
+        commentMode: state.comments.commentMode,
+        sendingComment: state.comments.sendingComment 
     }
 }
 
-export default Page8;
+const mapDispatchToProps = dispatch => {
+    return{
+        toggleCommentMode: () => dispatch(toggleCommentMode())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Page8);
 

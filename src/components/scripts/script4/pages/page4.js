@@ -68,6 +68,7 @@ const Page4 = (props) => {
                     </div>
                 </div>
             </div>
+            {sideBar}
         </div>
     )
 }
@@ -79,7 +80,7 @@ const GreenCheckClicked = (props) => {
 
     const handleCommentClick = (event) => {
         //Here is where you render the sidebar
-        if (props.commentMode === 'commentModeOn'){
+        if (props.props.commentMode === 'commentModeOn'){
             if (blur === ""){
                 setBlur("blur");
             }
@@ -89,7 +90,7 @@ const GreenCheckClicked = (props) => {
             if (sideBar === null){
                 setSidebar(<Sidebar id_tag={event.target.id} />)
             }
-            props.toggleCommentMode();
+            props.props.toggleCommentMode();
         }
     }
 
@@ -117,12 +118,12 @@ const GreenCheckClicked = (props) => {
     return(
         <div>
             <div>
-                <p className={`what_does_your_mentor_say ${props.commentMode}`} id="p_4" onClick={event => handleCommentClick(event)}>
+                <p className={`what_does_your_mentor_say ${props.props.commentMode}`} id="p_4" onClick={event => handleCommentClick(event)}>
                     Can you find something in your house that you worked really hard to make?<br />
                     If you can't find something that you made, can you find something that you worked hard to earn or to save up to buy?<br/>
                     I'll put my timer on for 5 minutes and I'll call out when our time is up.  If you do need a few more minutes after the timer goes off, just tell me out loud that you're still looking so I know you need some more time! <br/>
                 </p>
-                <div id="instruction_box_number_1_page_4_script_4" className={`custom_svg demo_box container_for_medium_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
+                <div id="instruction_box_number_1_page_4_script_4" className={`custom_svg demo_box container_for_medium_margin ${props.props.commentMode}`} onClick={event => handleCommentClick(event)}>
                     <p className='top_line_in_instruction_box'>
                         Before sharing your idea, wait to see if the mentee is come up with an example on their own. Then share:  Here is what I made.  This is a <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_4_script_4" defaultValue={getValue("text_box_number_1_page_4_script_4")} />  
                         and I made it in / for / when <textarea onChange={event => handleChange(event)} id="text_box_number_2_page_4_script_4" defaultValue={getValue("text_box_number_2_page_4_script_4")} />. <br/>
@@ -131,6 +132,7 @@ const GreenCheckClicked = (props) => {
                     </p>
                 </div>
             </div>
+            {sideBar}
         </div>
     )
 }
@@ -142,7 +144,7 @@ const RedXClicked = props => {
 
     const handleCommentClick = (event) => {
         //Here is where you render the sidebar
-        if (props.commentMode === 'commentModeOn'){
+        if (props.props.commentMode === 'commentModeOn'){
             if (blur === ""){
                 setBlur("blur");
             }
@@ -152,18 +154,18 @@ const RedXClicked = props => {
             if (sideBar === null){
                 setSidebar(<Sidebar id_tag={event.target.id} />)
             }
-            props.toggleCommentMode();
+            props.props.toggleCommentMode();
         }
     }
 
     return(
         <div>
             <div>
-                <p className={`what_does_your_mentor_say ${props.commentMode}`} id="p_5" onClick={event => handleCommentClick(event)}>
+                <p className={`what_does_your_mentor_say ${props.props.commentMode}`} id="p_5" onClick={event => handleCommentClick(event)}>
                     Ok! <br/>
                     Let's share our thumbs up and thumbs down for the week. Does that sound good? Or, do you have another idea for a short game? <br/>
                 </p>
-                <div id="instruction_box_number_2_page_4_script_4" className={`custom_svg demo_box container_for_medium_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
+                <div id="instruction_box_number_2_page_4_script_4" className={`custom_svg demo_box container_for_medium_margin ${props.props.commentMode}`} onClick={event => handleCommentClick(event)}>
                     <p>
                         If they have an idea for another short game, you can do that. <br/>
                         If they do not, explain: <br/>
@@ -177,6 +179,7 @@ const RedXClicked = props => {
                 </div>
                 
             </div>
+            {sideBar}
         </div>
     )
 }
