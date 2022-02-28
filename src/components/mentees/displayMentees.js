@@ -12,7 +12,7 @@ function DisplayMentees(props){
         let total_list_of_mentee_buttons = [];
         if (props.mentees.mentees !== undefined){
             for (const i of props.mentees.mentees){
-                total_list_of_mentee_buttons.push(<button className='mentee_button' key={i.name} onClick={ event => handleMenteeButtonChoiceClick(event, i.id)}>{i.name}</button>)
+                total_list_of_mentee_buttons.push(<button className='mentee_button' key={i.name} onClick={ event => handleMenteeButtonChoiceClick(event, i.id, i.name)}>{i.name}</button>)
             }
             setMenteeList(total_list_of_mentee_buttons)
         }
@@ -21,9 +21,9 @@ function DisplayMentees(props){
         }
     }
 
-    const handleMenteeButtonChoiceClick = (event, mentee_id) => {
+    const handleMenteeButtonChoiceClick = (event, mentee_id, mentee_name) => {
         event.preventDefault();
-        props.menteeChosen(mentee_id);
+        props.menteeChosen({id: mentee_id, name: mentee_name});
     }
     // The eslint thing below just gets rid of a meaningless warning
     // eslint-disable-next-line
@@ -46,7 +46,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return{
-        menteeChosen: (mentee_id) => dispatch(menteeChosen(mentee_id))
+        menteeChosen: (mentee_data) => dispatch(menteeChosen(mentee_data))
     }
 }
 

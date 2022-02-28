@@ -43,8 +43,8 @@ class SharingAboutMentoring extends Component {
                     </p>
 
                     <div id="instruction_box_number_1_sharing_about_mentoring" className="custom_svg demo_box container_for_medium_margin">
-                        <p className="top_line_in_instruction_box">If they want to share, click the link for the worksheet</p><br/>
-                        <p>Link: <textarea className='sharing_about_mentoring_text_box' onChange={event => this.handleChange(event)} id={`text_box_number_1_sharing_about_mentoring_script_${this.props.script}`} defaultValue={this.getValue(`text_box_number_1_sharing_about_mentoring_script_${this.props.script}`)} /></p>
+                        <p className="top_line_in_instruction_box">If they want to share, click the link for the worksheet:</p>
+                        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=H9sOck5cQ0CBQSFKY6fq1SOlKg2DiYZAgs7GzoizMlhUNVNHSzNKT0xKQTY1N1JSWFQ4RDNZNVJUVS4u" className="sharing_about_mentoring_a" target="_blank" rel="nopener noreferrer">Link</a>
                     </div>
                     
                     <div className='container_for_medium_margin'>

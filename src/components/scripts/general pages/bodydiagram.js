@@ -1,10 +1,18 @@
-import body from '../pictures/bodynotext.png';
+
 import { connect } from "react-redux";
+
 import { patchTexts, postTexts } from '../../../actions/text';
+import { printDocument } from "../../../actions/body";
+
+
+import body from '../pictures/bodynotext.png';
+
+
 
 import '../extcss.scss';
 
 const BodyDiagram = (props) => {
+
     const handleChange = (event) => {
         const object_outcome = getObject(event.target.id)
         object_outcome === "" ? 
@@ -25,7 +33,13 @@ const BodyDiagram = (props) => {
         let current_text_for_value = props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
         return current_text_for_value ? current_text_for_value.value : ""
     }
-    //Need to change all of the inputs to be textareas and have all of the labels be like h3s or something
+
+    const handlePNGButtonClick = (event) => {
+        const input = document.getElementsByClassName("bodyScanImageDiv")[0];
+        props.printDocument(input, props.mentee_name)
+    }
+
+
     return(
         <div className="bodyScanImageDiv">
             <img src={body} alt="Body diagram" id={`body_image_script_${props.script}`} />
@@ -84,13 +98,17 @@ const BodyDiagram = (props) => {
                     <textarea onChange={event => handleChange(event)} id={`text_box_number_11_body_diagram_script_${props.script}`} defaultValue={getValue(`text_box_number_11_body_diagram_script_${props.script}`)}/>
                 </div> 
 
+                <button className="downloadAsPNGButton" onClick={event => handlePNGButtonClick(event)}>Click to download as PNG</button>
+
         </div> 
     )
 }
 
+
 const mapStateToProps = state => {
     return{
         texts: state.texts.curatedTextsFromCurrentScript,
+        mentee_name: state.mentees.current_mentee_name,
         mentee_id: state.mentees.current_mentee_id,
         script: state.texts.currentScript
     }
@@ -99,7 +117,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return{
         patchTexts: (text_data) => dispatch(patchTexts(text_data)),
-        postTexts: (text_data) => dispatch(postTexts(text_data))
+        postTexts: (text_data) => dispatch(postTexts(text_data)),
+        printDocument: (htmlInfo, mentee_name) => dispatch(printDocument(htmlInfo, mentee_name))
 
     }
 }

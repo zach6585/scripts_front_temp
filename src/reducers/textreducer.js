@@ -1,6 +1,6 @@
 import { TEXTS_LOADING, TEXTS_SUCCESS } from '../actions/text';
 const initialState = {
-  loading: false,
+  texts_loading: false,
   error: "",
   curatedTextsFromCurrentScript: null,
   currentScript: ""
@@ -18,7 +18,7 @@ export function textReducer(state = initialState, action) {
       case TEXTS_LOADING:
         return {
           ...state,
-          loading: true,
+          texts_loading: true,
           err: '',
           curatedTextsFromCurrentScript: null
 
@@ -26,7 +26,7 @@ export function textReducer(state = initialState, action) {
       case TEXTS_SUCCESS:
         return {
           ...state,
-          loading: false,
+          texts_loading: false,
           err: '',
           curatedTextsFromCurrentScript: action.payload.texts,
           currentScript: action.payload.script_number

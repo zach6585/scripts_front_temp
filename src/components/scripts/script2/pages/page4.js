@@ -68,7 +68,7 @@ const Page4 = (props) => {
                     <div id="instruction_box_number_1_page_4_script_2" className={`ital custom_svg demo_box container_for_small_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                         <img src={shareScreen} alt="Share Screen" id="share_your_screen_page_4_script_2" />
                         <p className="top_line_in_instruction_box">
-                            Click on the <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_4_script_2" defaultValue={getValue("text_box_number_1_page_4_script_2")} placeholder='link to be inserted' /> and<br/><br/>
+                            Click on the link: <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_4_script_2" defaultValue={getValue("text_box_number_1_page_4_script_2")} placeholder='link to be inserted' /> and<br/><br/>
                             share your screen.<br/><br/>    
                             Take turns picking question to ask each other in the XXX game. 
                         </p>

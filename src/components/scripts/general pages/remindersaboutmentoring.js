@@ -126,27 +126,13 @@ class OTFZ extends Component{
         return current_text_for_value ? current_text_for_value.value : ""
     }
         render(){
-            const otf_or_z = this.props.otf_or_z
-            let otfz1 = '';
-            let otfz2 = '';
-            let otfz3 = '';
-            if (otf_or_z === 'otf'){
-                otfz1 = <p>This week you did <textarea className='reminders_number_done' onChange={event => this.handleChange(event)} id={`text_box_number_1_mentoring_reminders_script_${this.props.script}`} defaultValue={this.getValue(`text_box_number_1_mentoring_reminders_script_${this.props.script}`)} /> mood logs. Thanks for doing those. Please try to do 5 this week.</p>
-                otfz2 = <textarea className='reminders_text_box' onChange={event => this.handleChange(event)} id={`text_box_number_2_mentoring_reminders_script_${this.props.script}`} defaultValue={this.getValue(`text_box_number_2_mentoring_reminders_script_${this.props.script}`)} />
-                otfz3 = '' 
-            }
-            else if (otf_or_z === 'z'){
-                otfz1 = <p>I noticed that you did not get a chance to do any of your mood logs</p>
-                otfz2 = ''
-                otfz3 = <textarea className='reminders_text_box' onChange={event => this.handleChange(event)} id={`text_box_number_3_mentoring_reminders_script_${this.props.script}`} defaultValue={this.getValue(`text_box_number_3_mentoring_reminders_script_${this.props.script}`)} />
-            }
         return(
             <div className="left">
                 <p>How have you been doing at remembering your mood logs?</p>
                 <img src={pause} alt="Pause" className="pause" />
                 <img src={allEars} alt="All ears" className="allEars" />
                 <br/><br/>
-                {otfz1}
+                {this.props.otf_or_z === "otf" ? <p>This week you did <textarea className='reminders_number_done' onChange={event => this.handleChange(event)} id={`text_box_number_1_mentoring_reminders_script_${this.props.script}`} defaultValue={this.getValue(`text_box_number_1_mentoring_reminders_script_${this.props.script}`)} /> mood logs. Thanks for doing those. Please try to do 5 this week.</p> : <p>I noticed that you did not get a chance to do any of your mood logs</p>}
                 <p>
                     Remember, you will earn $5 for every week that you do 5 mood logs. That means you can earn $80 for doing the mood logs during mentoring.<br/><br/>
                     Also, the more you practice, the easier it will be to tell how you feel, so you can be in charge of your mental health.<br/><br/>
@@ -154,8 +140,8 @@ class OTFZ extends Component{
                     Is there a way I can help you remember to do them?
                 </p>
                 <br/><br/>
-                {otfz2}
-                {otfz3}
+                {this.props.otf_or_z === "otf" ? <textarea className='reminders_text_box' onChange={event => this.handleChange(event)} id={`text_box_number_2_mentoring_reminders_script_${this.props.script}`} defaultValue={this.getValue(`text_box_number_2_mentoring_reminders_script_${this.props.script}`)} /> : null}
+                {this.props.otf_or_z === "otf" ? null : <textarea className='reminders_text_box' onChange={event => this.handleChange(event)} id={`text_box_number_3_mentoring_reminders_script_${this.props.script}`} defaultValue={this.getValue(`text_box_number_3_mentoring_reminders_script_${this.props.script}`)} />}
             </div>
         )
         }

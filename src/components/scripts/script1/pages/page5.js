@@ -1,7 +1,3 @@
-
-
-
-
 import checkButSmaller from "../../pictures/checkbutsmaller.png";
 import redXButSmaller from "../../pictures/redxbutsmaller.png";
 

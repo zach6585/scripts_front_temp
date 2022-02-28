@@ -32,7 +32,6 @@ import './script1.css';
 class Script1List extends Component {
 
     state = {
-      button_use: {button_back: false, button_forward: true}, 
       component_list: [<Page1 />, <Page2/>, <Page3 />, <Page4/>, <Page5 />, <Page6/>, <Page7 />, <Page8/>, <Page9 />, <Page10 />, <Page11 />, <Page12 />, <Page13 />, <Page14 />, <Page15 />, <Page16 />, <Page17 />],
   }
     

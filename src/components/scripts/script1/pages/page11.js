@@ -66,7 +66,7 @@ const Page11 = (props) => {
                      </p>
                   </div>
                     <div className='wrapper'>
-                        <a href="https://drive.google.com/file/d/1cJXHFL2jlVdH_YSihqijsdhD-lgr7Cvk/view" id="video_link_page_11_script_1" className={props.commentMode} onClick={event => handleCommentClick(event)}>Video link</a>
+                        <a href="https://drive.google.com/file/d/1cJXHFL2jlVdH_YSihqijsdhD-lgr7Cvk/view" id="video_link_page_11_script_1" className={props.commentMode} onClick={event => handleCommentClick(event)} target="_blank" rel="nopener noreferrer">Video link</a>
                         <div id="image_and_instruction_box_number_1_page_11_script_1" className='container_for_extra_small_margin'>
                             <div id="instruction_box_number_1_page_11_script_1" className={`ital custom_svg demo_box ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                                 <p className='top_line_in_instruction_box'>

@@ -8,6 +8,9 @@ h1{
     font-size: 25px;
 }
 
+a {
+    font-size: 25px;
+}
 .bold {
     /* For when you want bold text */
     font-weight: bold;
@@ -180,14 +183,14 @@ textarea {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0%25' y='0%25' width='100%25' height='100%25' fill='transparent' stroke='blue' stroke-width='4px' stroke-dasharray='16 2 2 2' /%3E%3C/svg%3E");
 }
 
-div.custom_svg > p, h2, h1 {
+div.custom_svg > p, h2, h1, a {
     /* Sets the text to be properly distanced from the sides of the instruction box */
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     padding: 5px 10px;
 }
 
-div.solid_box> p, h2, h1 {
+div.solid_box> p, h2, h1, a {
     /* Does the same thing as the thing right above this but for the solid box form */
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
@@ -341,6 +344,13 @@ div.solid_box> p, h2, h1 {
 
 }
 
+.sharing_about_mentoring_a{
+    margin-left: -10px;
+    margin-top: 5px;
+    display: inline-block;
+
+}
+
 /* Scheduling for next weekend */
 
 .scheduling_for_next_week_text_box {
@@ -398,8 +408,7 @@ div.solid_box> p, h2, h1 {
 .bodyScanImageDiv > img{
     width: 700px;
     margin-left: 400px;
-    margin-top: -2000px;
-    margin-bottom: 500px;
+    margin-top: 30px;
 }
 
 
@@ -411,7 +420,7 @@ div.solid_box> p, h2, h1 {
 .feelings_div {
     /* The div that controls the feelings textarea and span of the body diagram */
     position: absolute;
-    margin-top: -1470px;
+    margin-top: -971px;
     margin-left: 446px;
 }
 
@@ -425,7 +434,7 @@ div.solid_box> p, h2, h1 {
     border: none;
     font-size: 25px;
     width: 209px;
-    height: 118px;
+    height: 121px;
     position: inherit;
     z-index: 1;
 }
@@ -434,7 +443,7 @@ div.solid_box> p, h2, h1 {
 .head_div {
     /* The div that controls the head textarea and span of the body diagram */
     position: absolute;
-    margin-top: -1442px;
+    margin-top: -945px;
     margin-left: 855px;
 }
 
@@ -457,7 +466,7 @@ div.solid_box> p, h2, h1 {
 .chest_div {
     /* The div that controls the chest textarea and span of the body diagram */
     position: absolute;
-    margin-top: -1306px;
+    margin-top: -806px;
     margin-left: 419px;
 }
 
@@ -480,13 +489,13 @@ div.solid_box> p, h2, h1 {
 .mouth_and_jaw_div {
     /* The div that controls the mouth and jaw textarea and span of the body diagram */
     position: absolute;
-    margin-top: -1300px;
+    margin-top: -800px;
     margin-left: 856px;
 }
 
 .mouth_and_jaw_div > span{
     position: inherit;
-    margin-top: -15px;
+    margin-top: -20px;
     white-space: nowrap;
     z-index: 2;
 }
@@ -503,13 +512,13 @@ div.solid_box> p, h2, h1 {
 .breathing_div {
     /* The div that controls the breathing textarea and span of the body diagram */
     position: absolute;
-    margin-top: -1173px;
+    margin-top: -674px;
     margin-left: 419px;
 }
 
 .breathing_div > span{
     position: inherit;
-    margin-top: -10px;
+    margin-top: -15px;
     z-index: 2;
 }
 
@@ -525,13 +534,13 @@ div.solid_box> p, h2, h1 {
 .shoulders_div {
     /* The div that controls the shoulders textarea and span of the body diagram */
     position: absolute;
-    margin-top: -1157px;
-    margin-left: 860px;
+    margin-top: -657px;
+    margin-left: 880px;
 }
 
 .shoulders_div > span{
     position: inherit;
-    margin-top: -15px;
+    margin-top: -20px;
     white-space: nowrap;
     z-index: 2;
 }
@@ -548,13 +557,13 @@ div.solid_box> p, h2, h1 {
 .stomach_div {
     /* The div that controls the stomach textarea and span of the body diagram */
     position: absolute;
-    margin-top: -999px;
+    margin-top: -500px;
     margin-left: 856px;
 }
 
 .stomach_div > span{
     position: inherit;
-    margin-top: -15px;
+    margin-top: -37px;
     white-space: nowrap;
     z-index: 2;
 }
@@ -562,8 +571,8 @@ div.solid_box> p, h2, h1 {
 .stomach_div > textarea{
     border: none;
     font-size: 25px;
-    width: 229px;
-    height: 118px;
+    width: 233px;
+    height: 126px;
     position: inherit;
     z-index: 1;
 }
@@ -572,22 +581,22 @@ div.solid_box> p, h2, h1 {
 .hands_and_arms_div {
     /* The div that controls the hands and arms textarea and span of the body diagram */
     position: absolute;
-    margin-top: -873px;
-    margin-left: 419px;
+    margin-top: -402px;
+    margin-left: 448px;
 }
 
 .hands_and_arms_div > span{
     position: inherit;
     white-space: nowrap;
-    margin-top: -10px;
+    margin-top: -18px;
     z-index: 2;
 }
 
 .hands_and_arms_div > textarea{
     border: none;
     font-size: 25px;
-    width: 209px;
-    height: 117px;
+    width: 156px;
+    height: 153px;
     position: inherit;
     z-index: 1;
 }
@@ -597,50 +606,72 @@ div.solid_box> p, h2, h1 {
 .legs_and_feet_div {
     /* The div that controls the legs and feet textarea and span of the body diagram */
     position: absolute;
-    margin-top: -820px;
-    margin-left: 899px;
+    margin-top: -334px;
+    margin-left: 934.5px;
 }
 
 .legs_and_feet_div > span{
     position: inherit;
     white-space: nowrap;
-    margin-top: -10px;
+    margin-top: -25px;
     z-index: 2;
 }
 
 .legs_and_feet_div > textarea{
     border: none;
     font-size: 25px;
-    width: 209px;
-    height: 117px;
+    width: 154px;
+    height: 146px;
     position: inherit;
     z-index: 1;
 }
 
-
-.legs_and_feet{
+.fidgeting_div {
+    /* The div that controls the legs and feet textarea and span of the body diagram */
     position: absolute;
-    width: 3.2em;
-    height: 3em;
-    margin-top: 200px;
-    margin-left: -52px;
+    margin-top: -115px;
+    margin-left: 444px;
 }
 
-.fidgeting{
-    position: absolute;
-    width: 6.2em;
-    height: 1.6em;
-    margin-top: 268.8px;
-    margin-left: -206px;
+.fidgeting_div > span{
+    position: inherit;
+    white-space: nowrap;
+    margin-top: -25px;
+    z-index: 2;
 }
 
-.energy_level{
-    position: absolute;
-    width: 6.68em;
-    height: 1.65em;
-    margin-top: 268.8px;
-    margin-left: -103px;
+.fidgeting_div > textarea{
+    border: none;
+    font-size: 25px;
+    width: 278px;
+    height: 87px;
+    position: inherit;
+    z-index: 1;
 }
+
+.energy_level_div {
+    /* The div that controls the legs and feet textarea and span of the body diagram */
+    position: absolute;
+    margin-top: -113px;
+    margin-left: 771px;
+}
+
+.energy_level_div > span{
+    position: inherit;
+    white-space: nowrap;
+    margin-top: -25px;
+    z-index: 2;
+}
+
+.energy_level_div > textarea{
+    border: none;
+    font-size: 25px;
+    width: 300px;
+    height: 85px;
+    position: inherit;
+    z-index: 1;
+}
+
 
     /* Still pertains to body diagram but belongs to the individual components that render it */
 

@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-export const menteeChosen = (mentee_id) => dispatch => {
+export const menteeChosen = (mentee_data) => dispatch => {
     //Once you chose the mentee this sets the current mentee to be that one
-    dispatch({type: 'MENTEE_CHOSEN', payload: mentee_id})
+    dispatch({type: 'MENTEE_CHOSEN', payload: {id: mentee_data.id, name: mentee_data.name}})
 }
 
 
