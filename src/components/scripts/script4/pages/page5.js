@@ -114,11 +114,11 @@ const Page5 = props => {
                         </p>
                     </div>
                     <div className='container_for_small_margin'>
-                        <img className={`check ${props.commentMode}`} id="img_1" src={checkButSmaller} alt="Check" onClick={(event) => handleClick(event, 'c')} /><p className={`what_does_your_mentor_say ${props.commentMode}`} id="p_5" onClick={event => handleClick(event, "")}>Your mentee says yes</p>
+                        <img className={`check ${props.commentMode}`} id="img_1" src={checkButSmaller} alt="Check" onClick={(event) => handleClick(event, 'c')} /><p className={`what_does_your_mentor_say ${props.commentMode}`} id="p_5" onClick={event => handleClick(event, "")}>Your mentee has heard of coping strategies</p>
                         <br/>
                         <div className="choicePicked">{checkStuff}</div>
                         <br/><br/>
-                        <img className={`redX ${props.commentMode}`} id="img_2" src={redXButSmaller} alt="Red X" onClick={(event) => handleClick(event, 'x')} /><p className={`what_does_your_mentor_say ${props.commentMode}`} id="p_6" onClick={event => handleClick(event, "")}>Your mentee says no</p>
+                        <img className={`redX ${props.commentMode}`} id="img_2" src={redXButSmaller} alt="Red X" onClick={(event) => handleClick(event, 'x')} /><p className={`what_does_your_mentor_say ${props.commentMode}`} id="p_6" onClick={event => handleClick(event, "")}>Your mentee has not heard of coping strategies.</p>
                         <br/>
                         <div className="choicePicked">{xStuff}</div>
                     </div>
@@ -196,8 +196,9 @@ const GreenCheckOrRedXClicked = props => {
             setLastLine("Thanks for sharing we will work on finding more coping strategies today.");
         }
     }
-    return(
-        <div>
+    if (props.x_or_check_picked === "check"){
+        return(
+            <div>
             <div>
                 {firstLine}
                 <div className='container_for_small_margin'>
@@ -221,6 +222,35 @@ const GreenCheckOrRedXClicked = props => {
             {sideBar}
         </div>
         )
+    }
+    else{
+        return(
+            <div>
+                <div>
+                    {firstLine}
+                    <div className='container_for_small_margin'>
+                        <p className={props.commentMode} id="p_8" onClick={event => handleCommentClick(event)}>
+                            {secondLine} For example, sometimes I feel 
+                        </p>
+                        <textarea onChange={event => handleChange(event)} id="text_box_number_5_page_5_script_4" defaultValue={getValue("text_box_number_5_page_5_script_4")} />. 
+                        <p className={props.commentMode} id="p_9" onClick={event => handleCommentClick(event)}>When I feel </p>
+                        <textarea onChange={event => handleChange(event)} id="text_box_number_6_page_5_script_4" defaultValue={getValue("text_box_number_6_page_5_script_4")} />, 
+                        <p className={props.commentMode} id="p_10" onClick={event => handleCommentClick(event)} >
+                            I <textarea onChange={event => handleChange(event)} id="text_box_number_7_page_5_script_4" defaultValue={getValue("text_box_number_7_page_5_script_4")} />. 
+                        </p>
+                        <p className={props.commentMode} id="p_11" onClick={event => handleCommentClick(event)}>
+                            Doing this makes me feel better, so it is a coping strategy. Is there anything that you do that helps make you feel better?
+                        </p>
+                        <img className={`pause ${props.commentMode}`} id="img_5" onClick={event => handleCommentClick(event)} src={pause} alt="pause" /> 
+                    <img className={`allEars ${props.commentMode}`} id="img_6" onClick={event => handleCommentClick(event)} src={allEars} alt="All ears" />
+                    </div>
+                    <p className={props.commentMode} id="p_12" onClick={event => handleCommentClick(event)}>{lastLine}</p>
+                </div>
+                {sideBar}
+            </div>
+            )
+    }
+    
 }
 
 const mapStateToProps = state => {

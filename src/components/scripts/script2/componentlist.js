@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 
 import {goForward, goBack} from '../../../actions/page';
+import { goToSpecificPage } from '../../../actions/page';
 
 import Page1 from './pages/page1';
 import Page2 from './pages/page2';
@@ -68,7 +69,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     goForward: () => dispatch(goForward()),
-    goBack: () => dispatch(goBack())
+    goBack: () => dispatch(goBack()),
+    goToSpecificPage: (pageNumber) => dispatch(goToSpecificPage(pageNumber))
   }
 }
 

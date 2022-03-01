@@ -677,15 +677,15 @@ div.solid_box> p, h2, h1, a {
 
         /* First part is what gives the image a button like quality. Colors should be discussed with Ariel */
 
-        #div_with_body_image_and_p_page_7_script_3{
+        .div_with_body_image_and_p{
             display: inline-block;
         }
 
-        #div_with_body_image_and_p_page_7_script_3 > p{
+        .div_with_body_image_and_p > p{
             display: inline;
         }
 
-        #div_with_body_image_and_p_page_7_script_3 > input{
+        .div_with_body_image_and_p > input{
             margin-left: 1100px;
             display: inline;
             padding: 15px 15px;
@@ -705,9 +705,9 @@ div.solid_box> p, h2, h1, a {
             user-select: none;
         }
 
-        #div_with_body_image_and_p_page_7_script_3 > input:hover {background-color: lightseagreen}
+        .div_with_body_image_and_p > input:hover {background-color: lightseagreen}
 
-        #div_with_body_image_and_p_page_7_script_3 > input:active {
+        .div_with_body_image_and_p > input:active {
         background-color: lightseagreen;
         box-shadow: 0 5px black;
         transform: translateY(4px);
