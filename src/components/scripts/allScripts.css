@@ -713,6 +713,42 @@ div.solid_box> p, h2, h1, a {
         transform: translateY(4px);
         }
 
+        .div_with_body_image_and_instruction_box{
+            display: inline-block;
+        }
+
+        .div_with_body_image_and_instruction_box > div{
+            display: inline;
+        }
+
+        .div_with_body_image_and_instruction_box > input{
+            margin-left: 1100px;
+            display: inline;
+            padding: 15px 15px;
+            font-size: 25px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: black;
+            background-color: blue;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px black;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .div_with_body_image_and_instruction_box > input:hover {background-color: lightseagreen}
+
+        .div_with_body_image_and_instruction_box > input:active {
+        background-color: lightseagreen;
+        box-shadow: 0 5px black;
+        transform: translateY(4px);
+        }
+
         /* Below controls the popup quality of the component */
         
         /* The actual popup */

@@ -1,8 +1,8 @@
 import { Component } from 'react';
 
 
-import check from '../../pictures/check.png';
-import redX from '../../pictures/redx.png';
+import check from '../../pictures/checkbutsmaller.png';
+import redX from '../../pictures/redxbutsmaller.png';
 import pause from '../../pictures/pause.png';
 import allEars from '../../pictures/allears.png';
 

@@ -3,11 +3,12 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { patchTexts, postTexts } from '../../../../actions/text';
+import { goToSpecificPage } from '../../../../actions/page';
 
 import shareScreen from '../../pictures/sharescreen.png';
 import stopShare from '../../pictures/stopshare.png';
-import check from '../../pictures/check.png';
-import redX from '../../pictures/redx.png';
+import check from '../../pictures/checkbutsmaller.png';
+import redX from '../../pictures/redxbutsmaller.png';
 
 
 class Page6 extends Component {
@@ -20,6 +21,7 @@ class Page6 extends Component {
         text: {}
     }
 
+    
         handleClick = (e, letter) => {
             if (letter === 'c'){
                 this.setState({handleclick: {words_that_appear_when_you_click_green_check: 
@@ -31,20 +33,23 @@ class Page6 extends Component {
             else if (letter === 'x'){
                 this.setState({handleclick: {words_that_appear_when_you_click_green_check : null, words_that_appear_when_you_click_red_x:
                     <div id='image_and_p_div_page_6_script_7'>
-                        <p>Go to "practicing coping strategies"</p>
+                        <button onClick={event => this.handleButtonPress(event)}>Go to Practicing coping strategies</button>
                         <img src={stopShare} alt="Stop sharing screen" />
                     </div>
                     }})
             }
         }
 
+        handleButtonPress = (event) => {
+            this.props.goToSpecificPage(8);
+        }
 
         handleChange = (event) => {
             const object_outcome = this.getObject(event.target.id)
             object_outcome === "" ? 
-            this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+            this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
             :
-            this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+            this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
         
         }
         
@@ -143,7 +148,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return{
         patchTexts: (text_data) => dispatch(patchTexts(text_data)),
-        postTexts: (text_data) => dispatch(postTexts(text_data))
+        postTexts: (text_data) => dispatch(postTexts(text_data)),
+        goToSpecificPage: (pageNum) => dispatch(goToSpecificPage(pageNum))
 
     }
 }

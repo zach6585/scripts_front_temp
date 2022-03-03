@@ -64,7 +64,7 @@ class Page9 extends Component{
                         <div id="instruction_box_number_1_page_9_script_6" className="custom_svg demo_box">
                             <p className='top_line_in_instruction_box'>
                                 Share your screen<br/>
-                                Open <textarea onChange={event => this.handleChange(event)} id="text_box_number_3_page_9_script_6" defaultValue={this.getValue("text_box_number_1_page_9_script_6")} />  
+                                Open <textarea onChange={event => this.handleChange(event)} id="text_box_number_3_page_9_script_6" defaultValue={this.getValue("text_box_number_3_page_9_script_6")} />  
                             </p>
                         </div>
                         <img src={shareScreen} alt="Share your screen" id="share_your_screen_page_9_script_6" />
@@ -90,7 +90,7 @@ class Page9 extends Component{
                     
                     <div className='container_for_medium_margin'>
                         <p>
-                            We can use this website to solve some of those challenges. <br/>
+                            We can use <a href="https://sites.google.com/view/peer-mentoring-solutions" target="_blank" rel="nopener noreferrer">this website</a> to solve some of those challenges. <br/>
                             Click on the type of challenge you are having. <br/>
                             Do you think any of the solutions would help you? 
                         </p>

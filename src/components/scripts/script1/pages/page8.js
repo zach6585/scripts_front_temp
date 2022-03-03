@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { useState, useEffect } from 'react';
 
 import { toggleCommentMode } from '../../../../actions/comment';
+import { goToSpecificPage } from '../../../../actions/page';
 
 import Sidebar from '../../general pages/sidebar';
 
@@ -76,7 +77,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return{
-        toggleCommentMode: () => dispatch(toggleCommentMode())
+        toggleCommentMode: () => dispatch(toggleCommentMode()),
+        goToSpecificPage: (pageNum) => dispatch(goToSpecificPage(pageNum))
     }
 }
 

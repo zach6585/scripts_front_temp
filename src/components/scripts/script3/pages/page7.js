@@ -7,7 +7,7 @@ import { toggleBodyImage } from '../../../../actions/body';
 import { useState, useEffect } from 'react';
 
 import Sidebar from '../../general pages/sidebar';
-
+ 
 
 import BodyDiagram from '../../general pages/bodydiagram';
 
