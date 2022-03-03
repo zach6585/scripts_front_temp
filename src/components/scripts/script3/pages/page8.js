@@ -121,7 +121,7 @@ const Page8 = (props) => {
                     <ul>
                         <li className={`${props.commentMode}`} id="li_11" onClick={event => handleClick(event, "")}>Is your jaw tight?</li>
                         <li className={`${props.commentMode}`} id="li_12" onClick={event => handleClick(event, "")}>Is your mouth dry?</li>
-                        <li className={`${props.commentMode}`} id="li_13" onClick={event => handleClick(event, "")}>Are you clenching your teeth? This means you are biting down and pressing your top teeth and bottom teach together.</li>
+                        <li className={`${props.commentMode}`} id="li_13" onClick={event => handleClick(event, "")}>Are you clenching your teeth? This means you are biting down and pressing your top teeth and bottom teeth together.</li>
                     </ul>
                     <p className={props.commentMode} id="p_6" onClick={event => handleClick(event, "")}>How do your shoulders feel?</p>
                     <ul>

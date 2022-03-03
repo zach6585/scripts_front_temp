@@ -75,7 +75,7 @@ const Page6 = (props) => {
                             Let's work together to find pictures that describe mental health.<br/>
                             You can do a search online or share pictures you have taken. <br/>
                             Or, you can send me an emoji or a GIF to show me what mental health means to you. <br/><br/>
-                            There is no right or wrong way to do  I can help you if you want.<br/><br/>
+                            There is no right or wrong way to do this. I can help you if you want.<br/><br/>
                             Here is an example.
                         </p>
                     </div>

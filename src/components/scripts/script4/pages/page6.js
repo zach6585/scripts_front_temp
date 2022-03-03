@@ -70,7 +70,6 @@ const Page6 = props => {
                             <p className='top_line_in_instruction_box'>
                                 Do the card sort activity with your mentee.<br/><br/>
                                 Send your mentee the card sort link: <textarea onChange={event => handleChange(event)} id="text_box_number_10_page_6_script_4" defaultValue={getValue("text_box_number_10_page_6_script_4")} /><br/>
-                                Link: <textarea onChange={event => handleChange(event)} id="text_box_number_11_page_6_script_4" defaultValue={getValue("text_box_number_11_page_6_script_4")} /><br/><br/>
                                 Ask them to share their screen.
                             </p>
                     </div>

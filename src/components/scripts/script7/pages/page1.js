@@ -18,7 +18,7 @@ class Page1 extends Component {
                     <div className='container_for_medium_margin'>
                         <h1 className="bold">Materials</h1>
                         <ul>
-                            <li>Peer mentor session 7 script</li>
+                            <li>Peer mentoring session 7 script</li>
                             <li>Audio recorder</li>
                             <li>Solutions website link</li>
                             <li>Body scan worksheet link</li>

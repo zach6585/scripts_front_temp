@@ -33,7 +33,7 @@ const PracticeReminder = (props) => {
             <h1 className="bold center">Practice reminder</h1>
             <div className="left container_for_medium_margin">
                 <p>
-                    This week, your job will be to practice using a coping strategy. We decided that you wanted to try 
+                    {this.props.startText}
                 </p>
                 <div className='container_for_small_margin'>
                     <textarea onChange={event => handleChange(event)} className="practice_reminder_text_box_1" id={`text_box_number_1_practice_reminder_script_${props.script}`} defaultValue={getValue(`text_box_number_1_practice_reminder_script_${props.script}`)} />.
@@ -54,9 +54,7 @@ const PracticeReminder = (props) => {
                     </ul>
                 <br/><br/>
                 <p>
-                    If you have challenges with your coping strategy, you can use the website!
-                    <br/><br/>
-                    The mood log will help you keep track of how you feel after you do the activity. You can use body scan workscripts if they help you with the mood logs.
+                    {props.endText}
                 </p>
             
             </div>

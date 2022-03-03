@@ -126,7 +126,10 @@ const Page9 = props => {
                             <li className={`${props.commentMode}`} id="li_5" onClick={event => handleCommentClick(event)}>How do your legs and feet feel?</li>
                             <li className={`${props.commentMode}`} id="li_6" onClick={event => handleCommentClick(event)}>Do you notice yourself fidgeting?</li>
                             <li className={`${props.commentMode}`} id="li_7" onClick={event => handleCommentClick(event)}>Do you notice a change in your energy level? </li>
-                            <li className={`open_circles_bullets ${props.commentMode}`} id="li_8" onClick={event => handleCommentClick(event)}>Do you feel like you have more or less energy than usual?</li>
+                            <ul>
+                                <li className={`open_circles_bullets ${props.commentMode}`} id="li_8" onClick={event => handleCommentClick(event)}>Do you feel like you have more or less energy than usual?</li>
+                            </ul>
+
                         </ul>
                         <br/><br/><br/>
                         <p className={props.commentMode} id="p_8" onClick={event => handleCommentClick(event)}>

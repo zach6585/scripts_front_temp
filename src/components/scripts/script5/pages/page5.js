@@ -119,11 +119,13 @@ const Page5 = props => {
                             <br/><br/><br/>
                             First, let's look at all the strategies that you like. 
                             <br/><br/>
-                            Let's put a check mark on the ones that help you feel good.
+                            We will move ones that help you feel good to a new pile. What do you want to call that pile?  
                         </p>
                         <div id="instruction_box_number_2_page_5_script_5" className={`custom_svg demo_box container_for_large_margin ${props.commentMode}`} onClick={event => handleClick(event, "")}>
                             <p className="top_line_in_instruction_box">
-                                Help your mentee think about which activities they want to check.
+                                Help your mentee make new piles in the cards sort.
+                                <br/><br/>
+                                Also, help your mentee think about which activities they want to check.
                                 <br/><br/>
                                 These should be activities that help them feel good. 
                                 <br/><br/>
@@ -134,14 +136,14 @@ const Page5 = props => {
                             <br/><br/><br/>
                             Great, now let's think about which of these you can do in 15 minutes or less. 
                             <br/><br/>
-                            Let's now circle the activities that you think you can do in 15 minutes or less.
+                            Let's make a new pile for the activities you think you can do in 15 minutes or less.
                         </p>
                         <div id="instruction_box_number_3_page_5_script_5" className={`ital custom_svg demo_box container_for_large_margin ${props.commentMode}`} onClick={event => handleClick(event, "")}>
-                            <p className="top_line_in_instruction_box">Help your mentee think about how long each activity takes and circle them.</p>
+                            <p className="top_line_in_instruction_box">Help your mentee think about how long each activity takes and  help them move them to a new pile for “I can do in 15 minutes or less.”</p>
                         </div>
                         <p className={props.commentMode} id="p_6" onClick={event => handleClick(event, "")}>
                             <br/><br/><br/>    
-                            We will now pick one of the activities that you circled to be your first coping strategy. 
+                            We will now pick one of the activities that makes you feel good and you can do in 15 minutes or less to be your first coping strategy. 
                             <br/><br/>
                             Which activity do you want to work on for the next few weeks? 
                             <br/><br/><br/>

@@ -84,7 +84,7 @@ const Page5 = (props) => {
                     <div className='container_for_medium_margin'>
                         <p className={props.commentMode} id="p1_2" onClick={event => handleCommentClick(event)}>
                             Are there any other symptoms that you thought of during the week? <br/>
-                            If you want, you can move the cards show the symptoms you had this week. <br/>
+                            If you want, you can move the cards to show the symptoms you had this week. <br/>
                         </p>
                         <img className={`pause ${props.commentMode}`} id="img_1" onClick={event => handleCommentClick(event)} src={pause} alt="pause" />
                         <img className={`allEars ${props.commentMode}`} id="img_2" onClick={event => handleCommentClick(event)} src={allEars} alt="All ears" />
