@@ -47,7 +47,7 @@ const Page8 = props => {
                         We'll start with thinking about how you are feeling. We do this every time to practice paying attention to your body so you know how you are feeling. The more you do this, the easier it will be when you are having very strong feelings and really need to use a coping strategy. 
 
                     </p>
-                    <div className="div_with_body_image_and_instruction_box" id="d_w_b_i_a_i_b_page_8_script_7">
+                    <div className="div_with_body_image" id="d_w_b_i_a_i_b_page_8_script_7">
                         <div id="instruction_box_number_1_page_8_script_7" className="custom_svg demo_box container_for_small_margin">
                             <p className='top_line_in_instruction_box'>
                                 Help your mentee use the body scan worksheet.<br/>

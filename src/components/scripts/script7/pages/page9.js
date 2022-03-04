@@ -35,7 +35,7 @@ class Page9 extends Component{
         return(
             <div className="sheet">
                 <h1 className="bold center">Practicing coping strategies</h1>
-                <div className='container_for_small_margin'>
+                <div className='left container_for_small_margin'>
                     <p>
                         <strong>Step 2: Practicing coping strategies</strong><br/>
                         Today we are working on:

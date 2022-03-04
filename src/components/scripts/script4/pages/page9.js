@@ -70,7 +70,7 @@ const Page9 = props => {
                     <div className="left">
                         <div className='body_page_main_div'>
                             <div className='container_for_medium_margin'>
-                            <div className="div_with_body_image_and_p" id="d_w_b_i_a_p_page_9_script_4">
+                            <div className="div_with_body_image" id="d_w_b_i_a_p_page_9_script_4">
                                 <p className={props.commentMode} id="p_1" onClick={event => handleCommentClick(event)}>
                                         Last week, we worked on the body scan worksheet. 
                                         <br/><br/>

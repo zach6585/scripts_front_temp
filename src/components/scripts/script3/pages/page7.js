@@ -77,7 +77,7 @@ const Page7 = (props) => {
                          <div className="left container_for_medium_margin">
                              
                              <p className={props.commentMode} id="p_1" onClick={event => handleCommentClick(event)}>Now we will practice thinking about how your body feels using something called a body scan.</p>
-                             <div className="div_with_body_image_and_p">
+                             <div className="div_with_body_image">
                                  <p className={props.commentMode} id="p_1" onClick={event => handleCommentClick(event)}>Our bodies can help us learn about our feelings and emotions. I will show you an example.</p>
                                  <input type="image" alt="Body image" src={body} name="body_image" className={`body_diagram_button ${props.commentMode}`} id="body_image_button" onClick={event => handleBodyImageClicked(event)} />
                              </div>

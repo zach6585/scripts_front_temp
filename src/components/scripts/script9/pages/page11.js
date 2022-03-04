@@ -10,9 +10,9 @@ class Page11 extends Component{
     handleChange = (event) => {
         const object_outcome = this.getObject(event.target.id)
         object_outcome === "" ? 
-        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
         :
-        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
     
     }
     
@@ -31,8 +31,8 @@ class Page11 extends Component{
     render(){
         return(
             <div className="sheet">
-                <h1 className='bold'>Step 4: Reflecting on how it went</h1>
-                <div className='container_for_extra_small_margin'>
+                <div className='left'>
+                    <h1 className='bold'>Step 4: Reflecting on how it went</h1>
                     <p>Sometimes it can be hard to do a coping strategy because things get in the way.</p>
                 
                     <div className="container_for_extra_small_margin solid_box">
@@ -51,9 +51,6 @@ class Page11 extends Component{
                         </p>
                     </div>
                    
-                   <div className='container_for_medium_margin'>
-                       <p>We are going to use a card sort to reflect on things that may have made using your coping strategy hard.</p>
-                   </div>
                 </div>
             </div>
             

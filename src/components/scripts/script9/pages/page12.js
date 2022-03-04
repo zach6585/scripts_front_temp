@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
-import check from "../../pictures/check.png";
-import redX from "../../pictures/redx.png";
+import check from "../../pictures/checkbutsmaller.png";
+import redX from "../../pictures/redxbutsmaller.png";
 
 
 class Page12 extends Component{
@@ -32,26 +32,25 @@ class Page12 extends Component{
     render(){
         return(
             <div className="sheet">
-                <h1 className='bold'>Step 5: Figuring out solutions</h1>
-                <div className='container_for_extra_small_margin'>
+                <div className='left'>
+                    <h1 className='bold'>Step 5: Figuring out solutions</h1>
                     <p>Do you think you could do this activity at home on your own this week?</p>
                     <img className="check" src={check} alt="Check" onClick={(event) => this.handleClick(event, 'c')} /><p className="what_does_your_mentor_say">Your mentee says yes</p>
                     <br/>
                     <div className="choicePicked">{this.state.handleclick.words_that_appear_when_you_click_green_check}</div>
-                    <br/><br/>p
+                    <br/><br/>
                     <img className="redX" src={redX} alt="Red X" onClick={(event) => this.handleClick(event, 'x')} /><p className="what_does_your_mentor_say">Your mentee says no</p>
                     <br/>
                     <div className="choicePicked">{this.state.handleclick.words_that_appear_when_you_click_red_x}</div>
                 
                     <div className="container_for_medium_margin">
                         <p className="left">What will make it hard to do at home?</p>
-                        <p><em>If they're not sure, help them look through the barriers from the card sort.</em></p>
                     </div>
                 
                     <div id="instruction_box_number_1_page_12_script_9" className="custom_svg demo_box container_for_small_margin">
                         <p className='top_line_in_instruction_box'>
                             Help your mentee problem solve how they will deal with the barrier. Use your tools and experiences to help them solve the problem.<br/>
-                            You can use the solution website <a href="https://sites.google.com/view/peer-mentoring-solutions">Link</a>
+                            You can use the solution website <a href="https://sites.google.com/view/peer-mentoring-solutions" target="_blank" rel="nopener noreferrer">Link</a>
                         </p>
                     </div>
 

@@ -32,9 +32,9 @@ class Page11 extends Component{
     render(){
         return(
             <div className="sheet">
-                <h1 className="bold center">Practicing coping strategies</h1>
-                <h1 className='bold'>Step 4: Figuring out solutions</h1>
                 <div className='container_for_small_margin left'>
+                    <h1 className="bold center">Practicing coping strategies</h1>
+                    <h1 className='bold'>Step 4: Figuring out solutions</h1>
                     <p>
                         Today we tried [solution] to make doing this coping strategy easier. <br/>
                         How did it go? <br/>

@@ -40,7 +40,7 @@ const Page6 = props => {
             <div className="sheet">
                 <h1 className='bold center'>Practicing coping strategies</h1>
                 <div className='left container_for_small_margin'>
-                    <div className="div_with_body_image_and_p" id="d_w_b_i_a_p_page_6_script_6">
+                    <div className="div_with_body_image" id="d_w_b_i_a_p_page_6_script_6">
                         <p>
                             <strong>Step 1: Identify how you are feeling</strong><br/>
                             The purpose of a coping strategy is to help you feel better when you are having challenging, uncomfortable emotions. Sometimes it can be hard to tell how you are feeling.<br/>

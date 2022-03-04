@@ -34,7 +34,7 @@ class Page9 extends Component{
     render(){
         return(
             <div className="sheet">
-                <div className='container_for_small_margin'>
+                <div className='left container_for_small_margin'>
                     <p>
                         <strong>Step 2: Practicing coping strategies</strong>
                     </p>
@@ -56,8 +56,6 @@ class Page9 extends Component{
                             <ul>
                                 <li className='open_circles_bullets'>“How is this making you feel right now?”</li>
                                 <li className='open_circles_bullets'>“Do you feel like doing this activity is helping you?” Why? Or Why not?</li>
-                                <li className='open_circles_bullets'>“Do you like the way you feel as you do this activity?” Why? Or Why not?</li>
-                                <li className='open_circles_bullets'>“Do you like the way you feel as you do this activity?” Why? Or Why not?</li>
                                 <li className='open_circles_bullets'>“Do you like the way you feel as you do this activity?” Why? Or Why not?</li>
                                 <li className='open_circles_bullets'>“This activity makes me feel <textarea onChange={event => this.handleChange(event)} id="text_box_number_2_page_9_script_10" defaultValue={this.getValue("text_box_number_2_page_9_script_10")} />. How does it make you feel?” </li>
                             </ul>

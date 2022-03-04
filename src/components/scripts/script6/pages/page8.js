@@ -41,7 +41,7 @@ const Page8 = props => {
             <div className="sheet">
                 <h1 className='bold center'>Step 3: Identify how you are feeling</h1>
                 <div className='left container_for_small_margin'>
-                    <div className="div_with_body_image_and_p" id="d_w_b_i_a_p_page_8_script_6">
+                    <div className="div_with_body_image" id="d_w_b_i_a_p_page_8_script_6">
                         <p>
                             When we did the body scan earlier, you said you were feeling <span className='underline_text'>{getValue('text_box_number_1_step_1_script_6')}</span>.<br/><br/>
                             Has anything changed?

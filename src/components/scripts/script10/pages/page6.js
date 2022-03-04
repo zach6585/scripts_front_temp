@@ -6,6 +6,7 @@ import redX from "../../pictures/redx.png";
 import { connect } from 'react-redux';
 
 import { patchTexts, postTexts } from '../../../../actions/text';
+import {goToSpecificPage} from '../../../../actions/page';
 
 
 class Page6 extends Component {
@@ -31,12 +32,13 @@ class Page6 extends Component {
         }
         else if (letter === 'x'){
             this.setState({handleclick: {words_that_appear_when_you_click_green_check : null, words_that_appear_when_you_click_red_x:
-                    <p>
-                        That's great that you had no challenges using your coping strategy!<br/>
-                    We'll practice it together!
-                    [go to step 1 coping strategy practice]
-
-                    </p>
+                    <div>
+                        <p>
+                            That's great that you had no challenges using your coping strategy!<br/>
+                            We'll practice it together!
+                        </p>
+                        <button onClick={() => goToSpecificPage(8)}>Skip to step 1</button>
+                    </div>
                 }})
         }
     }
@@ -114,7 +116,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return{
         patchTexts: (text_data) => dispatch(patchTexts(text_data)),
-        postTexts: (text_data) => dispatch(postTexts(text_data))
+        postTexts: (text_data) => dispatch(postTexts(text_data)),
+        goToSpecificPage: (pageNum) => dispatch(goToSpecificPage(pageNum))
 
     }
 }

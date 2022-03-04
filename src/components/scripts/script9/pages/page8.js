@@ -47,7 +47,7 @@ const Page8 = props => {
                         Let's practice thinking about how you are feeling. We do this to check-in before using the coping strategy.<br/>
                         Do you want to use the body scan or mood log?
                     </p>
-                    <div className="div_with_body_image_and_instruction_box" id="d_w_b_i_a_i_b_page_8_script_9">
+                    <div className="div_with_body_image" id="d_w_b_i_page_8_script_9">
                         <div id="instruction_box_number_1_page_8_script_9" className="custom_svg demo_box container_for_small_margin">
                             <p className='top_line_in_instruction_box'>
                                 Help your mentee use the body scan worksheet.<br/>

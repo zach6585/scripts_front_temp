@@ -1,15 +1,22 @@
 import { Component } from 'react';
 
-import SharingAboutMentoring from '../../general pages/sharingaboutmentoring'; 
+import RemindersAboutMentoring from '../../general pages/remindersaboutmentoring.js';
 
 
 class Page16 extends Component {
-
+    
     render() {
+        
         return (
-            <SharingAboutMentoring />
+            
+                <RemindersAboutMentoring extrapractice={true} />
+                
         )
     }
 }
 
 export default Page16;
+
+
+           
+          

@@ -42,7 +42,7 @@ const Page7 = (props) => {
             <div className="sheet">
                 <h1 className="bold center">Review</h1>
                 <div className="left container_for_medium_margin">
-                    <div className="div_with_body_image_and_p" id="d_w_b_i_a_p_page_7_script_5">
+                    <div className="div_with_body_image" id="d_w_b_i_a_p_page_7_script_5">
                         <p>
                             Last week, we worked on the body scan worksheet. 
                             <br/><br/>

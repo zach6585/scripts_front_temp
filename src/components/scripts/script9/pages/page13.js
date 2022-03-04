@@ -1,8 +1,8 @@
-function Page13(props){
+const Page13 = (props) => {
     return(
         <div className="sheet">
-            <h1 className='bold'>Coping strategy toolkit</h1>
-            <div className='container_for_medium_margin'>
+            <h1 className='bold center'>Coping strategy toolkit</h1>
+            <div className='left container_for_medium_margin'>
                 <p>Let's keep working on your coping strategy toolkit.</p>
                 <div id="instruction_box_number_1_page_13_script_9" className="custom_svg demo_box container_for_small_margin">
                     <p className="top_line_in_instruction_box">

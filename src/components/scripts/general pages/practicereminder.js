@@ -33,7 +33,7 @@ const PracticeReminder = (props) => {
             <h1 className="bold center">Practice reminder</h1>
             <div className="left container_for_medium_margin">
                 <p>
-                    {this.props.startText}
+                    {props.startText}
                 </p>
                 <div className='container_for_small_margin'>
                     <textarea onChange={event => handleChange(event)} className="practice_reminder_text_box_1" id={`text_box_number_1_practice_reminder_script_${props.script}`} defaultValue={getValue(`text_box_number_1_practice_reminder_script_${props.script}`)} />.

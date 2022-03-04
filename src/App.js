@@ -152,6 +152,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.props.pages.pageNumber)
     if (this.state.pageList.length !== 0){
       
       return(

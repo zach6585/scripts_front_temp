@@ -107,14 +107,14 @@
 /* Page 7 */ 
 
 #instruction_box_number_1_page_7_script_10{
-    width: 60%;
-    height: 220px;
+    width: 800px;
+    min-height: 220px;
 }
 
 
 #instruction_box_number_2_page_7_script_10{
-    width: 60%;
-    height: 120px;
+    width: 800px;
+    min-height: 120px;
 }
 
 #instruction_box_number_4_page_7_script_10{
@@ -132,99 +132,20 @@
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 8 */ 
 
-.bodyScanImageDiv_page_8 > img{
-    width: 14.7em;
-    margin-left: 70%;
-    margin-bottom: -300px;
+#d_w_b_i_page_8_script_10{
+    display: inline-flex;
 }
 
-#body_image_text_feelings_page_8_script_10{
-    position: absolute;
-    width: 2.5em;
-    height: 1.3em;
-    margin-top: 15px;
-    margin-left: -210px;
+#d_w_b_i_page_8_script_10 > p{
+    flex: 1;
+    width: 500px;
 }
 
-#body_image_text_head_page_8_script_10{
-    position: absolute;
-    width: 2.7em;
-    height: 1.3em;
-    margin-top: 18px;
-    margin-left: -78px;
-}
-
-#body_image_text_chest_page_8_script_10{
-    position: absolute;
-    width: 2.3em;
-    height: 1.2em;
-    margin-top: 60.8px;
-    margin-left: -215px;
-}
-
-#body_image_text_mouth_and_jaw_page_8_script_10{
-    position: absolute;
-    width: 2.7em;
-    height: 1.25em;
-    margin-top: 62px;
-    margin-left: -76.8px;
-}
-
-
-#body_image_text_breathing_page_8_script_10{
-    position: absolute;
-    width: 2.38em;
-    height: 1.2em;
-    margin-top: 102.8px;
-    margin-left: -215px;
-}
-
-#body_image_text_shoulders_page_8_script_10{
-    position: absolute;
-    width: 2.2em;
-    height: 1.25em;
-    margin-top: 108px;
-    margin-left: -65px;
-}
-
-#body_image_text_stomach_page_8_script_10{
-    position: absolute;
-    width: 2.7em;
-    height: 1.55em;
-    margin-top: 151.5px;
-    margin-left: -76.5px;
-}
-
-#body_image_text_hands_and_arms_page_8_script_10{
-    position: absolute;
-    width: 1.75em;
-    height: 1.8em;
-    margin-top: 188px;
-    margin-left: -207px;
-}
-
-#body_image_text_legs_and_feet_page_8_script_10{
-    position: absolute;
-    width: 1.65em;
-    height: 1.6em;
-    margin-top: 210px;
-    margin-left: -52px;
-}
-
-#body_image_text_fidgeting_page_8_script_10{
-    position: absolute;
-    width: 3.3em;
-    height: .8em;
-    margin-top: 278.8px;
-    margin-left: -206px;
-}
-
-#body_image_text_change_in_energy_level_page_8_script_10{
-    position: absolute;
-    width: 3.5em;
-    height: .8em;
-    margin-top: 278.8px;
-    margin-left: -103px;
+#d_w_b_i_page_8_script_10 > input{
+    width: 300px;
+    height: 300px;
+    flex: .3;
+    margin-left: 400px;
 }
 
 #instruction_box_number_1_page_8_script_10{
@@ -232,14 +153,22 @@
 }
 
 #text_box_number_1_page_8_script_10{
-    width: 90%;
+    width: 60%;
     height: 30px;
 }
 
+#instruction_box_number_2_page_8_script_10{
+    width: 60%;
+    height: 400px;
+    display: inline-block;
+    position: relative;
+}
+
 #phone_page_8_script_10{
-    width: 10%;
-    margin-left: 76%;
-    margin-bottom: -100px;
+    width: 20%;
+    margin-left: 80%;
+    margin-bottom: 100px;
+    display: inline;
 }
     
     
@@ -276,108 +205,21 @@
     width: 90%;
 }
 
-#image_div_page_10_script_10{
-    margin-top: 100px;
-    margin-left: 20%;
+#d_w_b_i_page_10_script_10{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#body_page_10_script_10{
+#d_w_b_i_page_10_script_10 > p{
+    flex: 1;
+    width: 500px;
+}
+
+#d_w_b_i_page_10_script_10 > input{
+    width: 300px;
+    flex: .3;
     margin-left: 100px;
-    margin-bottom: 71px;
-}
-
-#bodyScanImageDiv > img{
-    display: inline-block;
-    width: 14.7em;
-}
-
-#body_image_text_feelings_page_10_script_10{
-    position: absolute;
-    width: 2.5em;
-    height: 1.2em;
-    margin-top: 40px;
-    margin-left: -208px;
-}
-
-#body_image_text_head_page_10_script_10{
-    position: absolute;
-    width: 2.65em;
-    height: 1.2em;
-    margin-top: 43px;
-    margin-left: -78px;
-}
-
-#body_image_text_chest_page_10_script_10{
-    position: absolute;
-    width: 2.2em;
-    height: 1.2em;
-    margin-top: 85.8px;
-    margin-left: -215px;
-}
-
-#body_image_text_mouth_and_jaw_page_10_script_10{
-    position: absolute;
-    width: 2.6em;
-    height: 1.2em;
-    margin-top: 87px;
-    margin-left: -76.8px;
-}
-
-
-#body_image_text_breathing_page_10_script_10{
-    position: absolute;
-    width: 2.2em;
-    height: 1.2em;
-    margin-top: 127.8px;
-    margin-left: -215px;
-}
-
-#body_image_text_shoulders_page_10_script_10{
-    position: absolute;
-    width: 2.2em;
-    height: 1.2em;
-    margin-top: 134px;
-    margin-left: -65.5px;
-}
-
-#body_image_text_stomach_page_10_script_10{
-    position: absolute;
-    width: 2.8em;
-    height: 1.5em;
-    margin-top: 176.5px;
-    margin-left: -77.2px;
-}
-
-#body_image_text_hands_and_arms_page_10_script_10{
-    position: absolute;
-    width: 1.7em;
-    height: 1.7em;
-    margin-top: 213px;
-    margin-left: -207px;
-}
-
-#body_image_text_legs_and_feet_page_10_script_10{
-    position: absolute;
-    width: 1.8em;
-    height: 1.6em;
-    margin-top: 235px;
-    margin-left: -52px;
-}
-
-#body_image_text_fidgeting_page_10_script_10{
-    position: absolute;
-    width: 3.2em;
-    height: .8em;
-    margin-top: 303.8px;
-    margin-left: -206px;
-}
-
-#body_image_text_change_in_energy_level_page_10_script_10{
-    position: absolute;
-    width: 3.5em;
-    height: .8em;
-    margin-top: 303.8px;
-    margin-left: -103px;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------- */
