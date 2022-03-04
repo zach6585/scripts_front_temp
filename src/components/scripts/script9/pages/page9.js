@@ -34,7 +34,7 @@ class Page9 extends Component{
     render(){
         return(
             <div className="sheet">
-                <div className='container_for_small_margin'>
+                <div className='left container_for_small_margin'>
                     <p>
                         <strong>Step 2: Practicing coping strategies</strong>
                     </p>

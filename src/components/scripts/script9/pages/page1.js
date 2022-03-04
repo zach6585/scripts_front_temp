@@ -10,23 +10,19 @@ class Page1 extends Component {
                     <div>
                         <h1 className="bold">Purpose</h1>
                         <ul>
-                            <li>Help your mentee learn more about their mental health condition</li>
-                            <li>Help your mentee learn more about self-monitoring</li>
+                            <li>Work on your mentee's second coping strategy</li>
+                            <li>Review information about anxiety</li>
+                            <li>Work on your mentee's toolkit</li>
                         </ul>
                     </div>
                     <br /><br />
                     <div>
                         <h1 className="bold">Materials</h1>
                         <ul>
-                            <li className="square_bullets">Peer mentor session 2 script</li>
-                            <li className="square_bullets">Mental health worksheet</li>
-                            <li className="square_bullets">Symptom card sort</li>
-                            <li className="square_bullets">Audio recorder</li>
-                            <li className="square_bullets">Body scan worksheets</li>
-                                <ul>
-                                    <li className="open_circles_bullets">Blank worksheets for your mentee</li>
-                                    <li className="open_circles_bullets">1 you filled out</li>
-                                </ul>
+                            <li>Peer mentoring script</li>
+                            <li>Body scan worksheet link</li>
+                            <li>Mood log</li>
+                            <li>Coping strategy toolkit</li>
                         </ul>
                     </div>
                 </div>
@@ -37,4 +33,4 @@ class Page1 extends Component {
 }
 
 export default Page1;
-
+	

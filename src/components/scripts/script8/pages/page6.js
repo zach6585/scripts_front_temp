@@ -11,9 +11,9 @@ class Page6 extends Component {
     handleChange = (event) => {
         const object_outcome = this.getObject(event.target.id)
         object_outcome === "" ? 
-        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
         :
-        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
     
     }
     
@@ -44,7 +44,7 @@ class Page6 extends Component {
                         <div id="instruction_box_number_1_page_6_script_8" className="custom_svg demo_box">
                             <p className='top_line_in_instruction_box'>
                                 Share your screen<br/>
-                                Insert link: 
+                                Insert link: <textarea id='text_box_number_3_page_6_script_8' onChange={event => this.handleChange(event)} defaultValue={this.getValue("text_box_number_3_page_6_script_8")} ></textarea>
                             </p>
                         </div>
                         <img src={shareScreen} alt="Share your screen" id="share_your_screen_page_6_script_8" />

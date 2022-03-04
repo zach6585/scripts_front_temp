@@ -185,7 +185,7 @@
     
     #image_and_instruction_box_number_1_page_8_script_2 > div{
         width: 150px;
-        height: 175px;
+        min-height: 175px;
         flex: 0.2;
         
     }

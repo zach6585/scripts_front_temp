@@ -97,7 +97,7 @@
 
 #image_and_instruction_box_number_1_page_10_script_1 > div{
     width: 250px;
-    height: 200px;
+    min-height: 200px;
     flex: 0.4;
     
 }
@@ -137,10 +137,10 @@
     display: flex;
 }
 
-#image_and_instruction_box_number_1_page_10_script_1 > div{
+#image_and_instruction_box_number_1_page_11_script_1 > div{
     width: 250px;
-    height: 200px;
-    flex: 0.4;
+    min-height: 200px;
+    flex: 0.3;
     
 }
 

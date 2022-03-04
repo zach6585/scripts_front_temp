@@ -29,7 +29,7 @@ Notes:
 - In script 7 on page 12 of the word document it says "example of fillable versus unfillable box" but you said to just make it fillable. Should I have made it so that it gets the answer from the script before it?
 - And then on page 14 it was supposed to be one that filled based on what they put, right?
 - Same with page 16
-
+- I was never sent the script 6 
 
 
 

@@ -73,8 +73,8 @@ li button {
 
 #instruction_box_number_3_page_5_script_5 { /* This is an instructions box which has the dotted/dashed border */
     position: relative;
-    width: 66.5%;
-    height: 60px;
+    width: 500px;
+    min-height: 60px;
 }
 
 

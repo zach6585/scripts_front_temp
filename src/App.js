@@ -5,9 +5,8 @@ import { connect } from 'react-redux';
 import { getTexts, changeTexts } from './actions/text';
 import { userLogout, autoLogin } from './actions/user';
 import { flushMenteeList,changeMentee } from './actions/mentee';
-// import { changeScript, changePage } from './actions/mentee';
 import { toggleCommentMode } from './actions/comment';
-// import { goToSpecificPage } from './actions/page';
+import { goToSpecificPage } from './actions/page';
 
 
 import hamburgerMenu from "./components/scripts/pictures/hamburger_menu.png";
@@ -45,8 +44,10 @@ class App extends Component {
     componentList: [<Script1List />, <Script2List />, <Script3List />, <Script4List />, <Script5List />, <Script6List />, <Script7List />, <Script8List />, <Script9List />, <Script10List />, <Script11List />, <Script12List />, <Script13List />, <Script14List />, <Script15List />, <Script16List />], 
     currComponent: null,
     buttonList: [],
+    pageList: [],
     hamburger_is_clicked: false,
-    options: ''
+    options: '',
+    page_counts: {"1": 18, "2": 13, "3": 13, "4": 13, "5": 11, "6": 15, "7": 17, "8": 12, "9": 18, "10": 17, "11": 14, "12": 17, "13": 14, "14": 13, "15": 12, "16": 12}
   }
 
   onScrollCloseHamburger = () => {
@@ -58,7 +59,7 @@ class App extends Component {
     if (localStorage.getItem("token")){
       this.props.autoLogin();
     }
-    this.makeButtons();
+    this.makeButtons("button");
     window.addEventListener('scroll', this.onScrollCloseHamburger);
   }
 
@@ -69,74 +70,98 @@ class App extends Component {
     }
   
     else if (this.state.hamburger_is_clicked === false){
-      if (this.props.user.user_id === 5 || this.props.user.user_id === 1){
-        this.setState({hamburger_is_clicked: true,
-            options: 
-            <div id="hamburger_menu_ps_div">
-                <p onClick={event => this.menuItemHandleClick(event, 1)}>Change Script    |</p>
-                <p onClick={event => this.menuItemHandleClick(event, 2)}>Change Mentee    |</p>
-                <p onClick={event => this.menuItemHandleClick(event, 3)}>Logout    |</p>
-                <p onClick={event => this.menuItemHandleClick(event, 4)}>Add a comment</p>
-            </div>
-          })
-      }
-      else {
+      // if (this.props.user.user_id === 5 || this.props.user.user_id === 1){
+      //   this.setState({hamburger_is_clicked: true,
+      //       options: 
+      //       <div id="hamburger_menu_ps_div">
+      //           <p onClick={event => this.menuItemHandleClick(event, 1)}>Change Script    |</p>
+      //           <p onClick={event => this.menuItemHandleClick(event, 2)}>Change Mentee    |</p>
+      //           <p onClick={event => this.menuItemHandleClick(event, 3)}>Logout    |</p>
+      //           <p onClick={event => this.menuItemHandleClick(event, 4)}>Add a comment</p>
+      //       </div>
+      //     })
+      // }
+      // else {
         this.setState({hamburger_is_clicked: true,
           options: 
           <div id="hamburger_menu_ps_div">
               <p onClick={event => this.menuItemHandleClick(event, 1)}>Change Script    |</p>
               <p onClick={event => this.menuItemHandleClick(event, 2)}>Change Mentee    |</p>
-              <p onClick={event => this.menuItemHandleClick(event, 3)}>Logout</p>
+              <p onClick={event => this.menuItemHandleClick(event, 3)}>Logout    |</p>
+              <p onClick={event => this.menuItemHandleClick(event, 4)}>Pick specific page</p>
           </div>
         })
       }  
-    }
+    // }
   }
   
   menuItemHandleClick = (e, choice) => {
     //For the hamburger menu
     if (choice === 1){
       this.setState({hamburger_is_clicked: false, options: ''});
-      this.makeButtons();
+      this.makeButtons("button");
       this.props.changeTexts();
+      this.props.goToSpecificPage(1);
       // this.props.changeScript(-1, this.props.currentMentee);
       // this.props.changePage(-1, this.props.currentMentee);
     }
     else if (choice === 2){
       this.setState({hamburger_is_clicked: false, options: ''});
-      this.makeButtons();
+      this.makeButtons("button");
       this.props.changeTexts();
       this.props.changeMentee();
       
     }
     else if (choice === 3){
       this.setState({hamburger_is_clicked: false, options: ''});
-      this.makeButtons();
+      this.makeButtons("button");
       this.props.changeTexts();
       this.props.flushMenteeList();
       this.props.userLogout();
     }
     else if (choice === 4) {
       this.setState({hamburger_is_clicked: false, options: ''});
-      this.props.toggleCommentMode();
+      this.makeButtons("pages");
     }
   }
   
-  handleClick = (script_number, origin) => {//Once a button is clicked, it takes you to the coresponding component. Origin determines if it was a button or in render
+  handleClick = (script_number) => {//Once a button is clicked, it takes you to the coresponding component. Origin determines if it was a button or in render
     this.setState({buttonList: []});
     this.setState({currComponent: this.state.componentList[script_number]})
     this.props.getTexts({script_number: parseInt(script_number) + 1, mentee_id: this.props.mentees.current_mentee_id});
   }
 
+  handlePageButtonClick = (pageNumber) => {
+    this.setState({pageList: []});
+    this.props.goToSpecificPage(pageNumber);
+  }
 
-  makeButtons = () => {//Makes the button list depending on the componenents present in the componenet list
-    for (let i = 1; i < this.state.componentList.length + 1; i++){
-      this.setState((prevstate) => ({buttonList: prevstate.buttonList.concat(<button key={i-1} onClick={() => this.handleClick((i-1).toString(), "button")}>Script {i}</button>)}));
-    } 
+  makeButtons = (origin) => {//Makes the button list depending on the componenents present in the componenet list
+    
+    if (origin === "button"){
+      for (let i = 1; i < this.state.componentList.length + 1; i++){
+        this.setState((prevstate) => ({buttonList: prevstate.buttonList.concat(<button key={i-1} onClick={() => this.handleClick((i-1).toString())}>Script {i}</button>)}));
+      } 
+    }
+    else if (origin === "pages"){
+      
+      for (let i = 1; i < this.state.page_counts[this.props.texts.currentScript]; i++){
+        this.setState((prevstate) => ({pageList: prevstate.pageList.concat(<button key={i-1} onClick={() => this.handlePageButtonClick(i)}>Page {i}</button>)}))
+      }
+    }
   }
 
   render() {
-    if (localStorage.getItem("token")){
+    if (this.state.pageList.length !== 0){
+      
+      return(
+        <div>
+          {this.state.pageList}
+        </div>
+        
+      )
+    } 
+    else if (localStorage.getItem("token")){
       if (this.props.mentees.current_mentee_id === -1){
         if (this.props.mentees.mentees === null){
           return(<h1>Loading</h1>)
@@ -206,7 +231,8 @@ const mapDispatchToProps = dispatch => {
       flushMenteeList: () => dispatch(flushMenteeList()),
       autoLogin: () => dispatch(autoLogin()),
       changeMentee: () => dispatch(changeMentee()),
-      toggleCommentMode: () => dispatch(toggleCommentMode())
+      toggleCommentMode: () => dispatch(toggleCommentMode()),
+      goToSpecificPage: (pageNum) => dispatch(goToSpecificPage(pageNum))
   }
 }
 

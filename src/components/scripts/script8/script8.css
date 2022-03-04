@@ -30,7 +30,8 @@
 
 #instruction_box_number_1_page_6_script_8 { /* This is an instructions box which has the dotted/dashed border */
     display: inline-block;
-    width: 33.5%;
+    min-width: 400px;
+    min-height: 140px;
     /* position: relative; */
     
 

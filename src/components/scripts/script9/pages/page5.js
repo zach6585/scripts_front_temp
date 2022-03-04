@@ -41,7 +41,7 @@ class Page5 extends Component {
                 <div className="left container_for_small_margin">
                     <p>
                         Anxiety is a really common mental health condition. Almost 20% of people in the United States have anxiety. That means for every 10 people, 2 people have anxiety. <br/><br/>
-                        <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_5_script_9" defaultValue={this.getValue("text_box_number_1_page_5_script_9")} /><br/><br/>
+                        <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_5_script_9" defaultValue={this.getValue("text_box_number_1_page_5_script_9")} placeholder="“Please write about your own experience with anxiety. You can build on what your mentee has shared about their experience of anxiety so far”" /><br/><br/>
                         We are going to watch a video to learn more about anxiety. Feel free to ask me to stop the video if you have questions. <br/>
                         You can also let me know me if you are starting to have a feeling you don't like while watching the video. We can stop the video at any time.
                     </p>

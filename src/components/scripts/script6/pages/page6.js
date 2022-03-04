@@ -38,6 +38,7 @@ const Page6 = props => {
     if (!props.imageClicked){
         return (
             <div className="sheet">
+                <h1 className='bold center'>Practicing coping strategies</h1>
                 <div className='left container_for_small_margin'>
                     <div className="div_with_body_image_and_p" id="d_w_b_i_a_p_page_6_script_6">
                         <p>

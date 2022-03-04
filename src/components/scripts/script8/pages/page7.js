@@ -1,5 +1,9 @@
 import { Component } from 'react';
 
+import { connect } from 'react-redux';
+
+import { patchTexts, postTexts } from '../../../../actions/text';
+
 import pause from '../../pictures/pause.png';
 import allEars from '../../pictures/allears.png';
 import shareScreen from '../../pictures/sharescreen.png';
@@ -7,7 +11,27 @@ import stopShare from '../../pictures/stopshare.png';
 
 
 class Page7 extends Component {
+
+    handleChange = (event) => {
+        const object_outcome = this.getObject(event.target.id)
+        object_outcome === "" ? 
+        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
+        :
+        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
     
+    }
+    
+    getObject = (current_id_tag) => {
+        //Returns the object that has the specific id_tag
+        let current_text = this.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
+        return current_text ? current_text : ""
+    }
+    
+    getValue = (current_id_tag) => {
+        //Same as getObject but instead it returns the value
+        let current_text_for_value = this.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
+        return current_text_for_value ? current_text_for_value.value : ""
+    }
     render() {
         return (
             <div className="sheet">
@@ -39,6 +63,7 @@ class Page7 extends Component {
                             The more coping strategies you have and like, the easier it can be to cope with stress and challenging feelings.<br/><br/>
                             To help you pick another coping strategy, we are going to look back at the coping strategy card sort. 
                         </p>
+                        <textarea id='text_box_number_1_page_7_script_8' onChange={event => this.handleChange(event)} defaultValue={this.getValue("text_box_number_1_page_7_script_8")} />
                     </div>
 
                     <div className='container_for_large_margin'>
@@ -98,7 +123,7 @@ class Page7 extends Component {
                     </div>
 
                     <div id="instruction_box_number_5_page_7_script_8" className="custom_svg demo_box container_for_large_margin">
-                        <p className='top_line_in_instruction_box'>If your mentee thinks they will have challenges use the solutions website [insert hyperlink] to help them think of potential solutions. </p>
+                        <p className='top_line_in_instruction_box'>If your mentee thinks they will have challenges use the solutions website <textarea id='text_box_number_2_page_7_script_8' onChange={event => this.handleChange(event)} defaultValue={this.getValue("text_box_number_2_page_7_script_8")} /> to help them think of potential solutions. </p>
                     </div>
 
                     <div className='container_for_small_margin'>
@@ -131,4 +156,21 @@ class Page7 extends Component {
         )
     }
 }
-export default Page7;
+
+const mapStateToProps = state => {
+    return{
+        texts: state.texts.curatedTextsFromCurrentScript,
+        mentee_id: state.mentees.current_mentee_id,
+        script: state.texts.currentScript
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return{
+        patchTexts: (text_data) => dispatch(patchTexts(text_data)),
+        postTexts: (text_data) => dispatch(postTexts(text_data))
+
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Page7);
