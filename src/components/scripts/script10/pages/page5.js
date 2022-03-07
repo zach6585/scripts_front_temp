@@ -19,9 +19,9 @@ class Page5 extends Component {
     handleChange = (event) => {
         const object_outcome = this.getObject(event.target.id)
         object_outcome === "" ? 
-        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
         :
-        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
     
     }
     
@@ -44,7 +44,7 @@ class Page5 extends Component {
                 <div className="left container_for_small_margin">
                     <p>
                         Depression is a really common mental health condition. Almost 8% of people in the United States have depression. That's almost 19 million people in the United States! <br/><br/>
-                        <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_5_script_10" defaultValue={this.getValue("text_box_number_1_page_5_script_10")} placeholder="Please add prompt in text box: Write about your own experience with depression. You can build on the ideas your mentee has shared so far."/><br/><br/>
+                        <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_5_script_10" defaultValue={this.getValue("text_box_number_1_page_5_script_10")} placeholder="Write about your own experience with depression. You can build on the ideas your mentee has shared so far."/><br/><br/>
                         We are going to watch a video to learn more about depression. Feel free to ask me to stop the video if you have questions. <br/>
                         You can also let me know me if you are starting to have a feeling you don't like while watching the video. We can stop the video at any time.
                     </p>

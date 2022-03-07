@@ -13,9 +13,9 @@ class Page9 extends Component{
     handleChange = (event) => {
         const object_outcome = this.getObject(event.target.id)
         object_outcome === "" ? 
-        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
         :
-        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
     
     }
     
@@ -34,10 +34,8 @@ class Page9 extends Component{
     render(){
         return(
             <div className="sheet">
+                <h1 className='bold center'>Step 2: Practicing coping strategies</h1>
                 <div className='left container_for_small_margin'>
-                    <p>
-                        <strong>Step 2: Practicing coping strategies</strong>
-                    </p>
                     <div id="instruction_box_number_1_page_9_script_10" className="custom_svg demo_box container_for_extra_small_margin">
                         <p className='top_line_in_instruction_box'>
                             Practice the coping strategy together. <br/>

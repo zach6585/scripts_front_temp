@@ -26,8 +26,8 @@ const Page10 = props => {
     if (!props.imageClicked){
         return (
             <div className="sheet">
+                <h1 className='bold center'>Step 3: Identify how you are feeling</h1>
                 <div className='left container_for_small_margin'>
-                    <h1 className='bold'>Step 3: Identify how you are feeling</h1>
                     <p>
                         When we checked in earlier, you said you were feeling <span className='underline_text'>{getValue('text_box_number_1_step_1_script_10')}</span>.
                         <br/><br/>

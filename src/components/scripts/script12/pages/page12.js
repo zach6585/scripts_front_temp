@@ -7,9 +7,9 @@ const Page12 = props => {
     const handleChange = (event) => {
         const object_outcome = getObject(event.target.id)
         object_outcome === "" ? 
-        props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: props.props.mentee_id, script: props.script})
+        props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: props.mentee_id, script: props.script})
         :
-        props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: props.props.mentee_id, script: props.script})
+        props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: props.mentee_id, script: props.script})
 
     }
 
@@ -27,7 +27,7 @@ const Page12 = props => {
 
     return (
         <div className="sheet">
-            <h1 className='center bold'>Step 4: Reflecting on how it went</h1>
+            <h1 className='center bold'>Your supports</h1>
             <div className='left'>
                 <div className='container_for_extra_small_margin'>
                     <p>
@@ -86,8 +86,8 @@ const Page12 = props => {
                     <p className='top_line_in_instruction_box'>
                         Help your mentee think of who can help them in each situation.<br/>
                         You can help them type the name of the person. Or, if they want to, they could drag the box under the name of the person. <br/>
-                        <strong>When they are done</strong>, say, “I'll put this slide in your toolkit for you later, or you can do it yourself right now.”
-
+                        <strong>When they are done</strong>, say, “I'll put this slide in your toolkit for you later, or you can do it yourself right now.”<br/>
+                        We are going to start another activity. You can stop sharing your screen.
                     </p>
                 </div>
 

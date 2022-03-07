@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
-import check from "../../pictures/check.png";
-import redX from "../../pictures/redx.png";
+import check from "../../pictures/checkbutsmaller.png";
+import redX from "../../pictures/redxbutsmaller.png";
 
 
 class Page11 extends Component{
@@ -18,8 +18,7 @@ class Page11 extends Component{
             this.setState({handleclick: {words_that_appear_when_you_click_green_check: 
             <p>
                 Let's look at some solutions together. 
-                [Help your mentee review the solutions website]
-                Will insert hyperlink
+                <a href="https://sites.google.com/view/peer-mentoring-solutions" target="_blank" rel="nopener noreferrer">Link</a>
             </p>, 
             words_that_appear_when_you_click_red_x: ''}})
         }
@@ -36,13 +35,13 @@ class Page11 extends Component{
     render(){
         return(
             <div className="sheet">
-                <h1 className='bold'>Step 4: Reflecting on how it went</h1>
-                <div className='container_for_medium_margin'>
+                <h1 className='bold center'>Step 4: Reflecting on how it went</h1>
+                <div className='container_for_medium_margin left'>
                     <p>Was anything about doing that strategy hard, just now?</p>
                     <img className="check" src={check} alt="Check" onClick={(event) => this.handleClick(event, 'c')} /><p className="what_does_your_mentor_say">Your mentee says yes</p>
                     <br/>
                     <div className="choicePicked">{this.state.handleclick.words_that_appear_when_you_click_green_check}</div>
-                    <br/><br/>p
+                    <br/><br/>
                     <img className="redX" src={redX} alt="Red X" onClick={(event) => this.handleClick(event, 'x')} /><p className="what_does_your_mentor_say">Your mentee says no</p>
                     <br/>
                     <div className="choicePicked">{this.state.handleclick.words_that_appear_when_you_click_red_x}</div>

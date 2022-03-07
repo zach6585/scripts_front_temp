@@ -286,6 +286,12 @@ div.solid_box> p, h2, h1, a {
     height: 200px;
 }
 
+.reminders_text_box_number_4{
+    position: relative;
+    display: inline-block;
+    width: 800px;
+    height: 50px;
+}
 
 .highlighted {
     background-color: greenyellow;

@@ -172,7 +172,7 @@ class ExtraPracticeSection extends Component{
         //Same as getObject but instead it returns the value
         let current_text_for_value = this.props.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
         return current_text_for_value ? current_text_for_value.value : ""
-    }
+    } 
     render(){
         return(
             <div className='sheet left'>
@@ -180,7 +180,7 @@ class ExtraPracticeSection extends Component{
                         <p>
                             <span className='underline_text'>Practice reminder</span> <br/>
                             This week, your job will be to practice using a coping strategy. We decided that you wanted to try   
-                            <textarea className="reminders_text_box" onChange={event => this.handleChange(event)} id={`text_box_number_4_mentoring_reminders_script_${this.props.script}`} defaultValue={this.getValue(`text_box_number_4_mentoring_reminders_script_${this.props.script}`)} />.<br/>
+                            <textarea className="reminders_text_box_number_4" onChange={event => this.handleChange(event)} id={`text_box_number_4_mentoring_reminders_script_${this.props.script}`} defaultValue={this.getValue(`text_box_number_4_mentoring_reminders_script_${this.props.script}`)} />.<br/>
                             <span className='small'>(the strategy you practiced today)</span><br/>
                             Try to do this activity at least 5 times this week. <br/>
                             What kind of help do you think you will need to remember to practice the activity? Here are some ideas:

@@ -1,11 +1,12 @@
 import { Component } from 'react';
 
-import check from "../../pictures/check.png";
-import redX from "../../pictures/redx.png";
+import check from "../../pictures/checkbutsmaller.png";
+import redX from "../../pictures/redxbutsmaller.png";
 
 import { connect } from 'react-redux';
 
 import { patchTexts, postTexts } from '../../../../actions/text';
+import {goToSpecificPage} from '../../../../actions/page';
 
 class Page5 extends Component {
 
@@ -22,7 +23,7 @@ class Page5 extends Component {
             <p>
                 Today we'll work on making sure that you have an easier time with your coping strategy this week. We'll brainstorm together<br/>
                 First, we'll think about what other people do when they have challenges.<br/>
-                (go to page 9, hyperlink)
+                <button onClick={() => goToSpecificPage(7)}>Skip to step 1</button>
 
 
             </p>, 
@@ -41,9 +42,9 @@ class Page5 extends Component {
     handleChange = (event) => {
         const object_outcome = this.getObject(event.target.id)
         object_outcome === "" ? 
-        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
         :
-        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
     
     }
     
@@ -110,7 +111,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return{
         patchTexts: (text_data) => dispatch(patchTexts(text_data)),
-        postTexts: (text_data) => dispatch(postTexts(text_data))
+        postTexts: (text_data) => dispatch(postTexts(text_data)),
+        goToSpecificPage: (pageNum) => dispatch(goToSpecificPage(pageNum))
 
     }
 }

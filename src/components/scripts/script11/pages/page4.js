@@ -11,10 +11,22 @@ class Page4 extends Component {
     handleChange = (event) => {
         const object_outcome = this.getObject(event.target.id)
         object_outcome === "" ? 
-        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
         :
-        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
     
+    }
+    
+    getObject = (current_id_tag) => {
+        //Returns the object that has the specific id_tag
+        let current_text = this.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
+        return current_text ? current_text : ""
+    }
+    
+    getValue = (current_id_tag) => {
+        //Same as getObject but instead it returns the value
+        let current_text_for_value = this.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
+        return current_text_for_value ? current_text_for_value.value : ""
     }
         
     render() {

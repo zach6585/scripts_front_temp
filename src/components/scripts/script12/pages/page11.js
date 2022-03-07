@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
-import check from "../../pictures/check.png";
-import redX from "../../pictures/redx.png";
+import check from "../../pictures/checkbutsmaller.png";
+import redX from "../../pictures/redxbutsmaller.png";
 
 
 class Page11 extends Component{
@@ -38,14 +38,14 @@ class Page11 extends Component{
                     <img className="check" src={check} alt="Check" onClick={(event) => this.handleClick(event, 'c')} /><p className="what_does_your_mentor_say">Your mentee says yes</p>
                     <br/>
                     <div className="choicePicked">{this.state.handleclick.words_that_appear_when_you_click_green_check}</div>
-                    <br/><br/>p
+                    <br/><br/>
                     <img className="redX" src={redX} alt="Red X" onClick={(event) => this.handleClick(event, 'x')} /><p className="what_does_your_mentor_say">Your mentee says no</p>
                     <br/>
                     <div className="choicePicked">{this.state.handleclick.words_that_appear_when_you_click_red_x}</div>
                 
                     <div className="container_for_medium_margin">
                         <p className="left">What will make it hard to do at home?</p>
-                        <p><em>If they're not sure, help them look through the barriers from the card sort.</em></p>
+                        <p><em>If they're not sure, help them look through the barriers on the website.</em></p>
                     </div>
                 
                     <div id="instruction_box_number_1_page_11_script_12" className="custom_svg demo_box container_for_small_margin">
