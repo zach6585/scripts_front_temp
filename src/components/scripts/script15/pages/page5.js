@@ -9,7 +9,7 @@ const Page5 = (props) => {
         object_outcome === "" ? 
         props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: props.mentee_id, script: props.script})
         :
-        props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: props.props.mentee_id, script: props.script})
+        props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: props.mentee_id, script: props.script})
     
     }
     
@@ -35,7 +35,7 @@ const Page5 = (props) => {
                 </p>
                 <div id="instruction_box_number_1_page_5_script_15" className="custom_svg demo_box container_for_small_margin">
                     <p className="top_line_in_instruction_box"> 
-                        Send your mentee the link: <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_5_script_15" defaultValue={getValue("text_box_number_1_page_5_script_15")} /><br/>
+                        Send your mentee the toolkit link: <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_5_script_15" defaultValue={getValue("text_box_number_1_page_5_script_15")} /><br/>
                     </p>
                 </div>
 

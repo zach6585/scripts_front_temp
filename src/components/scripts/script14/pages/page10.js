@@ -1,5 +1,4 @@
-
-import RemindersAboutMentoring from '../../general pages/remindersaboutmentoring.js';
+import RemindersAboutMentoring from '../../general pages/remindersaboutmentoring/remindersaboutmentoring.js';
 
 
 const Page10 = () => {

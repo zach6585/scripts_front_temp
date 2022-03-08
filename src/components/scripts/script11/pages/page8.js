@@ -9,7 +9,7 @@ import allEars from "../../pictures/allears.png";
 import pause from "../../pictures/pause.png";
 
 import { connect } from 'react-redux';
-
+ 
 import { patchTexts, postTexts } from '../../../../actions/text';
 
 
@@ -19,9 +19,9 @@ class Page8 extends Component {
     handleChange = (event) => {
         const object_outcome = this.getObject(event.target.id)
         object_outcome === "" ? 
-        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
         :
-        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
     
     }
     
@@ -47,7 +47,7 @@ class Page8 extends Component {
                         We are going to watch a video about asking for help when you need it. Feel free to ask me to stop the video if you have questions. <br/>
                         You can also let me know me if you are starting to have a feeling you don't like while watching the video. We can stop the video at any time.
                     </p>
-                    <a id="video_link_page_8_script_11" href="https://drive.google.com/file/d/18EeRXFORyLuGCyC8wG81Cs7HxQ1He9AY/view?usp=sharing">Video link</a>
+                    <a id="video_link_page_8_script_11" href="https://drive.google.com/file/d/18EeRXFORyLuGCyC8wG81Cs7HxQ1He9AY/view?usp=sharing" target="_blank" rel="nopener noreferrer">Video link</a>
                     
                     <div id="instruction_box_number_1_page_8_script_11" className="custom_svg demo_box container_for_medium_margin">
                         <p className="top_line_in_instruction_box"> 
@@ -96,14 +96,14 @@ class Page8 extends Component {
 
                     <div id="instruction_box_number_4_page_8_script_11" className="custom_svg demo_box container_for_small_margin">
                         <p className="top_line_in_instruction_box"> 
-                            Share your screen and show your support map
+                            Share your screen and show your toolkit
                         </p>
                     </div>
                     <img src={shareScreen} alt="Share screen" id="shareScreen_number_2_page_8_script_11" />
 
                     <div className='container_for_medium_margin'>
                         <p>
-                            Your support map doesn't have to look this way. You can have words or pictures, or both. I thought about who helps me with different things, but you could come up with a different way to make your map. 
+                            Your toolkit doesn't have to look this way. You can have words or pictures, or both. I thought about who helps me with different things, but you could come up with a different way to make your slide on your toolkit.. 
                         </p>
                     </div>
 
@@ -113,13 +113,13 @@ class Page8 extends Component {
                     <img src={stopShare} alt="Stop sharing" id="stopShare_number_2_page_8_script_11" />
 
                     <div className='container_for_medium_margin'>
-                        <p>Now it's your turn. Let's work on making your map together.</p>
+                        <p>Now it's your turn. Let's work on adding to your toolkit together.</p>
                     </div>
 
                     <div id="instruction_box_number_6_page_8_script_11" className="custom_svg demo_box container_for_small_margin">
                         <p className="top_line_in_instruction_box">
                         Send your mentee the link to their toolkit in the chat<br/>
-                        Link: [able to insert this]<br/>
+                        Link: <textarea onChange={event => this.handleChange(event)} id="text_box_number_4_page_8_script_11" defaultValue={this.getValue("text_box_number_4_page_8_script_11")} /><br/>
                         Ask them to share their screen or you can both look at the toolkit on your own screens if you don't want to do screen share<br/>
 
                         </p>

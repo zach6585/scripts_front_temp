@@ -1,12 +1,12 @@
 import { Component } from 'react';
 
-import check from "../../pictures/check.png";
-import redX from "../../pictures/redx.png";
+import check from "../../pictures/checkbutsmaller.png";
+import redX from "../../pictures/redxbutsmaller.png";
 
 import { connect } from 'react-redux';
 
 import { patchTexts, postTexts } from '../../../../actions/text';
-
+import {goToSpecificPage} from '../../../../actions/page';
 
 class Page5 extends Component {
 
@@ -21,10 +21,10 @@ class Page5 extends Component {
         if (letter === 'c'){
             this.setState({handleclick: {words_that_appear_when_you_click_green_check: 
             <p>
-                A lot of people have challenges. <br/>
-                I'm here to support you! <br/> 
-                Today we'll work on making sure that you have an easier time with your coping strategy this week. We'll brainstorm together.<br/>
-                Go to next page 
+                Today we'll work on making sure that you have an easier time with your coping strategy this week. We'll brainstorm together<br/>
+                First, we'll think about what other people do when they have challenges.<br/>
+                <button onClick={() => goToSpecificPage(7)}>Skip to step 1</button>
+
 
             </p>, 
             words_that_appear_when_you_click_red_x: ''}})
@@ -32,10 +32,9 @@ class Page5 extends Component {
         else if (letter === 'x'){
             this.setState({handleclick: {words_that_appear_when_you_click_green_check : null, words_that_appear_when_you_click_red_x:
                     <p>
-                        That's great that you had no challenges using your coping strategy!<br/>
-                    We'll practice it together!
-                    [go to step 1 coping strategy practice]
-
+                    That's great that you had no challenges using your coping strategy!<br/>
+                    Everyone has challenges sometimes. So we will talk through some examples of challenges<br/><br/>
+                    Go to next page
                     </p>
                 }})
         }
@@ -43,9 +42,9 @@ class Page5 extends Component {
     handleChange = (event) => {
         const object_outcome = this.getObject(event.target.id)
         object_outcome === "" ? 
-        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
         :
-        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
     
     }
     
@@ -67,7 +66,7 @@ class Page5 extends Component {
                 <h1 className="bold center">How did it go?</h1>
                 <div className="left container_for_small_margin">
                     <p>
-                        Last week you practiced your new coping strategy <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_5_script_13" defaultValue={this.getValue("text_box_number_1_page_5_script_13")} />.
+                        Last week you practiced your <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_5_script_13" defaultValue={this.getValue("text_box_number_1_page_5_script_13")} />.
                     </p>
                     <div id="instruction_box_number_1_page_5_script_13" className="custom_svg demo_box container_for_medium_margin">
                         <p className="top_line_in_instruction_box"> 
@@ -75,17 +74,16 @@ class Page5 extends Component {
                             <em>Remember to provide positive feedback and validation.</em>
                         </p>
                             <ul>
-                                <li>How was it do use your coping strategy?</li>
+                                <li>How was it to use your coping strategy?</li>
                                 <li>How did it make you feel? </li>
                                 <li>When did you do it?</li>
                                 <li>Did you try using it when you felt <textarea onChange={event => this.handleChange(event)} id="text_box_number_2_page_5_script_13" defaultValue={this.getValue("text_box_number_2_page_5_script_13")} /> (feeling they are addressing)</li>
                                 <li>Did you have any challenges using your coping strategy?</li>
                                 <li>Is there anything else you want to share about using your coping strategy?</li>
                             </ul>
-                        
                     </div>
-                   
-                   <div className='container_for_medium_margin'>
+
+                    <div className='container_for_medium_margin'>
                         <p>Did you have any challenges doing your coping strategy this week?</p>
                         <br/><br/>
                         <img className="check" src={check} alt="Check" onClick={(event) => this.handleClick(event, 'c')} /><p className="what_does_your_mentor_say">Your mentee says yes</p>
@@ -95,7 +93,7 @@ class Page5 extends Component {
                         <img className="redX" src={redX} alt="Red X" onClick={(event) => this.handleClick(event, 'x')} /><p className="what_does_your_mentor_say">Your mentee says no</p>
                         <br/>
                         <div className="choicePicked">{this.state.handleclick.words_that_appear_when_you_click_red_x}</div>
-                   </div>
+                    </div>
                 </div>   
             </div>
         )
@@ -113,7 +111,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return{
         patchTexts: (text_data) => dispatch(patchTexts(text_data)),
-        postTexts: (text_data) => dispatch(postTexts(text_data))
+        postTexts: (text_data) => dispatch(postTexts(text_data)),
+        goToSpecificPage: (pageNum) => dispatch(goToSpecificPage(pageNum))
 
     }
 }

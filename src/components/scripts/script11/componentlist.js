@@ -1,6 +1,7 @@
 import { Component } from 'react';
 
-import {goForward, goBack} from '../../../actions/page';
+import {goForward, goBack} from '../../../actions/page'; 
+import { goToSpecificPage } from '../../../actions/page';
 
 import { connect } from 'react-redux';
 
@@ -19,17 +20,19 @@ import Page12 from './pages/page12';
 import Page13 from './pages/page13';
 import Page14 from './pages/page14';
 
+
 import larrow from "../pictures/larrow.png";
 import rarrow from "../pictures/rarrow.png";
-import './script11.css'; 
+import retToBeg from "../pictures/backtobeginning.svg";
+import './script11.css';
 import '../allScripts.css';
-
 
 
 class Script11List extends Component {
 
-    state = {button_use: {button_back: false, button_forward: true}, 
-    component_list: [<Page1 />, <Page2/>, <Page3 />, <Page4/>, <Page5 />, <Page6/>, <Page7 />, <Page8/>, <Page9 />, <Page10 />, <Page11 />, <Page12 />, <Page13 />, <Page14 />]}
+    state = { 
+      component_list: [<Page1 />, <Page2/>, <Page3 />, <Page4/>, <Page5 />, <Page6/>, <Page7 />, <Page8/>, <Page9 />, <Page10 />, <Page11 />, <Page12 />, <Page13 />, <Page14 />]
+    }
     
       
     handleClick = (letter) => {//This determines which button was pressed
@@ -37,8 +40,11 @@ class Script11List extends Component {
       if (letter === 'b'){
         this.props.goBack();
       }
-      else {
+      else if (letter === "f") {
         this.props.goForward();
+      }
+      else if (letter === "r"){
+        this.props.goToSpecificPage(1);
       }
       
     }
@@ -47,7 +53,8 @@ class Script11List extends Component {
       <div>{this.state.component_list[this.props.pageNum-1]}
         <div id="buttonDiv">
           {this.props.pageNum === 1 ? null :  <img alt="left arrow back" src={larrow} onClick={() => this.handleClick('b')} className="left page_button"/>}
-          {this.props.pageNum === this.state.component_list.length  ? null :  <img alt="right arrow forward" src={rarrow} onClick={() => this.handleClick('f')} className="right page_button"/>}
+          {this.props.pageNum === this.state.component_list.length ? null :  <img alt="right arrow forward" src={rarrow} onClick={() => this.handleClick('f')} className="right page_button"/>}
+          {this.props.pageNum === this.state.component_list.length ? <img alt="Back to beginning" src={retToBeg} onClick={() => this.handleClick("r")} className="right page_button" /> : null} 
         </div>
         <h3 className="page_num">{this.props.pageNum}</h3>
       </div>
@@ -65,7 +72,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     goForward: () => dispatch(goForward()),
-    goBack: () => dispatch(goBack())
+    goBack: () => dispatch(goBack()),
+    goToSpecificPage: (pageNumber) => dispatch(goToSpecificPage(pageNumber))
   }
 }
 

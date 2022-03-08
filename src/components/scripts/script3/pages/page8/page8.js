@@ -1,17 +1,16 @@
-import checkButSmaller from "../../pictures/checkbutsmaller.png";
-import redXButSmaller from "../../pictures/redxbutsmaller.png";
+import checkButSmaller from "../../../pictures/checkbutsmaller.png";
+import redXButSmaller from "../../../pictures/redxbutsmaller.png";
 
 import { connect } from 'react-redux';
 
-import { toggleCommentMode } from '../../../../actions/comment';
-import { patchTexts, postTexts } from '../../../../actions/text';
+import { toggleCommentMode } from '../../../../../actions/comment';
+import { patchTexts, postTexts } from '../../../../../actions/text';
 
 import { useState, useEffect } from 'react';
 
-import Sidebar from '../../general pages/sidebar';
-
-
-
+import Sidebar from '../../../general pages/sidebar';
+import CheckMark from './checkmark';
+import RedX from './redx';
 
 const Page8 = (props) => {
 
@@ -36,12 +35,12 @@ const Page8 = (props) => {
         }
         else {
             if (letter === 'c'){
-                setCheckWords(<CheckMark props={props} />);
+                setCheckWords(<CheckMark />);
                 setXWords(null);
             }
             else if (letter === 'x'){
                 setCheckWords(null);
-                setXWords(<RedX props={props} />);
+                setXWords(<RedX />);
             }
         }
     }
@@ -169,113 +168,6 @@ const Page8 = (props) => {
 
 }
 
-const CheckMark = (props) => {
-
-    const [sideBar, setSidebar] = useState(null);
-    const [blur, setBlur] = useState(""); 
-
-    useEffect(() => {
-        setBlur("");
-        setSidebar(null);
-      }, [props.props.sendingComment]);
-
-
-      const handleCommentClick = (event) => {
-        //Here is where you render the sidebar
-        if (props.commentMode === 'commentModeOn'){
-            if (blur === ""){
-                setBlur("blur");
-            }
-            else {
-                setBlur("");
-            }
-            if (sideBar === null){
-                setSidebar(<Sidebar id_tag={event.target.id} />)
-            }
-            props.toggleCommentMode();
-        }
-    }
-
-    const getValue = (current_id_tag) => {
-        //Same as getObject but instead it returns the value
-        let current_text_for_value = props.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
-        return current_text_for_value ? current_text_for_value.value : ""
-    }
-
-    return (
-        <div>
-            <div className={blur}>
-                <p className={props.commentMode} id="p_11" onClick={event => handleCommentClick(event)}>
-                    At the beginning of this worksheet, you said you were feeling <strong>{getValue("text_box_number_1_page_8_script_3")}</strong>. 
-                    <br/><br/>
-                    When you are feeling <strong>{getValue("text_box_number_1_page_8_script_3")}</strong> how does your body  usually feel? 
-                    <br/><br/>
-                    Does it feel   [some of the feelings they wrote on the worksheet]
-                    <br/><br/>
-                    Next time you notice your body feels this way, that might be a sign that you are feeling <strong>{getValue("text_box_number_1_page_8_script_3")}</strong>
-                    <br/><br/>
-                    This is one example of how paying attention to your body can help you know how you are feeling. 
-                </p>
-            </div>
-            {sideBar}
-        </div>
-    )
-}
-
-
-
-const RedX = (props) => {
-
-    const [sideBar, setSidebar] = useState(null);
-    const [blur, setBlur] = useState(""); 
-
-    useEffect(() => {
-        setBlur("");
-        setSidebar(null);
-      }, [props.sendingComment]);
-
-
-    const handleCommentClick = (event) => {
-    //Here is where you render the sidebar
-        if (props.commentMode === 'commentModeOn'){
-            if (blur === ""){
-                setBlur("blur");
-            }
-            else {
-                setBlur("");
-            }
-            if (sideBar === null){
-                setSidebar(<Sidebar id_tag={event.target.id} />)
-            }
-            props.toggleCommentMode();
-        }
-    }
-
-    const getValue = (current_id_tag) => {
-        //Same as getObject but instead it returns the value
-        let current_text_for_value = props.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
-        return current_text_for_value ? current_text_for_value.value : ""
-    }
-
-    return (
-        <div>
-            <div className={blur}>
-                <p className={props.commentMode} id="p_12" onClick={event => handleCommentClick(event)}>
-                    At the beginning of this worksheet, you were not sure how you were feeling.
-                    <br/><br/>
-                    Based on this worksheet, do you think you have a better idea of how you are feeling?
-                    <br/><br/>
-                    When your body feels <strong>{getValue("text_box_number_1_page_8_script_3")}</strong>
-                    <br/><br/>
-                    what kind of feeling is that related to? This is one example of how paying attention to your body can help you know how you are feeling. 
-                    <br/><br/>
-                    I will give you some body scan worksheets. You can use these to practice self-monitoring this week.
-                </p>
-            </div>
-            {sideBar}
-        </div>
-    )
-}
 
 const mapStateToProps = state => {
     return{

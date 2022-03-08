@@ -43,9 +43,14 @@
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 6 */ 
 
+
+#text_box_number_1_page_6_script_11{
+    margin-top: 10px;
+    height: 40px;
+}
 #instruction_box_number_1_page_6_script_11{
     width: 60%;
-    height: 220px;
+    min-height: 220px;
 }
 
 

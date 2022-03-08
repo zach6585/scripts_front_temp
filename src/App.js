@@ -145,16 +145,14 @@ class App extends Component {
     }
     else if (origin === "pages"){
       
-      for (let i = 1; i < this.state.page_counts[this.props.texts.currentScript]; i++){
+      for (let i = 1; i < this.state.page_counts[this.props.texts.currentScript] + 1; i++){
         this.setState((prevstate) => ({pageList: prevstate.pageList.concat(<button key={i-1} onClick={() => this.handlePageButtonClick(i)}>Page {i}</button>)}))
       }
     }
   }
 
   render() {
-    console.log(this.props.pages.pageNumber)
     if (this.state.pageList.length !== 0){
-      
       return(
         <div>
           {this.state.pageList}
@@ -174,11 +172,11 @@ class App extends Component {
           )
         }
       }
-      else if ((this.props.texts_loading)){
-        return(
-          <h1>Loading</h1>
-        )
-      }
+      // else if ((this.props.texts_loading)){
+      //   return(
+      //     <h1>Loading</h1>
+      //   )
+      // }
 
       else {
         if ((this.props.texts.curatedTextsFromCurrentScript === null)){

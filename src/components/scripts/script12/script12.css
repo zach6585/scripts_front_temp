@@ -46,13 +46,13 @@
 
 #instruction_box_number_1_page_6_script_12{
     width: 60%;
-    height: 220px;
+    min-height: 220px;
 }
 
 
 #instruction_box_number_2_page_6_script_12{
     width: 60%;
-    height: 120px;
+    min-height: 120px;
 }
 
 #instruction_box_number_4_page_6_script_12{

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import RemindersAboutMentoring from '../../general pages/remindersaboutmentoring.js';
+import RemindersAboutMentoring from '../../general pages/remindersaboutmentoring/remindersaboutmentoring.js';
 
 
 class Page15 extends Component {

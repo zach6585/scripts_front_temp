@@ -14,9 +14,9 @@ class Page5 extends Component {
     handleChange = (event) => {
         const object_outcome = this.getObject(event.target.id)
         object_outcome === "" ? 
-        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: this.props.mentee_id, script: this.props.script})
         :
-        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.props.mentee_id, script: this.props.script})
+        this.props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: this.props.mentee_id, script: this.props.script})
     
     }
     
@@ -48,7 +48,7 @@ class Page5 extends Component {
                             Send your mentee this link: <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_5_script_14" defaultValue={this.getValue("text_box_number_1_page_5_script_14")} /><br/>
                             Ask your mentee if they want to share their screen or share yours.<br/>
                             Talk through the worksheet together. <br/>
-                            If you think it would help your mentee, you can use the solution website together (link: <a href="https://sites.google.com/view/peer-mentoring-solutions">Solutions Link</a>).<br/>
+                            If you think it would help your mentee, you can use the solution website together (link: <a href='https://sites.google.com/view/peer-mentoring-solutions' target="_blank" rel="nopener noreferrer">Solutions Link</a>).<br/>
                             When you are done, stop screen sharing.
                         </p>
                     </div>

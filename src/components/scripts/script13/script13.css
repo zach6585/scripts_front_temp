@@ -44,13 +44,13 @@
 
 #instruction_box_number_1_page_6_script_13{
     width: 60%;
-    height: 220px;
+    min-height: 220px;
 }
 
 
 #instruction_box_number_2_page_6_script_13{
     width: 60%;
-    height: 120px;
+    min-height: 120px;
 }
 
 #instruction_box_number_4_page_6_script_13{
@@ -61,7 +61,7 @@
 
 #stop_sharing_screen_page_6_script_13{
     width: 400px;
-    display: inline;
+    /* display: inline; */
     position: relative;
 }
 
@@ -75,6 +75,12 @@
     width: 350px;
     height: 175px;
     display: inline-block;
+}
+
+#text_box_number_1_page_8_script_13{
+    margin-top: 10px;
+    height: 40px;
+    width: 500px;
 }
 
 #shareScreen_number_1_page_8_script_13{

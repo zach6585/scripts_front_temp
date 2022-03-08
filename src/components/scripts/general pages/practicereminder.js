@@ -3,7 +3,7 @@
 import { connect } from "react-redux";
 import { patchTexts, postTexts } from '../../../actions/text';
 
-
+ 
 const PracticeReminder = (props) => {
 
     const handleChange = (event) => {

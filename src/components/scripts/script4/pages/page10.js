@@ -5,7 +5,7 @@ import { toggleCommentMode } from '../../../../actions/comment';
 import { useState, useEffect } from 'react';
 
 import Sidebar from '../../general pages/sidebar';
-import RemindersAboutMentoring from '../../general pages/remindersaboutmentoring.js';
+import RemindersAboutMentoring from '../../general pages/remindersaboutmentoring/remindersaboutmentoring.js';
 
 const Page10 = props => {
 

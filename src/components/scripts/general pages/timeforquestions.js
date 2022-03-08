@@ -28,6 +28,7 @@ class TimeForQuestions extends Component {
     }
 
     render() {
+        console.log(this.props.script === "16")
         return (
             <div className="sheet">
                 <h1 className="bold center">Time for questions</h1>
@@ -46,10 +47,17 @@ class TimeForQuestions extends Component {
                     </div>
 
                     <div className='custom_svg demo_box container_for_small_margin questions_instructions_box'>
-                        <p className='top_line_in_instruction_box'>
-                            <em>If they ask you a question that you don't know the answer to, say:</em> <br/>
-                            I don't know the answer to that question. I will ask someone and tell you the answer next time we talk. 
-                        </p>
+                        {this.props.script === "16" ? 
+                            <p className='top_line_in_instruction_box'>
+                                 If they ask you a question you don't know the answer to, let them know you'll find out and be in touch.
+                            </p>
+                        :
+                            <p className='top_line_in_instruction_box'>
+                                <em>If they ask you a question that you don't know the answer to, say:</em> <br/>
+                                I don't know the answer to that question. I will ask someone and tell you the answer next time we talk. 
+                            </p>
+                        }
+                        
                     </div>
                 </div>
             </div>
