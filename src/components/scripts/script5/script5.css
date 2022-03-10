@@ -154,11 +154,11 @@ li button {
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 9 */ 
 
-
 #text_box_number_1_page_9_script_5{
     position: relative;
     display: inline-block;
     width: 400px;
+    margin-bottom: -20px;
 }
 
 
@@ -168,13 +168,15 @@ li button {
     height: 30px;
     margin: 10px 20px -4px 0px;
     display: inline-block;
-    
 }
 
 
-p#text_under_text_box_number_1_page_9_script_5{
+.text_under_text_box_number_1_practice_reminder{
     /* text-align: center; */
+    display: inline-block;
     margin-left: 80px;
+    margin-top: -60px;
+    
 }
 
 

@@ -32,17 +32,14 @@ const PracticeReminder = (props) => {
         <div className="sheet">
             <h1 className="bold center">Practice reminder</h1>
             <div className="left container_for_medium_margin">
+                {props.startText ? <p>{props.startText}</p> : <div className='container_for_small_margin'>
+                <textarea onChange={event => handleChange(event)} className="practice_reminder_text_box_1" id={`text_box_number_1_practice_reminder_script_${props.script}`} defaultValue={getValue(`text_box_number_1_practice_reminder_script_${props.script}`)} />.
+                <p className='small text_under_text_box_number_1_practice_reminder' id={`text_under_text_box_number_1_practice_reminder_script_${props.script}`}>(the strategy you practiced today)</p>
+                <br/><br/><p>Try to do this activity at least 5 times this week. 
+                    <br/><br/></p></div> }
+                
+                
                 <p>
-                    {props.startText}
-                </p>
-                <div className='container_for_small_margin'>
-                    <textarea onChange={event => handleChange(event)} className="practice_reminder_text_box_1" id={`text_box_number_1_practice_reminder_script_${props.script}`} defaultValue={getValue(`text_box_number_1_practice_reminder_script_${props.script}`)} />.
-                    <p className='small text_under_text_box_number_1_practice_reminder' id={`text_under_text_box_number_1_practice_reminder_script_${props.script}`}>(the strategy you practiced today)</p>
-                </div>
-                <br/><br/>
-                <p>
-                    Try to do this activity at least 5 times this week. 
-                    <br/><br/>
                     What kind of help do you think you will need to remember to practice the activity?
                     <br/> 
                     Here are some ideas:

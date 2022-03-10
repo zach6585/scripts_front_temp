@@ -384,30 +384,6 @@ div.solid_box> p, h2, h1, a {
 }
 
 
-/* Practice Reminder */
-
-.practice_reminder_text_box_1{
-    position: relative;
-    display: inline-block;
-    width: 400px;
-}
-
-
-.practice_reminder_text_box_2{
-    position: relative;
-    width: 350px;
-    height: 30px;
-    margin: 10px 20px -4px 0px;
-    display: inline-block;
-}
-
-
-.text_under_text_box_number_1_practice_reminder{
-    /* text-align: center; */
-    margin-left: 80px;
-}
-
-
 /* Body diagram */
 
 

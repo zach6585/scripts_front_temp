@@ -81,7 +81,7 @@ const Page8 = (props) => {
                             <tbody>
                                 <tr>
                                     <td><img src={jake} alt="Jake" id="jake" /></td>
-                                    <td>When Jake starts to get a cold, the first symptom he notices is his stuffy nose. Jakes has to keep blowing his nose over and over. His stuffy nose is a warning sign that he's getting a cold. After he gets his stuffy nose, he gets a stomach. This is another symptom. He drinks ginger ale to help his stomach feel better. </td>
+                                    <td>When Jake starts to get a cold, the first symptom he notices is his stuffy nose. Jakes has to keep blowing his nose over and over. His stuffy nose is a warning sign that he's getting a cold. After he gets his stuffy nose, he gets a stomach ache. This is another symptom. He drinks ginger ale to help his stomach feel better. </td>
                                 </tr>
                                 <tr>
                                     <td><img src={jerome} alt="Jerome" id="jerome" /></td>

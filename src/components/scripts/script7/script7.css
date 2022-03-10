@@ -264,7 +264,30 @@ label {
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 15 */ 
 
-/* See allScripts.css for the general scripts section */
+#text_box_number_1_page_15_script_7{
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    margin-bottom: -20px;
+}
+
+
+#text_box_number_2_page_15_script_7{
+    position: relative;
+    width: 350px;
+    height: 30px;
+    margin: 10px 20px -4px 0px;
+    display: inline-block;
+}
+
+
+.text_under_text_box_number_1_practice_reminder{
+    /* text-align: center; */
+    display: inline-block;
+    margin-left: 80px;
+    margin-top: -60px;
+    
+}
 
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 16 */ 

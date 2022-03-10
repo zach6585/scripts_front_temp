@@ -162,26 +162,14 @@ p#text_under_text_box_number_1_page_6_script_4{
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 11 */
 
+
+
 #text_box_number_1_page_11_script_4{
-    position: relative;
-    display: inline-block;
-    width: 400px;
-}
-
-
-#text_box_number_2_page_11_script_4{
     position: relative;
     width: 350px;
     height: 30px;
     margin: 10px 20px -4px 0px;
     display: inline-block;
-    
-}
-
-
-p#text_under_text_box_number_1_page_11_script_4{
-    /* text-align: center; */
-    margin-left: 80px;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------- */
