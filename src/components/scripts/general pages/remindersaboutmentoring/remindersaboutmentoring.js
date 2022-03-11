@@ -72,6 +72,8 @@ const RemindersAboutMentoring = (props) => {
                     </ul>
                     {five}
                     {otf}
+                    <br/><br/>
+                    <p>{props.thisWeek ? "This week, when you do your mood logs, try using the body scan worksheet first. The body scan worksheet might help you do the mood log." : null}</p>
                     {props.extrapractice ? <ExtraPracticeSection /> : null}
                     {dns}
                 </div>
@@ -94,8 +96,11 @@ const RemindersAboutMentoring = (props) => {
                     </ul>
                     {five}
                     {otf}
+                    <br/><br/>
+                    <p>{props.thisWeek ? "This week, when you do your mood logs, try using the body scan worksheet first. The body scan worksheet might help you do the mood log." : null}</p>
                     {props.extrapractice ? <ExtraPracticeSection /> : null}
                     {dns}
+                    
                 </div>
             </div>
         )

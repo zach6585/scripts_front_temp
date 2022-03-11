@@ -23,7 +23,7 @@ class Page5 extends Component {
             <p>
                 Today we'll work on making sure that you have an easier time with your coping strategy this week. We'll brainstorm together<br/>
                 First, we'll think about what other people do when they have challenges.<br/>
-                <button onClick={() => goToSpecificPage(7)}>Skip to step 1</button>
+                <button onClick={() => this.props.goToSpecificPage(7)}>Skip to step 1</button>
 
 
             </p>, 

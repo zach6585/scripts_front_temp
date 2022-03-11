@@ -51,7 +51,6 @@ const Page7 = props => {
                             <p className='top_line_in_instruction_box'>
                                 Help your mentee use the body scan worksheet.<br/>
                                 Put the link in the chat and ask your mentee to screen share<br/>
-                                In your binder, you have a list of questions that can be used to help your mentee fill out the body scan worksheet if you need help. <br/>
                                 <strong>Write how your mentee is feeling</strong><br/>
                                 <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_7_script_12" defaultValue={getValue("text_box_number_1_page_7_script_12")} />
                             </p>
