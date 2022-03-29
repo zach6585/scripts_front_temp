@@ -37,7 +37,7 @@ const Page9 = (props) => {
                 setSidebar(<Sidebar id_tag={e.target.id} />)
             }
             props.toggleCommentMode();
-        }
+        } 
         else{
             if (letter === 'c'){
                 setXText(null);
