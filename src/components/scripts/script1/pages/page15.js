@@ -1,12 +1,11 @@
-import TimeForQuestions from '../../general pages/timeforquestions';
+import SharingAboutMentoring from '../../general pages/sharingaboutmentoring';
 
 
 const Page15 = () => {
     return (
-        <TimeForQuestions /> 
+        <SharingAboutMentoring /> 
     )
 }
 
 
 export default Page15;
-

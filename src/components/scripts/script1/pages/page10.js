@@ -41,15 +41,8 @@ const Page10 = (props) => {
         <div>
             <div className={`sheet ${blur}`}>
                 <div className="left">
-                    <div>
-                        <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_1">
-                            That's ok, we're going to watch a video about mental health to learn more.
-                            We are going to watch a video together about mental health made by young adults who have mental health conditions. Please ask me to pause if you have a question or if something makes you feel uncomfortable.
-                        </p>
-                    </div>
-                  
                     <div className='wrapper'>
-                        <a href="https://drive.google.com/file/d/1cJXHFL2jlVdH_YSihqijsdhD-lgr7Cvk/view" id="video_link_page_10_script_1" className={props.commentMode} onClick={event => handleCommentClick(event)} target="_blank" rel="nopener noreferrer">Video link</a>
+                        <a href="https://drive.google.com/file/d/1OTilJ5hnSoyEC3vLnASwFcEcH_S5BZNL/view?usp=sharing" id="video_link_page_10_script_1" className={props.commentMode} onClick={event => handleCommentClick(event)} target="_blank" rel="nopener noreferrer">Video link</a>
                         <div id="image_and_instruction_box_number_1_page_10_script_1" >
                             <div id="instruction_box_number_1_page_10_script_1" className={`ital custom_svg demo_box ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                                 <p className='top_line_in_instruction_box'>

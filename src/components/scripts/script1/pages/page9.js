@@ -1,12 +1,13 @@
 import checkButSmaller from "../../pictures/checkbutsmaller.png";
 import redXButSmaller from "../../pictures/redxbutsmaller.png";
+import allEars from "../../pictures/allears.png";
+import pause from "../../pictures/pause.png";
 
 import { connect } from 'react-redux';
 import { useState, useEffect } from 'react';
 
 
 import { toggleCommentMode } from '../../../../actions/comment';
-import {goToSpecificPage} from '../../../../actions/page';
 
 import Sidebar from '../../general pages/sidebar';
 
@@ -15,8 +16,9 @@ import Sidebar from '../../general pages/sidebar';
 const Page9 = (props) => {
 
     const [sideBar, setSidebar] = useState(null);
-    const [blur, setBlur] = useState("");                         
-
+    const [blur, setBlur] = useState("");   
+    const [checkText, setCheckText] = useState(null);                      
+    const [xText, setXText] = useState(null);
 
     useEffect(() => {
         setBlur("");
@@ -38,10 +40,30 @@ const Page9 = (props) => {
         }
         else{
             if (letter === 'c'){
-                props.goToSpecificPage(11);
+                setXText(null);
+                setCheckText(<div><div>
+                        <p>
+                            If you're comfortable with it, can you tell me a little bit about what you know about mental health?  That way I'll know if there are certain things you've already learned about mental health that would be boring to repeat to you, or certain parts of mental health that you really want to talk about together and learn more about. 
+                        </p>
+                    </div>
+
+                    <div id="pause_listen_div">
+                       <img src={pause} className={`pause`} alt="Pause" />                        
+                       <img src={allEars} className={`allEars`} alt="Listen" /> 
+                    </div>
+
+                    <div id="instruction_box_number_1_page_9_script_1" className={`ital custom_svg demo_box container_for_small_margin`}>
+                        <p className='top_line_in_instruction_box'>
+                           Listen to your mentee's definitions of mental health and talk to them about their ideas. You can also share your own definition of mental health. 
+                        </p>
+                    </div></div>);
             }
             else if (letter === 'x'){
-                props.goToSpecificPage(10);
+                setCheckText(null);
+                setXText(<p>
+                That's ok, we're going to watch a video about mental health to learn more.
+                We are going to watch a video together about mental health made by young adults who have mental health conditions. Please ask me to pause if you have a question or if something makes you feel uncomfortable.
+            </p>);
             }
         }
     }
@@ -66,8 +88,12 @@ const Page9 = (props) => {
                         </p>
                         <div>
                             <img className={`check ${props.commentMode}`} id="img_1" src={checkButSmaller} alt="Check" onClick={(event) => handleClick(event, 'c')} /><p className={`what_does_your_mentor_say ${props.commentMode}`} id="p_2" onClick={(event) => handleClick(event, '')}>Your mentee says yes</p>
+                            <br/>
+                            <div>{checkText}</div>
                             <br/><br/>
                             <img className={`redX ${props.commentMode}`} id="img_2" src={redXButSmaller} alt="Red X" onClick={(event) => handleClick(event, 'x')} /><p  className={`what_does_your_mentor_say ${props.commentMode}`} id="p_3" onClick={(event) => handleClick(event, '')}>Your mentee says no</p>
+                            <br/>
+                            <div>{xText}</div>
                             <br/><br/>
                         </div>
                     </div>
@@ -89,8 +115,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return{
-        toggleCommentMode: () => dispatch(toggleCommentMode()),
-        goToSpecificPage: (pageNum) => dispatch(goToSpecificPage(pageNum))
+        toggleCommentMode: () => dispatch(toggleCommentMode())
     }
 }
 
