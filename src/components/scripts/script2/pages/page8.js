@@ -120,6 +120,12 @@ const Page8 = (props) => {
                             <li className="dash_bullets">"That sounds hard"</li>
                             <li className="dash_bullets">"That happens to me sometimes too"</li>
                         </ul>
+                        <p>
+                            Share the link with your mentee and ask them to share their screen<br/>
+                            Link:<a href="https://provenbyusers.com/cs.php?c=i0a724958" target="_blank" rel="nopener noreferrer">https://provenbyusers.com/cs.php?c=i0a724958</a><br/>
+                            <strong>When they are done, have them click “Save for later,” instead of “I'm done”</strong>
+                        </p>
+                        
                     </div>
 
                     <div className='container_for_medium_margin'>
