@@ -3,7 +3,6 @@ import stopShare from '../../pictures/stopshare.png';
 import { connect } from 'react-redux';
 
 
-import { patchTexts, postTexts } from '../../../../actions/text';
 import { toggleCommentMode } from '../../../../actions/comment';
 
 import { useState, useEffect } from 'react';
@@ -38,26 +37,6 @@ const Page4 = (props) => {
         }
     }
 
-    const handleChange = (event) => {
-        const object_outcome = getObject(event.target.id)
-        object_outcome === "" ? 
-        props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: props.mentee_id, script: props.script})
-        :
-        props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: props.mentee_id, script: props.script})
-
-    }
-    
-    const getObject = (current_id_tag) => {
-        //Returns the object that has the specific id_tag
-        let current_text = props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
-        return current_text ? current_text : ""
-    }
-
-    const getValue = (current_id_tag) => {
-        //Same as getObject but instead it returns the value
-        let current_text_for_value = props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
-        return current_text_for_value ? current_text_for_value.value : ""
-    }
     return (
         <div>
             <div className={`sheet ${blur}`}>
@@ -70,9 +49,8 @@ const Page4 = (props) => {
                         <p className="top_line_in_instruction_box">
                             Click on the link:<a href="https://jamboard.google.com/d/1fAVvfwQg6diBXDATYfx4Apox5Xtf2Maw0PpHYmVuTlA/edit?usp=sharing" target="_blank" rel="nopener noreferrer">Link</a>and<br/><br/>
                             share your screen.<br/><br/>    
-                            We will click on the boxes. A question will show up in the box and we will both answer it.<br/>
-                            If you also have a question that isn't in game, but you really want to ask me, just let me know! <br/>
-                            You will talk with your mentee about which picture or type of thing you like better and why
+                            Click on the link and share your screen. <br/>
+                            You will talk with your mentee about which picture or type of thing you like better and why.
                         </p>
                     </div>
                     <div className='container_for_small_margin'>
@@ -96,8 +74,6 @@ const Page4 = (props) => {
 
 const mapStateToProps = state => {
     return{
-        texts: state.texts.curatedTextsFromCurrentScript,
-        mentee_id: state.mentees.current_mentee_id,
         script: state.texts.currentScript,
         commentMode: state.comments.commentMode,
         sendingComment: state.comments.sendingComment 
@@ -106,8 +82,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return{
-        patchTexts: (text_data) => dispatch(patchTexts(text_data)),
-        postTexts: (text_data) => dispatch(postTexts(text_data)),
         toggleCommentMode: () => dispatch(toggleCommentMode())
     }
 }
