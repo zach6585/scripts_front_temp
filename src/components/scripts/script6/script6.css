@@ -140,8 +140,8 @@ label {
     width: 500px;
 }
 
-#d_w_b_i_a_p_page_8_script_6 > input{
-    width: 300px;
+#d_w_b_i_a_p_page_8_script_6 > a > input{
+    width: 200px;
     height: 300px;
     flex: .3;
     margin-left: 400px;

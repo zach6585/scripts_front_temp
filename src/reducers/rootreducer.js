@@ -6,8 +6,7 @@ import pageReducer from "./pagereducer";
 import userReducer from './userreducer';
 import menteeReducer from "./menteereducer";
 import commentReducer from "./commentreducer";
-import bodyReducer from "./bodyreducer";
 
-export default withReduxStateSync(combineReducers({pages: pageReducer, texts: textReducer, user: userReducer, mentees: menteeReducer, comments: commentReducer, body: bodyReducer}))
+export default withReduxStateSync(combineReducers({pages: pageReducer, texts: textReducer, user: userReducer, mentees: menteeReducer, comments: commentReducer}))
 
 

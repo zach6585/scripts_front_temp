@@ -5,10 +5,6 @@ export const IMAGE_LOADING = "LOADING";
 export const IMAGE_SUCCESS = "SUCCESS";
 export const FAILURE = "FAILURE";
 
-export const toggleBodyImage = () => dispatch => {
-    dispatch({type: 'TOGGLE_BODY'});
-}
-
 export const printDocument = (input, mentee_name) => dispatch => {
     input.removeChild(input.lastElementChild);
     html2canvas(input)
@@ -23,5 +19,4 @@ export const printDocument = (input, mentee_name) => dispatch => {
         // pdf.addImage(imgData, 'PNG', 0, 0);
         // pdf.save(`bodyImage${mentee_name}`);
       })
-    .then(dispatch({type: 'TOGGLE_BODY'}))
 }

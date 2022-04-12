@@ -109,8 +109,8 @@ p#text_under_text_box_number_1_page_6_script_4{
     width: 500px;
 }
 
-#d_w_b_i_a_p_page_9_script_4 > input{
-    width: 300px;
+#d_w_b_i_a_p_page_9_script_4 > a > input{
+    width: 200px;
     height: 300px;
     flex: .3;
     margin-left: 400px;

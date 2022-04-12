@@ -7,9 +7,7 @@ import { patchTexts, postTexts } from '../../../../actions/text';
 import { useState, useEffect } from 'react';
 
 import Sidebar from '../../general pages/sidebar';
-import componentWrapper from '../../../../HOC'; 
 
-import BodyDiagram from '../../general pages/bodydiagram';
 
 import shareScreen from '../../pictures/sharescreen.png';
 import stopShare from '../../pictures/stopshare.png';
@@ -64,8 +62,7 @@ const Page7 = (props) => {
         return current_text_for_value ? current_text_for_value.value : ""
     }
     
-    if (!props.imageClicked){
-        return (
+    return (
             <div>
                  <div className={`sheet ${blur}`}>
                      <div className='body_page_main_div'>
@@ -96,16 +93,6 @@ const Page7 = (props) => {
                  {sideBar}
              </div>
         )
-    }
-    else{
-        return(
-            <div>
-                <BodyDiagram />
-                {sideBar}
-            </div>
-            
-        )
-    }
 
 }
 
@@ -129,4 +116,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(componentWrapper(Page7));
+export default connect(mapStateToProps, mapDispatchToProps)(Page7);

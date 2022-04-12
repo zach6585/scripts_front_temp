@@ -207,8 +207,8 @@ label {
     width: 500px;
 }
 
-#d_w_b_i_a_p_page_10_script_7 > input{
-    width: 300px;
+#d_w_b_i_a_p_page_10_script_7 > a > input{
+    width: 200px;
     height: 300px;
     flex: .3;
     margin-left: 400px;
