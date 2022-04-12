@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { connect } from 'react-redux';
-
+import { useLocation } from 'react-router-dom';
 
 import { getTexts, changeTexts } from './actions/text';
 import { userLogout, autoLogin } from './actions/user';
@@ -37,6 +37,14 @@ import Script16List from './components/scripts/script16/componentlist';
 import Users from './components/users/users.js';
 import Mentees from './components/mentees/mentees';
 
+const appWrapper = (WrappedComponent) => props => {
+  const location = useLocation();
+  
+  return (
+    <WrappedComponent {...props}
+    location={location} />
+  )
+}
 
 class App extends Component {
   
@@ -59,6 +67,13 @@ class App extends Component {
     if (localStorage.getItem("token")){
       this.props.autoLogin();
     }
+    if (localStorage.getItem("persist:root")){
+      this.setState({buttonList: [], pageList: []})
+      this.setState({hamburger_is_clicked: false, options: ''});
+      this.props.changeTexts();
+      this.props.changeMentee();
+      this.props.goToSpecificPage(1);
+    }
     this.makeButtons("button");
     window.addEventListener('scroll', this.onScrollCloseHamburger);
   }
@@ -70,18 +85,6 @@ class App extends Component {
     }
   
     else if (this.state.hamburger_is_clicked === false){
-      // if (this.props.user.user_id === 5 || this.props.user.user_id === 1){
-      //   this.setState({hamburger_is_clicked: true,
-      //       options: 
-      //       <div id="hamburger_menu_ps_div">
-      //           <p onClick={event => this.menuItemHandleClick(event, 1)}>Change Script    |</p>
-      //           <p onClick={event => this.menuItemHandleClick(event, 2)}>Change Mentee    |</p>
-      //           <p onClick={event => this.menuItemHandleClick(event, 3)}>Logout    |</p>
-      //           <p onClick={event => this.menuItemHandleClick(event, 4)}>Add a comment</p>
-      //       </div>
-      //     })
-      // }
-      // else {
         this.setState({hamburger_is_clicked: true,
           options: 
           <div id="hamburger_menu_ps_div">
@@ -102,8 +105,6 @@ class App extends Component {
       this.makeButtons("button");
       this.props.changeTexts();
       this.props.goToSpecificPage(1);
-      // this.props.changeScript(-1, this.props.currentMentee);
-      // this.props.changePage(-1, this.props.currentMentee);
     }
     else if (choice === 2){
       this.setState({hamburger_is_clicked: false, options: ''});
@@ -172,11 +173,6 @@ class App extends Component {
           )
         }
       }
-      // else if ((this.props.texts_loading)){
-      //   return(
-      //     <h1>Loading</h1>
-      //   )
-      // }
 
       else {
         if ((this.props.texts.curatedTextsFromCurrentScript === null)){
@@ -195,8 +191,8 @@ class App extends Component {
                     <img className={this.state.hamburger_is_clicked ? "rotate" : "no_rotate"} src={hamburgerMenu} alt="Hamburger menu icon" onClick={(event) => this.hamburgerClick(event)} />
               </div>
             </div>
-          )
-          }
+          )  
+        }
       }
     }
     else{
@@ -235,4 +231,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(appWrapper(App));

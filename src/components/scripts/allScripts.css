@@ -667,7 +667,7 @@ div.solid_box> p, h2, h1, a {
             display: inline;
         }
 
-        .div_with_body_image > input{
+        .div_with_body_image > a > input{
             margin-left: 1100px;
             display: inline;
             padding: 15px 15px;
@@ -687,9 +687,9 @@ div.solid_box> p, h2, h1, a {
             user-select: none;
         }
 
-        .div_with_body_image > input:hover {background-color: lightseagreen}
+        .div_with_body_image > a > input:hover {background-color: lightseagreen}
 
-        .div_with_body_image > input:active {
+        .div_with_body_image > a > input:active {
         background-color: lightseagreen;
         box-shadow: 0 5px black;
         transform: translateY(4px);

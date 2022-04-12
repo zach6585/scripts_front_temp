@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { toggleCommentMode } from '../../../../actions/comment';
 import { patchTexts, postTexts } from '../../../../actions/text';
-import { toggleBodyImage } from '../../../../actions/body';
 
 import { useState, useEffect } from 'react';
 
 import Sidebar from '../../general pages/sidebar';
- 
+import componentWrapper from '../../../../HOC'; 
 
 import BodyDiagram from '../../general pages/bodydiagram';
 
@@ -40,10 +40,6 @@ const Page7 = (props) => {
             }
             props.toggleCommentMode();
         }
-    }
-    
-    const handleBodyImageClicked = (event) => {
-        props.toggleBodyImage();
     }
 
     
@@ -79,7 +75,7 @@ const Page7 = (props) => {
                              <p className={props.commentMode} id="p_1" onClick={event => handleCommentClick(event)}>Now we will practice thinking about how your body feels using something called a body scan.</p>
                              <div className="div_with_body_image">
                                  <p className={props.commentMode} id="p_1" onClick={event => handleCommentClick(event)}>Our bodies can help us learn about our feelings and emotions. I will show you an example.</p>
-                                 <input type="image" alt="Body image" src={body} name="body_image" className={`body_diagram_button ${props.commentMode}`} id="body_image_button" onClick={event => handleBodyImageClicked(event)} />
+                                 <Link target="_blank" to="/body" rel="noopener noreferrer"><input type="image" alt="Body image" src={body} name="body_image" className={`body_diagram_button ${props.commentMode}`} id="body_image_button" /></Link>
                              </div>
                              <br/>
                              <div id="instruction_box_number_1_page_7_script_3" className={`custom_svg demo_box container_for_medium_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
@@ -121,8 +117,7 @@ const mapStateToProps = state => {
         mentee_id: state.mentees.current_mentee_id,
         script: state.texts.currentScript,
         commentMode: state.comments.commentMode,
-        sendingComment: state.comments.sendingComment,
-        imageClicked: state.body.imageClicked
+        sendingComment: state.comments.sendingComment
     }
 }
 
@@ -130,9 +125,8 @@ const mapDispatchToProps = dispatch => {
     return{
         patchTexts: (text_data) => dispatch(patchTexts(text_data)),
         postTexts: (text_data) => dispatch(postTexts(text_data)),
-        toggleCommentMode: () => dispatch(toggleCommentMode()),
-        toggleBodyImage: () => dispatch(toggleBodyImage())
+        toggleCommentMode: () => dispatch(toggleCommentMode())
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Page7);
+export default connect(mapStateToProps, mapDispatchToProps)(componentWrapper(Page7));

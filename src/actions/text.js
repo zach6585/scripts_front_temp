@@ -7,7 +7,7 @@ export const postTexts = (data) => dispatch => {
 }
 
 export const patchTexts = (data) => dispatch => {
-      axios.patch(`https://cors-for-all.herokuapp.com/https://scripts-app-backend.herokuapp.com/texts/${data.id}`, {value: data.value, id_tag: data.id_tag, script: data.script, mentee_id: data.mentee_id})
+  axios.patch(`https://cors-for-all.herokuapp.com/https://scripts-app-backend.herokuapp.com/texts/${data.id}`, {value: data.value, id_tag: data.id_tag, script: data.script, mentee_id: data.mentee_id})
       .then(resp => dispatch({type: 'TEXT_UPDATED', payload: resp.data}))
 }
 
