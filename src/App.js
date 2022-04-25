@@ -111,6 +111,7 @@ class App extends Component {
       this.makeButtons("button");
       this.props.changeTexts();
       this.props.changeMentee();
+      this.props.goToSpecificPage(1);
       
     }
     else if (choice === 3){
@@ -118,6 +119,7 @@ class App extends Component {
       this.makeButtons("button");
       this.props.changeTexts();
       this.props.flushMenteeList();
+      this.props.goToSpecificPage(1);
       this.props.userLogout();
     }
     else if (choice === 4) {
