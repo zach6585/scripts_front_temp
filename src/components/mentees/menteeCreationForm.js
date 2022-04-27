@@ -34,7 +34,7 @@ function MenteeCreationForm(props){
 const mapStateToProps = (state) => {
     return{
         user: state.user,
-        errors: state.mentees.errors
+        errors: state.mentees.err
     }
 }
 

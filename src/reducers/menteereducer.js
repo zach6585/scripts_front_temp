@@ -28,14 +28,16 @@ export default function menteeReducer(state = initialState, action){
                     ...state,
                     mentees: action.payload,
                     current_mentee_id: action.payload.id,
-                    current_mentee_name: action.payload.name
+                    current_mentee_name: action.payload.name,
+                    err: ''
                 }
             }
             else{
                 return{
                     ...state,
                     mentees: [...state.mentees, action.payload],
-                    current_mentee_id: action.payload.id
+                    current_mentee_id: action.payload.id,
+                    err: ''
                 }
             }
             
@@ -57,14 +59,16 @@ export default function menteeReducer(state = initialState, action){
                 mentees: null,
                 current_mentee_id: -1,
                 lastPage: -1,
-                lastScript: -1
+                lastScript: -1,
+                err: ''
             }
         case 'CHANGE_MENTEE':
             return{
                 ...state,
                 current_mentee_id: -1,
                 lastPage: -1,
-                lastScript: -1
+                lastScript: -1,
+                err: ''
             }
         case 'ERRORS_FOUND':
             return{
