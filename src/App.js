@@ -155,15 +155,7 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.pageList.length !== 0){
-      return(
-        <div>
-          {this.state.pageList}
-        </div>
-        
-      )
-    } 
-    else if (localStorage.getItem("token")){
+    if (localStorage.getItem("token")){
       if (this.props.mentees.current_mentee_id === -1){
         if (this.props.mentees.mentees === null){
           return(<h1>Loading</h1>)
@@ -184,6 +176,14 @@ class App extends Component {
               </div>
             )
         }
+        else if (this.state.pageList.length !== 0){
+          return(
+            <div>
+              {this.state.pageList}
+            </div>
+            
+          )
+        } 
         else{
           return(
             <div>

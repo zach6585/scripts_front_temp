@@ -15,7 +15,13 @@ export const createMentee = (mentee_info) => dispatch => {
     //Add a new mentee to your list of mentees
     axios.post("https://cors-for-all.herokuapp.com/https://scripts-app-backend.herokuapp.com/mentees", {name: mentee_info.name, user_id: mentee_info.user_id})
     .then(resp => {
-        dispatch({type: 'CREATE_MENTEE', payload: resp.data})
+        if (resp.data.errors){
+            dispatch({ type: 'ERRORS_FOUND', payload: resp.data.errors});
+        }
+        else{
+            dispatch({type: 'CREATE_MENTEE', payload: resp.data})
+        }
+        
     })
 }
 

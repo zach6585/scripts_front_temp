@@ -18,17 +18,23 @@ function MenteeCreationForm(props){
     }
 
     return(
-        <form id="mentee_creation_form">
-            <label htmlFor='mentee_name'>Name: </label>
-            <input name="mentee_name" type="text" onChange={event => handleMenteeNameChange(event)} id="mentee_form_name_input_box"></input>
-            <input type="submit" value="Submit" id="mentee_form_submit_button" onClick={event => handleMenteeNameSubmit(event)}></input>
-        </form>
+        <div>
+            <form id="mentee_creation_form">
+                <label htmlFor='mentee_name'>Name: </label>
+                <input name="mentee_name" type="text" onChange={event => handleMenteeNameChange(event)} id="mentee_form_name_input_box"></input>
+                <input type="submit" value="Submit" id="mentee_form_submit_button" onClick={event => handleMenteeNameSubmit(event)}></input>
+            </form>
+            <p>{props.errors}</p>
+        </div>
+        
+
     )
 }
 
 const mapStateToProps = (state) => {
     return{
-        user: state.user
+        user: state.user,
+        errors: state.mentees.errors
     }
 }
 

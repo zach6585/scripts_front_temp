@@ -4,7 +4,8 @@ const initialState = {
     current_mentee_id: -1,
     lastScript: -1,
     lastPage: -1,
-    current_mentee_name: ""
+    current_mentee_name: "",
+    err: ''
 }
 
 export default function menteeReducer(state = initialState, action){
@@ -64,6 +65,14 @@ export default function menteeReducer(state = initialState, action){
                 current_mentee_id: -1,
                 lastPage: -1,
                 lastScript: -1
+            }
+        case 'ERRORS_FOUND':
+            return{
+                ...state,
+                current_mentee_id: -1,
+                lastPage: -1,
+                lastScript: -1,
+                err: action.payload
             }
         default: 
             return state 
