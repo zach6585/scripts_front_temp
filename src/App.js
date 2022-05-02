@@ -156,6 +156,14 @@ class App extends Component {
 
   render() {
     if (localStorage.getItem("token")){
+      if (this.props.user.user_id === -1){
+        return(
+          <div>
+            <h1 className='bold center'>Something went wrong... Please log out then log back in.</h1>
+            <button onClick={e => this.menuItemHandleClick(e, 3)}>Logout here</button>
+          </div>
+        )
+      }
       if (this.props.mentees.current_mentee_id === -1){
         if (this.props.mentees.mentees === null){
           return(<h1>Loading</h1>)

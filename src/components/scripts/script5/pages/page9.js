@@ -45,7 +45,6 @@ const Page9 = (props) => {
                     <li className="square_bullets">Something else: <textarea onChange={event => handleChange(event)} id="text_box_number_2_page_9_script_5" defaultValue={getValue("text_box_number_2_page_9_script_5")} /></li>
                 </ul>
                 <p>
-                    If you have challenges with your coping strategy, you can use the website!<br/>
                     The mood log will help you keep track of how you feel after you do the activity. You can use body scan worksheets if they help you with the mood logs.
                 </p>
             </div>
