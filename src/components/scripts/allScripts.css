@@ -666,7 +666,7 @@ div.solid_box> p, h2, h1, a {
         .div_with_body_image > p{
             display: inline;
         }
-
+ 
         .div_with_body_image > a > input{
             margin-left: 900px;
             display: inline;
