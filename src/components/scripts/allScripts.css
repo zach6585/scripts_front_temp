@@ -668,7 +668,7 @@ div.solid_box> p, h2, h1, a {
         }
 
         .div_with_body_image > a > input{
-            margin-left: 1100px;
+            margin-left: 900px;
             display: inline;
             padding: 15px 15px;
             font-size: 25px;
@@ -685,6 +685,7 @@ div.solid_box> p, h2, h1, a {
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            width: 250px;
         }
 
         .div_with_body_image > a > input:hover {background-color: lightseagreen}

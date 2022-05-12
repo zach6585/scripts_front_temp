@@ -110,19 +110,23 @@
 /* Page 8 */ 
 
 #d_w_b_i_a_i_b_page_8_script_7{
-    display: inline-flex;
+    display: flex;
+    align-items: center;
 }
 
-#d_w_b_i_a_i_b_page_8_script_7 > p{
-    flex: 1;
-    width: 500px;
+#d_w_b_i_a_i_b_page_8_script_7 > div{
+    position: relative;
+    display: inline-block;
+    flex: 0.5;
+    width: 700px;
 }
 
-#d_w_b_i_a_i_b_page_8_script_7 > input{
-    width: 300px;
+#d_w_b_i_a_i_b_page_8_script_7 > a{
+    position: absolute;
+    margin-left: -200px;
+    width: 1000px;
     height: 300px;
-    flex: .3;
-    margin-left: 400px;
+    flex: .8;
 }
 
 #instruction_box_number_1_page_8_script_7{
