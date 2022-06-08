@@ -47,7 +47,7 @@ class Page8 extends Component {
                         We are going to watch a video about asking for help when you need it. Feel free to ask me to stop the video if you have questions. <br/>
                         You can also let me know me if you are starting to have a feeling you don't like while watching the video. We can stop the video at any time.
                     </p>
-                    <a id="video_link_page_8_script_11" href="https://drive.google.com/file/d/18EeRXFORyLuGCyC8wG81Cs7HxQ1He9AY/view?usp=sharing" target="_blank" rel="nopener noreferrer">Video link</a>
+                    <a id="video_link_page_8_script_11" href="https://drive.google.com/file/d/1FO5D3ynWh_qx-grvkjWZ9sdK2UWvROYk/view?usp=sharing" target="_blank" rel="nopener noreferrer">Video link</a>
                     
                     <div id="instruction_box_number_1_page_8_script_11" className="custom_svg demo_box container_for_medium_margin">
                         <p className="top_line_in_instruction_box"> 
