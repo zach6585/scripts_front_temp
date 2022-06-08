@@ -47,7 +47,7 @@ const Page4 = (props) => {
                     <div id="instruction_box_number_1_page_4_script_2" className={`ital custom_svg demo_box container_for_small_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                         <img src={shareScreen} alt="Share Screen" id="share_your_screen_page_4_script_2" />
                         <p className="top_line_in_instruction_box">
-                            Click on the link:<a href="https://jamboard.google.com/d/1fAVvfwQg6diBXDATYfx4Apox5Xtf2Maw0PpHYmVuTlA/edit?usp=sharing" target="_blank" rel="nopener noreferrer">Link</a>and<br/><br/>
+                            Click on the link:<a href="https://jamboard.google.com/d/1fAVvfwQg6diBXDATYfx4Apox5Xtf2Maw0PpHYmVuTlA/edit?usp=sharing" id="video_link_page_4_script_2" target="_blank" rel="nopener noreferrer">Link</a>and<br/><br/>
                             share your screen.<br/><br/>    
                             Click on the link and share your screen. <br/>
                             You will talk with your mentee about which picture or type of thing you like better and why.

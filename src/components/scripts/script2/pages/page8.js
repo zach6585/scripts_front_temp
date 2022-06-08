@@ -122,7 +122,7 @@ const Page8 = (props) => {
                         </ul>
                         <p>
                             Share the link with your mentee and ask them to share their screen<br/>
-                            Link:<a href="https://provenbyusers.com/cs.php?c=i0a724958" target="_blank" rel="nopener noreferrer">https://provenbyusers.com/cs.php?c=i0a724958</a><br/>
+                            Link:<a href="https://provenbyusers.com/cs.php?c=i0a724958" id="video_link_2_page_8_script_2" target="_blank" rel="nopener noreferrer">https://provenbyusers.com/cs.php?c=i0a724958</a><br/>
                             <strong>When they are done, have them click “Save for later,” instead of “I'm done”</strong>
                         </p>
                         

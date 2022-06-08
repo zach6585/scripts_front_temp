@@ -32,7 +32,7 @@ class Page7 extends Component {
 
                     <div className='container_for_medium_margin'>
                         <p>
-                            Let's look at <a href="https://sites.google.com/view/peer-mentoring-solutions" target="_blank" rel="nopener noreferrer">this website</a>. What kind of challenge do you think it was? 
+                            Let's look at <a href="https://sites.google.com/view/peer-mentoring-solutions" id="video_link_page_7_script_7" target="_blank" rel="nopener noreferrer">this website</a>. What kind of challenge do you think it was? 
                         </p>
                     </div>
 

@@ -48,7 +48,7 @@ class Page5 extends Component {
                             Send your mentee this link: <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_5_script_14" defaultValue={this.getValue("text_box_number_1_page_5_script_14")} /><br/>
                             Ask your mentee if they want to share their screen or share yours.<br/>
                             Talk through the worksheet together. <br/>
-                            If you think it would help your mentee, you can use the solution website together (link: <a href='https://sites.google.com/view/peer-mentoring-solutions' target="_blank" rel="nopener noreferrer">Solutions Link</a>).<br/>
+                            If you think it would help your mentee, you can use the solution website together (link: <a href='https://sites.google.com/view/peer-mentoring-solutions' id="video_link_page_5_script_14" target="_blank" rel="nopener noreferrer">Solutions Link</a>).<br/>
                             When you are done, stop screen sharing.
                         </p>
                     </div>

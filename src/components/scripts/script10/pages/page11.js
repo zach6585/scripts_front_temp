@@ -18,7 +18,7 @@ class Page11 extends Component{
             this.setState({handleclick: {words_that_appear_when_you_click_green_check: 
             <p>
                 Let's look at some solutions together. 
-                <a href="https://sites.google.com/view/peer-mentoring-solutions" target="_blank" rel="nopener noreferrer">Link</a>
+                <a href="https://sites.google.com/view/peer-mentoring-solutions" id="video_link_page_11_script_10" target="_blank" rel="nopener noreferrer">Link</a>
             </p>, 
             words_that_appear_when_you_click_red_x: ''}})
         }

@@ -16,7 +16,7 @@ class Page6 extends Component {
                     </p>
                     <div id="instruction_box_number_1_page_6_script_12" className="custom_svg demo_box container_for_small_margin">
                         <p className="top_line_in_instruction_box">
-                            Send your mentee the link to the website <a href='https://sites.google.com/view/peer-mentoring-solutions' target="_blank" rel="nopener noreferrer">Solution site link</a><br/>
+                            Send your mentee the link to the website <a href='https://sites.google.com/view/peer-mentoring-solutions' id="video_link_page_6_script_12" target="_blank" rel="nopener noreferrer">Solution site link</a><br/>
                             Ask if they want you to share their screen or if they want to share their screen. Help your mentee figure out what to click on. <br/>
                             Then help them look at the solutions.
                         </p>

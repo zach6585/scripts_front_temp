@@ -90,7 +90,7 @@ class Page9 extends Component{
                     
                     <div className='container_for_medium_margin'>
                         <p>
-                            We can use <a href="https://sites.google.com/view/peer-mentoring-solutions" target="_blank" rel="nopener noreferrer">this website</a> to solve some of those challenges. <br/>
+                            We can use <a href="https://sites.google.com/view/peer-mentoring-solutions" id="video_link_page_9_script_6" target="_blank" rel="nopener noreferrer">this website</a> to solve some of those challenges. <br/>
                             Click on the type of challenge you are having. <br/>
                             Do you think any of the solutions would help you? 
                         </p>
