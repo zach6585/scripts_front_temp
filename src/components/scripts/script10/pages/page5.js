@@ -48,7 +48,7 @@ class Page5 extends Component {
                         We are going to watch a video to learn more about depression. Feel free to ask me to stop the video if you have questions. <br/>
                         You can also let me know me if you are starting to have a feeling you don't like while watching the video. We can stop the video at any time.
                     </p>
-                    <a id="video_link_page_5_script_10" href="https://drive.google.com/file/d/1L6vfi7CIcmTiBeX-JfkO1w9KvCu2a-ra/view?usp=sharing">Video link</a>
+                    <a id="video_link_page_5_script_10" href="https://drive.google.com/file/d/1L6vfi7CIcmTiBeX-JfkO1w9KvCu2a-ra/view?usp=sharing" target="_blank" rel="nopener noreferrer">Video link</a>
                     
                     <div id="instruction_box_number_1_page_5_script_10" className="custom_svg demo_box container_for_medium_margin">
                         <p className="top_line_in_instruction_box"> 
