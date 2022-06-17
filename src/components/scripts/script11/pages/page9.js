@@ -36,6 +36,12 @@ class Page9 extends Component {
         return current_text_for_value ? current_text_for_value.value : ""
     }
 
+    getLink = (current_id_tag) => {
+        //Just like getValue but instead of textvalue it returns the link value
+        let current_link_for_value = this.props.links.find(link_item => {return link_item.link_id === current_id_tag})
+        return current_link_for_value ? current_link_for_value.link_address : ""
+    }
+
     render() {
         return (
             <div className="sheet">
@@ -96,7 +102,7 @@ class Page9 extends Component {
                     </div>
 
                     <div id="instruction_box_number_4_page_9_script_11" className="custom_svg demo_box container_for_small_margin">
-                        <p className="top_line_in_instruction_box">If your mentee thinks they will have challenges use the solutions website <a href="https://sites.google.com/view/peer-mentoring-solutions" id="video_link_page_9_script_11" target="_blank" rel="nopener noreferrer">Link</a> to help them think of potential solutions. </p>
+                        <p className="top_line_in_instruction_box">If your mentee thinks they will have challenges use the solutions website <a href={this.getLink("video_link_page_9_script_11")} id="video_link_page_9_script_11" target="_blank" rel="nopener noreferrer">Link</a> to help them think of potential solutions. </p>
                     </div>
 
                     <div className='container_for_large_margin'>
@@ -133,7 +139,8 @@ const mapStateToProps = state => {
     return{
         texts: state.texts.curatedTextsFromCurrentScript,
         mentee_id: state.mentees.current_mentee_id,
-        script: state.texts.currentScript
+        script: state.texts.currentScript,
+        links: state.links.links
     }
 }
 

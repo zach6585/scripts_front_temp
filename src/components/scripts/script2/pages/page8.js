@@ -65,6 +65,12 @@ const Page8 = (props) => {
         let current_text_for_value = props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
         return current_text_for_value ? current_text_for_value.value : ""
     }
+
+    const getLink = (current_id_tag) => {
+        //Same as getObject but instead it returns the value
+        let current_link_for_value = props.links.find(link_item => {return link_item.link_id === current_id_tag})
+        return current_link_for_value ? current_link_for_value.link_address : ""
+    }
   
     return (
         <div>
@@ -122,7 +128,7 @@ const Page8 = (props) => {
                         </ul>
                         <p>
                             Share the link with your mentee and ask them to share their screen<br/>
-                            Link:<a href="https://provenbyusers.com/cs.php?c=i0a724958" id="video_link_2_page_8_script_2" target="_blank" rel="nopener noreferrer">https://provenbyusers.com/cs.php?c=i0a724958</a><br/>
+                            Link:<a href={getLink("video_link_2_page_8_script_2")} id="video_link_2_page_8_script_2" target="_blank" rel="nopener noreferrer">https://provenbyusers.com/cs.php?c=i0a724958</a><br/>
                             <strong>When they are done, have them click “Save for later,” instead of “I'm done”</strong>
                         </p>
                         
@@ -136,7 +142,7 @@ const Page8 = (props) => {
                     </div>
                     
                     <div className='wrapper'>
-                        <a href="https://drive.google.com/file/d/1cxN_Bzo3uN-Mkt6nL29vEMUJTXLB7tPk/view?usp=sharing" id="video_link_page_8_script_2" className={props.commentMode} onClick={event => handleCommentClick(event)} target="_blank" rel="nopener noreferrer">Video link</a>
+                        <a href={getLink("video_link_page_8_script_2")} id="video_link_page_8_script_2" className={props.commentMode} onClick={event => handleCommentClick(event)} target="_blank" rel="nopener noreferrer">Video link</a>
                         <div id="image_and_instruction_box_number_1_page_8_script_2" className='container_for_extra_small_margin'>
                             <div id="instruction_box_number_3_page_8_script_2" className={`ital custom_svg demo_box ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                                 <p className='top_line_in_instruction_box'>
@@ -174,7 +180,8 @@ const mapStateToProps = state => {
         mentee_id: state.mentees.current_mentee_id,
         script: state.texts.currentScript,
         commentMode: state.comments.commentMode,
-        sendingComment: state.comments.sendingComment 
+        sendingComment: state.comments.sendingComment,
+        links: state.links.links 
     }
 }
 

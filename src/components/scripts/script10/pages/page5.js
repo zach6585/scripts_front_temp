@@ -36,6 +36,12 @@ class Page5 extends Component {
         let current_text_for_value = this.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
         return current_text_for_value ? current_text_for_value.value : ""
     }
+
+    getLink = (current_id_tag) => {
+        //Just like getValue but instead of textvalue it returns the link value
+        let current_link_for_value = this.props.links.find(link_item => {return link_item.link_id === current_id_tag})
+        return current_link_for_value ? current_link_for_value.link_address : ""
+    }
   
     render() {
         return (
@@ -51,7 +57,7 @@ class Page5 extends Component {
                     <div id="video_link_page_5_script_10_div">
                         
                     </div>
-                    <a id="video_link_page_5_script_10" href="https://drive.google.com/file/d/1L6vfi7CIcmTiBeX-JfkO1w9KvCu2a-ra/view?usp=sharing" target="_blank" rel="nopener noreferrer">Video link</a>
+                    <a id="video_link_page_5_script_10" href={this.getLink("video_link_page_5_script_10")} target="_blank" rel="nopener noreferrer">Video link</a>
                     <br/>
                     <div id="instruction_box_number_1_page_5_script_10" className="custom_svg demo_box container_for_medium_margin">
                         <p className="top_line_in_instruction_box"> 
@@ -105,7 +111,8 @@ const mapStateToProps = state => {
     return{
         texts: state.texts.curatedTextsFromCurrentScript,
         mentee_id: state.mentees.current_mentee_id,
-        script: state.texts.currentScript
+        script: state.texts.currentScript,
+        links: state.links.links
     }
 }
 

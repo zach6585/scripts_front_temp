@@ -31,6 +31,12 @@ class Page5 extends Component {
         let current_text_for_value = this.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
         return current_text_for_value ? current_text_for_value.value : ""
     }
+
+    getLink = (current_id_tag) => {
+        //Just like getValue but instead of textvalue it returns the link value
+        let current_link_for_value = this.props.links.find(link_item => {return link_item.link_id === current_id_tag})
+        return current_link_for_value ? current_link_for_value.link_address : ""
+    }
   
     render() {
         return (
@@ -48,7 +54,7 @@ class Page5 extends Component {
                             Send your mentee this link: <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_5_script_14" defaultValue={this.getValue("text_box_number_1_page_5_script_14")} /><br/>
                             Ask your mentee if they want to share their screen or share yours.<br/>
                             Talk through the worksheet together. <br/>
-                            If you think it would help your mentee, you can use the solution website together (link: <a href='https://sites.google.com/view/peer-mentoring-solutions' id="video_link_page_5_script_14" target="_blank" rel="nopener noreferrer">Solutions Link</a>).<br/>
+                            If you think it would help your mentee, you can use the solution website together (link: <a href={this.getLink("video_link_page_5_script_14")} id="video_link_page_5_script_14" target="_blank" rel="nopener noreferrer">Solutions Link</a>).<br/>
                             When you are done, stop screen sharing.
                         </p>
                     </div>
@@ -63,7 +69,8 @@ const mapStateToProps = state => {
     return{
         texts: state.texts.curatedTextsFromCurrentScript,
         mentee_id: state.mentees.current_mentee_id,
-        script: state.texts.currentScript
+        script: state.texts.currentScript,
+        links: state.links.links
     }
 }
 

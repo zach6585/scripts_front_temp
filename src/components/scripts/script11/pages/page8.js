@@ -36,6 +36,12 @@ class Page8 extends Component {
         let current_text_for_value = this.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
         return current_text_for_value ? current_text_for_value.value : ""
     }
+
+    getLink = (current_id_tag) => {
+        //Just like getValue but instead of textvalue it returns the link value
+        let current_link_for_value = this.props.links.find(link_item => {return link_item.link_id === current_id_tag})
+        return current_link_for_value ? current_link_for_value.link_address : ""
+    }
   
     render() {
         return (
@@ -47,7 +53,7 @@ class Page8 extends Component {
                         We are going to watch a video about asking for help when you need it. Feel free to ask me to stop the video if you have questions. <br/>
                         You can also let me know me if you are starting to have a feeling you don't like while watching the video. We can stop the video at any time.
                     </p>
-                    <a id="video_link_page_8_script_11" href="https://drive.google.com/file/d/1FO5D3ynWh_qx-grvkjWZ9sdK2UWvROYk/view?usp=sharing" target="_blank" rel="nopener noreferrer">Video link</a>
+                    <a id="video_link_page_8_script_11" href={this.getLink("video_link_page_8_script_11")} target="_blank" rel="nopener noreferrer">Video link</a>
                     
                     <div id="instruction_box_number_1_page_8_script_11" className="custom_svg demo_box container_for_medium_margin">
                         <p className="top_line_in_instruction_box"> 
@@ -156,7 +162,8 @@ const mapStateToProps = state => {
     return{
         texts: state.texts.curatedTextsFromCurrentScript,
         mentee_id: state.mentees.current_mentee_id,
-        script: state.texts.currentScript
+        script: state.texts.currentScript,
+        links: state.links.links
     }
 }
 

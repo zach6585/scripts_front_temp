@@ -1,11 +1,20 @@
 import { Component } from 'react';
 
+
+import { connect } from 'react-redux';
+
 import allEars from "../../pictures/allears.png";
 import pause from "../../pictures/pause.png";
 import stopShare from "../../pictures/stopshare.png";
 
 class Page7 extends Component {
-    
+
+    getLink = (current_id_tag) => {
+        //Just like getValue but instead of textvalue it returns the link value
+        let current_link_for_value = this.props.links.find(link_item => {return link_item.link_id === current_id_tag})
+        return current_link_for_value ? current_link_for_value.link_address : ""
+    }
+
     render() {
         return (
             <div className="sheet">
@@ -16,7 +25,7 @@ class Page7 extends Component {
                     </p>
                     <div id="instruction_box_number_1_page_7_script_9" className="custom_svg demo_box container_for_small_margin">
                         <p className="top_line_in_instruction_box">
-                            Send your mentee the link to the website: <a href='https://sites.google.com/view/peer-mentoring-solutions' id="video_link_page_7_script_9" target="_blank" rel="nopener noreferrer">Solutions site</a><br/>
+                            Send your mentee the link to the website: <a href={this.getLink("video_link_page_7_script_9")} id="video_link_page_7_script_9" target="_blank" rel="nopener noreferrer">Solutions site</a><br/>
                             Ask if they want you to share their screen or if they want to share their screen. Help your mentee figure out what to click on. <br/>
                             Then help them look at the solutions.
                         </p>
@@ -66,4 +75,11 @@ class Page7 extends Component {
         )
     }
 }
-export default Page7;
+
+const mapStateToProps = state => {
+    return{
+        links: state.links.links
+    }
+}
+
+export default connect(mapStateToProps)(Page7);

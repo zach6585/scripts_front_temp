@@ -1,10 +1,18 @@
 import { Component } from 'react';
 
+import { connect } from 'react-redux';
+
 import stopShare from '../../pictures/stopshare.png';
 import pause from '../../pictures/pause.png';
 import allEars from '../../pictures/allears.png';
 
 class Page7 extends Component {
+
+    getLink = (current_id_tag) => {
+        //Just like getValue but instead of textvalue it returns the link value
+        let current_link_for_value = this.props.links.find(link_item => {return link_item.link_id === current_id_tag})
+        return current_link_for_value ? current_link_for_value.link_address : ""
+    }
 
     render() {
         return (
@@ -32,7 +40,7 @@ class Page7 extends Component {
 
                     <div className='container_for_medium_margin'>
                         <p>
-                            Let's look at <a href="https://sites.google.com/view/peer-mentoring-solutions" id="video_link_page_7_script_7" target="_blank" rel="nopener noreferrer">this website</a>. What kind of challenge do you think it was? 
+                            Let's look at <a href={this.getLink("video_link_page_7_script_7")} id="video_link_page_7_script_7" target="_blank" rel="nopener noreferrer">this website</a>. What kind of challenge do you think it was? 
                         </p>
                     </div>
 
@@ -80,4 +88,12 @@ class Page7 extends Component {
         )
     }
 }
-export default Page7;
+
+const mapStateToProps = state => {
+    return{
+        links: state.links.links
+    }
+}
+
+
+export default connect(mapStateToProps)(Page7);

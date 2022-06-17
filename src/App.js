@@ -224,8 +224,7 @@ const mapStateToProps = state => {
     mentees: state.mentees,
     texts_loading: state.texts.loading, 
     comments: state.comments.comments,
-    commentMode: state.comments.commentMode,
-    links: state.links
+    commentMode: state.comments.commentMode
     
   }
 }

@@ -31,6 +31,12 @@ class SharingAboutMentoring extends Component {
         let current_text_for_value = this.props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
         return current_text_for_value ? current_text_for_value.value : ""
     }
+
+    getLink = (current_id_tag) => {
+        //Just like getValue but instead of textvalue it returns the link value
+        let current_link_for_value = this.props.links.find(link_item => {return link_item.link_id === current_id_tag})
+        return current_link_for_value ? current_link_for_value.link_address : ""
+    }
   
     render() {
         return (
@@ -44,7 +50,7 @@ class SharingAboutMentoring extends Component {
 
                     <div id="instruction_box_number_1_sharing_about_mentoring" className="custom_svg demo_box container_for_medium_margin">
                         <p className="top_line_in_instruction_box">If they want to share, click the link for the worksheet:</p>
-                        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=H9sOck5cQ0CBQSFKY6fq1SOlKg2DiYZAgs7GzoizMlhUNVNHSzNKT0xKQTY1N1JSWFQ4RDNZNVJUVS4u" className="sharing_about_mentoring_a" target="_blank" rel="nopener noreferrer">Link</a>
+                        <a href={this.getLink("sharing_about_mentoring_a")} id="sharing_about_mentoring_a" target="_blank" rel="nopener noreferrer">Link</a>
                     </div>
                     
                     <div className='container_for_medium_margin'>
@@ -70,7 +76,8 @@ const mapStateToProps = state => {
     return{
         texts: state.texts.curatedTextsFromCurrentScript,
         mentee_id: state.mentees.current_mentee_id,
-        script: state.texts.currentScript
+        script: state.texts.currentScript,
+        links: state.links.links
     }
 }
 
@@ -78,7 +85,6 @@ const mapDispatchToProps = dispatch => {
     return{
         patchTexts: (text_data) => dispatch(patchTexts(text_data)),
         postTexts: (text_data) => dispatch(postTexts(text_data))
-
     }
 }
 

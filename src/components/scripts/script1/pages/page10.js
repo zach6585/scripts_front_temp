@@ -36,13 +36,18 @@ const Page10 = (props) => {
             props.toggleCommentMode();
         }
     }
+    const getLink = (current_id_tag) => {
+        //Same as getObject but instead it returns the value
+        let current_link_for_value = props.links.find(link_item => {return link_item.link_id === current_id_tag})
+        return current_link_for_value ? current_link_for_value.link_address : ""
+    }
 
     return (
         <div>
             <div className={`sheet ${blur}`}>
                 <div className="left">
                     <div className='wrapper'>
-                        <a href="https://drive.google.com/file/d/1OTilJ5hnSoyEC3vLnASwFcEcH_S5BZNL/view?usp=sharing" id="video_link_page_10_script_1" className={props.commentMode} onClick={event => handleCommentClick(event)} target="_blank" rel="nopener noreferrer">Video link</a>
+                        <a href={getLink("video_link_page_10_script_1")} id="video_link_page_10_script_1" className={props.commentMode} onClick={event => handleCommentClick(event)} target="_blank" rel="nopener noreferrer">Video link</a>
                         <div id="image_and_instruction_box_number_1_page_10_script_1" >
                             <div id="instruction_box_number_1_page_10_script_1" className={`ital custom_svg demo_box ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                                 <p className='top_line_in_instruction_box'>
@@ -78,7 +83,8 @@ const Page10 = (props) => {
 const mapStateToProps = state => {
     return{
         commentMode: state.comments.commentMode,
-        sendingComment: state.comments.sendingComment 
+        sendingComment: state.comments.sendingComment,
+        links: state.links.links
     }
 }
 

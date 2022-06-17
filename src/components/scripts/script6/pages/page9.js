@@ -32,6 +32,12 @@ class Page9 extends Component{
         return current_text_for_value ? current_text_for_value.value : ""
     }
 
+    getLink = (current_id_tag) => {
+        //Just like getValue but instead of textvalue it returns the link value
+        let current_link_for_value = this.props.links.find(link_item => {return link_item.link_id === current_id_tag})
+        return current_link_for_value ? current_link_for_value.link_address : ""
+    }
+
     render(){
         return(
             <div className="sheet">
@@ -90,7 +96,7 @@ class Page9 extends Component{
                     
                     <div className='container_for_medium_margin'>
                         <p>
-                            We can use <a href="https://sites.google.com/view/peer-mentoring-solutions" id="video_link_page_9_script_6" target="_blank" rel="nopener noreferrer">this website</a> to solve some of those challenges. <br/>
+                            We can use <a href={this.getLink("video_link_page_9_script_6")} id="video_link_page_9_script_6" target="_blank" rel="nopener noreferrer">this website</a> to solve some of those challenges. <br/>
                             Click on the type of challenge you are having. <br/>
                             Do you think any of the solutions would help you? 
                         </p>
@@ -137,7 +143,8 @@ const mapStateToProps = state => {
     return{
         texts: state.texts.curatedTextsFromCurrentScript,
         mentee_id: state.mentees.current_mentee_id,
-        script: state.texts.currentScript
+        script: state.texts.currentScript,
+        links: state.links.links
     }
 }
 
