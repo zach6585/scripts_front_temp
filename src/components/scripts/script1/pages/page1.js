@@ -31,7 +31,6 @@ const Page1 = (props) => {
             props.toggleCommentMode();
         }
     }
-
     return (
         <div>
             <div className={`sheet ${blur}`}>

@@ -1,6 +1,5 @@
 Yee
 
-Notes for cron job thing:
-    - All <a> tags need to have their links be softcoded and pulled from the google sheets
-        - On top of that, we need to make action and reducer additions that reassign the links
-    - It could be lazy and just reassign every night/day/etc. using a cron job or we could go through the effort of doing a comparison to determine if the cron job is needed. Ultimately, the first one seems easier but who knows.
+What is left is that I need to do two things:
+    1) Convert every href to be an element in the links object 
+    2) Figure out to make this actually work, as it was crashing when I was trying

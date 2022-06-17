@@ -7,6 +7,7 @@ import { userLogout, autoLogin } from './actions/user';
 import { flushMenteeList,changeMentee } from './actions/mentee';
 import { toggleCommentMode } from './actions/comment';
 import { goToSpecificPage } from './actions/page';
+import { getLinks } from './actions/link';
 
 
 import hamburgerMenu from "./components/scripts/pictures/hamburger_menu.png";
@@ -72,6 +73,7 @@ class App extends Component {
       this.setState({hamburger_is_clicked: false, options: ''});
       this.props.changeTexts();
       this.props.changeMentee();
+      this.props.getLinks();
       this.props.goToSpecificPage(1);
     }
     this.makeButtons("button");
@@ -222,8 +224,8 @@ const mapStateToProps = state => {
     mentees: state.mentees,
     texts_loading: state.texts.loading, 
     comments: state.comments.comments,
-    commentMode: state.comments.commentMode
-    
+    commentMode: state.comments.commentMode,
+    links: state.links
     
   }
 }
@@ -237,7 +239,8 @@ const mapDispatchToProps = dispatch => {
       autoLogin: () => dispatch(autoLogin()),
       changeMentee: () => dispatch(changeMentee()),
       toggleCommentMode: () => dispatch(toggleCommentMode()),
-      goToSpecificPage: (pageNum) => dispatch(goToSpecificPage(pageNum))
+      goToSpecificPage: (pageNum) => dispatch(goToSpecificPage(pageNum)),
+      getLinks: () => dispatch(getLinks())
   }
 }
 

@@ -42,9 +42,9 @@
 }
 
 #video_link_page_5_script_10{
-    display: flex;
-    margin-bottom: -90px;
-    margin-top: 100px;
+    position: absolute;
+    margin-bottom: 0px;
+    margin-top: 70px;
 }
 #share_your_screen_page_5_script_10{
     width: 500px;
