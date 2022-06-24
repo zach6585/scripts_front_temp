@@ -34,7 +34,7 @@ class Page5 extends Component {
                     <p>
                     That's great that you had no challenges using your coping strategy!<br/>
                     Everyone has challenges sometimes. So we will talk through some examples of challenges<br/><br/>
-                    Go to next page
+                    <button onClick={() => this.props.goToSpecificPage(6)}>Go to next page</button>
                     </p>
                 }})
         }
