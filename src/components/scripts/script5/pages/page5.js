@@ -125,16 +125,14 @@ const Page5 = props => {
                             <p className="top_line_in_instruction_box">
                                 Help your mentee make new piles in the cards sort.
                                 <br/><br/>
-                                Also, help your mentee think about which activities they want to check.
-                                <br/><br/>
-                                These should be activities that help them feel good. 
+                                The piles should describe how the activities make them feel.
                                 <br/><br/>
                                 You can ask them questions and give them encouragement.
                             </p>
                         </div>
                         <p className={props.commentMode} id="p_5" onClick={event => handleClick(event, "")}>
                             <br/><br/><br/>
-                            Great, now let's think about which of these you can do in 15 minutes or less. 
+                            Great, now let's think about which of the activities that make you feel good are activities you can do in 15 minutes or less. 
                             <br/><br/>
                             Let's make a new pile for the activities you think you can do in 15 minutes or less.
                         </p>

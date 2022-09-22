@@ -62,7 +62,7 @@ const Page9 = (props) => {
                 setCheckText(null);
                 setXText(<p>
                 That's ok, we're going to watch a video about mental health to learn more.
-                We are going to watch a video together about mental health made by young adults who have mental health conditions. Please ask me to pause if you have a question or if something makes you feel uncomfortable.
+                This video was made by young adults who have mental health conditions. Please ask me to pause if you have a question or if something makes you feel uncomfortable.
             </p>);
             }
         }

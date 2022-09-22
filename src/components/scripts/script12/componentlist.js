@@ -1,28 +1,9 @@
-import { Component } from 'react';
+import { Component, lazy, Suspense } from 'react';
 
 import {goForward, goBack} from '../../../actions/page';
 import { goToSpecificPage } from '../../../actions/page';
 
 import { connect } from 'react-redux';
-
-import Page1 from './pages/page1';
-import Page2 from './pages/page2';
-import Page3 from './pages/page3';
-import Page4 from './pages/page4';
-import Page5 from './pages/page5';
-import Page6 from './pages/page6';
-import Page7 from './pages/page7';
-import Page8 from './pages/page8';
-import Page9 from './pages/page9';
-import Page10 from './pages/page10';
-import Page11 from './pages/page11';
-import Page12 from './pages/page12';
-import Page13 from './pages/page13';
-import Page14 from './pages/page14';
-import Page15 from './pages/page15';
-import Page16 from './pages/page16';
-import Page17 from './pages/page17';
-import Page18 from './pages/page18';
 
 import larrow from "../pictures/larrow.png";
 import rarrow from "../pictures/rarrow.png";
@@ -30,6 +11,24 @@ import retToBeg from "../pictures/backtobeginning.svg";
 import './script12.css';
 import '../allScripts.css';
 
+const Page1 = lazy(() => import('./pages/page1'));
+const Page2 = lazy(() => import('./pages/page2'));
+const Page3 = lazy(() => import('./pages/page3'));
+const Page4 = lazy(() => import('./pages/page4'));
+const Page5 = lazy(() => import('./pages/page5'));
+const Page6 = lazy(() => import('./pages/page6'));
+const Page7 = lazy(() => import('./pages/page7'));
+const Page8 = lazy(() => import('./pages/page8'));
+const Page9 = lazy(() => import('./pages/page9'));
+const Page10 = lazy(() => import('./pages/page10'));
+const Page11 = lazy(() => import('./pages/page11'));
+const Page12 = lazy(() => import('./pages/page12'));
+const Page13 = lazy(() => import('./pages/page13'));
+const Page14 = lazy(() => import('./pages/page14'));
+const Page15 = lazy(() => import('./pages/page15'));
+const Page16 = lazy(() => import('./pages/page16'));
+const Page17 = lazy(() => import('./pages/page17'));
+const Page18 = lazy(() => import('./pages/page18'));
 
 class Script12List extends Component {
 
@@ -53,14 +52,15 @@ class Script12List extends Component {
   }
   render() {
     return(
-    <div>{this.state.component_list[this.props.pageNum-1]}
-      <div id="buttonDiv">
-        {this.props.pageNum === 1 ? null :  <img alt="left arrow back" src={larrow} onClick={() => this.handleClick('b')} className="left page_button"/>}
-        {this.props.pageNum === this.state.component_list.length  ? null :  <img alt="right arrow forward" src={rarrow} onClick={() => this.handleClick('f')} className="right page_button"/>}
-        {this.props.pageNum === this.state.component_list.length ? <img alt="Back to beginning" src={retToBeg} onClick={() => this.handleClick("r")} className="right page_button" /> : null} 
-      </div>
-      <h3 className="page_num">{this.props.pageNum}</h3>
-    </div>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        {this.state.component_list[this.props.pageNum-1]}
+        <div id="buttonDiv">
+          {this.props.pageNum === 1 ? null :  <img alt="left arrow back" src={larrow} onClick={() => this.handleClick('b')} className="left page_button"/>}
+          {this.props.pageNum === this.state.component_list.length  ? null :  <img alt="right arrow forward" src={rarrow} onClick={() => this.handleClick('f')} className="right page_button"/>}
+          {this.props.pageNum === this.state.component_list.length ? <img alt="Back to beginning" src={retToBeg} onClick={() => this.handleClick("r")} className="right page_button" /> : null} 
+        </div>
+        <h3 className="page_num">{this.props.pageNum}</h3>
+      </Suspense>
     )
   }
 }

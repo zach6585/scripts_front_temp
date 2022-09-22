@@ -65,7 +65,7 @@ class Page6 extends Component {
                     <div id="instruction_box_number_3_page_6_script_8" className="custom_svg demo_box container_for_small_margin">
                         <p className='top_line_in_instruction_box'>
                             Send your mentee the link<br/>
-                            Link: <br/>
+                            Link: <textarea id='text_box_number_3_page_6_script_8' onChange={event => this.handleChange(event)} defaultValue={this.getValue("text_box_number_3_page_6_script_8")} ></textarea><br/>
                             <strong>Stop screen sharing and ask your mentee to screen share.</strong>
                         </p>
                         

@@ -101,7 +101,7 @@ const Page9 = props => {
                 
                     <div id="instruction_box_number_1_page_9_script_4" className={`ital custom_svg demo_box ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                         <p className="top_line_in_instruction_box">
-                            Help your mentee review their body scan workscript.<br/>
+                            Help your mentee review their body scan worksheet.<br/>
                             Put the link in the chat and ask your mentee to screen share
                         </p>
                     </div>

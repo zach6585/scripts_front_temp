@@ -166,43 +166,10 @@
     height: 200px;
 }
 
-#instruction_box_number_2_page_8_script_2{
+#instruction_box_number_3_page_8_script_2{
     width: 800px;
     min-height: 450px;
     margin:0 20px 15px 50px;
-}
-
-#video_link_page_8_script_2{
-    font-size: 25px;
-}
-
-#image_and_instruction_box_number_1_page_8_script_2{
-    margin-top: 10px;
-    display: flex;
-}
-
-#image_and_instruction_box_number_1_page_8_script_2 > div{
-    width: 150px;
-    min-height: 175px;
-    flex: 0.2;
-    
-}
-
-#image_and_instruction_box_number_1_page_8_script_2 > img{
-    flex: 0.5;
-    
-}
-
-
-#optimize_video_page_8_script_2{
-    width: 90%;
-    padding-top: 10%;
-    display: flex;
-}
-
-#text_box_number_3_page_8_script_2 {
-    width: 100%;
-    height: 320px;
 }
 
 
@@ -210,7 +177,47 @@
 /* Page 9 */ 
 
 
-#text_box_number_1_page_9_script_2{
+#video_link_page_9_script_2{
+    font-size: 25px;
+}
+
+#image_and_instruction_box_number_1_page_9_script_2{
+    margin-top: 10px;
+    display: flex;
+}
+
+#image_and_instruction_box_number_1_page_9_script_2 > div{
+    width: 150px;
+    min-height: 175px;
+    flex: 0.2;
+    
+}
+
+#image_and_instruction_box_number_1_page_9_script_2 > img{
+    flex: 0.5;
+    
+}
+
+
+#optimize_video_page_9_script_2{
+    width: 90%;
+    padding-top: 10%;
+    display: flex;
+}
+
+#text_box_number_3_page_8_script_2 {
+    /* This one's mislabeled because Ariel asked me to change the script at this part into two pages
+    To prevent having to restart this textbox, I just opted to leave it out of laziness */
+    width: 100%;
+    height: 320px;
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 10 */ 
+
+#text_box_number_1_page_10_script_2{
     position: relative;
     display: inline-block;
     width: 900px;
@@ -218,23 +225,17 @@
 }
 
 
-#instruction_box_number_1_page_9_script_2{
-    width: 800px;
-    height: 200px;
+#instruction_box_number_1_page_10_script_2{
+    max-width: 800px;
+    min-height: 200px;
     margin:0 20px 15px 0px;
     
 }
 
-#text_box_number_2_page_9_script_2{
+#text_box_number_2_page_10_script_2{
     width: 400px;
     height: 40px;
 }
-
-
-/*-------------------------------------------------------------------------------------------------------------------------------- */
-/* Page 10 */ 
-
-/* See allScripts.css for the general scripts section */
 
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 11 */ 
@@ -248,5 +249,10 @@
 
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 13 */ 
+
+/* See allScripts.css for the general scripts section */
+
+/*-------------------------------------------------------------------------------------------------------------------------------- */
+/* Page 14 */ 
 
 /* See allScripts.css for the general scripts section */

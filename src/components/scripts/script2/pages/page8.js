@@ -3,11 +3,8 @@ import jerome from "../../pictures/jerome.png";
 import maggie from "../../pictures/maggie.png";
 import shareScreen from "../../pictures/sharescreen.png";
 import stopShare from "../../pictures/stopshare.png";
-import optimizeVideo from "../../pictures/optimizevideo.png";
 import allEars from "../../pictures/allears.png";
 import pause from "../../pictures/pause.png";
-
-
 import { connect } from 'react-redux';
 
 import { patchTexts, postTexts } from '../../../../actions/text';
@@ -109,13 +106,23 @@ const Page8 = (props) => {
                             <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_8_script_2" defaultValue={getValue("text_box_number_1_page_8_script_2")} /><br/>
                             The symptoms I have include:<br/><br/>
                             <textarea onChange={event => handleChange(event)} id="text_box_number_2_page_8_script_2" defaultValue={getValue("text_box_number_2_page_8_script_2")} /><br/>
-                            Before we move on to an activity where you get to think about your own symptoms, I'm wondering if there's anything about 'symptoms' that was confusing or that you want to talk more about? <br/>
+                            Before we move on to an activity where you get to think about your own symptoms, I'm wondering if there's anything about 'symptoms' that was confusing or that you want to talk more about?  <br/>
+                            <img className={`allEars ${props.commentMode}`} onClick={event => handleCommentClick(event)} src={allEars} alt="All ears" />
+                            <img className={`pause ${props.commentMode}`} onClick={event => handleCommentClick(event)} src={pause} alt="Pause" /><br/>
+                            Now we are going to do a card sort activity to learn more about your symptoms.
+                            <div id="instruction_box_number_2_page_8_script_2" className={`ital custom_svg demo_box container_for_medium_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
+                                <p className="top_line_in_instruction_box">
+                                    Share the link with your mentee and ask them to share their screen <br/>
+                                    Link:<a href={getLink("video_link_2_page_8_script_2")} id="video_link_2_page_8_script_2" target="_blank" rel="nopener noreferrer">{getLink("video_link_2_page_8_script_2")}</a><br/>
+                                </p>
+                            </div>
+                            <br/>
                             Here are some cards that show mental health symptoms other young adults have. You might have some of these symptoms too. Let's sort them into two piles—symptoms you sometimes have and symptoms you don't have.<br/><br/>
                             If you have questions about these symptoms, I can try to help you understand them better.
                         </p>
                    </div>
                    
-                    <div id="instruction_box_number_2_page_8_script_2" className={`ital custom_svg demo_box container_for_small_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
+                    <div id="instruction_box_number_3_page_8_script_2" className={`ital custom_svg demo_box container_for_small_margin ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
                         <p className="top_line_in_instruction_box">
                             Do the card sort together<br/>
                             If you have any of the same symptoms as your mentee, tell them that you have that same symptom.<br/>
@@ -127,46 +134,11 @@ const Page8 = (props) => {
                             <li className="dash_bullets">"That happens to me sometimes too"</li>
                         </ul>
                         <p>
-                            Share the link with your mentee and ask them to share their screen<br/>
-                            Link:<a href={getLink("video_link_2_page_8_script_2")} id="video_link_2_page_8_script_2" target="_blank" rel="nopener noreferrer">https://provenbyusers.com/cs.php?c=i0a724958</a><br/>
                             <strong>When they are done, have them click “Save for later,” instead of “I'm done”</strong>
                         </p>
                         
                     </div>
 
-                    <div className='container_for_medium_margin'>
-                        <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_3">
-                            During our time together, we are going to be learning a lot about mental health and how to keep your symptoms from getting in the way of things you want to do! Remember, you are not alone in feeling this way - there are a lot of young adults, including me, who are going through similar things as you.<br/>
-                            Now we will watch a video to learn more about symptoms.<br/>
-                        </p>
-                    </div>
-                    
-                    <div className='wrapper'>
-                        <a href={getLink("video_link_page_8_script_2")} id="video_link_page_8_script_2" className={props.commentMode} onClick={event => handleCommentClick(event)} target="_blank" rel="nopener noreferrer">Video link</a>
-                        <div id="image_and_instruction_box_number_1_page_8_script_2" className='container_for_extra_small_margin'>
-                            <div id="instruction_box_number_3_page_8_script_2" className={`ital custom_svg demo_box ${props.commentMode}`} onClick={event => handleCommentClick(event)}>
-                                <p className='top_line_in_instruction_box'>
-                                    Share your screen <br/>
-                                    -Share sound <br/>
-                                    -Optimize for video
-                                </p>
-                            </div>
-                            <img src={shareScreen} id="share_screen_page_8_script_2" alt="Share your screen" className={props.commentMode} onClick={event => handleCommentClick(event)} />
-                        </div>
-                    </div>
-                    <div className='container_for_medium_margin'>
-                        <img src={optimizeVideo} id="opt_page_8_script_2" alt="Optimize your video" className={props.commentMode} onClick={event => handleCommentClick(event)} />
-                    </div>
-                    
-                    <div className='container_for_large_margin'>
-                        <p className={props.commentMode} onClick={event => handleCommentClick(event)} id="p_4">
-                            In the video, they talked about there being things that make symptoms worse. Some things that make my symptoms worse are:<br/>
-                            <textarea onChange={event => handleChange(event)} id="text_box_number_3_page_8_script_2" defaultValue={getValue("text_box_number_3_page_8_script_2")} /><br/><br/>
-                            What about you? What makes your symptoms worse?
-                        </p>
-                        <img className={`allEars ${props.commentMode}`} onClick={event => handleCommentClick(event)} src={allEars} alt="All ears" />
-                        <img className={`pause ${props.commentMode}`} onClick={event => handleCommentClick(event)} src={pause} alt="Pause" />
-                    </div>
                 </div>   
             </div>
             {sideBar}

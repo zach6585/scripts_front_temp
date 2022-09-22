@@ -76,7 +76,7 @@ export default function menteeReducer(state = initialState, action){
                 current_mentee_id: -1,
                 lastPage: -1,
                 lastScript: -1,
-                err: action.payload
+                err: action.payload[0].slice(5)
             }
         default: 
             return state 

@@ -36,7 +36,7 @@ class Page11 extends Component{
                     <h1 className="bold center">Practicing coping strategies</h1>
                     <h1 className='bold'>Step 4: Figuring out solutions</h1>
                     <p>
-                        Today we tried [solution] to make doing this coping strategy easier. <br/>
+                        Today we tried [solution your mentee tried today] to make doing this coping strategy easier. <br/>
                         How did it go? <br/>
                         Do you feel like you could do this coping strategy on your own? 
                     </p>

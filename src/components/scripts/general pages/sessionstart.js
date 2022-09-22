@@ -83,7 +83,7 @@ class SessionStart extends Component {
 class GreenCheckClicked extends Component{
     render(){
         return(
-            <div id="checked">
+            <div id="instruction_box_number_1_session_start checked" className="custom_svg demo_box container_for_medium_margin">
                 <p>Talk to your mentee about this topic for up to 5 minutes.
                 <br/><br/>
                 Once you and your mentee have talked for about five minutes, you can thank them for sharing.  Politely suggest that it's time to transition to hearing about the plan for the day.  If the mentee still wants to talk, suggest “pausing” for now and coming back to the conversation at the end of the peer mentoring session. </p>

@@ -76,7 +76,7 @@ class Page5 extends Component {
                     </p>
                     <div id="instruction_box_number_1_page_5_script_7" className="custom_svg demo_box container_for_medium_margin">
                         <p className="top_line_in_instruction_box"> 
-                            Try to learn about how it was for your mentee to do the coping strategies. Ask questions such, as the questions in the list:<br/>
+                            Try to learn about how it was for your mentee to do the coping strategies. Ask questions!:<br/>
                             <em>Remember to provide positive feedback and validation.</em>
                         </p>
                             <ul>

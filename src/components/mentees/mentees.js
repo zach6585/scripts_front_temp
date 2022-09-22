@@ -1,48 +1,45 @@
-import {Component} from 'react';
+import {useState, lazy, Suspense} from 'react';
 import './mentees.css';
 
-import DisplayMentees from './displayMentees';
-import MenteeCreationForm from './menteeCreationForm';
+
+const DisplayMentees = lazy(() => import('./displayMentees'));
+const MenteeCreationForm = lazy(() => import('./menteeCreationForm'));
 
 
-
-class Mentees extends Component{
-
-    state = {
-        current_component_name: 'display mentees'
-    }
-
-    handleClick = (event) => {
-        event.preventDefault();
-        if (this.state.current_component_name === "display mentees"){
-            this.setState({
-                current_component_name: 'mentee form'
-            })
+const Mentees = () => {
+    const [whichComponent, setWhichComponent] = useState('display'); //Acts as a flag for which component needs to be rendered
+    
+    const handleClick = (e) => {
+        e.preventDefault();
+        if (whichComponent === "display"){
+            setWhichComponent('create');
         }
-        else if (this.state.current_component_name === "mentee form"){
-            this.setState({
-                current_component_name: 'display mentees'
-            })
+        else{
+            setWhichComponent('display');
         }
     }
-
-
-    render(){
-        if (this.state.current_component_name === "display mentees"){
-            return(
+    if (whichComponent === "display"){
+        return(
+            <Suspense fallback={<h1>Loading...</h1>}>
                 <div className='mentee_main_div'>
                     <div id="display_mentees"><DisplayMentees /></div>
                     <br/>
-                    <button id="button_to_make_a_mentee" onClick={event => this.handleClick(event)}>Add a new mentee</button>
+                    <button id="button_to_make_a_mentee" onClick={event => handleClick(event)}>Add a new mentee</button>
                 </div>
-            )
-        }
-        else{
-            return(
+            </Suspense>
+            
+        )
+    }
+    
+    else{
+        return(
+            <Suspense fallback={<h1>Loading...</h1>}>
                 <MenteeCreationForm />
-            )
-        }
-        
+                <br/>
+                <button id="button_to_choose_a_mentee" onClick={event => handleClick(event)}>Choose existing mentee</button>
+            </Suspense>
+            
+        )
     }
 }
 

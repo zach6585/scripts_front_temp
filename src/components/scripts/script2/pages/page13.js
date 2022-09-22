@@ -1,9 +1,11 @@
-import SchedulingForNextWeek from '../../general pages/schedulingfornextweek';
+import SharingAboutMentoring from '../../general pages/sharingaboutmentoring'; 
+
 
 const Page13 = () => {
-  
-  return (
-    <SchedulingForNextWeek />  
-  )
+
+    return (
+        <SharingAboutMentoring />
+    )
 }
+
 export default Page13;

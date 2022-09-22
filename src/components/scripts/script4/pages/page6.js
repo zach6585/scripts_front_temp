@@ -80,7 +80,8 @@ const Page6 = props => {
                             <span className='underline_text'>Card sort directions</span><br/>
                             First, we will think about activities you do and do not like.<br/> 
                             If you like the type of activity, you will put the card in the “like” pile. <br/>
-                            If you do not like the activity, you will put the card in the “do not like” pile.
+                            If you do not like the activity, you will put the card in the “do not like” pile. <br/>
+                            There is also a “neutral” pile you can use if you want.
                         </p>
                     </div>
 

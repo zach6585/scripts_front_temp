@@ -65,6 +65,15 @@
     margin-left: 5%;
 }
 
+#text_box_number_3_page_6_script_8 {
+    /* This lack of order is because Ariel asked me to put in a link after the product was released */
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 30px;
+}
+
+
 #instruction_box_number_4_page_6_script_8 {
     display: inline-block;
     width: 83.5%;
@@ -77,7 +86,6 @@
     width: 300px;
     height: 30px;
 }
-
 
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 7 */ 

@@ -1,49 +1,38 @@
-import {Component} from 'react';
+import {useState, lazy, Suspense} from 'react';
 import './users.css';
 
-import Signup from './signup';
-import Login from './login';
+
+const Signup = lazy(() => import('./signup'));
+const Login = lazy(() => import('./login'));
 
 
+const Users = () => {
+    const [whichComponent, setWhichComponent] = useState("Login"); //Acts as a flag for which component needs to be rendered
+    const [currComponent, setCurrComponent] = useState(<Login />); //Actual componenent being rendered
+    const [buttonText, setButtonText] = useState("Don't have an account yet? Sign up here"); //Text within button being rendered
 
-class Users extends Component{
-
-    state = {
-        current_component_being_rendered: <Login  />, 
-        current_component_name: 'login',
-        button_under_form_text: "Don't have an account yet? Sign up here"
-    }
-
-    handleClick = (event) => {
-        event.preventDefault();
-        if (this.state.current_component_name === "login"){
-            this.setState({
-                current_component_being_rendered: <Signup />,
-                current_component_name: 'signup',
-                button_under_form_text: "Already have an account? Log in here"
-            })
+    const handleClick = (e) => {
+        e.preventDefault();
+        if (whichComponent === "Login"){
+            setWhichComponent("Signup");
+            setCurrComponent(<Signup />);
+            setButtonText("Already have an account? Log in here");
         }
-        else if (this.state.current_component_name === "signup"){
-            this.setState({
-                current_component_being_rendered: <Login />,
-                current_component_name: 'login',
-                button_under_form_text: "Don't have an account yet? Sign up here"
-            })
+        else{
+            setWhichComponent("Login");
+            setCurrComponent(<Login />);
+            setButtonText("Don't have an account yet? Sign up here");
+            
         }
-        console.log(this.state)
     }
 
-
-    render(){
-        return(
-            <div>
-                {this.state.current_component_being_rendered}
-                <h3 id="fake_link_text" onClick={event => this.handleClick(event)}>{this.state.button_under_form_text}</h3>
-            </div>
-        )
-    }
+    return(
+        <Suspense fallback={<h1>Loading...</h1>}>
+            {currComponent}
+            <h3 id="fake_link_text" onClick={e => handleClick(e)}>{buttonText}</h3>
+        </Suspense>
+    )
 }
 
+export default Users;
 
-
-export default Users

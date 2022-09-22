@@ -39,9 +39,13 @@ const Page11 = (props) => {
                     <li className="square_bullets">Setting an alarm on your phone?</li>
                     <li className="square_bullets">Something else: <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_11_script_4" defaultValue={getValue("text_box_number_1_page_11_script_4")} /></li>
                 </ul>
+                <div id="instruction_box_number_1_page_11_script_4" className='ital custom_svg demo_box container_for_medium_margin'>
+                    <p className="top_line_in_instruction_box">
+                        If the mentee does choose a reminder or setting an alarm, it would be good to offer: “can you set the reminder/alarm yourself or do you need any help? If you need help, I'm happy to help you right now!”
+                    </p>
+                </div>
                 <div className="container_for_small_margin">
                     <p>
-                        If the mentee does choose a reminder or setting an alarm, it would be good to offer: “can you set the reminder/alarm yourself or do you need any help? If you need help, I'm happy to help you right now!”<br/>
                         The mood log will help you keep track of how you feel after you do the activity. 
                     </p>
                 </div>

@@ -1,13 +1,12 @@
-import RemindersAboutMentoring from '../../general pages/remindersaboutmentoring/remindersaboutmentoring.js';
+import TimeForQuestions from '../../general pages/timeforquestions';
 
 
 const Page11 = () => {
 
-    return (
-        <RemindersAboutMentoring />
-    )
+   return (
+      <TimeForQuestions /> 
+   )
 }
 
-
-
 export default Page11;
+

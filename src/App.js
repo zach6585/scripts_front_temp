@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component, lazy, Suspense } from 'react';
 import { connect } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 
@@ -16,27 +16,44 @@ import hamburgerMenu from "./components/scripts/pictures/hamburger_menu.png";
 import './App.css';
 import './components/scripts/allScripts.css';
 
+const Script1List = lazy(() => import('./components/scripts/script1/componentlist'));
+const Script2List = lazy(() => import('./components/scripts/script2/componentlist'));
+const Script3List = lazy(() => import('./components/scripts/script3/componentlist'));
+const Script4List = lazy(() => import('./components/scripts/script4/componentlist'));
+const Script5List = lazy(() => import('./components/scripts/script5/componentlist'));
+const Script6List = lazy(() => import('./components/scripts/script6/componentlist'));
+const Script7List = lazy(() => import('./components/scripts/script7/componentlist'));
+const Script8List = lazy(() => import('./components/scripts/script8/componentlist'));
+const Script9List = lazy(() => import('./components/scripts/script9/componentlist'));
+const Script10List = lazy(() => import('./components/scripts/script10/componentlist'));
+const Script11List = lazy(() => import('./components/scripts/script11/componentlist'));
+const Script12List = lazy(() => import('./components/scripts/script12/componentlist'));
+const Script13List = lazy(() => import('./components/scripts/script13/componentlist'));
+const Script14List = lazy(() => import('./components/scripts/script14/componentlist'));
+const Script15List = lazy(() => import('./components/scripts/script15/componentlist'));
+const Script16List = lazy(() => import('./components/scripts/script16/componentlist'));
 
+const Users = lazy(() => import('./components/users/users.js'));
+const Mentees = lazy(() => import('./components/mentees/mentees.js'));
+// import Users from './components/users/users.js';
+// import Mentees from './components/mentees/mentees';
 
-import Script1List from './components/scripts/script1/componentlist';
-import Script2List from './components/scripts/script2/componentlist';
-import Script3List from './components/scripts/script3/componentlist';
-import Script4List from './components/scripts/script4/componentlist';
-import Script5List from './components/scripts/script5/componentlist';
-import Script6List from './components/scripts/script6/componentlist';
-import Script7List from './components/scripts/script7/componentlist';
-import Script8List from './components/scripts/script8/componentlist';
-import Script9List from './components/scripts/script9/componentlist';
-import Script10List from './components/scripts/script10/componentlist';
-import Script11List from './components/scripts/script11/componentlist';
-import Script12List from './components/scripts/script12/componentlist';
-import Script13List from './components/scripts/script13/componentlist';
-import Script14List from './components/scripts/script14/componentlist';
-import Script15List from './components/scripts/script15/componentlist';
-import Script16List from './components/scripts/script16/componentlist';
-
-import Users from './components/users/users.js';
-import Mentees from './components/mentees/mentees';
+// import Script1List from './components/scripts/script1/componentlist';
+// import Script2List from './components/scripts/script2/componentlist';
+// import Script3List from './components/scripts/script3/componentlist';
+// import Script4List from './components/scripts/script4/componentlist';
+// import Script5List from './components/scripts/script5/componentlist';
+// import Script6List from './components/scripts/script6/componentlist';
+// import Script7List from './components/scripts/script7/componentlist';
+// import Script8List from './components/scripts/script8/componentlist';
+// import Script9List from './components/scripts/script9/componentlist';
+// import Script10List from './components/scripts/script10/componentlist';
+// import Script11List from './components/scripts/script11/componentlist';
+// import Script12List from './components/scripts/script12/componentlist';
+// import Script13List from './components/scripts/script13/componentlist';
+// import Script14List from './components/scripts/script14/componentlist';
+// import Script15List from './components/scripts/script15/componentlist';
+// import Script16List from './components/scripts/script16/componentlist';
 
 const appWrapper = (WrappedComponent) => props => {
   const location = useLocation();
@@ -173,7 +190,10 @@ class App extends Component {
         else{
           
           return(
-            <Mentees />
+            <Suspense fallback={<div>Loading...</div>}>
+              <Mentees />
+            </Suspense>
+            
           )
         }
       }
@@ -197,7 +217,9 @@ class App extends Component {
         else{
           return(
             <div>
-              {this.state.currComponent}
+              <Suspense fallback={<h1>Loading...</h1>}>
+                {this.state.currComponent}
+              </Suspense>
               <div className="hamburger_menu_div">
                     {this.state.options}
                     <img className={this.state.hamburger_is_clicked ? "rotate" : "no_rotate"} src={hamburgerMenu} alt="Hamburger menu icon" onClick={(event) => this.hamburgerClick(event)} />
@@ -209,7 +231,10 @@ class App extends Component {
     }
     else{
       return(
-        <Users />
+        <Suspense fallback={<h1>Loading...</h1>}>
+          <Users />
+        </Suspense>
+        
         )
       }
   }

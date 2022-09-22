@@ -14,7 +14,7 @@ export default function userReducer(state = initialState, action) {
     */
     switch (action.type) {
       //Number 1 from above is accomplished through LOADING and SUCCESS
-      case 'ERRORS_FOUND':
+      case 'USER_ERRORS_FOUND':
         return {
           ...state,
           err: action.payload,

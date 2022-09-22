@@ -7,7 +7,7 @@ class Page10 extends Component {
     
     render() {
         return (
-            <RemindersAboutMentoring extrapractice={true} thisWeek={true} />
+            <RemindersAboutMentoring thisWeek={true} />
         )
     }
 }

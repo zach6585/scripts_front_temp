@@ -30,16 +30,19 @@ class Page5 extends Component {
             <div className="sheet">
                 <h1 className="bold center">Reviewing what you have learned in peer mentoring</h1>
                 <div className="left container_for_medium_margin">
-                    <p>
                     <textarea id='text_box_number_1_page_5_script_8' onChange={event => this.handleChange(event)} defaultValue={this.getValue("text_box_number_1_page_5_script_8")} placeholder="Insert link to mentoring review game" ></textarea><br/><br/>
-                        Instructions to share link, etc.
-                    </p>
+                    <ul>
+                        <li>Play the peer mentoring review game with your mentee. If they need help answering questions, you can share your ideas. Try to ask questions that help them figure out the answer themselves. </li>
+                        <li>Remember to encourage your mentee!</li>
+                    </ul>
                 </div>
             </div>
         )
     }
 }
 
+
+ 
 
 const mapStateToProps = state => {
     return{
