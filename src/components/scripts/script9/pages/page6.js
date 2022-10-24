@@ -25,7 +25,7 @@ class Page6 extends Component {
                     A lot of people have challenges. <br/>
                     I'm here to support you! <br/> 
                     Today we'll work on making sure that you have an easier time with your coping strategy this week. We'll brainstorm together.<br/>
-                    Go to next page 
+                    <button onClick={() => this.props.goToSpecificPage(7)}>Go to next page</button>
 
                 </p>, 
                 words_that_appear_when_you_click_red_x: ''}})

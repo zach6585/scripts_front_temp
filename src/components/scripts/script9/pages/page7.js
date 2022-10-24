@@ -52,9 +52,7 @@ class Page7 extends Component {
 
                     <div id="instruction_box_number_3_page_7_script_9" className="custom_svg demo_box container_for_large_margin">
                         <p className="top_line_in_instruction_box">
-                            Help your mentee brainstorm ideas about what solutions they could use. Also give ideas for doing the solution. For example, helping them make a reminder or talking to someone about what they need.<br/><br/>
-                            Help them brainstorm ideas. Ask them if they feel like they could use the solutions.<br/> 
-                            If they need help figuring out what to do, help them as much as you can. <br/>
+                            Help them brainstorm ideas. 
                             Give them positive feedback for their ideas. You can say things like:
                         </p>
                         <ul>

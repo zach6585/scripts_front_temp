@@ -132,24 +132,17 @@
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 8 */ 
 
-#d_w_b_i_page_8_script_10{
-    display: inline-flex;
-}
-
-#d_w_b_i_page_8_script_10 > p{
-    flex: 1;
-    width: 500px;
-}
-
-#d_w_b_i_page_8_script_10 > input{
-    width: 300px;
+#d_w_b_i_page_8_script_10 > a{
+    display: inline-block;
+    margin-left: -20%;
+    width: 20%;
     height: 300px;
-    flex: .3;
-    margin-left: 400px;
 }
 
 #instruction_box_number_1_page_8_script_10{
-    width: 60%;
+    width: 50%;
+    margin-right: -30%;
+    display: inline-block;
 }
 
 #text_box_number_1_page_8_script_10{
@@ -208,18 +201,19 @@
 #d_w_b_i_page_10_script_10{
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-#d_w_b_i_page_10_script_10 > p{
-    flex: 1;
-    width: 500px;
-}
-
-#d_w_b_i_page_10_script_10 > input{
+#d_w_b_i_page_10_script_10 > img{
+    position: relative;
+    flex: 0.2;
     width: 300px;
-    flex: .3;
-    margin-left: 100px;
+}
+
+#d_w_b_i_page_10_script_10 > a{
+    position: absolute;
+    width: 400px;
+    flex: 1;
+    margin-left: -200px;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------- */
@@ -235,8 +229,9 @@
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 13 */ 
 
-
-/* See allScripts.css for the general scripts section */
+#text_box_number_1_page_13_script_10{
+    margin-top: 1%;
+}
 
 /*-------------------------------------------------------------------------------------------------------------------------------- */
 /* Page 14 */ 

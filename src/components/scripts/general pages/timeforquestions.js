@@ -28,7 +28,6 @@ class TimeForQuestions extends Component {
     }
 
     render() {
-        console.log(this.props.script === "16")
         return (
             <div className="sheet">
                 <h1 className="bold center">Time for questions</h1>

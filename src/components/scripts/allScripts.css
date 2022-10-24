@@ -78,7 +78,7 @@ td{
 .page_button{
     /* For the arrow buttons that allow you to change pages */
     position: absolute;
-    margin-top: 0%;
+    margin-top: 10%;
     font-size: 16px;
     padding: 10px 15px;
     width: 150px;

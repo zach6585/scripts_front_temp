@@ -43,8 +43,10 @@ const Page8 = props => {
                 <div className="div_with_body_image" id="d_w_b_i_page_8_script_10">
                     <div id="instruction_box_number_1_page_8_script_10" className="custom_svg demo_box container_for_small_margin">
                         <p className='top_line_in_instruction_box'>
-                            Help your mentee use the body scan worksheet.<br/>
+                            Help your mentee use the body scan worksheet or mood log.<br/>
                             Put the link in the chat and ask your mentee to screen share<br/>
+                            Body scan link: <textarea onChange={event => handleChange(event)} id="text_box_number_2_page_8_script_10" defaultValue={getValue("text_box_number_2_page_8_script_10")} /><br/>
+                            Mood log link: <textarea onChange={event => handleChange(event)} id="text_box_number_3_page_8_script_10" defaultValue={getValue("text_box_number_3_page_8_script_10")} /><br/>
                             <strong>Write how your mentee is feeling</strong><br/>
                             <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_8_script_10" defaultValue={getValue("text_box_number_1_page_8_script_10")} />
                         </p>

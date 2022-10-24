@@ -64,12 +64,12 @@ class Page12 extends Component{
 
                     <div id="instruction_box_number_2_page_12_script_9" className="custom_svg demo_box container_for_small_margin">
                         <p className='top_line_in_instruction_box'>
-                            After your mentee has an idea for the problem, ask: 
+                            If your mentee is not sure, ask:
                         </p>
                         <ul>
                             <li>What time of day would you like to try out the activity?</li>
                             <li>Is there a place you will try out the coping strategy?</li>
-                            <li>Will you set a reminder to practice the coping strategy [help them to do set the reminder, if they need help]</li>
+                            <li>Will you set a reminder to practice the coping strategy [help them to set the reminder, if they need help]</li>
                         </ul>
 
                         <div className='container_for_small_margin'>
@@ -78,6 +78,7 @@ class Page12 extends Component{
                                 <li>Good idea!</li>
                                 <li>That sounds great!</li>
                             </ul>
+                            <p>If your mentee still seems to think they will have a hard time, help them problem solve using the solutions website.</p>
                         </div>
                     </div>
 

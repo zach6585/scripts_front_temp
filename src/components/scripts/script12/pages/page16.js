@@ -8,7 +8,7 @@ class Page16 extends Component {
     render() { 
         return (
             <div>
-                <RemindersAboutMentoring extrapractice={true} />
+                <RemindersAboutMentoring />
             </div>
         )
     }

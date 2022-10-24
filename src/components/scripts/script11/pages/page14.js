@@ -1,14 +1,14 @@
 import { Component } from 'react';
 
-import SchedulingForNextWeek from '../../general pages/schedulingfornextweek';
+import SharingAboutMentoring from '../../general pages/sharingaboutmentoring'; 
+
 
 class Page14 extends Component {
 
-  render() {
+    render() {
         return (
-          <SchedulingForNextWeek />  
+            <SharingAboutMentoring />
         )
     }
 }
-
 export default Page14;

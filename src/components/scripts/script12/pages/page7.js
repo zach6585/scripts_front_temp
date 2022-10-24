@@ -39,34 +39,18 @@ const Page7 = props => {
                     Do you want to use the body scan or mood log?
                 </p>
                 <div className="div_with_body_image" id="d_w_b_i_page_7_script_12">
-                <Link target="_blank" to="/body" rel="noopener noreferrer"><input type="image" alt="Body image" src={body} name="body_image" className={`body_diagram_button ${props.commentMode}`} id="body_image_button" /></Link>
+                    <Link target="_blank" to="/body" rel="noopener noreferrer"><input type="image" alt="Body image" src={body} name="body_image" className={`body_diagram_button ${props.commentMode}`} id="body_image_button" /></Link>
                     <div id="instruction_box_number_1_page_7_script_12" className="custom_svg demo_box container_for_small_margin">
                         <p className='top_line_in_instruction_box'>
-                            Help your mentee use the body scan worksheet.<br/>
-                            Put the link in the chat and ask your mentee to screen share<br/>
-                            <strong>Write how your mentee is feeling</strong><br/>
-                            <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_7_script_12" defaultValue={getValue("text_box_number_1_page_7_script_12")} />
+                            Send your mentee a link to the body scan or mood log and help them complete it.<br/>
+                            Add mood log link: <textarea onChange={event => handleChange(event)} id="text_box_number_2_page_7_script_12" defaultValue={getValue("text_box_number_2_page_7_script_12")} /> <br/>
+                            Add body scan link: <textarea onChange={event => handleChange(event)} id="text_box_number_3_page_7_script_12" defaultValue={getValue("text_box_number_3_page_7_script_12")} />
                         </p>
                     </div>
                 </div>
-                
-                
-                
-
-
-                <div className='container_for_large_margin'>
-                    <p>Now that you figured out how you are feeling, let's practice rating it on the mood log.</p>
-                    <div id="instruction_box_number_2_page_7_script_12" className='custom_svg demo_box container_for_small_margin'>
-                        <p className='top_line_in_instruction_box'>
-                            Help your mentee use the mood log on their phone.<br/>
-                            Put the link [will insert for each mentee] in the chat and ask your mentee to screen share.<br/>
-                            If your mentee points to an emoji, but doesn't say a feeling, ask them to describe what the feeling is. 
-                        </p>
-                    </div>
+                <div className='container_for_large_margin' id="div_with_phone_image_page_7_script_12">
                     <img src={phone} alt="Phone with emojis" id="phone_page_7_script_12" />
                 </div>
-                
-                
             </div>
         </div>
         

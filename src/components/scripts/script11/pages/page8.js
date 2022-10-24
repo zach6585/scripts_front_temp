@@ -79,7 +79,7 @@ class Page8 extends Component {
                     </div>
 
                     <div id="instruction_box_number_3_page_8_script_11" className="custom_svg demo_box container_for_small_margin">
-                        <p className="top_line_in_instruction_box">If your mentee had a hard feeling while watching the video, ask if they would like to take a 8 minute break or listen to a favorite song. </p>
+                        <p className="top_line_in_instruction_box"> If your mentee had a hard feeling while watching the video, ask if they would like to take a 5 minute break or listen to a favorite song.</p>
                     </div>
                     
                     <div className='container_for_medium_margin'>
@@ -100,12 +100,15 @@ class Page8 extends Component {
                         </p>
                     </div>
 
-                    <div id="instruction_box_number_4_page_8_script_11" className="custom_svg demo_box container_for_small_margin">
-                        <p className="top_line_in_instruction_box"> 
-                            Share your screen and show your toolkit
-                        </p>
+                    <div id="image_and_instruction_box_number_1_page_8_script_11">
+                        <div id="instruction_box_number_4_page_8_script_11" className="custom_svg demo_box container_for_small_margin">
+                            <p className="top_line_in_instruction_box"> 
+                                Share your screen and show your toolkit: <textarea onChange={event => this.handleChange(event)} id="text_box_number_5_page_8_script_11" defaultValue={this.getValue("text_box_number_5_page_8_script_11")} />
+                            </p>
+                        </div>
+                        <img src={shareScreen} alt="Share screen" id="shareScreen_number_2_page_8_script_11" />
                     </div>
-                    <img src={shareScreen} alt="Share screen" id="shareScreen_number_2_page_8_script_11" />
+                    
 
                     <div className='container_for_medium_margin'>
                         <p>

@@ -101,7 +101,7 @@
 #video_link_page_8_script_11{
     position: absolute;
     margin-bottom: 0px;
-    margin-top: 70px;
+    margin-top: 5%;
 }
 #shareScreen_number_1_page_8_script_11{
     width: 500px;
@@ -150,17 +150,26 @@
 }
 
 
-
+#image_and_instruction_box_number_1_page_8_script_11{
+    display: flex;
+    flex-wrap: nowrap;
+}
 
 
 #instruction_box_number_4_page_8_script_11{
-    width: 350px;
+    width: 550px;
     height: 105px;
     display: inline-block;
 }
 
+#text_box_number_5_page_8_script_11{
+    width: 90%;
+    height: 30px;
+}
+
 #shareScreen_number_2_page_8_script_11{
-    width: 500px;
+    min-width: 40%;
+    display: inline;
 }
 
 #instruction_box_number_5_page_8_script_11{

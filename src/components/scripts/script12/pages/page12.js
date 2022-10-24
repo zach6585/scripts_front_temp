@@ -40,7 +40,8 @@ const Page12 = props => {
                     <p className='top_line_in_instruction_box'>
                         Send your mentee the link to their toolkit in the chat<br/>
                         Link: <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_12_script_12" defaultValue={getValue("text_box_number_1_page_12_script_12")} /><br/>
-                        Ask them to share their screen or you can both look at the toolkit on your own screens if you don't want to do screen share<br/><br/>    
+                        Ask them to share their screen or you can both look at the toolkit on your own screens if you don't want to do screen share.  
+                        <span className="bold"> Go to the next page to see instructions for the activity. </span><br/><br/>
                         Ask them questions about who their supports are. Find out why they think that person is a good support.<br/>
                         Share about your supports.
                     </p>

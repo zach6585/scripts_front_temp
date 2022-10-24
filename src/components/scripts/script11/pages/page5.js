@@ -23,9 +23,7 @@ class Page5 extends Component {
             <p>
                 Today we'll work on making sure that you have an easier time with your coping strategy this week. We'll brainstorm together<br/>
                 First, we'll think about what other people do when they have challenges.<br/>
-                <button onClick={() => this.props.goToSpecificPage(7)}>Skip to step 1</button>
-
-
+                <button onClick={() => this.props.goToSpecificPage(6)}>Go to next page</button>
             </p>, 
             words_that_appear_when_you_click_red_x: ''}})
         }
@@ -33,8 +31,7 @@ class Page5 extends Component {
             this.setState({handleclick: {words_that_appear_when_you_click_green_check : null, words_that_appear_when_you_click_red_x:
                     <p>
                     That's great that you had no challenges using your coping strategy!<br/>
-                    Everyone has challenges sometimes. So we will talk through some examples of challenges<br/><br/>
-                    Go to next page
+                    <button onClick={() => this.props.goToSpecificPage(7)}>Skip to step 1</button>
                     </p>
                 }})
         }
@@ -66,11 +63,11 @@ class Page5 extends Component {
                 <h1 className="bold center">How did it go?</h1>
                 <div className="left container_for_small_margin">
                     <p>
-                        Last week you practiced your <textarea onChange={event => this.handleChange(event)} id="text_box_number_1_page_5_script_11" defaultValue={this.getValue("text_box_number_1_page_5_script_11")} />.
+                        Last week you practiced your coping strategy
                     </p>
-                    <div id="instruction_box_number_1_page_5_script_11" className="custom_svg demo_box container_for_medium_margin">
+                    <div id="instruction_box_number_1_page_5_script_11" className="custom_svg demo_box container_for_small_margin">
                         <p className="top_line_in_instruction_box"> 
-                            Try to learn about how it was for your mentee to do the coping strategies. Ask questions such, as the questions in the list:<br/>
+                            Try to learn about how it was for your mentee to do the coping strategies. Ask questions such as the questions in the list:<br/>
                             <em>Remember to provide positive feedback and validation.</em>
                         </p>
                             <ul>

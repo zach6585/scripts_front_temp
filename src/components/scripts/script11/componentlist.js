@@ -25,11 +25,12 @@ const Page11 = lazy(() => import('./pages/page11'));
 const Page12 = lazy(() => import('./pages/page12'));
 const Page13 = lazy(() => import('./pages/page13'));
 const Page14 = lazy(() => import('./pages/page14'));
+const Page15 = lazy(() => import('./pages/page15'));
 
 class Script11List extends Component {
 
     state = { 
-      component_list: [<Page1 />, <Page2/>, <Page3 />, <Page4/>, <Page5 />, <Page6/>, <Page7 />, <Page8/>, <Page9 />, <Page10 />, <Page11 />, <Page12 />, <Page13 />, <Page14 />]
+      component_list: [<Page1 />, <Page2/>, <Page3 />, <Page4/>, <Page5 />, <Page6/>, <Page7 />, <Page8/>, <Page9 />, <Page10 />, <Page11 />, <Page12 />, <Page13 />, <Page14 />, <Page15 />]
     }
     
       

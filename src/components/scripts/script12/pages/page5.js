@@ -22,8 +22,7 @@ class Page5 extends Component {
             this.setState({handleclick: {words_that_appear_when_you_click_green_check: 
             <p>
                 Today we'll work on making sure that you have an easier time with your coping strategy this week. We'll brainstorm together<br/>
-                First, we'll think about what other people do when they have challenges.<br/>
-                <button onClick={() => this.props.goToSpecificPage(7)}>Skip to step 1</button>
+                <button onClick={() => this.props.goToSpecificPage(6)}>Go to next page</button>
 
 
             </p>, 
@@ -33,8 +32,7 @@ class Page5 extends Component {
             this.setState({handleclick: {words_that_appear_when_you_click_green_check : null, words_that_appear_when_you_click_red_x:
                     <p>
                     That's great that you had no challenges using your coping strategy!<br/>
-                    Everyone has challenges sometimes. So we will talk through some examples of challenges<br/><br/>
-                    <button onClick={() => this.props.goToSpecificPage(6)}>Go to next page</button>
+                    <button onClick={() => this.props.goToSpecificPage(7)}>Skip to step 1</button>
                     </p>
                 }})
         }
@@ -70,7 +68,7 @@ class Page5 extends Component {
                     </p>
                     <div id="instruction_box_number_1_page_5_script_12" className="custom_svg demo_box container_for_medium_margin">
                         <p className="top_line_in_instruction_box"> 
-                            Try to learn about how it was for your mentee to do the coping strategies. Ask questions such, as the questions in the list:<br/>
+                            Try to learn about how it was for your mentee to do the coping strategies. Ask questions such as the questions in the list:<br/>
                             <em>Remember to provide positive feedback and validation.</em>
                         </p>
                             <ul>

@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 
 import { patchTexts, postTexts } from '../../../../actions/text';
 
-
 import body from '../../pictures/body.png';
 import phone from '../../pictures/phone.png'
 import { Link } from 'react-router-dom';
@@ -11,6 +10,21 @@ import { Link } from 'react-router-dom';
 
 const Page10 = props => {
 
+    
+    const handleChange = (event) => {
+        const object_outcome = getObject(event.target.id)
+        object_outcome === "" ? 
+        props.postTexts({value: event.target.value, id_tag: event.target.id, mentee_id: props.mentee_id, script: props.script})
+        :
+        props.patchTexts({value: event.target.value, id_tag: event.target.id, id: object_outcome.id, mentee_id: props.mentee_id, script: props.script})
+    
+    }
+    
+    const getObject = (current_id_tag) => {
+        //Returns the object that has the specific id_tag
+        let current_text = props.texts.find(text_item => {return text_item.id_tag === current_id_tag})
+        return current_text ? current_text : ""
+    }
     
     const getValue = (current_id_tag) => {
         //Same as getObject but instead it returns the value
@@ -23,7 +37,7 @@ const Page10 = props => {
             <h1 className='bold center'>Step 3: Identify how you are feeling</h1>
             <div className='left container_for_small_margin'>
                 <p>
-                    When we checked in earlier, you said you were feeling <span className='underline_text'>{getValue('text_box_number_1_step_1_script_10')}</span>.
+                    When we checked in earlier, you said you were feeling <textarea onChange={event => handleChange(event)} id="text_box_number_1_page_10_script_10" defaultValue={getValue("text_box_number_1_page_10_script_10")} placeholder="the feeling your mentee reported earlier" />.
                     <br/><br/>
                     Let's think about how you feel again. It's good to think about how you are feeling after you do a coping strategy to see if using the coping strategy changed how you feel.
                 </p>
@@ -31,7 +45,9 @@ const Page10 = props => {
                 <div id="instruction_box_number_1_page_10_script_10" className="custom_svg demo_box container_for_extra_small_margin">
                     <p className='top_line_in_instruction_box'>
                         Help your mentee review their body scan worksheet or mood log.<br/>
-                        Put the link in the chat and ask your mentee to screen share
+                        Put the link in the chat and ask your mentee to screen share<br/>
+                        Body scan link: <textarea onChange={event => handleChange(event)} id="text_box_number_2_page_10_script_10" defaultValue={getValue("text_box_number_2_page_10_script_10")} /><br/>
+                        Mood log link: <textarea onChange={event => handleChange(event)} id="text_box_number_3_page_10_script_10" defaultValue={getValue("text_box_number_3_page_10_script_10")} />
                     </p>
                 </div>
             

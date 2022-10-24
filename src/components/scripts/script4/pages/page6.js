@@ -98,9 +98,6 @@ const Page6 = props => {
                             <em>When your mentee is finished, say</em>: Good job! Now we are ready for the next part of the activity!
                         </p>
                     </div>
-                    <div>
-                        <p className='bold'>There is also a “neutral” pile you can use if you want.</p>
-                    </div>
 
                     <div className='container_for_large_margin'>
                         <p className={props.commentMode} id="p_2" onClick={event => handleCommentClick(event)}>

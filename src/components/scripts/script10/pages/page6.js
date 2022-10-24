@@ -25,7 +25,7 @@ class Page6 extends Component {
                 A lot of people have challenges. <br/>
                 I'm here to support you! <br/> 
                 Today we'll work on making sure that you have an easier time with your coping strategy this week. We'll brainstorm together.<br/>
-                Go to next page 
+                <button onClick={() => this.props.goToSpecificPage(7)}>Go to next page</button>
 
             </p>, 
             words_that_appear_when_you_click_red_x: ''}})
@@ -37,7 +37,7 @@ class Page6 extends Component {
                             That's great that you had no challenges using your coping strategy!<br/>
                             We'll practice it together!
                         </p>
-                        <button onClick={() => goToSpecificPage(8)}>Skip to step 1</button>
+                        <button onClick={() => this.props.goToSpecificPage(8)}>Skip to step 1</button>
                     </div>
                 }})
         }
@@ -73,7 +73,7 @@ class Page6 extends Component {
                     </p>
                     <div id="instruction_box_number_1_page_6_script_10" className="custom_svg demo_box container_for_medium_margin">
                         <p className="top_line_in_instruction_box"> 
-                            Try to learn about how it was for your mentee to do the coping strategies. Ask questions such, as the questions in the list:<br/>
+                            Try to learn about how it was for your mentee to do the coping strategies. Ask questions such as the questions in the list:<br/>
                             <em>Remember to provide positive feedback and validation.</em>
                         </p>
                             <ul>

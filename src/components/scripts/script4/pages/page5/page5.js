@@ -99,7 +99,7 @@ const Page5 = props => {
                     <div className='container_for_small_margin'>
                         <p className={props.commentMode} id="p_3" onClick={event => handleClick(event, "")}>
                             Today we will talk about coping strategies to help you feel better when you have symptoms. <br/> 
-                            Lowering stress in life is a really important part of mental health.  That means finding ways to keep your stress low as possible at home, at school or work, in the community, and when you are around other people.<br/><br/> 
+                            Lowering stress in life is a really important part of mental health. That means finding ways to keep your stress as low as possible at home, at school or work, in the community, and when you are around other people.<br/><br/> 
                             We are going to work together to find activities that make you feel good or help lower stress. These are called “coping strategies.” <br/><br/>
                             Coping strategies are what people do to deal with stress.  We take care of our mental health by using coping tools that help us notice our emotions, find ways to relax, and ways to make peace with upsetting feelings and thoughts.  
                         </p>

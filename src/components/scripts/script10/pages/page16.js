@@ -9,7 +9,7 @@ class Page16 extends Component {
         
         return (
             
-                <RemindersAboutMentoring extrapractice={true} />
+                <RemindersAboutMentoring />
                 
         )
     }
